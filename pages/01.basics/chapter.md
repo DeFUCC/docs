@@ -1,11 +1,11 @@
 ---
-title: Basics
+title: 'Фонд ФРУКТ'
 taxonomy:
-    category: docs
+    category:
+        - docs
 ---
 
-### Chapter 1
+### Фонд Развития Универсализации, Кооперации и Творчества
 
-# Basics
+# База знаний
 
-Discover the **basic** principals
