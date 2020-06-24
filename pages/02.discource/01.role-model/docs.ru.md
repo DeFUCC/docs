@@ -1,6 +1,6 @@
 ---
 title: 'Ролевая модель'
-media_order: 'host.svg,doer.svg'
+media_order: 'host.svg,doer.svg,persona.svg'
 date: '14:07 24-06-2020'
 taxonomy:
     category:
@@ -12,3 +12,4 @@ visible: true
 
 [![Хост](host.svg?resize=120,120&classes=float-left)](./host)
 [![Деятель](doer.svg?resize=120,120&classes=float-left)](./doer)
+[![Личность](persona.svg?resize=120,120&classes=float-left)](./persona)
