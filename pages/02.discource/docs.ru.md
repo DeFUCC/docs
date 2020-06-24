@@ -4,7 +4,7 @@ media_order: all-concepts.svg
 date: '20:44 23-06-2020'
 taxonomy:
     category:
-        - discourse
+        - docs
 ---
 
 Дискурс — язык и система целенаправленного мышления и взаимодействия людей.
