@@ -1,5 +1,5 @@
 ---
-title: Определения
+title: 'По науке'
 date: '12:53 25-06-2020'
 taxonomy:
     category:
