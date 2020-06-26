@@ -21,6 +21,7 @@ author: Давай
     	<div class="child-page">
             <h4><a href="{{child.url}}">{{child.title}}</a> </h4> 
     	</div>	
+    <hr />
     {% endfor %}
 </div>
 {% endfor %}
