@@ -15,8 +15,8 @@ author: Давай
 {% set children = page.collection({'items':'@self.children','order': {'by': 'default', 'dir': 'asc'}}) %}
 {% for item in page.children %}
 <div markdown="0" class="item-card"> 
-<h2><a href="{{item.url}}">{{item.title}}</a>
-    {% if item.header.author %} by {{item.header.author}}{% endif %}</h2> 
-<p>{{item.summary}}</p>  
+<h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
+    {% if item.header.author %} by {{item.header.author}} {% endif %}
+	{{item.summary}}
 </div>
 {% endfor %}
