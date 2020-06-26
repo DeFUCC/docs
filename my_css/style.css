@@ -1,0 +1,83 @@
+h1, h2, h3, h4, h5, h6, p {
+    text-align: left !important;
+    font-family: 'Ubuntu', sans-serif;  
+}
+
+h1,h2,h3,h4,h5,h6 {
+ 	line-height:1em;   
+}
+
+body {
+    letter-spacing: 0;  
+    font-family: 'Ubuntu', sans-serif;
+    hyphens: auto;
+    line-height: 1.4;
+    font-size:1.18rem;
+}
+
+#body .nav {
+  	overflow: hidden;  
+}
+
+#body .nav>i {
+    transform: rotate(90deg);
+}
+
+#body img {
+ 	margin: 0;   
+}
+
+#header {
+  background-color: #eee;  
+}
+
+.searchbox {
+    border-color: #777;
+    background-color: #aaa;
+}
+
+#sidebar ul li.visited > a .read-icon {
+    color: #f26724;
+}
+
+#body-inner {
+ 	max-width:720px;   
+    word-break: break-word;
+}
+
+.float-left {
+ 	float:left;   
+}
+
+#chapter {
+    justify-content: start;
+}
+
+@media (max-width:800px) {
+    #top-github-link {
+        display:none;
+    }
+}
+
+
+.table-of-contents .toclink::before {
+    content: "•";
+    display: inline;
+    margin-right: .5ex;
+}
+
+.child-card {
+    padding:1em;
+    box-shadow:  0px 1px 1px #333;
+    border-radius: 4px;
+}
+
+.item-card h4 {
+ 	line-height: 0.8em;
+}
+
+.item-card .updated {
+ 	font-size:0.5em;
+    margin:0;
+    padding:0;
+}
