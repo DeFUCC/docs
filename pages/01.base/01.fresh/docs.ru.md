@@ -12,7 +12,7 @@ author: Давай
 ---
 
 {% set children = page.collection({'items':'@root','order': {'by': 'modified', 'dir': 'asc'}}) %}
-{% for item in page.children %}
+{% for item in children %}
 <div class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
 	{{item.summary}}
