@@ -1,5 +1,5 @@
 ---
-title: Свежее
+title: ' Свежее'
 date: '21:00 26-06-2020'
 taxonomy:
     category:
@@ -15,6 +15,6 @@ author: Давай
 {% for item in children %}
 <div class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
-	{{item.modified}}
+	{{item.modified | nicetime}}
 </div>
 {% endfor %}
