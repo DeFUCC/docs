@@ -17,10 +17,9 @@ author: Давай
 <div markdown="0" class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
 	{{item.summary}}
-    ===
     {% for child in item.children %}
     	<div class="child-page">
-            
+            {{child.title}}
     	</div>	
     {% endfor %}
 </div>
