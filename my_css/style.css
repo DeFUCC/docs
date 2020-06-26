@@ -1,22 +1,13 @@
-h1, h2, h3, h4, h5, h6, p {
-    text-align: left !important;
-    font-family: 'Ubuntu', sans-serif;  
-}
 
-h1,h2,h3,h4,h5,h6 {
- 	line-height:1em;   
-}
 
 body {
-    letter-spacing: 0;  
+    letter-spacing: 0;
     font-family: 'Ubuntu', sans-serif;
     hyphens: auto;
-    line-height: 1.4;
-    font-size:1.18rem;
 }
 
 #body .nav {
-  	overflow: hidden;  
+  	overflow: hidden;
 }
 
 #body .nav>i {
@@ -24,11 +15,11 @@ body {
 }
 
 #body img {
- 	margin: 0;   
+ 	margin: 0;
 }
 
 #header {
-  background-color: #eee;  
+  background-color: #eee;
 }
 
 .searchbox {
@@ -41,12 +32,12 @@ body {
 }
 
 #body-inner {
- 	max-width:720px;   
+ 	max-width:720px;
     word-break: break-word;
 }
 
 .float-left {
- 	float:left;   
+ 	float:left;
 }
 
 #chapter {
