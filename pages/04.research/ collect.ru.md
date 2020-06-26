@@ -20,6 +20,7 @@ author: Давай
     {% for child in item.children %}
     	<div class="child-page">
             <h4><a href="{{child.url}}">{{child.title}}</a> </h4> 
+            upd. {{child.date}}
     	</div>	
     <hr />
     {% endfor %}
