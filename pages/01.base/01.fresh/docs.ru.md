@@ -17,5 +17,6 @@ author: Давай
 	<div class="card-content">
 <h4 class="title"><a href="{{item.url}}">{{item.title}}</a> </h4> 
         <p class="subtitle">{{item.modified | nicetime}}</p>
+    </div>
 </div>
 {% endfor %}
