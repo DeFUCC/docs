@@ -3,7 +3,7 @@ title: Технологии
 date: '14:47 26-06-2020'
 taxonomy:
     category:
-        - article
+        - docs
 visible: true
 ---
 
