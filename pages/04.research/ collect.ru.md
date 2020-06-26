@@ -1,8 +1,7 @@
 ---
 title: Исследования
 date: '14:57 25-06-2020'
-metadata:
-    res: Давай
+author: Давай
 taxonomy:
     category:
         - docs
