@@ -13,7 +13,7 @@ author: Давай
 
 {% set children = page.collection({'items':'@root.descendants','order': {'by': 'modified', 'dir': 'desc'}}) %}
 {% for item in children %}
-<div class="item-card"> 
+<div class="card"> 
 <h4><a href="{{item.url}}">{{item.title}}</a> </h4> 
 	{{item.modified | nicetime}}
 </div>
