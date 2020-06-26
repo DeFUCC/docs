@@ -14,7 +14,8 @@ author: Давай
 {% set children = page.collection({'items':'@root.descendants','order': {'by': 'modified', 'dir': 'desc'}}) %}
 {% for item in children %}
 <div class="card"> 
-<h4><a href="{{item.url}}">{{item.title}}</a> </h4> 
-	{{item.modified | nicetime}}
+	<div class="card-content">
+<h4 class="title"><a href="{{item.url}}">{{item.title}}</a> </h4> 
+        <p class="subtitle">{{item.modified | nicetime}}</p>
 </div>
 {% endfor %}
