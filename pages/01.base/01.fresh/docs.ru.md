@@ -16,7 +16,7 @@ author: Давай
 <div class="card my-2"> 
 	<div class="card-content">
 <h4 class="title"><a href="{{item.url}}">{{item.title}}</a> </h4> 
-        <p class="subtitle">{{item.modified | nicetime}}</p>
+        <p class="subtitle is-size-7">{{item.modified | nicetime}}</p>
     </div>
 </div>
 {% endfor %}
