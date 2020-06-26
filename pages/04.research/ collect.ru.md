@@ -19,7 +19,7 @@ author: Давай
 	{{item.summary}}
     {% for child in item.children %}
     	<div class="child-page">
-            {{child.title}}
+            <h4><a href="{{child.url}}">{{child.title}}</a> </h4> 
     	</div>	
     {% endfor %}
 </div>
