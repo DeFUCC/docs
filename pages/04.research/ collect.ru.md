@@ -20,7 +20,7 @@ author: Давай
     {% for child in item.children %}
     	<div class="child-page">
             <h4><a href="{{child.url}}">{{child.title}}</a> <br />
-                <span class="updated">Опубликовано {{child.date | nicetime}}</span>, <span class="updated">обновлено {{child.modified | nicetime}}</span></h4> 
+                <span class="updated">Опубликовано {{child.date | nicetime}},</span> <span class="updated">обновлено {{child.modified | nicetime}}</span></h4> 
             
     	</div>	
     <hr />
