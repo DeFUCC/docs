@@ -5,8 +5,8 @@ taxonomy:
     category:
         - docs
 process:
-    markdown: true
     twig: true
+    markdown: false
 author: Давай
 ---
 
