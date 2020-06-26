@@ -16,7 +16,12 @@ author: Давай
 {% for item in page.children %}
 <div markdown="0" class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
-    {% if item.header.author %} by {{item.header.author}} {% endif %}
 	{{item.summary}}
+    ===
+    {% for child in item.children %}
+    	<div class="child-page">
+            
+    	</div>	
+    {% endfor %}
 </div>
 {% endfor %}
