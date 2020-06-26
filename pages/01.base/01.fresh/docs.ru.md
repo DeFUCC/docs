@@ -11,7 +11,7 @@ visible: true
 author: Давай
 ---
 
-{% set children = page.collection({'items':'@root','order': {'by': 'modified', 'dir': 'desc'}}) %}
+{% set children = page.collection({'items':'@root.descendants','order': {'by': 'modified', 'dir': 'desc'}}) %}
 {% for item in children %}
 <div class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
