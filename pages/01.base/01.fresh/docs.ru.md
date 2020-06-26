@@ -15,6 +15,6 @@ author: Давай
 {% for item in children %}
 <div class="item-card"> 
 <h2><a href="{{item.url}}">{{item.title}}</a> </h2> 
-	{{item.summary}}
+	{{item.modified}}
 </div>
 {% endfor %}
