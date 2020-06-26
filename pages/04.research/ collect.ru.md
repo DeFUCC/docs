@@ -11,10 +11,12 @@ author: Давай
 ---
 
 Полное собрание исследований ФРУКТа в важных для развития направлениях.
+
 {% set children = page.collection({'items':'@self.children','order': {'by': 'default', 'dir': 'asc'}}) %}
 {% for item in page.children %}
-<div class="item-card"> 
-<h2><a href="{{item.url}}">{{item.title}}</a> by {{item.header.author}}</h2> 
+<div markdown="0" class="item-card"> 
+<h2><a href="{{item.url}}">{{item.title}}</a>
+    {by {{item.header.author}}</h2> 
 <p>{{item.summary}}</p>  
 </div>
 {% endfor %}
