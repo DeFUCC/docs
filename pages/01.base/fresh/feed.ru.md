@@ -6,7 +6,6 @@ taxonomy:
         - docs
 process:
     twig: true
-    markdown: false
 visible: true
 author: Давай
 ---
