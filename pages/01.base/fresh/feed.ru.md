@@ -11,7 +11,7 @@ content:
         by: modified
         dir: desc
     pagination: true
-    limit: 10
+    limit: 12
 ---
 
 Вновь добавленные и обновленные доки
