@@ -5,6 +5,13 @@ taxonomy:
     category:
         - docs
 author: Давай
+content:
+    items: '@root.descendants'
+    order:
+        by: modified
+        dir: desc
+    pagination: true
+    limit: 10
 ---
 
 Вновь добавленные и обновленные доки
