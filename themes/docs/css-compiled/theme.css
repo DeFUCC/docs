@@ -7,8 +7,9 @@
   .button:active, .button-secondary:active {
     margin: 2px 0 -2px 0; }
 
-body {
 
+body {
+    font-size: 18px !important;
   background: #fefefe;
   color: #555;
   -webkit-font-smoothing: antialiased;
@@ -855,6 +856,7 @@ td {
 }
   
   #body .bread {
+      font-size:16px;
       display:flex;
       flex:1 1 auto;
   }

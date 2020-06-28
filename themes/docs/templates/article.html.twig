@@ -15,5 +15,7 @@
     	{{ page.content }}
     </p>
     <p class="subtitle is-size-7"><i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
+    <h4>Ссылки сюда:</h4>
+    {{ backlinks[page.url] }}
 </section>
 {% endblock %}
