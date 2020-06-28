@@ -3,7 +3,7 @@
             <div class="card my-2"> 
             	<div class="card-content">
             	    {% if item.parent.title != 'Pages' %}
-            	        <a class="underlined" href="{{item.parent.url}}">{{item.parent.title}}</a>
+            	        <a class="underlined is-size-6" href="{{item.parent.url}}">{{item.parent.title}}</a>
             	    {% endif %}
                     <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a> 
                     
@@ -20,7 +20,7 @@
                          <i class="fa fa-eye"></i>
                          {{ viewcounts[page.route]|nicenumber }} /
                          <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
-                    <p>{{item.summary(100)|striptags}}</p>
+                    <p>{{item.summary(140)|striptags}}</p>
                     
                     
                 </div>
