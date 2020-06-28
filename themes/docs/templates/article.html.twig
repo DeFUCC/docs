@@ -1,0 +1,19 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block content %}
+<section id="body-inner" class="content">
+    <h1>{{ page.title }}
+        
+    </h1>
+    <small class="is-size-7 has-text-weight-normal">
+    <i class="fa fa-clock-o"></i> 
+        Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+    </small>
+       
+    <p>
+    	{{ page.content }}
+    </p>
+    <p class="subtitle is-size-7"><i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
+</section>
+{% endblock %}

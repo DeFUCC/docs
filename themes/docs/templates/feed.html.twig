@@ -1,0 +1,44 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block content %}
+<container id="body-inner">
+<section class="content">
+    <h1>{{ page.title }}</h1>   
+    {{ page.content }}
+
+    {% set collection = page.collection %}
+    {% for item in collection %}
+        {% if item.visible %}
+        
+            <div class="card my-2"> 
+            	<div class="card-content">
+            	    {% if item.parent.title != 'Pages' %}
+            	        <a class="underlined" href="{{item.parent.url}}">{{item.parent.title}}</a>
+            	    {% endif %}
+                    <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a> 
+                    
+                    {% if item.template == 'article' %}
+                    <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</small>
+                    {% endif %}
+                    
+                    </h4> 
+                    <p class="subtitle is-size-7"><i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
+                    <p>{{item.summary(100)|striptags}}</p>
+                    
+                    
+                </div>
+            </div>
+     
+        {% endif %}         
+    {% endfor %}
+</section>
+
+
+{# Render the pagination list #}
+{% if config.plugins.pagination.enabled and collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+{% endif %}
+
+</container>
+{% endblock %}
