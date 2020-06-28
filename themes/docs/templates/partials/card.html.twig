@@ -6,7 +6,7 @@
                 	    <div class="column is-one-quarter flex-center">
                 	        <a href="{{item.url}}">
                     	        {% if item.media.images %}
-                    	            {{item.media.images|first.resize(100,100)}}
+                    	            {{item.media.images|first.resize(200,300)}}
                     	        {% else %}
                     	             {{item.media.files|first.resize(100,100)}}
                     	        {% endif %}
