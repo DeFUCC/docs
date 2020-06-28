@@ -10,17 +10,18 @@
                 	        {% endfor %}
                 	    {% endif %}
             	    {% endif %}
+            	       {% for tag in item.taxonomy.tag %}
+                            <span class="tag">
+                              {{tag}}
+                            </span>
+                        {% endfor %}
                     <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a> 
                     
                     
                     
                     </h4> 
                     <p class="subtitle is-size-7">
-                         {% for tag in item.taxonomy.tag %}
-                            <span class="tag">
-                              {{tag}}
-                            </span>
-                        {% endfor %}
+                      
                         
                         {% if item.template == 'article' %}
                         <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}

@@ -7,6 +7,11 @@
   .button:active, .button-secondary:active {
     margin: 2px 0 -2px 0; }
 
+body iframe {
+    min-width:100%;
+    max-width:100%;
+    margin: 1em 0;
+}
 
 body {
     font-size: 18px !important;
