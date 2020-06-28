@@ -6,7 +6,9 @@
 <section class="content">
     <h1>{{ page.title }}</h1>   
     {{ page.content }}
+</section>
 
+<section class="columns mx-2 is-multiline content">
     {% set collection = page.collection %}
     {% for item in collection %}
         {% include '/partials/card.html.twig'  %}

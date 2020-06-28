@@ -21,8 +21,18 @@
         <p>
         	{{ page.content }}
         </p>
-        <p class="subtitle is-size-7"><i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
-    </section>
+         <hr />
+        <p class="has-text-right">
+            
+            {% if page.header.author %}
+            <i class="fa fa-user"></i> Автор: {{page.header.author }}  <br />  
+            {% endif %}
+            
+            {% if page.header.date %}
+            <i class="fa fa-user"></i> Опубликовано {{page.header.date | nicetime }}  <br />  
+            {% endif %}
+           
+            <i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
     
    
         {% set linked = backlinks[page.url] %}
@@ -35,6 +45,6 @@
             {% endfor %}
          </section>
         {% endif %}
-   
+   </section>
 
 {% endblock %}
