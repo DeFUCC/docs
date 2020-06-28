@@ -7,6 +7,8 @@
             
         </h1>
         <small class="is-size-7 has-text-weight-normal">
+         <i class="fa fa-eye"></i>
+            {{ viewcounts[page.route]|nicenumber }} /
         <i class="fa fa-clock-o"></i> 
             Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
         </small>

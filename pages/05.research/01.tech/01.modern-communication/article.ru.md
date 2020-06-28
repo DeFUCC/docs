@@ -3,7 +3,9 @@ title: 'Коммуникации нового времени'
 date: '16:40 10-01-2020'
 taxonomy:
     category:
-        - article
+        - Статья
+    tag:
+        - Технологии
 visible: true
 author: Давай
 ---
