@@ -137,6 +137,12 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     display: flex;
 }
 
+.flex-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 .searchbox {
     border-color: #777;
     background-color: #aaa;
