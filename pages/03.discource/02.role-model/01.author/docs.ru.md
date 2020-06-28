@@ -8,6 +8,6 @@ taxonomy:
 author: Давай
 ---
 
-![](author.svg?resize=200,200)
+![](author.svg?resize=300,300)
 
 Первоначальный сочинитель программы или проекта
