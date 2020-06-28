@@ -3,7 +3,9 @@ title: 'Дар для будущего'
 date: '15:12 25-06-2020'
 taxonomy:
     category:
-        - article
+        - Исследование
+    tag:
+        - 'Экономика дара'
 visible: true
 ---
 
