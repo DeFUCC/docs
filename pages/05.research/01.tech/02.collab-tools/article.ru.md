@@ -3,7 +3,9 @@ title: 'Инструменты сотрудничества'
 date: '18:13 25-06-2020'
 taxonomy:
     category:
-        - article
+        - Статья
+    tag:
+        - Технологии
 visible: true
 ---
 
