@@ -1,12 +1,12 @@
 ---
 title: 'Оценка УКТ'
-media_order: ukt-s.svg
+media_order: ukt.svg
 date: '13:32 25-06-2020'
 taxonomy:
     category:
         - docs
 ---
 
-![УКТ](ukt-s.svg?resize=300,300) 
+![УКТ](ukt-s.svg?resize=300,300)
 
 ### Трёхпараметрическая пятибалльная система изучения и оценки ценности затей, проектов и любых начинаний.

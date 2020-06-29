@@ -1,5 +1,6 @@
 ---
 title: Развитие
+media_order: logo_R.svg
 date: '20:30 23-06-2020'
 taxonomy:
     category:
