@@ -1,11 +1,13 @@
 ---
 title: Миссия
-media_order: logo_flower.svg
+media_order: logo_square.svg
 date: '13:27 25-06-2020'
 taxonomy:
     category:
         - docs
 ---
+
+![Миссия](logo_square.svg?resize=300,300)
 
 ### Миссия ФРУКТа — всестороннее развитие творческого потенциала человека и общества.
 
