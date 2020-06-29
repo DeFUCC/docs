@@ -1,5 +1,6 @@
 ---
 title: Миссия
+media_order: logo_flower.svg
 date: '13:27 25-06-2020'
 taxonomy:
     category:
