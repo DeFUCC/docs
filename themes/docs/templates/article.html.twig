@@ -17,17 +17,21 @@
         <i class="fa fa-clock-o"></i>
             Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
         </small>
+        
+        <p>
+            {{ page.summary }}
+        </p>
 
-        {% set table_of_contents = toc(page.content) %}
-        {% if table_of_contents is not empty %}
+        {% set table_of_contents = toc(page.content, 2, 4) %}
+        {% if table_of_contents is not empty  %}
         <div class="page-toc">
-            <h4>Содержание:</h4>
             {{ table_of_contents }}
         </div>
         {% endif %}
 
         <p>
-        	{{ page.content }}
+        	{% set content = page.content|slice(page.summary|length) %}
+            {{ content }}
         </p>
          <hr />
         <p class="has-text-right">
