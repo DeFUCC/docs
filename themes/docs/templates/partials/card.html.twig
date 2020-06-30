@@ -37,7 +37,7 @@
                          {% endif %}
                         
                          <i class="fa fa-eye"></i>
-                         {{ viewcounts[item.route]|nicenumber }} /
+                         {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
                          <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
                     <p>{{item.summary(140)|striptags}}</p>
             	    </div>
