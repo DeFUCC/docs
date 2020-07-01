@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 102.57 105.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4a4a49;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke: #bdbcbc;
+        stroke-width: 5.67px;
+      }
+
+      .cls-3 {
+        fill: #e6e5e5;
+      }
+
+      .cls-4 {
+        stroke: #4a4a49;
+        stroke-width: 2.83px;
+      }
+    </style>
+  </defs>
+  <title>norm</title>
+  <g>
+    <rect class="cls-1" x="33.97" y="4.64" width="34.63" height="96.22" rx="17.32"></rect>
+    <line class="cls-2" x1="51.57" y1="23.03" x2="51.57" y2="81.69"></line>
+    <circle class="cls-3" cx="51.34" cy="52.53" r="13.46"></circle>
+    <circle class="cls-4" cx="51.57" cy="52.53" r="7.53"></circle>
+    <circle class="cls-3" cx="51.34" cy="81.69" r="13.46"></circle>
+    <circle class="cls-4" cx="51.57" cy="81.69" r="7.53"></circle>
+    <circle class="cls-3" cx="51.34" cy="23.03" r="13.46"></circle>
+    <circle class="cls-4" cx="51.57" cy="23.03" r="7.53"></circle>
+  </g>
+</svg>
