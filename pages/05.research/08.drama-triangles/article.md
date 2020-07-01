@@ -7,7 +7,7 @@ media_order: 'eye-intuition-01.svg,wisdom-triangle-01.svg,adult.svg,child.svg,he
 
 ===
 
-![](triangles.svg)
+![](triangles.svg?resize=200,300)
 
 Ключевые философские предпосылки теории:
 
