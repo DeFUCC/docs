@@ -28,6 +28,10 @@ body {
     hyphens: auto;
 }
 
+.float-right {
+    float: right;
+}
+
 a {
   color: #1694CA; }
   a:hover {
