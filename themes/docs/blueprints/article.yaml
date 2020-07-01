@@ -1,0 +1,26 @@
+title: Item
+'@extends':
+    type: default
+    context: blueprints://pages
+    
+    
+media:
+  video:
+    mp4: video/mp4
+    mov: video/quicktime
+    m4v: video/x-m4v
+    swf: video/x-flv
+
+  image:
+    jpg: image/jpeg
+    jpeg: image/jpeg
+    png: image/png
+    gif: image/gif
+
+  file:
+    txt: text/plain
+    doc: application/msword
+    html: text/html
+    pdf: application/pdf
+    zip: application/zip
+    gz: application/gzip
