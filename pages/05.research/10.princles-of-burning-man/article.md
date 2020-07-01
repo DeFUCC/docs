@@ -1,6 +1,11 @@
 ---
 title: '10 принципов сообщества Burning Man'
 media_order: 'territory.png,c78749fa121d05a2-4h3a58572edit.jpg,ff2643f4689b825a-img_3831.jpg'
+taxonomy:
+    category:
+        - Исследование
+    tag:
+        - Социология
 ---
 
 ![](territory.png)
