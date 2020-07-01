@@ -1,6 +1,11 @@
 ---
 title: 'Правовое поле дарения в РФ'
 media_order: Scale-of-Justice.png
+taxonomy:
+    category:
+        - Исследование
+    tag:
+        - Право
 ---
 
 ![](Scale-of-Justice.png?resize=300,300)
