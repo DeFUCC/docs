@@ -5,6 +5,11 @@ date: '20:44 23-06-2020'
 taxonomy:
     category:
         - docs
+content:
+    items: '@self.descendants'
+    order:
+        by: default
+        dir: asc
 ---
 
 Дискурс — язык и система целенаправленного мышления и взаимодействия людей.
