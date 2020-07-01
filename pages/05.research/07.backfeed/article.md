@@ -10,7 +10,7 @@ media_order: 'applications.png,cycle.jpg'
 
 ===
 
-![](applications.png)
+![](applications.png?resize=300,300)
 
 ##  Децентрализованная кооперация
 
