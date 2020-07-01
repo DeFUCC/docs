@@ -1,0 +1,28 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.19 48.19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efa252;
+      }
+
+      .cls-2 {
+        fill: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <title>idea</title>
+  <g>
+    <rect class="cls-1" x="1.57" y="1.57" width="45.04" height="45.04" rx="22.52"/>
+    <g>
+      <path class="cls-2" d="M26.94,40.25c0-1,.74-.83,1.69-.83,0-5.25-.35-6.15.62-6.76a10.57,10.57,0,1,0-10.27,0c1,.61.62,1.41.62,6.76,1.48,0,1.69,0,1.69,1.24H27v-.41Zm.86-2.85H20.39v-.86H27.8Zm0-1.69H20.39v-.82H27.8ZM19.36,32a9.63,9.63,0,0,1-5-8.82A9.74,9.74,0,1,1,28.83,32a2,2,0,0,0-1,2.07H20.39A2.09,2.09,0,0,0,19.36,32Zm6.79,7.87H22a1.51,1.51,0,0,0-1.64-1.23v-.37H27.8v.37A1.55,1.55,0,0,0,26.15,39.83Z"/>
+      <path class="cls-2" d="M24.09,15.69a7.76,7.76,0,0,0-7.74,7.74h.82a6.94,6.94,0,0,1,6.92-6.92Z"/>
+      <rect class="cls-2" x="36.87" y="23.35" width="3.71" height="0.82"/>
+      <rect class="cls-2" x="7.61" y="23.35" width="3.71" height="0.82"/>
+      <rect class="cls-2" x="23.68" y="6.87" width="0.82" height="3.71"/>
+      <rect class="cls-2" x="32.61" y="12.76" width="3.67" height="0.82" transform="translate(0.77 28.22) rotate(-45)"/>
+      <rect class="cls-2" x="11.89" y="33.49" width="3.67" height="0.82" transform="translate(-19.96 19.63) rotate(-45)"/>
+      <rect class="cls-2" x="13.34" y="11.35" width="0.82" height="3.67" transform="translate(-5.29 13.58) rotate(-45)"/>
+      <rect class="cls-2" x="34.04" y="32.09" width="0.82" height="3.67" transform="translate(-13.9 34.3) rotate(-45)"/>
+    </g>
+  </g>
+</svg>
