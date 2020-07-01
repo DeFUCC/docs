@@ -6,7 +6,7 @@ taxonomy:
     category:
         - Исследование
     tag:
-        - 'Экономика дара'
+        - Экономика
 visible: true
 ---
 
