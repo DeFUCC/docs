@@ -1,6 +1,6 @@
 ---
 title: 'Социокультурное проектирование'
-date: '22:21 27-06-2020'
+date: '22:21 19-11-2019'
 media_order: 22.png
 taxonomy:
     category:
