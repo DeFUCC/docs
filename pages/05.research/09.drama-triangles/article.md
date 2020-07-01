@@ -1,6 +1,11 @@
 ---
 title: 'Назад к изобилию: выход из драматического треугольника'
 media_order: 'triangles.svg,eye-intuition-01.svg,wisdom-triangle-01.svg,adult.svg,child.svg,hero.svg,memo.svg,minus.svg,parent.svg,plus.svg,positions.svg,scenarios.svg,trans.svg,transactions.svg,tri.svg,triage.svg,victim.svg,winner.svg,zero.svg,norm.svg'
+taxonomy:
+    category:
+        - Исследование
+    tag:
+        - Психология
 ---
 
 На основе наблюдений, описанных Эриком Берном и рядом других психотерапевтов в начале 1960-х годов был разработан новый инструмент изучения человеческой психики и работы с ней — транзакционный анализ. Это психологическая модель описания, анализа и трансформации поведения человека, включающая философию, теорию и методы, позволяющие людям понять самих себя и особенности своего взаимодействия с окружающими.
