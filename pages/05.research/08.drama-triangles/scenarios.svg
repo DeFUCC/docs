@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 137.25 124.92">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke: #4d4c4c;
+        stroke-width: 2.83px;
+      }
+
+      .cls-2 {
+        stroke: #8dd2f2;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 8.5px;
+      }
+
+      .cls-3 {
+        stroke: #e2e57e;
+      }
+
+      .cls-4 {
+        stroke: #fac697;
+      }
+
+      .cls-5 {
+        stroke: #ffd97b;
+      }
+    </style>
+  </defs>
+  <title>scenarios</title>
+  <line class="cls-1" x1="15.16" y1="14.89" x2="15.16" y2="111.53"></line>
+  <line class="cls-1" x1="126.45" y1="63.25" x2="15.16" y2="63.25"></line>
+  <path class="cls-2" d="M15.16,39S40.71,69.36,62.45,73.11C95,78.74,110.76,93.69,116,104"></path>
+  <path class="cls-3" d="M15.16,99.6S48.24,62.37,72.65,62.46c29.95.11,24-31.34,47.81-31.34"></path>
+  <path class="cls-4" d="M15.16,69.66S95,126.42,126.45,12.89"></path>
+  <path class="cls-5" d="M15.16,83.07S51.27,66.32,58.85,43.12c8-24.4,44.09-24.4,66-24.4"></path>
+</svg>

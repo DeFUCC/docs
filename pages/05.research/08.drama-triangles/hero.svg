@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fcc668;
+      }
+
+      .cls-2 {
+        fill: #ffe8a1;
+      }
+
+      .cls-3 {
+        fill: #4a4a49;
+      }
+
+      .cls-4 {
+        fill: #98d5ed;
+      }
+
+      .cls-5 {
+        fill: #fdce7b;
+      }
+    </style>
+  </defs>
+  <title>hero</title>
+  <g>
+    <path class="cls-1" d="M120.61,120.21H29.39L75,22ZM47.15,108.88h55.7L75,48.92Z"></path>
+    <g>
+      <circle class="cls-2" cx="75" cy="35.45" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="64.69" y="34.04" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="73.58" y="25.15" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-4" cx="38.27" cy="114.55" r="16.65"></circle>
+      <rect class="cls-3" x="27.96" y="113.13" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-5" cx="111.73" cy="114.55" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="101.42" y="113.13" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="110.31" y="104.24" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

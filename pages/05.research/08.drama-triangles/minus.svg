@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 184.15 169.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f49d8a;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #4a4a49;
+        stroke-miterlimit: 10;
+        stroke-width: 2.83px;
+      }
+    </style>
+  </defs>
+  <title>minus</title>
+  <g>
+    <g>
+      <polygon class="cls-1" points="92.07 102.73 143.09 14.37 41.06 14.37 92.07 102.73"></polygon>
+      <circle class="cls-1" cx="92.07" cy="126.99" r="24.26"></circle>
+    </g>
+    <line class="cls-2" x1="107.1" y1="126.99" x2="77.05" y2="126.99"></line>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #93d4ec;
+      }
+
+      .cls-2 {
+        fill: #fdce7b;
+      }
+
+      .cls-3 {
+        fill: #4a4a49;
+      }
+
+      .cls-4 {
+        fill: #98d5ed;
+      }
+
+      .cls-5 {
+        fill: #53c2ee;
+      }
+    </style>
+  </defs>
+  <title>victim</title>
+  <g>
+    <path class="cls-1" d="M75,119,19.8,44.86H130.2ZM42.37,56.2,75,100,107.63,56.2Z"></path>
+    <g>
+      <circle class="cls-2" cx="31.08" cy="50.53" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="20.78" y="49.11" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="29.67" y="40.22" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-4" cx="118.92" cy="50.53" r="16.65"></circle>
+      <rect class="cls-3" x="108.61" y="49.11" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-5" cx="75" cy="109.53" r="16.65"></circle>
+      <rect class="cls-3" x="64.69" y="108.11" width="20.62" height="2.83"></rect>
+    </g>
+  </g>
+</svg>

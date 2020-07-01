@@ -3,13 +3,26 @@ title: Item
     type: default
     context: blueprints://pages
     
-custom_file:
-  name: myfile
-  type: file
-  label: A Label
-  destination: 'user/plugins/my-plugin/assets'
-  multiple: true
-  autofocus: false
-  accept:
-    - image/*
-    - .pdf
+media:
+    file:
+        pdf: application/pdf
+    
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            custom_file:
+              name: myfile
+              type: file
+              label: PDFs
+              destination: 'self@'
+              multiple: true
+              autofocus: false
+              accept:
+                - '*'

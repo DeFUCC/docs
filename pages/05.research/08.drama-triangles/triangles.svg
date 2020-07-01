@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 382.77 519.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #faf19b;
+      }
+
+      .cls-2 {
+        fill: #fdce7b;
+      }
+
+      .cls-3 {
+        fill: #98d5ed;
+      }
+    </style>
+  </defs>
+  <title>triangles</title>
+  <g>
+    <polygon class="cls-1" points="27.36 296.75 351.02 296.75 189.2 14.79 27.36 296.75"></polygon>
+    <polygon class="cls-2" points="94.64 434.38 189.2 232.77 283.75 434.38 94.64 434.38"></polygon>
+    <polygon class="cls-3" points="76.14 346.75 189.2 498.63 302.24 348.74 76.14 346.75"></polygon>
+  </g>
+</svg>

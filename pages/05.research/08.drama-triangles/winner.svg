@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fef2b7;
+      }
+
+      .cls-2 {
+        fill: #ffe8a1;
+      }
+
+      .cls-3 {
+        fill: #4a4a49;
+      }
+    </style>
+  </defs>
+  <title>winner</title>
+  <g>
+    <path class="cls-1" d="M132.29,121.9H17.71L75,22.09Zm-95-11.34h75.41L75,44.87Z"></path>
+    <g>
+      <circle class="cls-2" cx="27.5" cy="116.52" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="17.2" y="115.11" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="26.09" y="106.21" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-2" cx="75" cy="33.48" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="64.69" y="32.06" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="73.58" y="23.17" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-2" cx="122.5" cy="116.52" r="16.65"></circle>
+      <g>
+        <rect class="cls-3" x="112.19" y="115.11" width="20.62" height="2.83"></rect>
+        <rect class="cls-3" x="121.08" y="106.21" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

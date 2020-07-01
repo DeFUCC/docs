@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 168.15 172.78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdce7b;
+      }
+
+      .cls-2 {
+        fill: #4a4a49;
+      }
+
+      .cls-3 {
+        fill: #98d5ed;
+      }
+
+      .cls-4 {
+        fill: #e6e5e5;
+      }
+
+      .cls-5 {
+        fill: #ffe8a1;
+      }
+
+      .cls-6 {
+        fill: #53c2ee;
+      }
+    </style>
+  </defs>
+  <title>positions</title>
+  <g>
+    <g>
+      <circle class="cls-1" cx="27.77" cy="66.85" r="16.65"></circle>
+      <g>
+        <rect class="cls-2" x="17.47" y="65.43" width="20.62" height="2.83"></rect>
+        <rect class="cls-2" x="26.36" y="56.54" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-3" cx="68.54" cy="66.85" r="16.65"></circle>
+      <rect class="cls-2" x="58.23" y="65.43" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-4" cx="140.37" cy="66.85" r="16.51"></circle>
+      <path class="cls-2" d="M140.37,77.22A10.65,10.65,0,1,1,151,66.57,10.67,10.67,0,0,1,140.37,77.22Zm0-18.47a7.82,7.82,0,1,0,7.82,7.82A7.82,7.82,0,0,0,140.37,58.75Z"></path>
+    </g>
+    <g>
+      <rect class="cls-2" x="93.83" y="61.51" width="20.62" height="2.83"></rect>
+      <rect class="cls-2" x="93.83" y="69.35" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-1" cx="27.77" cy="26.87" r="16.65"></circle>
+      <g>
+        <rect class="cls-2" x="17.47" y="25.45" width="20.62" height="2.83"></rect>
+        <rect class="cls-2" x="26.36" y="16.56" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-1" cx="68.54" cy="26.87" r="16.65"></circle>
+      <g>
+        <rect class="cls-2" x="58.23" y="25.45" width="20.62" height="2.83"></rect>
+        <rect class="cls-2" x="67.12" y="16.56" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-5" cx="140.37" cy="26.87" r="16.65"></circle>
+      <g>
+        <rect class="cls-2" x="130.06" y="25.45" width="20.62" height="2.83"></rect>
+        <rect class="cls-2" x="138.96" y="16.56" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-2" x="93.83" y="21.53" width="20.62" height="2.83"></rect>
+      <rect class="cls-2" x="93.83" y="29.37" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-1" cx="68.54" cy="106.38" r="16.65"></circle>
+      <g>
+        <rect class="cls-2" x="58.23" y="104.97" width="20.62" height="2.83"></rect>
+        <rect class="cls-2" x="67.12" y="96.07" width="2.83" height="20.62"></rect>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-3" cx="27.77" cy="106.38" r="16.65"></circle>
+      <rect class="cls-2" x="17.47" y="104.97" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-3" cx="68.54" cy="145.92" r="16.65"></circle>
+      <rect class="cls-2" x="58.23" y="144.5" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-6" cx="140.37" cy="145.92" r="16.65"></circle>
+      <rect class="cls-2" x="130.06" y="144.5" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <rect class="cls-2" x="93.83" y="140.58" width="20.62" height="2.83"></rect>
+      <rect class="cls-2" x="93.83" y="148.42" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-3" cx="27.77" cy="145.92" r="16.65"></circle>
+      <rect class="cls-2" x="17.47" y="144.5" width="20.62" height="2.83"></rect>
+    </g>
+    <g>
+      <circle class="cls-4" cx="140.37" cy="106.38" r="16.51"></circle>
+      <path class="cls-2" d="M140.37,116.75A10.65,10.65,0,1,1,151,106.1,10.66,10.66,0,0,1,140.37,116.75Zm0-18.46a7.82,7.82,0,1,0,7.82,7.81A7.81,7.81,0,0,0,140.37,98.29Z"></path>
+    </g>
+    <g>
+      <rect class="cls-2" x="93.83" y="101.04" width="20.62" height="2.83"></rect>
+      <rect class="cls-2" x="93.83" y="108.89" width="20.62" height="2.83"></rect>
+    </g>
+  </g>
+</svg>
