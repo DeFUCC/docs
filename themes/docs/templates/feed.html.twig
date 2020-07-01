@@ -8,7 +8,13 @@
     {{ page.content }}
 </section>
 
+
+
 <section class="columns mx-2 is-multiline content">
+    {% if uri.param('tag') %}
+        <h4>Тэг: <span class="tag is-large">{{uri.param('tag')}}</span></h4>
+    {% endif %}
+    
     {% set collection = page.collection %}
     {% for item in collection %}
         {% include '/partials/card.html.twig'  %}

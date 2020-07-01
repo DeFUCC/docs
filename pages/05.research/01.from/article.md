@@ -1,6 +1,11 @@
 ---
 title: 'От специализации, конкуренции и потребления'
 media_order: potreblenie12.jpg
+taxonomy:
+    category:
+        - Исследование
+    tag:
+        - Основание
 ---
 
 ![](potreblenie12.jpg)
