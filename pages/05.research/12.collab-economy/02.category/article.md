@@ -1,5 +1,5 @@
 ---
-title: '10 принципов сообщества Burning Man'
+title: 'Часть 2: Категоризация'
 taxonomy:
     category:
         - Исследование
