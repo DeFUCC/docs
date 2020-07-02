@@ -1,5 +1,5 @@
 ---
-title: Представление
+title: Реализация
 content:
     items: '@self.children'
     order:

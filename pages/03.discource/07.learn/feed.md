@@ -1,5 +1,5 @@
 ---
-title: Представление
+title: Образование
 content:
     items: '@self.children'
     order:
