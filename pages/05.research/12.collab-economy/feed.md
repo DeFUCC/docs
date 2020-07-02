@@ -9,10 +9,8 @@ taxonomy:
 content:
     items: '@self.children'
     order:
-        by: modified
-        dir: desc
-    pagination: true
-    limit: 12
+        by: default
+        dir: asc
 author: Давай
 ---
 
