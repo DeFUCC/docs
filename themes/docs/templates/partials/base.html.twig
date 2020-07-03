@@ -13,16 +13,16 @@
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}">
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css-compiled/nucleus.css',102) %} 
-        {% do assets.addCss('theme://css-compiled/theme.css',101) %}
+        {% do assets.addCss('theme://css/assets/nucleus.css',102) %}
+        {% do assets.addCss('theme://css/theme.css',101) %}
         {% do assets.addCss('theme://css/custom.css',100) %}
-        {% do assets.addCss('theme://css/bulma.min.css',101) %}
-        {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
-        {% do assets.addCss('theme://css/featherlight.min.css') %}
+        {% do assets.addCss('theme://css/assets/bulma.min.css',101) %}
+        {% do assets.addCss('theme://css/assets/font-awesome.min.css',100) %}
+        {% do assets.addCss('theme://css/assets/featherlight.min.css') %}
 
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
-            {% do assets.addCss('theme://css/nucleus-ie9.css') %}
-            {% do assets.addCss('theme://css/pure-0.5.0/grids-min.css') %}
+            {% do assets.addCss('theme://css/assets/nucleus-ie9.css') %}
+            {% do assets.addCss('theme://css/assets/pure-0.5.0/grids-min.css') %}
             {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
         {% endif %}
     {% endblock %}
@@ -61,7 +61,7 @@
         <div id="overlay"></div>
 
         <div class="">
-            
+
 
             {% block topbar %}{% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
             <div id="top-bar">
@@ -70,14 +70,14 @@
                     {% if config.plugins.breadcrumbs.enabled %}
                     {% include 'partials/breadcrumbs.html.twig' %}
                     {% endif %}
-                    
+
                      {% if  github_link_position == 'top' %}
                     <div id="top-github-link" class="px-2">
                     {% include 'partials/github_link.html.twig' %}
                     </div>
                     {% endif %}
                 </div>
-                
+
                 {% if  page.nextSibling or page.prevSibling %}
                 <div id="top-page-nav" class="px-2">
                 {% include 'partials/nav.html.twig' %}
