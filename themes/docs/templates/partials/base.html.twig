@@ -62,8 +62,9 @@
 
         <div class="">
 
+            {% block topbar %}
 
-            {% block topbar %}{% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
+            {% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
             <div id="top-bar">
                 <a href="#" id="sidebar-toggle" class="pr-3" data-sidebar-toggle><i class="fa fa-2x fa-home"></i></a>
                 <div class="bread">
@@ -84,7 +85,9 @@
                 </div>
                 {% endif %}
             </div>
-            {% endif %}{% endblock %}
+            {% endif %}
+
+          {% endblock %}
 
             {% block content %}{% endblock %}
 
