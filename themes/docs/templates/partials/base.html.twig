@@ -16,7 +16,7 @@
         {% do assets.addCss('theme://css/assets/nucleus.css',102) %}
         {% do assets.addCss('theme://css/theme.css',101) %}
         {% do assets.addCss('theme://css/content.css',101) %}
-        {% do assets.addCss('theme://css/custom.css',99) %}
+        {% do assets.addCss('theme://css/responsive.css',99) %}
         {% do assets.addCss('theme://css/assets/bulma.min.css',101) %}
         {% do assets.addCss('theme://css/assets/font-awesome.min.css',100) %}
         {% do assets.addCss('theme://css/assets/featherlight.min.css') %}
@@ -80,26 +80,33 @@
                     {% endif %}
                 </div>
 
-                {% if  page.nextSibling or page.prevSibling %}
-                <div id="top-page-nav" class="px-2">
-                {% include 'partials/nav.html.twig' %}
-                </div>
-                {% endif %}
+              
             </div>
             {% endif %}
 
           {% endblock %}
 
             {% block content %}{% endblock %}
+            
+          
 
             {% block footer %}
+            
                 {% if  github_link_position == 'bottom' %}
-                {% include 'partials/github_note.html.twig' %}
+                    {% include 'partials/github_note.html.twig' %}
                 {% endif %}
+                
+             
             {% endblock %}
 
         </div>
-        {% block navigation %}{% endblock %}
+        
+        {% block navigation %} 
+            {% if  page.nextSibling or page.prevSibling %}
+                {% include 'partials/bottom_nav.html.twig' %}
+            {% endif %}
+        {% endblock %}
+        
     </section>
     {% endblock %}
 

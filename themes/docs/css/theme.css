@@ -98,13 +98,53 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 
 
-
-#body .nav {
+#top-page-nav .nav {
   	overflow: hidden;
+  	
 }
 
-#body .nav>i {
+#top-page-nav .nav>i {
     transform: rotate(90deg);
+}
+
+#bottom-page-nav {
+    display: flex;
+    position: relative;
+}
+
+#bottom-page-nav .nav {
+    flex: 1 1 50%;
+    padding:1em;
+}
+
+#bottom-page-nav h6 {
+    font-size:0.7em;
+    color: #ccc;
+}
+
+#bottom-page-nav .prev div {
+    margin-left: 2.5em;
+}
+
+#bottom-page-nav .next div {
+    margin-right: 2.5em;
+}
+
+#bottom-page-nav i {
+    position:absolute;
+    top:24px;
+}
+
+#bottom-page-nav .next i {
+    right: 16px;
+}
+
+#bottom-page-nav .next {
+    text-align: right;
+}
+
+#bottom-page-nav .nav:hover {
+  background: #F6F6F6; 
 }
 
 #body img {
@@ -138,9 +178,8 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 #sidebar-toggle {
   display: none; }
-  @media only all and (max-width: 47.938em) {
-    #sidebar-toggle {
-      display: inline-block; } }
+  
+
 
 #sidebar {
   background-color: #38424D;
@@ -325,23 +364,14 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   #body .padding {
     padding: 3rem 6rem; }
 
-    @media only all and (max-width: 59.938em) {
-      #body .padding {
-        position: static;
-        padding: 15px 3rem; } }
 
-    @media only all and (max-width: 47.938em) {
-      #body .padding {
-        padding: 5px 1rem; } }
+        
   #body h1 + hr {
     margin-top: -1.7rem;
     margin-bottom: 3rem; }
 
-    #body .nav {
-      padding:6px; }
 
-    #body .nav:hover {
-      background: #F6F6F6; }
+
 
 
 #footer {
@@ -350,10 +380,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   font-size: 13px; }
   #footer p {
     margin: 0; }
-
-
-
-
 
 
 #body a.anchor-link {
@@ -419,21 +445,15 @@ td {
 
 .two-column-bullet {
   width: 50%; }
-  @media only all and (max-width: 47.938em) {
-    .two-column-bullet {
-      width: 100%; } }
+ 
 
 .three-column-bullet {
   width: 33.33333%; }
-  @media only all and (max-width: 47.938em) {
-    .three-column-bullet {
-      width: 100%; } }
+
 
 .four-column-bullet {
   width: 25%; }
-  @media only all and (max-width: 47.938em) {
-    .four-column-bullet {
-      width: 100%; } }
+
 
 .bullet-icon {
   float: left;
@@ -789,37 +809,9 @@ td {
   #body #breadcrumbs span {
     padding: 0 0.1rem; }
 
-@media only all and (max-width: 59.938em) {
-  #sidebar {
-    width: 230px; }
 
-  #body {
-    margin-left: 230px; } }
-@media only all and (max-width: 47.938em) {
-  #sidebar {
-    width: 230px;
-    left: -230px; }
-
-  #body {
-    margin-left: 0;
-    width: 100%; }
-
-  .sidebar-hidden {
-    overflow: hidden; }
-    .sidebar-hidden #sidebar {
-      left: 0; }
-    .sidebar-hidden #body {
-      margin-left: 230px;
-      overflow: hidden; }
-    .sidebar-hidden #overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer; } }
+      
+      
 .copy-to-clipboard {
   background-image: url(../images/clippy.svg);
   background-position: 50% 50%;
