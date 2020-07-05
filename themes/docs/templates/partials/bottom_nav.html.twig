@@ -1,4 +1,4 @@
-{% set cats = page.taxonomy.category %}
+    {% set cats = page.taxonomy.category %}
 
     {% set progress = page.collection({'items':{'@taxonomy':{'category': cats}},'order': {'by': 'default', 'dir': 'asc'}}) %}
 	{% set next = progress.nextSibling(page.path) %}

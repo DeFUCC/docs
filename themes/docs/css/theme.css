@@ -223,7 +223,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
       color: rgba(187, 187, 187, 0.6);
       position: absolute;
       right: 0.6rem;
-      top: 0.7rem;
+      top: 0.5rem;
       font-size:80%;}
 
     #sidebar h5.parent a {
