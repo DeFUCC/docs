@@ -17,7 +17,8 @@
         {% do assets.addCss('theme://css/theme.css',101) %}
         {% do assets.addCss('theme://css/content.css',101) %}
         {% do assets.addCss('theme://css/responsive.css',99) %}
-        {% do assets.addCss('theme://css/assets/bulma.min.css',101) %}
+        {% do assets.addCss('theme://css/assets/bulma.min.css',101) %} 
+        {% do assets.addCss('theme://css/assets/vuetify.min.css',101) %}
         {% do assets.addCss('theme://css/assets/font-awesome.min.css',100) %}
         {% do assets.addCss('theme://css/assets/featherlight.min.css') %}
 
@@ -42,7 +43,7 @@
 
 {% endblock head %}
 </head>
-<body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
+<body class="v-application searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
     {% block sidebar %}
     <nav id="sidebar">
         <div id="header-wrapper">
