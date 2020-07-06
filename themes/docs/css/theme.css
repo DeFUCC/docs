@@ -228,10 +228,12 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
     #sidebar h5.parent a {
       background: #293038;
+      line-height:2em;
       color: #c8c8c8 !important; }
 
     #sidebar h5.active a {
       background: #fff;
+      line-height:2em;
       color: #555 !important; }
 
     #sidebar h5.active i {
