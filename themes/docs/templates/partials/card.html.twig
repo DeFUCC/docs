@@ -1,6 +1,6 @@
 {% if item.visible %}
 
-            <div class="card my-3 columns">
+            <div class="card my-3 columns is-mobile">
 
 
             	    {% if item.media.images or item.media.files %}
@@ -18,7 +18,7 @@
             	    <div class="column">
             	        {% if item.template == 'article' %}
             	        {% for cat in item.taxonomy.category %}
-            	            <span class="is-size-7">{{cat}}</span>
+            	            <span>{{cat}}</span>
             	        {% endfor %}
             	    {% endif %}
 
