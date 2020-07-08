@@ -8,7 +8,9 @@
         </h1>
         {% for tag in page.taxonomy.tag %}
             <a href="/research/tag:{{tag}}">
-                {% include 'partials/tag.html.twig' %}
+              <span class="tag">
+                {{tag}}
+              </span>
             </a>
         {% endfor %}
         <small class="is-size-7 has-text-weight-normal">
@@ -17,7 +19,7 @@
         <i class="fa fa-clock-o"></i>
             Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
         </small>
-        
+
         <p>
             {{ page.summary }}
         </p>
