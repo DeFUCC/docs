@@ -1,10 +1,10 @@
 {% if item.visible %}
 
-            <div class="card">
+            <div class="card my-3 columns">
 
 
             	    {% if item.media.images or item.media.files %}
-                	    <div class="col col-4 pl-0">
+                	    <div class="column is-one-third">
                 	        <a href="{{item.url}}">
                     	        {% if item.media.images %}
                     	            {{item.media.images|first.resize(200,200)}}
