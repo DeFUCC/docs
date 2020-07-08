@@ -718,8 +718,9 @@
   margin-bottom: 0;
 }
 
-.markdown-body li {
-  word-wrap: break-all;
+.markdown-body > ol li {
+  word-wrap: break-word;
+  margin: 1em 0;
 }
 
 .markdown-body li>p {

@@ -24,6 +24,7 @@ samp {
 }
 
 a {
+    text-decoration: none;
   color: #1694CA; }
 
 a:hover {

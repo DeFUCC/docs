@@ -1,4 +1,6 @@
-
+.page-content {
+    min-width:100%;
+}
 
 .button, .button-secondary {
   display: inline-block;
