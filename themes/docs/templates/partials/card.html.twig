@@ -1,8 +1,8 @@
 {% if item.visible %}
-        
-            <div class="v-card elevation-6 v-sheet pa-6 my-2 row"> 
-            
-            	    
+
+            <div class="card">
+
+
             	    {% if item.media.images or item.media.files %}
                 	    <div class="col col-4 pl-0">
                 	        <a href="{{item.url}}">
@@ -14,42 +14,43 @@
                 	        </a>
                 	    </div>
             	    {% endif %}
-            	    
-            	    <div class="col">
+
+            	    <div class="column">
             	        {% if item.template == 'article' %}
-                	        {% for cat in item.taxonomy.category %}
-                	            <span>{{cat}}</span>
-                	        {% endfor %}
-            	        {% endif %} 
-            	    
-            	        {% for tag in item.taxonomy.tag %}
-                            {% include 'partials/tag.html.twig' %}
-                        {% endfor %}
-                            
-                         <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a> </h4> 
-                    
-                        <small>
-                     
+            	        {% for cat in item.taxonomy.category %}
+            	            <span>{{cat}}</span>
+            	        {% endfor %}
+            	    {% endif %}
+
+        	       {% for tag in item.taxonomy.tag %}
+                        <span class="tag">
+                          {{tag}}
+                        </span>
+                    {% endfor %}
+
+                    <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a>
+                    </h4>
+
+                    <p class="subtitle is-size-7">
+
                         {% if item.template == 'article' %}
-                            <i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
-                            /
-                        {% endif %}
-                        
-                        <i class="fa fa-eye"></i>
+                        <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+                        </small> /
+                         {% endif %}
+
+                         <i class="fa fa-eye"></i>
                          {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
                          <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
-                         
+
                          {% if item.template == 'article' %}
                             <p>{{item.summary()|striptags|slice(0,140)}}...</p>
                          {% else %}
                             <p>{{item.summary(140)|striptags}}</p>
                          {% endif %}
-                         
-                         </small>
-                         
-                    
+
+
             	    </div>
-                
+
             </div>
-     
-{% endif %}         
+
+{% endif %}
