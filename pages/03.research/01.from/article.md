@@ -7,6 +7,7 @@ taxonomy:
     tag:
         - Основание
 main_img: potreblenie12.jpg
+icon: potreblenie12.jpg
 ---
 
 ![](potreblenie12.jpg)

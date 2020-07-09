@@ -12,10 +12,10 @@ form:
       fields:
         content:
           fields:
-            header.main_img:
+            header.icon:
               type: filepicker
               preview_images: true
-              label: Main image
+              label: Page icon
               accept:
                 - .png
                 - .jpg
