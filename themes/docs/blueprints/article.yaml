@@ -13,6 +13,7 @@ form:
         content:
           fields:
             header.icon:
+              ordering@: header.title
               type: filepicker
               preview_images: true
               label: Page icon
