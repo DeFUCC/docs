@@ -1,0 +1,23 @@
+title: Article
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.a_file:
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              label: Select a file
+              accept:
+                - .png
+                - .jpg
+                - .svg
