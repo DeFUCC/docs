@@ -1,6 +1,7 @@
 ---
 title: Кооперация
 media_order: logo_K.svg
+icon: logo_K.svg
 date: '13:20 25-06-2020'
 taxonomy:
     category:

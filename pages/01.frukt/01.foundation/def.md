@@ -1,6 +1,7 @@
 ---
 title: Фонд
 media_order: logo_F.svg
+icon: logo_F.svg
 taxonomy:
     category:
         - docs

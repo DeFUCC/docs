@@ -1,6 +1,7 @@
 ---
 title: Универсализация
 media_order: logo_U.svg
+icon: logo_U.svg
 date: '13:16 25-06-2020'
 taxonomy:
     category:

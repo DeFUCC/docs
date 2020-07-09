@@ -1,6 +1,7 @@
 ---
 title: Развитие
 media_order: logo_R.svg
+icon: logo_R.svg
 taxonomy:
     category:
         - docs

@@ -4,18 +4,18 @@
 
 <div id="body-inner" class="content">
     <div class="columns">
-        
+
       <div class="column is-one-third">
-         
-        {% for image in page.media.files %}
-            {{ image.html }}
-        {% endfor %}
+
+            {{ page.media[page.header.icon] }}
+            <h1>{{ page.title }}</h1>
+
       </div>
-      
+
       <div class="column">
-        <h1>{{ page.title }}</h1>
+
           {{ page.content }}
-        
+
       </div>
 
     </div>

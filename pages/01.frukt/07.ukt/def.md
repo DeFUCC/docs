@@ -1,6 +1,7 @@
 ---
 title: 'Оценка УКТ'
 media_order: ukt.svg
+icon: ukt.svg
 date: '13:32 25-06-2020'
 taxonomy:
     category:
