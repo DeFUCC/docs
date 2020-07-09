@@ -1,0 +1,77 @@
+:root {
+  --header-h: 64px;
+  --panelw: 220px;
+  --content-w: 720px;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  margin-left: var(--panel-w);
+  align-content: flex-start;
+}
+
+#main > header {
+  padding: 1em;
+  background-color: hsla(0,0%,90%,0.85);
+  display: flex;
+  position:sticky;
+  top:0;
+  align-items: center;
+  flex: 1 1 100%;
+  max-height: var(--header-h);
+}
+
+#main > .page {
+  flex:1 1 100%;
+/*  max-width: var(--content-w); */
+}
+
+#main .asidel {
+  flex: 1 1 20%;
+  background-color: #f6f6f6;
+  max-width:280px;
+}
+
+#main .asidel .nav {
+  top:-1000px;
+  position: absolute;
+}
+
+#main .asidel.open .nav {
+  top:0;
+  position: relative;
+}
+
+#main .asider {
+  flex: 1 1 20%;
+  background-color: #f9f9f9;
+}
+
+#main > .page {
+  padding: 2em;
+}
+
+.module {
+  display:flex;
+  position: relative;
+}
+
+.module aside {
+  flex:1 1 30%;
+}
+
+.module > article .content {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.module .content {
+  position: sticky;
+  top:var(--header-h);
+}

@@ -1,0 +1,60 @@
+{% if item.visible %}
+
+            <div class="card {{ item.active ? 'active' : '' }}">
+
+            	    {% if item.media.images or item.media.files %}
+                	    <div class="image">
+                	        <a href="{{item.url}}">
+                    	        {% if item.media.images %}
+                    	            {{item.media.images|first.resize(200,300)}}
+                    	        {% else %}
+                    	             {{item.media.files|first.resize(100,100)}}
+                    	        {% endif %}
+                	        </a>
+                	    </div>
+            	    {% endif %}
+
+            	    <div class="info">
+            	        {% if item.template == 'article' %}
+            	        {% for cat in item.taxonomy.category %}
+            	            <span>{{cat}}</span>
+            	        {% endfor %}
+            	    {% endif %}
+
+        	       {% for tag in item.taxonomy.tag %}
+                        <span class="tag">
+                          {{tag}}
+                        </span>
+                    {% endfor %}
+
+                    <h4 class="title"><a href="{{item.url}}">{{item.title}}</a>
+                    </h4>
+
+                      {% if item.template == 'article' %}
+                        <div class="subtitle">
+
+
+                            <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+                            </small> /
+
+
+                             <i class="fa fa-eye"></i>
+                             {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
+                             <i class="fa fa-pencil"></i> {{item.modified | nicetime}}
+                         </div>
+
+                         {% endif %}
+
+                         <div>
+                      {#   <p>{{item.summary()|striptags|slice(0,140)}}...</p>
+                      #}
+                         </div>
+
+
+
+            	    </div>
+              
+
+            </div>
+
+{% endif %}

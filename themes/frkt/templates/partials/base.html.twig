@@ -1,0 +1,85 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <style>html{visibility: hidden;opacity:0;}</style>
+{% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100,  {'group':'cdn'}) %}
+    {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99, {'group':'cdn'}) %}
+    {% do assets.addCss('theme://css/custom.css', 98, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/panel.css', 100, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/list.css', 100, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/page.css', 100, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/card.css', 100, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/responsive.css', 100, {'group':'page'}) %}
+    {% do assets.addCss('theme://css/layout.css', 130, {'group':'page'}) %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('theme://js/menu.js', 100, {'group':'bottom'}) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()}}
+    {{ assets.js()|raw}}
+{% endblock %}
+</head>
+<body  class="{{ page.header.body_classes }}">
+
+{% block panel %}
+   {% include 'partials/panel.html.twig' %}
+{% endblock %}
+
+<article id="main">
+
+{% block header %}
+<header>
+
+    {% if config.plugins.breadcrumbs.enabled %}
+      {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+    <button class="btn-menu">MENU</button>
+</header>
+{% endblock %}
+
+
+
+{% block page %}
+
+    <section class="page">
+        {% block content %}{% endblock %}
+
+    </section>
+
+{% endblock %}
+
+
+
+{% block footer %}
+
+    <footer class="footer text-center">
+
+    </footer>
+
+{% endblock %}
+
+</article>
+
+{% block bottom %}
+    {{ assets.js('bottom')|raw }}
+{% endblock %}
+
+</body>
+</html>

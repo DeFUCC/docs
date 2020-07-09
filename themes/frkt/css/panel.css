@@ -1,0 +1,42 @@
+.panel {
+  display: flex;
+  position: absolute;
+  width:var(--panelw);
+  max-width:var(--panelw);
+  flex-direction: column;
+  background-color: #333;
+  height: 100vh;
+  z-index: 70;
+  left: calc(0px - var(--panelw));
+  top:0px;
+}
+
+.panel.open {
+  left:0;
+}
+
+.panel-overlay.active {
+  visibility: visible;
+  background: hsla(0, 0%, 0%, 0.3);
+}
+
+.panel-overlay {
+  visibility: hidden;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: hsla(0, 0%, 0%, 0.0);
+  z-index:40;
+}
+
+.panel a {
+    color: #fff;
+}
+
+.panel .logo {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin:0 auto;
+}
