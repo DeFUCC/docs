@@ -5,6 +5,7 @@ date: '16:47 24-06-2020'
 taxonomy:
     category:
         - docs
+icon: idea.svg
 ---
 
 ### Мысль, предлагаемая к реализации

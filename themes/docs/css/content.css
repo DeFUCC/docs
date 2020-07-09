@@ -135,6 +135,10 @@ pre {
 hr {
   border-bottom: 4px solid #F0F2F4; }
 
+.sticky {
+  position: sticky;
+  top:50px;
+}
 
 .page-title {
   margin-top: -25px;
