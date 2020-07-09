@@ -3,15 +3,13 @@
 
 {% block content %}
     <section id="body-inner" class="content">
-      <div>
-          {% if item.header.icon  %}
+      <div class="article-head">
+          {% if page.header.icon  %}
               <div class="article-image">
-                  <a href="{{item.url}}">
-                        {{item.media[item.header.icon].resize(300,300)}}
-                  </a>
+                    {{page.media[page.header.icon].resize(300,300)}}
               </div>
           {% endif %}
-        <div>
+        <div class="article-start">
           <h1>{{ page.title }}
 
             </h1>
