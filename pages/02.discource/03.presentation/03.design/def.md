@@ -3,7 +3,7 @@ title: Программа
 media_order: design.svg
 taxonomy:
     category:
-        - docs
+        - Дискурс
 icon: design.svg
 ---
 

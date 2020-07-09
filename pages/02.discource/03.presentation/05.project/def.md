@@ -3,7 +3,7 @@ title: Проект
 media_order: project.svg
 taxonomy:
     category:
-        - docs
+        - Дискурс
 icon: project.svg
 ---
 

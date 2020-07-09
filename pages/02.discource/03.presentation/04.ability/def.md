@@ -3,7 +3,7 @@ title: Возможность
 media_order: ability.svg
 taxonomy:
     category:
-        - docs
+        - Дискурс
 icon: ability.svg
 ---
 

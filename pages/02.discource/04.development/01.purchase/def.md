@@ -3,7 +3,8 @@ title: Приобретение
 media_order: purchase.svg
 taxonomy:
     category:
-        - docs
+        - Дискурс
+icon: purchase.svg
 ---
 
 ### Поставка необходимых для реализации проекта инструментов, материалов и информации
