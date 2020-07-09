@@ -1,10 +1,10 @@
 {% if item.visible %}
 
-            <div class="card my-3 columns is-mobile">
+            <div class="card my-3 ">
 
 
             	    {% if item.media.images or item.media.files %}
-                	    <div class="column is-one-third">
+                	    <div class="card-image">
                 	        <a href="{{item.url}}">
                     	        {% if item.media.images %}
                     	            {{item.media.images|first.resize(200,200)}}
@@ -15,7 +15,7 @@
                 	    </div>
             	    {% endif %}
 
-            	    <div class="column">
+            	    <div class="card-content">
             	        {% if item.template == 'article' %}
             	        {% for cat in item.taxonomy.category %}
             	            <span>{{cat}}</span>
@@ -27,28 +27,28 @@
                           {{tag}}
                         </span>
                     {% endfor %}
+                        <div class="content">
+                            <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a>
+                            </h4>
+        
+                            <p class="subtitle is-size-7">
+        
+                                {% if item.template == 'article' %}
+                                <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+                                </small> /
+                                 {% endif %}
+        
+                                 <i class="fa fa-eye"></i>
+                                 {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
+                                 <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
+        
+                                 {% if item.template == 'article' %}
+                                    <p>{{item.summary()|striptags|slice(0,140)}}...</p>
+                                 {% else %}
+                                    <p>{{item.summary(140)|striptags}}</p>
+                                 {% endif %}
 
-                    <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a>
-                    </h4>
-
-                    <p class="subtitle is-size-7">
-
-                        {% if item.template == 'article' %}
-                        <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
-                        </small> /
-                         {% endif %}
-
-                         <i class="fa fa-eye"></i>
-                         {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
-                         <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
-
-                         {% if item.template == 'article' %}
-                            <p>{{item.summary()|striptags|slice(0,140)}}...</p>
-                         {% else %}
-                            <p>{{item.summary(140)|striptags}}</p>
-                         {% endif %}
-
-
+                        </div>
             	    </div>
 
             </div>
