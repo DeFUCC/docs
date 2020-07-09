@@ -6,9 +6,11 @@
             	    {% if item.media.images or item.media.files %}
                 	    <div class="card-image">
                 	        <a href="{{item.url}}">
-                    	        {% if item.media.images %}
+                              {% if item.header.icon %}
+                                {{media[item.header.icon]}}
+                              {% elseif item.media.images %}
                     	            {{item.media.images|first.resize(200,200)}}
-                    	        {% else %}
+                    	        {% elseif item.media.files %}
                     	             {{item.media.files|first.resize(200,200)}}
                     	        {% endif %}
                 	        </a>
