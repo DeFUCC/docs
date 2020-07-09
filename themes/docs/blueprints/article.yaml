@@ -12,11 +12,10 @@ form:
       fields:
         content:
           fields:
-            header.a_file:
+            header.main_img:
               type: filepicker
-              folder: '@self'
-              preview_images: true
-              label: Select a file
+              preview_images: false
+              label: Main image
               accept:
                 - .png
                 - .jpg

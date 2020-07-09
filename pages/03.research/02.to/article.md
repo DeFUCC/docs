@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - Основание
 media_order: fruits-s.png
+main_img: fruits-s.png
 ---
 
 ![](fruits-s.png)

@@ -54,6 +54,16 @@ b, strong, label, th {
 
 .item-card {
     display: flex;
+    flex: 1 1 200px;
+}
+
+.item-card .card-image {
+  position: absolute;
+  text-align: center;
+}
+
+.item-card .card-content {
+
 }
 
 .flex-center {
