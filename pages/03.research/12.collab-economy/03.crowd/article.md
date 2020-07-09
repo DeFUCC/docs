@@ -1,5 +1,7 @@
 ---
 title: 'Часть 3: Толпа'
+media_order: crowd.jpg
+icon: crowd.jpg
 taxonomy:
     category:
         - Исследование
