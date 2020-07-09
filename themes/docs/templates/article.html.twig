@@ -3,26 +3,37 @@
 
 {% block content %}
     <section id="body-inner" class="content">
-        <h1>{{ page.title }}
+      <div>
+          {% if item.header.icon  %}
+              <div class="article-image">
+                  <a href="{{item.url}}">
+                        {{item.media[item.header.icon].resize(300,300)}}
+                  </a>
+              </div>
+          {% endif %}
+        <div>
+          <h1>{{ page.title }}
 
-        </h1>
-        {% for tag in page.taxonomy.tag %}
-            <a href="/research/tag:{{tag}}">
-              <span class="tag">
-                {{tag}}
-              </span>
-            </a>
-        {% endfor %}
-        <small class="is-size-7 has-text-weight-normal">
-         <i class="fa fa-eye"></i>
-            {{ viewcounts[page.route]|nicenumber }} /
-        <i class="fa fa-clock-o"></i>
-            Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
-        </small>
+            </h1>
+            {% for tag in page.taxonomy.tag %}
+                <a href="/research/tag:{{tag}}">
+                  <span class="tag">
+                    {{tag}}
+                  </span>
+                </a>
+            {% endfor %}
+            <small class="is-size-7 has-text-weight-normal">
+             <i class="fa fa-eye"></i>
+                {{ viewcounts[page.route]|nicenumber }} /
+            <i class="fa fa-clock-o"></i>
+                Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+            </small>
 
-        <p>
-            {{ page.summary }}
-        </p>
+            <p>
+                {{ page.summary }}
+            </p>
+        </div>
+      </div>
 
         {% set table_of_contents = toc(page.content, 2, 4) %}
         {% if table_of_contents is not empty  %}
