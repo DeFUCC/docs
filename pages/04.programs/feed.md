@@ -1,7 +1,7 @@
 ---
 title: Программы
 content:
-    items: '@root.descendants'
+    items: '@self.descendants'
     order:
         by: modified
         dir: desc
