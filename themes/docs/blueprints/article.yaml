@@ -14,7 +14,7 @@ form:
           fields:
             header.main_img:
               type: filepicker
-              preview_images: false
+              preview_images: true
               label: Main image
               accept:
                 - .png
