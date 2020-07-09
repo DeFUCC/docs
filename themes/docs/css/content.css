@@ -78,6 +78,10 @@ b, strong, label, th {
     border-radius: 4px;
 }
 
+.card {
+    max-width:200px;
+}
+
 code {
   background: #f9f2f4;
   color: #9c1d3d;
