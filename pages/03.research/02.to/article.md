@@ -7,6 +7,7 @@ taxonomy:
         - Основание
 media_order: fruits-s.png
 main_img: fruits-s.png
+icon: fruits-s.png
 ---
 
 ![](fruits-s.png)
