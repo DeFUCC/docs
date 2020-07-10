@@ -7,6 +7,7 @@ taxonomy:
     tag:
         - Право
 icon: Scale-of-Justice.png
+toc: true
 ---
 
 ## Определение в ГК РФ
