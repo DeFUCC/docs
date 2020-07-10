@@ -15,7 +15,7 @@
 
     {% set collection = page.collection %}
     {% for item in collection %}
-      {% if item.template == 'article' %}
+      {% if item.template == 'article' or item.template == 'feed' %}
           {% include '/partials/article-card.html.twig'  %}
       {% else %}
           {% include '/partials/card.html.twig'  %}

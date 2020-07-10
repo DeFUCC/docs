@@ -1,7 +1,7 @@
 {% if item.visible %}
 
-            <div class="card item-card">
-              <a class="item-card" href="{{item.url}}">
+            <a href="{{item.url}}" class="card item-card">
+
 
             	   {% include 'partials/card-image.html.twig'%}
 
@@ -19,8 +19,8 @@
 
                         </div>
             	    </div>
-                </a>
-            </div>
+              </a>
+
 
 
 {% endif %}

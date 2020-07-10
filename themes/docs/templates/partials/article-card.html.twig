@@ -1,11 +1,11 @@
 {% if item.visible %}
 
-            <div class="card article-card">
+            <a href="{{item.url}}" class="article-card">
 
 
             	    {% if item.header.icon or item.media.images or item.media.files %}
                 	    <div class="card-image">
-                	        <a href="{{item.url}}">
+
                               {% if item.header.icon %}
                                 {{item.media[item.header.icon].resize(200,200)}}
                               {% elseif item.media.images %}
@@ -13,24 +13,24 @@
                     	        {% elseif item.media.files %}
                     	             {{item.media.files|first.resize(200,200)}}
                     	        {% endif %}
-                	        </a>
+
                 	    </div>
             	    {% endif %}
 
-            	    <div class="card-content">
-            	        {% if item.template == 'article' %}
-            	        {% for cat in item.taxonomy.category %}
-            	            <span>{{cat}}</span>
-            	        {% endfor %}
-            	    {% endif %}
+                  <div class="tags">
+                    {% for tag in item.taxonomy.tag %}
+                           <span class="tag">
+                             {{tag}}
+                           </span>
+                       {% endfor %}
+                  </div>
 
-        	       {% for tag in item.taxonomy.tag %}
-                        <span class="tag">
-                          {{tag}}
-                        </span>
-                    {% endfor %}
+            	    <div class="card-content">
+
+
+
                         <div class="content">
-                            <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a>
+                            <h4 class="title is-size-5">{{item.title}}
                             </h4>
 
                             <p class="subtitle is-size-7">
@@ -45,12 +45,9 @@
                                  <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
 
 
-                                  <p>{{item.summary()|striptags|slice(0,140)}}...</p>
-
-
                         </div>
             	    </div>
 
-            </div>
+            </a>
 
 {% endif %}
