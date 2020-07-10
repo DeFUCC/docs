@@ -1,3 +1,29 @@
+window.addEventListener('DOMContentLoaded', () => {
+
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			const id = entry.target.getAttribute('id');
+			if (entry.intersectionRatio > 0) {
+				document.querySelector(`.page-toc li a[href="#${id}"]`).parentElement.classList.add('active')
+        if (window.innerWidth > 980) {
+          document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+        }
+			} else {
+				document.querySelector(`.page-toc li a[href="#${id}"]`).parentElement.classList.remove('active');
+			}
+		});
+	});
+
+	// Track all sections that have an `id` applied
+	document.querySelectorAll('h2[id], h3[id], h4[id], h5[id]').forEach((heading) => {
+		observer.observe(heading);
+	});
+
+});
+
+
+// rollup top bar
+
 
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scrollupstart', onScrollUpStart, false);
@@ -12,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
  function onScrollDownStart() {
        document.querySelector('#top-bar').classList.add("hidden");
  }
-
 
 
 // https://github.com/vistromwebb/skrallan

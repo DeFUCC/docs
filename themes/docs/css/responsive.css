@@ -9,9 +9,15 @@
 @media (min-width: 980px) {
   .page-toc {
      position: fixed;
-     right: 2em;
+     left: 1em;
      width: 280px;
      top: 77px;
+     max-height:calc(100% - 180px);
+     overflow-y:scroll;
+    }
+
+    .article {
+      margin-left:300px;
     }
 }
 
