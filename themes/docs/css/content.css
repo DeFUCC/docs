@@ -180,6 +180,10 @@ hr {
   background: #1694CA;
   color: #fff; }
 
+.article {
+  padding: 2em;
+}
+
 .article-head {
   display:flex;
   justify-content: center;

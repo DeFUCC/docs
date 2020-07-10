@@ -1,33 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-<container class="page">
-<section class="content {{ page.content|length < 480 ? 'narrow' : '' }}">
-   {% include 'partials/card-image.html.twig' with {'item':page}%}
-    <h1>{{ page.title }}</h1>
-    {% if uri.param('tag') %}
-        <h4>Тэг: <span class="tag is-large">{{uri.param('tag')}}</span></h4>
-    {% endif %}
-    {{ page.content }}
-</section>
-
-<section class="cards columns mx-2 is-multiline is-mobile">
-
-    {% set collection = page.collection %}
-    {% for item in collection %}
-      {% if item.template == 'article' or item.template == 'feed' %}
-          {% include '/partials/article-card.html.twig'  %}
-      {% else %}
-          {% include '/partials/card.html.twig'  %}
-      {% endif %}
-    {% endfor %}
-</section>
-
-
-{# Render the pagination list #}
-{% if config.plugins.pagination.enabled and collection.params.pagination %}
-    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-{% endif %}
-
-</container>
+  {% include 'partials/page-block.html.twig'%}
 {% endblock %}
