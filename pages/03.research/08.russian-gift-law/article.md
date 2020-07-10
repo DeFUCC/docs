@@ -6,9 +6,8 @@ taxonomy:
         - Исследование
     tag:
         - Право
+icon: Scale-of-Justice.png
 ---
-
-![](Scale-of-Justice.png?resize=300,300)
 
 ## Определение в ГК РФ
 

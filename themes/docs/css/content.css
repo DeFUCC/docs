@@ -161,11 +161,12 @@ hr {
 .article-head {
   display:flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
 }
 
-.article-image {
-  flex: 1 1 300px
+.article-icon {
+  flex: 1 1 300px;
+  padding:2em;
 }
 
 .page {
