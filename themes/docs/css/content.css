@@ -62,12 +62,9 @@ b, strong, label, th {
 
 .item-card {
     display: flex;
+    flex-wrap: wrap;
     flex: 1 1 200px;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
-    width:200px;
-    height:300px;
     margin: 1em;
 }
 
@@ -75,13 +72,13 @@ b, strong, label, th {
   color: #333;
 }
 
-.item-card .card-image {
+.article-card .card-image {
   position: absolute;
   text-align: center;
   z-index:1
 }
 
-.item-card .card-content {
+.article-card .card-content {
   position: absolute;
   margin-top:120px;
   padding: 0.5em;
@@ -92,7 +89,7 @@ b, strong, label, th {
   background: hsla(0,0%,100%,0.8);
 }
 
-.item-card:hover .card-content {
+.article-card:hover .card-content {
   margin:0;
   background: hsla(0,0%,100%,1)
 }
@@ -186,7 +183,7 @@ hr {
   flex: 1 0 200px;
   position: sticky;
   top:90px;
-  padding: 2em;
+  padding: 0 0 1em 2em;
 }
 
 .page .cards {

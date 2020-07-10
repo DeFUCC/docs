@@ -3,19 +3,7 @@
             <div class="card item-card">
               <a class="item-card" href="{{item.url}}">
 
-            	    {% if item.header.icon or item.media.images or item.media.files %}
-                	    <div class="card-image">
-
-                              {% if item.header.icon %}
-                                {{item.media[item.header.icon].resize(200,200)}}
-                              {% elseif item.media.images %}
-                    	            {{item.media.images|first.resize(200,200)}}
-                    	        {% elseif item.media.files %}
-                    	             {{item.media.files|first.resize(200,200)}}
-                    	        {% endif %}
-
-                	    </div>
-            	    {% endif %}
+            	   {% include 'partials/card-image.html.twig'%}
 
             	    <div class="card-content">
 
@@ -26,7 +14,7 @@
 
                             <p class="subtitle is-size-7">
 
-                                    <p>{{item.summary(140)|striptags}}
+                                    <p>{{item.summary()|striptags}}
                                     </p>
 
                         </div>

@@ -2,7 +2,8 @@
 
 {% block content %}
 <container class="page">
-<section class="content {{ page.content|length < 280 ? 'narrow' : '' }}">
+<section class="content {{ page.content|length < 480 ? 'narrow' : '' }}">
+   {% include 'partials/card-image.html.twig' with {'item':page}%}
     <h1>{{ page.title }}</h1>
     {% if uri.param('tag') %}
         <h4>Тэг: <span class="tag is-large">{{uri.param('tag')}}</span></h4>
@@ -11,7 +12,6 @@
 </section>
 
 <section class="cards columns mx-2 is-multiline is-mobile">
-
 
     {% set collection = page.collection %}
     {% for item in collection %}
