@@ -9,7 +9,7 @@ content:
     order:
         by: default
         dir: asc
-media_order: 'square boxes@2x.png'
+media_order: blocks.svg
 ---
 
 ### Фонд Развития Универсализации, Кооперации и Творчества
