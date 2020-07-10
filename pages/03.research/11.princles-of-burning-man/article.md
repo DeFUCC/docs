@@ -6,6 +6,8 @@ taxonomy:
         - Исследование
     tag:
         - Социология
+icon: territory.png
+toc: true
 ---
 
 ![](territory.png)
