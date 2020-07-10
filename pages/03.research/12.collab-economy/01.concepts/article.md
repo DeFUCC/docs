@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - Социология
 icon: cube.png
+toc: true
 ---
 
 # Экономика сотрудничества
