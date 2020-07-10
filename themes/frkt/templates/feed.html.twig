@@ -10,24 +10,16 @@
     <h1>{{ page.title }}</h1>
     {{ page.content }}
 </section>
-{% for child in pages.children.visible %}
-  <section class="module">
-    <aside>
-      <div class="content">
-        <h2 >{{child.title}}</h2>
-        {{child.content}}
-      </div>
+<section class="children">
+  {% for item in page.children.visible %}
+        <div class="">
 
-    </aside>
-    <article>
-      <div class="content">
-        {% for item in child.children %}
-          {% include 'partials/card.html.twig'%}
-        {% endfor %}
-      </div>
-    </article>
-  </section>
-{% endfor %}
+            {% include 'partials/card.html.twig'%}
+
+        </div>
+  {% endfor %}
+</section>
+
 </container>
 
 {% endblock %}

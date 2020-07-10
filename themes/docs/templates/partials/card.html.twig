@@ -1,11 +1,11 @@
 {% if item.visible %}
 
             <div class="card item-card">
-
+              <a class="item-card" href="{{item.url}}">
 
             	    {% if item.header.icon or item.media.images or item.media.files %}
                 	    <div class="card-image">
-                	        <a href="{{item.url}}">
+
                               {% if item.header.icon %}
                                 {{item.media[item.header.icon].resize(200,200)}}
                               {% elseif item.media.images %}
@@ -13,46 +13,26 @@
                     	        {% elseif item.media.files %}
                     	             {{item.media.files|first.resize(200,200)}}
                     	        {% endif %}
-                	        </a>
+
                 	    </div>
             	    {% endif %}
 
             	    <div class="card-content">
-            	        {% if item.template == 'article' %}
-            	        {% for cat in item.taxonomy.category %}
-            	            <span>{{cat}}</span>
-            	        {% endfor %}
-            	    {% endif %}
 
-        	       {% for tag in item.taxonomy.tag %}
-                        <span class="tag">
-                          {{tag}}
-                        </span>
-                    {% endfor %}
+
                         <div class="content">
-                            <h4 class="title is-size-4"><a href="{{item.url}}">{{item.title}}</a>
+                            <h4 class="title is-size-4">{{item.title}}
                             </h4>
 
                             <p class="subtitle is-size-7">
 
-                                {% if item.template == 'article' %}
-                                <small class="is-size-7 has-text-weight-normal"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
-                                </small> /
-                                 {% endif %}
-
-                                 <i class="fa fa-eye"></i>
-                                 {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
-                                 <i class="fa fa-pencil"></i> {{item.modified | nicetime}}</p>
-
-                                 {% if item.template == 'article' %}
-                                    <p>{{item.summary()|striptags|slice(0,140)}}...</p>
-                                 {% else %}
-                                    <p>{{item.summary(140)|striptags}}</p>
-                                 {% endif %}
+                                    <p>{{item.summary(140)|striptags}}
+                                    </p>
 
                         </div>
             	    </div>
-
+                </a>
             </div>
+
 
 {% endif %}

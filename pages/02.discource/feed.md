@@ -6,7 +6,7 @@ taxonomy:
     category:
         - docs
 content:
-    items: '@self.descendants'
+    items: '@self.children'
     order:
         by: default
         dir: asc

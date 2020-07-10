@@ -66,6 +66,10 @@ b, strong, label, th {
     margin: 1em;
 }
 
+.item-card a {
+  color: #333;
+}
+
 .item-card .card-image {
   position: absolute;
   text-align: center;
@@ -75,6 +79,7 @@ b, strong, label, th {
 .item-card .card-content {
   position: absolute;
   margin-top:120px;
+  padding: 0.5em;
   z-index:2;
   width:100%;
   height:100%;
@@ -156,4 +161,26 @@ hr {
 
 .article-image {
   flex: 1 1 300px
+}
+
+.page {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.page > .content {
+  flex: 1 0 200px;
+  position: sticky;
+  top:90px;
+  padding: 2em;
+}
+
+.page .cards {
+  flex: 1 1 100px;
+  height:min-content;
+  position:sticky;
+  top: 90px;
+  padding: 2em 0;
 }

@@ -6,5 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
  function openMenu() {
    		document.querySelector('.panel-overlay').classList.toggle("active");
-      document.querySelector('.asidel').classList.toggle("open");
+      document.querySelector('.panel').classList.toggle("open");
  }
