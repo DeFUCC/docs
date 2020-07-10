@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Ubuntu|Inconsolata);
 
+:root {
+  --bg-gray: #f3f3f3;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
@@ -13,6 +17,10 @@ kbd,
 pre,
 samp {
   font-family: "Inconsolata", monospace; }
+
+.page-content {
+      min-width:100%;
+  }
 
 .flex {
   display: flex;
@@ -67,6 +75,8 @@ b, strong, label, th {
   z-index:30;
 }
 
+
+
 .item-card {
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +106,7 @@ b, strong, label, th {
   box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
   color: #4a4a4a;
   max-width: 100%;
+  min-width: 200px;
   position: relative;
 }
 
@@ -180,8 +191,9 @@ hr {
   background: #1694CA;
   color: #fff; }
 
-.article {
+.content.article {
   padding: 2em;
+  max-width:720px;
 }
 
 .article-head {
@@ -201,18 +213,24 @@ hr {
   flex:1 1 200px;
 }
 
+.page-block {
+  background: var(--bg-gray);
+}
+
 .page {
   display: flex;
   align-items: flex-start;
   position: relative;
   flex-wrap: wrap;
+  background: var(--bg-gray);
 }
 
 .page > .content {
   flex: 1 0 200px;
   position: sticky;
   top:90px;
-  padding: 0 0 1em 2em;
+  padding: 1em;
+  background: var(--bg-gray);
 }
 
 .page .cards {
@@ -221,4 +239,5 @@ hr {
   position:sticky;
   top: 90px;
   padding: 2em 0;
+  background: var(--bg-gray);
 }

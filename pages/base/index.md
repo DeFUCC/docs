@@ -1,8 +1,8 @@
 ---
-title: 'База знаний'
+title: 'Фонд ФРУКТ'
 taxonomy:
     category:
-        - docs
+        - ФРУКТ
 content:
     items: '@root.children'
     order:

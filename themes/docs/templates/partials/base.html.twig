@@ -24,6 +24,7 @@
 
         {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
             {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+
         {% endif %}
     {% endblock %}
 
@@ -34,6 +35,7 @@
         {% do assets.addJs('theme://js/clipboard.min.js') %}
         {% do assets.addJs('theme://js/jquery.scrollbar.min.js') %}
         {% do assets.addJs('theme://js/learn.js') %}
+        {% do assets.addJs('theme://js/scroll.js') %}
     {% endblock %}
 
     {% block assets deferred %}
@@ -85,7 +87,7 @@
 
           {% endblock %}
 
-        
+
             {% block content %}{% endblock %}
 
 

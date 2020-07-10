@@ -1,9 +1,9 @@
 ---
-title: ' Свежее'
+title: 'Свежее'
 date: '21:00 26-06-2020'
 taxonomy:
     category:
-        - docs
+        - ФРУКТ
 author: Давай
 content:
     items: '@root.descendants'

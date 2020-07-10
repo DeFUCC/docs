@@ -2,8 +2,7 @@
 
 {% block content %}
   {% for item in pages.children.visible %}
-  <section class="my-6">
-
+  <section class="page-block py-6">
 
     {% include 'partials/page-block.html.twig' with {'page':item} %}
     </section>

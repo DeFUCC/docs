@@ -12,12 +12,31 @@ form:
       fields:
         content:
           fields:
-            header.icon:
+            columns:
+              type: columns
               ordering@: header.title
-              type: filepicker
-              preview_images: true
-              label: Page icon
-              accept:
-                - .png
-                - .jpg
-                - .svg
+              fields:
+                column1:
+                  type: column
+                  fields:
+                    header.icon:
+                      type: filepicker
+                      preview_images: true
+                      label: Page icon
+                      accept:
+                        - .png
+                        - .jpg
+                        - .svg
+                column2:
+                  type: column
+                  fields:
+                    header.toc:
+                      type: toggle
+                      label: TOC enabled
+                      highlight: 1
+                      default: 1
+                      options:
+                          1: Enabled
+                          0: Disabled
+                      validate:
+                           type: bool
