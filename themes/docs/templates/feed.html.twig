@@ -2,15 +2,16 @@
 
 {% block content %}
 <container class="page">
-<section class="content">
+<section class="content {{ page.content|length < 280 ? 'narrow' : '' }}">
     <h1>{{ page.title }}</h1>
+    {% if uri.param('tag') %}
+        <h4>Тэг: <span class="tag is-large">{{uri.param('tag')}}</span></h4>
+    {% endif %}
     {{ page.content }}
 </section>
 
 <section class="cards columns mx-2 is-multiline is-mobile">
-    {% if uri.param('tag') %}
-        <h4>Тэг: <span class="tag is-large">{{uri.param('tag')}}</span></h4>
-    {% endif %}
+
 
     {% set collection = page.collection %}
     {% for item in collection %}

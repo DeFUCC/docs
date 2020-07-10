@@ -45,6 +45,11 @@ a.underlined {
 b, strong, label, th {
   font-weight: 600; }
 
+.content.narrow {
+    flex-basis: 10px;
+    max-width: 300px;
+}
+
 .page-toc {
     float: right;
     max-width: 50%;
