@@ -6,13 +6,25 @@
 
 }
 
-@media only all and (min-width: 1400px) {
+@media (min-width: 980px) {
+  .page-toc {
+     position: fixed;
+     right: 2em;
+     width: 280px;
+     top: 77px;
+    }
+}
+
+
+@media (min-width: 1400px) {
     #sidebar {
         width: 230px;
     }
 
     #body {
         margin-left: 230px; }
+
+
 
 
 }
