@@ -6,6 +6,7 @@ taxonomy:
     tag:
         - Социология
 icon: interaction.png
+toc: true
 ---
 
 # Экономика сотрудничества
