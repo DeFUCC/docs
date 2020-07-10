@@ -162,11 +162,17 @@ hr {
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-wrap:wrap;
 }
 
 .article-icon {
-  flex: 1 1 300px;
+  flex: 0 1 300px;
+
   padding:2em;
+}
+
+.article-start {
+  flex:1 1 200px;
 }
 
 .page {
