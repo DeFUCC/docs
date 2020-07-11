@@ -21,6 +21,17 @@ form:
                   type: column
                   fields:
 
+                    header.toc:
+                      type: toggle
+                      label: TOC enabled
+                      highlight: 1
+                      default: 1
+                      options:
+                          1: Enabled
+                          0: Disabled
+                      validate:
+                           type: bool
+
                     header.subtitle:
                       style: vertical
                       type: textarea
