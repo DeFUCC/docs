@@ -12,6 +12,11 @@ form:
       fields:
         content:
           fields:
+            header.subtitle:
+              type: text
+              ordering@: header.title
+              label: Подзаголовок
+              default: ''
             columns:
               type: columns
               ordering@: header.title
