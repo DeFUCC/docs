@@ -4,6 +4,8 @@ taxonomy:
     category:
         - Дискурс
 toc: false
+icon: all-concepts.svg
+media_order: all-concepts.svg
 ---
 
 ### Дискурс — язык и система целенаправленного мышления и взаимодействия людей.

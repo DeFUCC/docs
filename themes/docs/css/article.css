@@ -45,7 +45,7 @@
 .article-icon {
   flex: 0 1 240px;
   background: var(--bg-gray);
-  padding:2em;
+  padding:3em 1em 0 1em;
   z-index:30;
   position: relative;
 }
