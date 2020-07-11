@@ -66,11 +66,7 @@ form:
                   type: column
                   fields:
 
-                    header.subtitle:
-                      style: vertical
-                      type: textarea
-                      rows: 4
-                      label: Subtitle
+                    
 
                     content:
                         type: markdown

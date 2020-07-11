@@ -17,17 +17,13 @@ form:
               type: columns
               fields:
 
-                column1:
+                column2:
                   type: column
                   fields:
 
-                    header.toc:
-                      type: toggle
-                      label: TOC enabled
-                      highlight: 1
-                      default: 1
-                      options:
-                          1: Enabled
-                          0: Disabled
-                      validate:
-                           type: bool
+                    header.subtitle:
+                      ordering@: -1
+                      style: vertical
+                      type: textarea
+                      rows: 4
+                      label: Subtitle
