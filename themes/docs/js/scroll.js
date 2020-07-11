@@ -5,8 +5,11 @@ window.addEventListener('DOMContentLoaded', () => {
 			const id = entry.target.getAttribute('id');
 			if (entry.intersectionRatio > 0) {
 				document.querySelector(`.page-toc li a[href="#${id}"]`).parentElement.classList.add('active')
-        if (window.innerWidth > 980) {
-          document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+        if (window.innerWidth > 670) {
+          setTimeout(() => {
+            document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+          },400)
+
         }
 			} else {
 				document.querySelector(`.page-toc li a[href="#${id}"]`).parentElement.classList.remove('active');

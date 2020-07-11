@@ -3,7 +3,7 @@ title: 'Экономическая модель протокола децент�
 media_order: 'applications.png,cycle.jpg,BackfeedEconomicModel.pdf'
 taxonomy:
     category:
-        - Исследования
+        - Исследование
     tag:
         - Экономика
 icon: applications.png
