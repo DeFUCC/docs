@@ -17,13 +17,12 @@ form:
               type: columns
               fields:
 
-                column2:
+                column1:
                   type: column
                   fields:
 
                     header.subtitle:
-                      ordering@: -1
                       style: vertical
                       type: textarea
-                      rows: 4
+                      rows: 3
                       label: Subtitle
