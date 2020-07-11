@@ -5,5 +5,8 @@ content:
     order:
         by: default
         dir: asc
+taxonomy:
+    category:
+        - Дискурс
 ---
 
