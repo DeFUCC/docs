@@ -95,7 +95,7 @@ main.article article {
   padding: 1em;
 }
 
-main.article.no-toc {
+main.article.no-toc header {
   position:sticky;
   top: 80px;
 }
