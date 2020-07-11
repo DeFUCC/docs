@@ -71,7 +71,7 @@
 }
 
 main.article {
-  padding: 2em;
+  padding: 0 2em;
   max-width:1000px;
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +80,7 @@ main.article {
 }
 
 main.article header {
-  flex: 0 0 260px;
+  flex: 0 0 230px;
   background: var(--bg-gray);
   display: flex;
   flex-wrap: wrap;
@@ -92,8 +92,13 @@ main.article article {
   z-index: 40;
   max-width: 620px;
   word-wrap: break-word;
+  padding: 1em;
 }
 
+main.article.no-toc {
+  position:sticky;
+  top: 80px;
+}
 
 /*  table of contents  */
 
@@ -101,10 +106,10 @@ main.article article {
     position: fixed;
     z-index:20;
     top: 100px;
-    max-width:230px;
+    max-width:200px;
     background: hsla(0,0%,50%,0);
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.4em;
     max-height:70%;
     scrollbar-width: thin;
     scrollbar-color: #eee;
