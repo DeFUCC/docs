@@ -3,11 +3,11 @@
     {% set progress = page.collection({'items':{'@taxonomy':{'category': cats}},'order': {'by': 'default', 'dir': 'asc'}}) %}
 	{% set next = progress.nextSibling(page.path) %}
 	{% set prev = progress.prevSibling(page.path) %}
-
+{% if next or prev %}
 	<div id="bottom-page-nav">
-	    
+
 	{% if not progress.isFirst(page.path) %}
-	    <a class="nav prev" href="{{ next.url }}"> 
+	    <a class="nav prev" href="{{ next.url }}">
 	        <i class="fa fa-2x fa-chevron-left"></i>
 	        <div>
 	            <h6>Назад</h6>
@@ -15,7 +15,7 @@
 	        </div>
 	    </a>
 	{% endif %}
-	
+
 	{% if not progress.isLast(page.path) %}
 	    <a class="nav next" href="{{ prev.url }}">
 	        <i class="fa fa-2x fa-chevron-right"></i>
@@ -25,6 +25,6 @@
 	        </div>
         </a>
 	{% endif %}
-	
-	</div>
 
+	</div>
+{% endif %}

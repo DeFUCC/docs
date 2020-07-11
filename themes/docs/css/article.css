@@ -115,6 +115,7 @@ main.article.no-toc header {
     scrollbar-width: thin;
     scrollbar-color: #eee;
     overflow-y:scroll;
+    overflow-x:hidden;
 }
 
 .page-toc h5 {
