@@ -1,51 +1,46 @@
 {% extends 'partials/base.html.twig' %}
 
-
 {% block content %}
-    <section  class="content article">
-      <div class="article-head">
-          {% if page.header.icon  %}
-              <div class="article-icon">
-                    {{page.media[page.header.icon]}}
-              </div>
-          {% endif %}
-        <div class="article-start">
-          <h1>{{ page.title }}
-
-            </h1>
-            {% for tag in page.taxonomy.tag %}
-                <a href="/research/tag:{{tag}}">
-                  <span class="tag">
-                    {{tag}}
-                  </span>
-                </a>
-            {% endfor %}
-            <small class="is-size-7 has-text-weight-normal">
-             <i class="fa fa-eye"></i>
-                {{ viewcounts[page.route]|nicenumber }} /
-            <i class="fa fa-clock-o"></i>
-                Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
-            </small>
-
-
-        </div>
-      </div>
-      <p>
-          {{ page.summary }}
-      </p>
-      {% if page.header.toc %}
-        {% set table_of_contents = toc(page.content, 2, 4) %}
-        {% if table_of_contents is not empty  %}
-        <div class="page-toc">
-            <h4>Содержание:</h4>
-            {{ table_of_contents }}
-        </div>
+    <main class="content article {{ page.header.toc ? 'with-toc':'no-toc'}}">
+      <header>
+        {% if page.header.icon  %}
+            <div class="article-icon">
+                  {{page.media[page.header.icon]}}
+            </div>
         {% endif %}
-      {% endif %}
+      <div class="article-start">
+        <h1>{{ page.title }}
 
-
+          </h1>
+          {% for tag in page.taxonomy.tag %}
+              <a href="/research/tag:{{tag}}">
+                <span class="tag">
+                  {{tag}}
+                </span>
+              </a>
+          {% endfor %}
+          <small class="is-size-7 has-text-weight-normal">
+           <i class="fa fa-eye"></i>
+              {{ viewcounts[page.route]|nicenumber }} /
+          <i class="fa fa-clock-o"></i>
+              Время на чтение ~ {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
+          </small>
+          <p>
+              {{ page.summary }}
+          </p>
+          {% if page.header.toc %}
+            {% set table_of_contents = toc(page.content, 2, 4) %}
+            {% if table_of_contents is not empty  %}
+            <div class="page-toc">
+                <h4>Содержание:</h4>
+                {{ table_of_contents }}
+            </div>
+            {% endif %}
+          {% endif %}
+      </header>
+      <article>
         <p>
-        	{% set content = page.content|slice(page.summary|length) %}
+          {% set content = page.content|slice(page.summary|length) %}
             {{ content }}
         </p>
          <hr />
@@ -56,7 +51,7 @@
             {% endif %}
 
             {% if page.header.date %}
-            <i class="fa fa-user"></i> Опубликовано {{page.header.date | nicetime }}  <br />
+            <i class="fa fa-user"></i> Дата публикации {{page.header.date | nicetime }}  <br />
             {% endif %}
 
             <i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
@@ -72,6 +67,8 @@
             {% endfor %}
          </section>
         {% endif %}
-   </section>
+      </article>
+
+   </main>
 
 {% endblock %}
