@@ -53,7 +53,7 @@
 .article-start {
   flex:1 1 200px;
   background: var(--bg-gray);
-  padding:2em;
+  padding:1em;
   z-index:30;
   position: relative;
   background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 85%, rgba(255,255,255,0) 100%);
@@ -70,7 +70,7 @@ main.article {
 }
 
 main.article header {
-  flex: 0 0 160px;
+  flex: 0 0 260px;
   background: var(--bg-gray);
   display: flex;
   flex-wrap: wrap;
@@ -80,6 +80,8 @@ main.article article {
   flex: 1 1 300px;
   background: var(--bg-gray);
   z-index: 40;
+  max-width: 620px;
+  word-wrap: break-word;
 }
 
 
@@ -97,6 +99,10 @@ main.article article {
     scrollbar-width: thin;
     scrollbar-color: #eee;
     overflow-y:scroll;
+}
+
+.page-toc h5 {
+  color: #555;
 }
 
 .page-toc ul {

@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 670) {
           setTimeout(() => {
             document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
-          },400)
+          },200)
 
         }
 			} else {
@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scrollupstart', onScrollUpStart, false);
     window.addEventListener('scrolldownstart', onScrollDownStart, false);
  });
+
+ window.addEventListener('beforeunload', (event) => {
+   window.removeEventListener('scrollupstart', onScrollUpStart, true);
+   window.removeEventListener('scrolldownstart', onScrollUpStart, true);
+ })
 
 
  function onScrollUpStart() {
