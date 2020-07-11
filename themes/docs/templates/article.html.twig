@@ -27,9 +27,7 @@
           <i class="fa fa-clock-o"></i>
                {{ page.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}
           </small>
-          <p class="summary">
-              {{ page.summary(140)|striptags[:140] }}...
-          </p>
+
 
         </div>
 
@@ -48,8 +46,8 @@
 
 
         <p>
-          {% set content = page.content|slice(page.summary|length) %}
-            {{ content }}
+
+            {{ page.content }}
         </p>
          <hr />
         <p class="has-text-right">
