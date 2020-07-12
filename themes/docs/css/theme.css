@@ -181,14 +181,14 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 
 #sidebar {
-  background-color: #38424D;
+  background-color: var(--bg-gray);
   position: fixed;
   top: 0;
   width: 300px;
   bottom: 0;
   left: 0;
   font-weight: 500;
-  font-size: 15px; }
+  font-size: 12px; }
 
   #sidebar a {
     color: #bbbbbb; }
@@ -226,17 +226,17 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
       font-size:80%;}
 
     #sidebar h5.parent a {
-      background: #293038;
+      background: #aaa;
       line-height:2em;
       color: #c8c8c8 !important; }
 
     #sidebar h5.active a {
-      background: #fff;
+      background: #888;
       line-height:2em;
-      color: #555 !important; }
+      color: #222 !important; }
 
     #sidebar h5.active i {
-      color: #555 !important; }
+      color: #222 !important; }
 
   #sidebar h5 + ul.topics {
     display: none;
@@ -289,7 +289,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
           margin-top: 9px; }
 
       #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-        background: #2d353e;
+        background: #999;
         margin-left: -1rem;
         margin-right: -1rem;
         padding-left: 1rem;

@@ -1,3 +1,5 @@
+// https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+
 window.addEventListener('DOMContentLoaded', () => {
 
 	const observer = new IntersectionObserver(entries => {
