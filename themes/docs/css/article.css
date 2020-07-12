@@ -134,6 +134,7 @@ main.article.no-toc header {
 .page-toc a {
   color: #888;
   transition: all 300ms ease;
+  font-weight: normal;
 }
 
 .page-toc a:hover {
