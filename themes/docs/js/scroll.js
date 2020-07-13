@@ -5,12 +5,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	const observer = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			const id = entry.target.getAttribute('id');
+      let tocLinks = document.querySelector(`.page-toc li a[href="#${id}"]`)
+      if (!tocLinks) {return}
 			if (entry.intersectionRatio > 0) {
-				document.querySelector(`.page-toc li a[href="#${id}"]`).parentElement.classList.add('active')
-        if (window.innerWidth > 670) {
-          setTimeout(() => {
-            document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
-          },200)
+          tocLinks.parentElement.classList.add('active')
+          if (window.innerWidth > 670) {
+            setTimeout(() => {
+              document.querySelector(`.page-toc li a[href="#${id}"]`).scrollIntoView({block: "center", behavior: "smooth"});
+            },200)
 
         }
 			} else {
