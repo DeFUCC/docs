@@ -87,7 +87,7 @@ main.article header {
   flex-wrap: wrap;
 }
 
-main.article article {
+main.article > article {
   flex: 1 1 300px;
   background: var(--bg-gray);
   z-index: 40;
