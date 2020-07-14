@@ -1,10 +1,14 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+  <main class="page-blocks">
   {% for item in pages.children.visible %}
-  <section class="page-block py-6">
 
-    {% include 'partials/page-block.html.twig' with {'page':item} %}
+    <section>
+      {% include 'partials/page-block.html.twig' with {'page':item} %}
     </section>
+
+
   {% endfor %}
+  </main>
 {% endblock %}

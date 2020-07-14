@@ -49,13 +49,13 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   color: #fff;
   text-align: center;
   padding: 1rem; }
+
   #header a {
     display: inline-block; }
-  #header #logo-svg {
-    width: 8rem;
-    height: 2rem; }
-    #header #logo-svg path {
-      fill: #fff; }
+
+#header #logo img {
+  width: 200px;
+}
 
 .searchbox {
   margin-top: 0.5rem;
@@ -231,7 +231,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
       color: #555 !important; }
 
     #sidebar h5.active a {
-      background: #888;
+      background: #ccc;
       line-height:2em;
       color: #222 !important; }
 
@@ -289,7 +289,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
           margin-top: 9px; }
 
       #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-        background: #999;
+        background: #eee;
         margin-left: -1rem;
         margin-right: -1rem;
         padding-left: 1rem;

@@ -20,7 +20,7 @@ form:
   fields:
     top_level_version:
         type: toggle
-        label: Top Level Version
+        label: Top Level Version Navigation
         highlight: 1
         default: 0
         options:
@@ -35,6 +35,14 @@ form:
         placeholder: http://getgrav.org
         validate:
           type: text
+
+    custom_logo:
+      type: file
+      label: Логотип
+      destination: 'user/assets'
+      multiple: false
+      accept:
+        - image/*
 
     google_analytics_code:
         type: text

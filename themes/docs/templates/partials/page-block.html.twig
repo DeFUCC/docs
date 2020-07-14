@@ -1,5 +1,6 @@
-<container class="page">
-<section class="content {{ page.content|length < 800 ? 'narrow' : '' }}">
+<main class="page container" >
+<section class="content  {{ page.content|length < 800 ? 'narrow' : '' }}">
+
 
     <h1>{{ page.title }}</h1>
     {% if uri.param('tag') %}
@@ -26,4 +27,4 @@
     {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
 {% endif %}
 
-</container>
+</main>

@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <main class="content article {{ page.header.toc ? 'with-toc':'no-toc'}}">
+    <main class="article {{ page.header.toc ? 'with-toc':'no-toc'}}">
       <header>
         {% if page.header.icon  %}
             <div class="article-icon">
@@ -9,9 +9,14 @@
             </div>
         {% endif %}
         <div class="article-start">
-          <h1 class="is-size-5">{{ page.title }}
+          {% if page.parent.slug == 'pages' %}
+              {% set parent = page.find(system.home.alias) %}
+          {% else %}
+              {% set parent = page.parent %}
+          {% endif %}
 
-          </h1>
+          <a href="{{parent.url}}">{{ parent.title }}</a>
+          <h1 class="is-size-5">{{ page.title }}</h1>
 
           {% for tag in page.taxonomy.tag %}
               <a href="/research/tag:{{tag}}">
@@ -43,7 +48,7 @@
             {% endif %}
           {% endif %}
       </header>
-      <article>
+      <article class="content">
 
 
 
