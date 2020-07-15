@@ -11,8 +11,6 @@ content:
     order:
         by: modified
         dir: desc
-    pagination: true
-    limit: 12
 author: Давай
 ---
 

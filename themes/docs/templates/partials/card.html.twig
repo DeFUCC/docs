@@ -1,26 +1,44 @@
 {% if item.visible %}
 
-            <a href="{{item.url}}" class="card item-card">
+  <a href="{{item.url}}" class="card">
+
+  	   {% include 'partials/card-image.html.twig'%}
+
+  	    <div class="card-content">
+
+          {% if item.template == 'article' %}
+
+          <div class="tags">
+            {% for tag in item.taxonomy.tag %}
+                   <span class="tag">
+                     {{tag}}
+                   </span>
+               {% endfor %}
+          </div>
+
+          {% endif %}
 
 
-            	   {% include 'partials/card-image.html.twig'%}
+          <h3 class="title">{{item.title}}
+          </h3>
 
-            	    <div class="card-content">
+          <p class="summary">
+            {{item.summary()|striptags}}
+          </p>
+
+          {% if item.template == 'article' %}
+
+          <small class="">
+            <i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }} /
+            <i class="fa fa-eye"></i>
+            {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
+            <i class="fa fa-pencil"></i> {{item.modified | nicetime}}
+           </small>
+
+          {% endif %}
 
 
-                        <div class="content">
-                            <h4 class="title is-size-4">{{item.title}}
-                            </h4>
-
-                            <p class="subtitle is-size-7">
-
-                                    <p>{{item.summary()|striptags}}
-                                    </p>
-
-                        </div>
-            	    </div>
-              </a>
-
-
+  	    </div>
+    </a>
 
 {% endif %}

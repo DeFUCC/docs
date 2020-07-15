@@ -2,27 +2,22 @@
 
 {% block content %}
 
-<div id="body-inner" class="content">
-    <div class="columns">
+<main class="article">
 
-      <div class="column is-one-third is-relative">
-        <div class="sticky">
+      <header>
+        {% if page.header.icon  %}
+            <div class="article-icon">
+                  {{page.media[page.header.icon]}}
+            </div>
+        {% endif %}
+      </header>
 
-          {{ page.media[page.header.icon] }}
-
-        </div>
-
-
-
-      </div>
-
-      <div class="column">
+      <article class="content">
           <h2>{{ page.title }}</h2>
           {{ page.content }}
 
-      </div>
+      </article>
 
-    </div>
-</div>
+</main>
 
 {% endblock %}

@@ -69,19 +69,17 @@
 
             <i class="fa fa-pencil"></i> Последняя редакция {{page.modified | nicetime}}</p>
 
-
-        {% set linked = backlinks[page.url] %}
-        {% if linked|length >0 %}
-         <section class="content">
-            <h3 class="mt-3">На эту статью ссылаются:</h3>
-            {%  for link in linked %}
-                {% set backlink = page.find(link) %}
-                {% include 'partials/card.html.twig' with {'item':backlink} %}
-            {% endfor %}
-         </section>
-        {% endif %}
       </article>
-
+      {% set linked = backlinks[page.url] %}
+      {% if linked|length >0 %}
+       <footer>
+          <h3 class="mt-3">На эту статью ссылаются:</h3>
+          {%  for link in linked %}
+              {% set backlink = page.find(link) %}
+              {% include 'partials/card.html.twig' with {'item':backlink} %}
+          {% endfor %}
+       </footer>
+      {% endif %}
    </main>
 
 {% endblock %}

@@ -1,0 +1,30 @@
+<footer>
+   <nav id="footer-nav">
+
+     {% for p in pages.children.visible %}
+     <section>
+       <h3 class="{{ p.active or p.activeChild ? 'active' : '' }}"> <a href="{{p.url}}">{{p.title}}</a> </h3>
+       <ul id="{{ slug }}">
+          {% for ch in p.children.visible %}
+            <li class="{{ ch.active or ch.activeChild ? 'active' : '' }}">
+                  <a href="{{ch.url}}">{{ch.title}}</a>
+                {% if ch.children.visible.count %}
+                  <span class="tag">{{ch.children.visible.count}}</span>
+                  {% if ch.active or ch.activeChild %}
+                    <ul>
+                      {% for sub in ch.children.visible %}
+                          <li class="{{ sub.active or sub.activeChild ? 'active' : '' }}">
+                              <a href="{{sub.url}}">{{sub.title}}</a>
+                          </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endif %}
+              </li>
+          {% endfor %}
+       </ul>
+     </section>
+     {% endfor %}
+
+   </nav>
+</footer>

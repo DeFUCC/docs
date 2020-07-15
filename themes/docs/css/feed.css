@@ -1,0 +1,37 @@
+main.index {
+  display: flex;
+  flex-direction: column;
+}
+
+main.index > section {
+  background: var(--bg-gray);
+}
+
+main.index > section:nth-child(even) {
+  background: #fff;
+}
+
+.list {
+  max-width: 980px;
+  padding: 4em 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px,25%) 1fr;
+  position: relative;
+}
+
+.list .sticky {
+  position: sticky;
+  top:80px;
+  padding: 1em;
+}
+
+.list .content {
+  padding: 1em;
+}
+
+.list .cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}

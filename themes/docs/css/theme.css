@@ -1,4 +1,7 @@
-
+:root {
+  --bg-gray: #fbfbfb;
+  --text-color:#333;
+}
 
 .button, .button-secondary {
   display: inline-block;
@@ -14,16 +17,6 @@ body iframe {
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg-gray);
-  color: #555;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-    font-size:1.15em;
-    letter-spacing: 0;
-    hyphens: auto;
 }
 
 .default-animation, #header #logo-svg, #header #logo-svg path, #sidebar, #sidebar ul, #body, #body .padding, #body .nav {
@@ -96,64 +89,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
       color: rgba(255, 255, 255, 0.6); }
 
 
-
-#top-page-nav .nav {
-  	overflow: hidden;
-
-}
-
-#top-page-nav .nav>i {
-    transform: rotate(90deg);
-}
-
-#bottom-page-nav {
-    display: flex;
-    position: relative;
-}
-
-#bottom-page-nav .nav {
-    flex: 1 1 50%;
-    padding:1em;
-}
-
-#bottom-page-nav h6 {
-    font-size:0.7em;
-    color: #ccc;
-}
-
-#bottom-page-nav .prev div {
-    margin-left: 2.5em;
-}
-
-#bottom-page-nav .next div {
-    margin-right: 2.5em;
-}
-
-#bottom-page-nav i {
-    position:absolute;
-    top:24px;
-}
-
-#bottom-page-nav .next i {
-    right: 16px;
-}
-
-#bottom-page-nav .next {
-    text-align: right;
-}
-
-#bottom-page-nav .nav:hover {
-  background: #F6F6F6;
-}
-
-#body img {
- 	margin: 0;
-}
-
-#header {
-  background-color: #eee;
-}
-
 .searchbox {
     border-color: #777;
     background-color: #aaa;
@@ -163,23 +98,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     color: #f26724;
 }
 
-#body-inner {
-    margin: 2em;
- 	max-width:720px;
-    word-break: break-word;
-    display: block;
-}
-
-#chapter {
-    justify-content: start;
-}
-
-
-#sidebar-toggle {
-  display: none; }
-
-
-
 #sidebar {
   background-color: var(--bg-gray);
   position: fixed;
@@ -188,7 +106,9 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   bottom: 0;
   left: 0;
   font-weight: 500;
-  font-size: 12px; }
+  font-size: 12px;
+  z-index:200;
+ }
 
   #sidebar a {
     color: #999; }
@@ -348,7 +268,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   min-height: 100%; }
 
   #body img, #body .video-container {
-
+    max-width: 100%;
     display: block;
     text-align: center; }
 
@@ -372,9 +292,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     margin-bottom: 3rem; }
 
 
-
-
-
 #footer {
   padding: 3rem 1rem;
   color: #a2a2a2;
@@ -385,22 +302,13 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 #body a.anchor-link {
   color: #ccc; }
+
 #body a.anchor-link:hover {
   color: #1694CA; }
 
 
 
-table {
-  border: 1px solid #eaeaea;
-  table-layout: auto; }
 
-th {
-  background: #f7f7f7;
-  padding: 0.5rem; }
-
-td {
-  padding: 0.5rem;
-  border: 1px solid #eaeaea; }
 
 .button {
   background: #1694CA;
@@ -649,21 +557,7 @@ td {
   .lifecycle #body-inner .level-4 + ol h3 {
     background: #34495E; }
 
-#top-bar {
-  background: #F6F6F6;
-  padding: 1rem;
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
-  transition: all 600ms ease;
- }
 
- #top-bar.hidden {
-   transform: translateY(-100%);
- }
 
 #top-github-link {
     position: relative;
@@ -671,23 +565,6 @@ td {
     display: flex;
     align-items: center;
 }
-
-  #body .bread {
-      font-size:16px;
-      display:flex;
-      flex:1 1 auto;
-  }
-
-#body #breadcrumbs {
-  height: auto;
-  display: block;
-  margin-bottom: 0;
-  padding-left: 0;
-  line-height: 1.4; }
-  #body #breadcrumbs span {
-    padding: 0 0.1rem; }
-
-
 
 
 .copy-to-clipboard {

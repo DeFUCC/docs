@@ -38,31 +38,15 @@
 
 {% import _self as macro %}
 
-<nav class="navigation">
-    <div class="highlightable">
-        {% if theme_config.top_level_version %}
-            {% for slug, ver in pages.children.visible %}
-                {{ macro.version(ver) }}
-                <ul id="{{ slug }}" class="topics">
-                {{ macro.loop(ver, '') }}
-                </ul>
-            {% endfor %}
-        {% else %}
-            <ul class="topics">
-                {% if theme_config.root_page %}
-                    {{ macro.loop(page.find(theme_config.root_page), '') }}
-                {% else %}
-            {{ macro.loop(pages, '') }}
-                {% endif %}
-            </ul>
-        {% endif %}
-       <br/>
+<nav id="footer-nav">
 
-        <a class="" href="#" data-clear-history-toggle><i
-                    class="fa fa-fw fa-history"></i> {{ 'THEME_LEARN2_CLEAR_HISTORY'|t }}</a>
+  {% for slug, ver in pages.children.visible %}
+  <section>
+    {{ macro.version(ver) }}
+    <ul id="{{ slug }}" class="topics">
+    {{ macro.loop(ver, '') }}
+    </ul>
+  </section>
+  {% endfor %}
 
-        <section id="footer">
-            <p>{{ 'THEME_LEARN2_BUILT_WITH_GRAV'|t }}</p>
-        </section>
-    </div>
 </nav>

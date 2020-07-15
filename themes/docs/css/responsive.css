@@ -5,6 +5,23 @@
 }
 
 @media (max-width: 670px) {
+
+  main.article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    max-height: min-content;
+    place-items: start start;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
   .page-toc {
      display:none;
     }
@@ -21,7 +38,7 @@
     }
 }
 
-@media (min-width:1110px) {
+@media (min-width:1140px) {
   .page-toc {
     right: 2em;
   }

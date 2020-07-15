@@ -1,13 +1,17 @@
 {% if item.header.icon or item.media.images or item.media.files %}
+{% set size = size ?: 150 %}
+
     <div class="card-image">
 
             {% if item.header.icon %}
-              {{item.media[item.header.icon].resize(200,200)}}
+              {% set image  = item.media[item.header.icon] %}
             {% elseif item.media.images %}
-                {{item.media.images|first.resize(200,200)}}
+              {% set image  = item.media.images|first %}
             {% elseif item.media.files %}
-                 {{item.media.files|first.resize(200,200)}}
+              {% set image  = item.media.files|first %}
             {% endif %}
+
+            <img src="{{ image.cropResize(size,size).url }}" width="{{size}}" />
 
     </div>
 {% endif %}

@@ -3,6 +3,7 @@
     {% set progress = page.collection({'items':{'@taxonomy':{'category': cats}},'order': {'by': 'default', 'dir': 'asc'}}) %}
 	{% set next = progress.nextSibling(page.path) %}
 	{% set prev = progress.prevSibling(page.path) %}
+  
 {% if next or prev %}
 	<div id="bottom-page-nav">
 
