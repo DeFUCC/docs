@@ -24,7 +24,7 @@
 
         {% do assets.addCss('theme://css/assets/font-awesome.min.css',100) %}
         {% do assets.addCss('theme://css/assets/featherlight.min.css') %}
-        
+
     {% endblock %}
 
     {% block javascripts %}
@@ -64,11 +64,10 @@
       {% block content %}{% endblock %}
 
 
-
       {% block navigation %}
-      <footer>
+
         {% include 'partials/bottom_nav.html.twig' %}
-      </footer>
+
       {% endblock %}
 
   </section>

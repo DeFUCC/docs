@@ -38,9 +38,9 @@
     }
 }
 
-@media (min-width:1240px) {
+@media (min-width:1150px) {
   .page-toc {
-    right: 2em;
+    left: 940px;
   }
 
   main.article header {
