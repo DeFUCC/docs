@@ -50,42 +50,6 @@ function fallbackMessage(action) {
 
 
 jQuery(document).ready(function() {
-    var sidebarStatus = searchStatus = 'open';
-
-
-    jQuery('#overlay').on('click', function() {
-        jQuery(document.body).toggleClass('sidebar-hidden');
-        sidebarStatus = (jQuery(document.body).hasClass('sidebar-hidden') ? 'closed' : 'open');
-
-        return false;
-    });
-
-
-    jQuery('[data-sidebar-toggle]').on('click', function() {
-        jQuery(document.body).toggleClass('sidebar-hidden');
-        sidebarStatus = (jQuery(document.body).hasClass('sidebar-hidden') ? 'closed' : 'open');
-
-        return false;
-    });
-    jQuery('[data-clear-history-toggle]').on('click', function() {
-        sessionStorage.clear();
-        location.reload();
-        return false;
-    });
-    jQuery('[data-search-toggle]').on('click', function() {
-        if (sidebarStatus == 'closed') {
-            jQuery('[data-sidebar-toggle]').trigger('click');
-            jQuery(document.body).removeClass('searchbox-hidden');
-            searchStatus = 'open';
-
-            return false;
-        }
-
-        jQuery(document.body).toggleClass('searchbox-hidden');
-        searchStatus = (jQuery(document.body).hasClass('searchbox-hidden') ? 'closed' : 'open');
-
-        return false;
-    });
 
     var ajax;
     jQuery('[data-search-input]').on('input', function() {
@@ -175,10 +139,10 @@ jQuery(document).ready(function() {
 
     // allow keyboard control for prev/next links
     jQuery(function() {
-        jQuery('.nav-prev').click(function(){
+        jQuery('.nav.prev').click(function(){
             location.href = jQuery(this).attr('href');
         });
-        jQuery('.nav-next').click(function() {
+        jQuery('.nav.next').click(function() {
             location.href = jQuery(this).attr('href');
         });
     });
@@ -186,12 +150,12 @@ jQuery(document).ready(function() {
     jQuery(document).keydown(function(e) {
       // prev links - left arrow key
       if(e.which == '37') {
-        jQuery('.nav.nav-prev').click();
+        jQuery('.nav.prev').click();
       }
 
       // next links - right arrow key
       if(e.which == '39') {
-        jQuery('.nav.nav-next').click();
+        jQuery('.nav.next').click();
       }
     });
 
@@ -199,32 +163,9 @@ jQuery(document).ready(function() {
 
 jQuery(window).on('load', function() {
 
-    function adjustForScrollbar() {
-        if ((parseInt(jQuery('#body-inner').height()) + 83) >= jQuery('#body').height()) {
-            jQuery('.nav.nav-next').css({ 'margin-right': getScrollBarWidth() });
-        } else {
-            jQuery('.nav.nav-next').css({ 'margin-right': 0 });
-        }
-    }
-
-
-    // store this page in session
-    sessionStorage.setItem(jQuery('body').data('url'), 1);
-
-    // loop through the sessionStorage and see if something should be marked as visited
-    for (var url in sessionStorage) {
-        if (sessionStorage.getItem(url) == 1) jQuery('[data-nav-id="' + url + '"]').addClass('visited');
-    }
-
-
     $(".highlightable").highlight(sessionStorage.getItem('search-value'), { element: 'mark' });
 });
 
-$(function() {
-    $('a[rel="lightbox"]').featherlight({
-        root: 'section#body'
-    });
-});
 
 jQuery.extend({
     highlight: function(node, re, nodeName, className) {

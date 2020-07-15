@@ -32,11 +32,8 @@
 }
 
 #body > main {
-  max-width:100%;
   word-break: break-word;
 }
-
-
 
   #bottom-page-nav {
       display: flex;
@@ -48,6 +45,8 @@
       flex: 1 1 40%;
       padding:1em;
       position: relative;
+      background: var(--bg-gray);
+      z-index:20;
   }
 
   #bottom-page-nav h6 {
@@ -102,6 +101,11 @@
     flex-wrap: wrap;
     padding: 0 2em;
     width: 100%;
+    font-size: 14px;
+  }
+
+  #footer-nav .site-info {
+    padding: 0 1em;
   }
 
   #footer-nav > section {
@@ -120,10 +124,14 @@
   #footer-nav ul, #footer-nav a {
     padding:0;
     list-style: none;
-    font-size: 14px;
-    line-height: 1.8;
+
+    line-height: 1.4;
     color: #aaa;
     transition: color 200ms ease;
+  }
+
+  #footer-nav ul li {
+    margin: 0.5em 0;
   }
 
   #footer-nav ul ul {

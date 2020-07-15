@@ -2,7 +2,7 @@ main.article {
   padding: 0 2em;
   max-width:1000px;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px minmax(auto,620px) auto;
   grid-template-rows: 1fr auto;
   grid-template-areas:
   "header content"
@@ -31,6 +31,11 @@ main.article {
   position: relative;
   background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
   padding-bottom:60px;
+}
+
+.article-start h1 {
+  font-size:1.4em;
+  margin-bottom: 8px;
 }
 
 .article header .info {

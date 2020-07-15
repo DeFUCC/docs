@@ -1,12 +1,29 @@
-# Learn2
+# FRUKT
 
-![Learn2](screenshot.jpg)
+![Frukt](screenshot.jpg)
 
-Learn2 is the default [Grav Learn](http://learn.getgrav.org) theme. Simple, fast and modern.
+Frukt is the theme used for DeFUCC programs' sites. It works in a semi-modular way, showing most of the sites pages on the main page. Simple, fast and modern.
+
+## Features
+
+* Lightweight and minimal for optimal performance
+* Fully responsive with footer mobile navigation
+* Retractable top bar with logo and breadcrumbs
+* Clean modular CSS assets in the pipeline
+* Beautiful articles with fixed Table of contents showing current section
+* Built for showing of bits of valuable information of different sizes
+* Fontawesome icon support
+* Vanilla JS code
+
+### Supported Page Templates
+
+* Index template for site overview
+* Feed template for children listing in cards
+* Error view template
 
 # Installation
 
-Installing the Learn2 theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file. 
+Installing the Learn2 theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
 The theme is designed to be used to provide a documentation site. You can see this in action at [](http://learn.getgrav.org)
 
@@ -51,19 +68,7 @@ Manually updating Learn2 is pretty simple. Here is what you will need to do to g
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-## Features
 
-* Lightweight and minimal for optimal performance
-* Fully responsive with off-page mobile navigation
-* SCSS based CSS source files for easy customization
-* Built specifically for providing easy to read documentation
-* Fontawesome icon support
-
-### Supported Page Templates
-
-* "Docs" template
-* "Chapter" template
-* Error view template
 
 
 ## Setup

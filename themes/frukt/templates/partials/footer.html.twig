@@ -1,6 +1,24 @@
 <footer>
    <nav id="footer-nav">
 
+   <section class="site-info">
+
+     <a href="{{ base_url_absolute }}">
+       <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.footer_logo|first.path }}" />
+     </a>
+
+     <p>
+      {{site.title}} {{"now"|date("Y") }}
+     </p>
+
+     <p>
+     {{ 'THEME_FRUKT_GITHUB_NOTE'|t }}
+     {% if  github_link_position == 'top' %}
+       {% include 'partials/github_link.html.twig' %}
+     {% endif %}
+     </p>
+   </section>
+
      {% for p in pages.children.visible %}
      <section>
        <h3 class="{{ p.active or p.activeChild ? 'active' : '' }}"> <a href="{{p.url}}">{{p.title}}</a> </h3>

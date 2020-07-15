@@ -33,7 +33,6 @@
 
     {% block javascripts %}
         {% do assets.addJs('jquery',101) %}
-        {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
         {% do assets.addJs('theme://js/featherlight.min.js') %}
         {% do assets.addJs('theme://js/clipboard.min.js') %}
         {% do assets.addJs('theme://js/learn.js') %}
@@ -49,44 +48,24 @@
 </head>
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
 
-  {% block sidebar %}
-  <aside id="sidebar">
-      <header>
+{% block topbar %}
+<header id="top-bar">
+  <a id="logo" href="{{ base_url_absolute }}">
+    <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
+  </a>
 
-        <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}">
-          <img src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
-        </a>
+    {% if config.plugins.breadcrumbs.enabled %}
+      <div class="bread">
+          {% include 'partials/breadcrumbs.html.twig' %}
+      </div>
+    {% endif %}
 
-        {% include 'partials/search.html.twig' %}
+</header>
+{% endblock %}
 
-      </header>
-      {% include 'partials/sidebar.html.twig' %}
-  </aside>
-  {% endblock %}
 
   {% block body %}
   <section id="body">
-      <div id="overlay"></div>
-
-      {% block topbar %}
-      <header id="top-bar">
-
-          <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-bars"></i></a>
-          {% if config.plugins.breadcrumbs.enabled %}
-            <div class="bread">
-                {% include 'partials/breadcrumbs.html.twig' %}
-            </div>
-          {% endif %}
-          {% if  github_link_position == 'top' %}
-            <div id="top-github-link" class="px-2">
-            {% include 'partials/github_link.html.twig' %}
-            </div>
-          {% endif %}
-
-      </header>
-      {% endblock %}
-
-
 
       {% block content %}{% endblock %}
 

@@ -19,7 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.default-animation, #header #logo-svg, #header #logo-svg path, #sidebar, #sidebar ul, #body, #body .padding, #body .nav {
+.default-animation, #header #logo-svg, #header #logo-svg path, #body, #body .padding, #body .nav {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -94,174 +94,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     background-color: #aaa;
 }
 
-#sidebar ul li.visited > a .read-icon {
-    color: #f26724;
-}
-
-#sidebar {
-  background-color: var(--bg-gray);
-  position: fixed;
-  top: 0;
-  width: 300px;
-  bottom: 0;
-  left: 0;
-  font-weight: 500;
-  font-size: 12px;
-  z-index:200;
- }
-
-  #sidebar a {
-    color: #999; }
-
-    #sidebar a:hover {
-      color: #d5d5d5; }
-
-    #sidebar a.subtitle {
-      color: rgba(187, 187, 187, 0.6); }
-
-  #sidebar hr {
-    border-bottom: 1px solid #323a44; }
-
-  #sidebar a.padding {
-    padding: 0 1rem; }
-
-  #sidebar h5 {
-    margin: 0.5rem 0 0 0;
-    position: relative;
-    line-height: 1.6em;
-    font-size:1.2em;}
-
-    #sidebar h5 a {
-      display: block;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 1rem;
-      padding-right: 1rem; }
-
-    #sidebar h5 i {
-      color: rgba(187, 187, 187, 0.6);
-      position: absolute;
-      right: 0.6rem;
-      top: 0.5rem;
-      font-size:80%;}
-
-    #sidebar h5.parent a {
-      background: #aaa;
-      line-height:2em;
-      color: #555 !important; }
-
-    #sidebar h5.active a {
-      background: #ccc;
-      line-height:2em;
-      color: #222 !important; }
-
-    #sidebar h5.active i {
-      color: #222 !important; }
-
-  #sidebar h5 + ul.topics {
-    display: none;
-    margin-top: 0; }
-
-  #sidebar h5.parent + ul.topics, #sidebar h5.active + ul.topics {
-    display: block; }
-
-  #sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-    #sidebar ul.searched a {
-      color: #888888; }
-
-    #sidebar ul.searched .search-match a {
-      color: #d5d5d5; }
-
-      #sidebar ul.searched .search-match a:hover {
-        color: #eeeeee; }
-
-    #sidebar ul.topics {
-      padding: 0 1rem; }
-
-      #sidebar ul.topics.searched ul {
-        display: block; }
-
-      #sidebar ul.topics ul {
-        display: none;
-        padding-bottom: 1rem; }
-
-        #sidebar ul.topics ul ul {
-          padding-bottom: 0; }
-
-      #sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
-        display: block; }
-
-      #sidebar ul.topics > li > a {
-        line-height: 1.9rem;
-        font-size: 1.1em;
-      }
-
-        #sidebar ul.topics > li > a b {
-          opacity: 0.5;
-          font-weight: normal; }
-
-        #sidebar ul.topics > li > a .fa {
-          margin-top: 9px; }
-
-      #sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
-        background: #eee;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem; }
-
-    #sidebar ul li.active > a {
-      background: #fff;
-      color: #555 !important;
-      margin-left: -1rem;
-      margin-right: -1rem;
-      padding-left: 1rem;
-      padding-right: 1rem; }
-
-    #sidebar ul li {
-      padding: 0; }
-
-      #sidebar ul li.visited + span {
-        margin-right: 16px; }
-
-      #sidebar ul li a {
-        display: block;
-        padding: 2px 0; }
-
-        #sidebar ul li a span {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-          display: block; }
-
-      #sidebar ul li > a {
-        padding: 4px 0; }
-
-      #sidebar ul li .fa {
-        display: none;
-        float: right;
-        font-size: 13px;
-        min-width: 16px;
-        margin: 4px 0 0 0;
-        text-align: right; }
-
-      #sidebar ul li.visited > a .read-icon {
-        color: #1694CA;
-        display: inline; }
-
-      #sidebar ul li li {
-        padding-left: 1rem;
-        text-indent: 0.2rem; }
-
-#main {
-  background: #f7f7f7;
-  margin: 0 0 1.563rem 0; }
-
 #body {
   position: relative;
   margin-left: 300px;
@@ -292,22 +124,11 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     margin-bottom: 3rem; }
 
 
-#footer {
-  padding: 3rem 1rem;
-  color: #a2a2a2;
-  font-size: 13px; }
-  #footer p {
-    margin: 0; }
-
-
 #body a.anchor-link {
   color: #ccc; }
 
 #body a.anchor-link:hover {
   color: #1694CA; }
-
-
-
 
 
 .button {
@@ -332,50 +153,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   .button-secondary:active {
     box-shadow: 0 1px 0 #f69b15; }
 
-.bullets {
-  margin: 1.7rem 0;
-  margin-left: -0.85rem;
-  margin-right: -0.85rem;
-  overflow: auto; }
-
-.bullet {
-  float: left;
-  padding: 0 0.85rem; }
-
-.two-column-bullet {
-  width: 50%; }
-
-
-.three-column-bullet {
-  width: 33.33333%; }
-
-
-.four-column-bullet {
-  width: 25%; }
-
-
-.bullet-icon {
-  float: left;
-  background: #1694CA;
-  padding: 0.875rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 1.75rem;
-  text-align: center; }
-
-.bullet-icon-1 {
-  background: #1694CA; }
-
-.bullet-icon-2 {
-  background: #16cac4; }
-
-.bullet-icon-3 {
-  background: #b2ca16; }
-
-.bullet-content {
-  margin-left: 4.55rem; }
 
 .tooltipped {
   position: relative; }
@@ -556,15 +333,6 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   color: #2C3E50; }
   .lifecycle #body-inner .level-4 + ol h3 {
     background: #34495E; }
-
-
-
-#top-github-link {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-}
 
 
 .copy-to-clipboard {
