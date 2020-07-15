@@ -1,21 +1,68 @@
 en:
-    THEME_FRUKT_GITHUB_NOTE: Found errors? Think you can improve this page? Edit it on GitHub!
-
+    THEME_FRUKT_GITHUB_NOTE: Found errors? Think you can improve this page?
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
+    THEME_FRUKT_PREVIOUS: Previous
+    THEME_FRUKT_NEXT: Next
+ru:
+    THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на GitHub. 
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
+    THEME_FRUKT_MINUTES: мин.
+    THEME_FRUKT_AUTHOR: Автор
+    THEME_FRUKT_PUBLISHED: Впервые опубликовано
+    THEME_FRUKT_EDITED: Последняя редакция
+    THEME_FRUKT_LINKS: На этот материал ссылаются
+    THEME_FRUKT_PREVIOUS: Ранее
+    THEME_FRUKT_NEXT: Далее
 cn:
     THEME_FRUKT_GITHUB_NOTE: 发现错误？请帮忙改进，谢谢！
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
 cs:
     THEME_FRUKT_GITHUB_NOTE: Našli jste chybu? Myslíte, že můžete vylepšit tuto dokumentaci?
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
 de:
     THEME_FRUKT_GITHUB_NOTE: Fehler gefunden? Möchten Sie diese Seite verbessern?
-
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
 es:
     THEME_FRUKT_GITHUB_NOTE: ¿Encontraste errores? ¿Crees que puedes mejorar esta documentación?
-
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
 fr:
     THEME_FRUKT_GITHUB_NOTE: Vous avez découvert des erreurs ? Vous pensez pouvoir améliorer cette documentation ?
-
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions
 it:
     THEME_FRUKT_GITHUB_NOTE: Hai trovato degli errori? Pensi di poter migliorare questa documentazione?
-
-ru:
-    THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на GitHub. Включайтесь!
+    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
+    THEME_FRUKT_MINUTES: min.
+    THEME_FRUKT_AUTHOR: Author
+    THEME_FRUKT_PUBLISHED: First published
+    THEME_FRUKT_EDITED: Last edited
+    THEME_FRUKT_LINKS: Mentions

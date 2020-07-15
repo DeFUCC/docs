@@ -7,3 +7,5 @@
     * Feed template for site sections
     * Article template for long texts with interactive toc
     * Def template for short definitions
+2. [](#upgrade)
+    * I18n ready

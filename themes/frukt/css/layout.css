@@ -110,6 +110,7 @@
 
   #footer-nav > section {
     flex: 1 1 160px;
+    padding: 0 1em;
   }
 
   #footer-nav h3 {

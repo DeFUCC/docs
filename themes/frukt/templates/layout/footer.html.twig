@@ -3,20 +3,24 @@
 
    <section class="site-info">
 
-     <a href="{{ base_url_absolute }}">
-       <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.footer_logo|first.path }}" />
-     </a>
+    {% if theme.footer_logo %}
+      <a href="{{ base_url_absolute }}">
+        <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.footer_logo|first.path }}" />
+      </a>
+    {% endif %}
 
      <p>
       {{site.title}} {{"now"|date("Y") }}
      </p>
 
+
+     {% if  github_link_position %}
      <p>
-     {{ 'THEME_FRUKT_GITHUB_NOTE'|t }}
-     {% if  github_link_position == 'top' %}
+        {{ 'THEME_FRUKT_GITHUB_NOTE'|t }} <br />
        {% include 'partials/github_link.html.twig' %}
-     {% endif %}
      </p>
+     {% endif %}
+
    </section>
 
      {% for p in pages.children.visible %}
