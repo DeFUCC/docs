@@ -1,5 +1,5 @@
 ---
-title: 'Часть 3: Толпа'
+title: 'Толпа'
 media_order: crowd.jpg
 icon: crowd.jpg
 taxonomy:

@@ -6,7 +6,10 @@
   {% for item in page.parent.children.visible %}
 
     <section>
-      {% include 'layout/list.html.twig' with {'page':item} %}
+    
+          {% include 'layout/list.html.twig' with {'page':item} %}
+
+
     </section>
 
   {% endfor %}

@@ -7,17 +7,7 @@
          </a>
           <div class="card-text">
 
-            {% if item.template == 'article' %}
 
-            <div class="tags">
-              {% for tag in item.taxonomy.tag %}
-                     <span class="tag">
-                       {{tag}}
-                     </span>
-                 {% endfor %}
-            </div>
-
-            {% endif %}
             <a href="{{item.url}}">
             <h3 class="title">{{item.title}}
             </h3>
@@ -28,10 +18,24 @@
 
             {% if item.template == 'article' %}
             <small class="">
-              <i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }} /
-              <i class="fa fa-eye"></i>
-              {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
-              <i class="fa fa-pencil"></i> {{item.modified | nicetime}}
+
+
+              {% for tag in item.taxonomy.tag %}
+                     <span class="tag">
+                       {{tag}}
+                     </span>
+                 {% endfor %}
+
+                 <span class="tag"><i class="fa fa-eye"></i>
+                 {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
+
+              <span class="tag"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</span>
+
+            {% if false %}
+                <span class="tag"><i class="fa fa-pencil"></i> {{item.modified | nicetime}}</span>
+            {% endif %}
+
+
              </small>
             {% endif %}
             </a>

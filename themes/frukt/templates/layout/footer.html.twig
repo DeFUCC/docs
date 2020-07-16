@@ -19,7 +19,7 @@
      </p>
    </section>
 
-     {% for p in pages.children.visible %}
+     {% for p in pages.children.routable.visible %}
      <section>
        <h3 class="{{ p.active or p.activeChild ? 'active' : '' }}"> <a href="{{p.url}}">{{p.title}}</a> </h3>
        <ul id="{{ slug }}">

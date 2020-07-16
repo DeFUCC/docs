@@ -1,7 +1,7 @@
 ---
 title: Миссия
-media_order: logo_square.svg
-icon: logo_square.svg
+media_order: sq-round.svg
+icon: sq-round.svg
 date: '13:27 25-06-2020'
 taxonomy:
     category:

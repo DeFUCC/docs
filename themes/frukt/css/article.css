@@ -49,6 +49,15 @@ main.article {
   color: #333;
 }
 
+.article-details {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  padding:2em;
+  color: #999;
+  background-color: #f5f5f5;
+  font-size:0.85em;
+}
+
 main.article header {
   background: var(--bg-gray);
   display: flex;
@@ -66,6 +75,20 @@ main.article > article {
 main.article.no-toc header {
   position:sticky;
   top: 80px;
+}
+
+
+.tag {
+  background: hsla(0,0%,70%,0.08);
+  padding: 6px 10px;
+  margin: 2px;
+  border-radius: 20px;
+  color: #666;
+  font-size: 12px;
+  white-space:nowrap;
+}
+.tag i {
+  margin: 0 4px 0 0;
 }
 
 /*  table of contents  */

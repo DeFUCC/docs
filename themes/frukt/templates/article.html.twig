@@ -14,21 +14,25 @@
                 {% include 'partials/breadcrumbs.html.twig' %}
           {% endif %}
 
+
+
           <a href="{{parent.url}}">{{ parent.title }}</a>
           <h1 class="">{{ page.title }}</h1>
           {{page.header.subtitle|markdown }}
+
           <small>
           {% for tag in page.taxonomy.tag %}
               <a href="/tag:{{tag}}">
-                <span class="tag">
-                  {{tag}}
-                </span>
+                <span class="tag">{{tag}}</span>
               </a>
           {% endfor %}
-           <i class="fa fa-eye"></i>
-              {{ viewcounts[page.route]|nicenumber }} /
-          <i class="fa fa-clock-o"></i>
+          <span class="tag"><i class="fa fa-eye"></i>
+             {{ viewcounts[page.route]|nicenumber }}
+          </span>
+          <span class="tag"><i class="fa fa-clock-o"></i>
                {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
+          </span>
+
           </small>
 
 
@@ -52,18 +56,41 @@
             {{ page.content }}
         </p>
 
-         <hr />
-        <p class="">
 
-            {% if page.header.author %}
-            <i class="fa fa-user"></i> {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }}  <br />
-            {% endif %}
+        <div class="article-details">
+
+          {% if page.header.author %}
+
+              <div class="icon">
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="text">
+                {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }}
+              </div>
+
+          {% endif %}
 
             {% if page.header.date %}
-            <i class="fa fa-keyboard-o"></i> {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }}  <br />
+
+              <div class="icon">
+                <i class="fa fa-keyboard-o"></i>
+              </div>
+              <div class="text">
+                {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }}
+              </div>
+
             {% endif %}
 
-            <i class="fa fa-pencil"></i> {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}</p>
+
+              <div class="icon">
+                <i class="fa fa-pencil"></i>
+              </div>
+              <div class="text">
+                {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}
+              </div>
+
+
+        </div>
 
 
       </article>
