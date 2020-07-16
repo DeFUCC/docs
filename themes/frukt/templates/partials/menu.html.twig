@@ -1,0 +1,7 @@
+<ul id="menu">
+{% for item in pages.children.visible %}
+    <li class="{{ item.active or item.activeChild ? 'active' : '' }}">
+      <a href="/#{{ item.slug }}">{{ item.title }}</a>
+    </li>
+{% endfor %}
+</ul>

@@ -9,10 +9,9 @@
             </div>
         {% endif %}
         <div class="article-start">
-          {% if page.parent.slug == 'pages' %}
-              {% set parent = page.find(system.home.alias) %}
-          {% else %}
-              {% set parent = page.parent %}
+
+          {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
           {% endif %}
 
           <a href="{{parent.url}}">{{ parent.title }}</a>

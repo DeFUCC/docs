@@ -96,8 +96,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 #body {
   position: relative;
-  margin-left: 300px;
-  min-height: 100%; }
+}
 
   #body img, #body .video-container {
     max-width: 100%;
@@ -129,6 +128,10 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 #body a.anchor-link:hover {
   color: #1694CA; }
+
+#breadcrumbs a {
+  font-weight: normal;
+}
 
 
 .button {

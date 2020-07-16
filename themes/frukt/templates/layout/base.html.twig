@@ -48,11 +48,7 @@
     <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
   </a>
 
-    {% if config.plugins.breadcrumbs.enabled %}
-      <div class="bread">
-          {% include 'partials/breadcrumbs.html.twig' %}
-      </div>
-    {% endif %}
+    {% include 'partials/menu.html.twig' %}
 
 </header>
 {% endblock %}

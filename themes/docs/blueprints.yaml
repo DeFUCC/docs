@@ -1,0 +1,80 @@
+name: DeFUCC docs
+version: 1.8.0
+description: "Docs based on Learn2 for Grav"
+icon: book
+author:
+  name: Davay
+  email: davay@frkt.ru
+  url: http://doc.frkt.ru
+homepage: https://github.com/getgrav/grav-theme-learn2
+demo: http://doc.frkt.ru
+keywords: docs, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-learn2/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
+
+form:
+  validation: loose
+  fields:
+    top_level_version:
+        type: toggle
+        label: Top Level Version Navigation
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    home_url:
+        type: text
+        label: Home URL
+        placeholder: http://getgrav.org
+        validate:
+          type: text
+
+    custom_logo:
+      type: file
+      label: Logo
+      destination: 'user/assets'
+      multiple: false
+      accept:
+        - image/*
+
+    footer_logo:
+      type: file
+      label: Footer logo
+      destination: 'user/assets'
+      multiple: false
+      accept:
+        - image/*
+
+    google_analytics_code:
+        type: text
+        label: Google Analytics Code
+        placeholder: UA-XXXXXXXX-X
+        validate:
+          type: text
+
+    github.position:
+        type: select
+        size: medium
+        classes: fancy
+        label: GitHub Position
+        options:
+            top: Top
+            bottom: Bottom
+            off: Off
+
+    github.tree:
+        type: text
+        label: GitHub Tree
+        default: https://github.com/getgrav/grav-skeleton-rtfm-site/blob/develop/
+
+    github.commits:
+        type: text
+        label: GitHub Commits
+        default: https://github.com/getgrav/grav-skeleton-rtfm-site/commits/develop/

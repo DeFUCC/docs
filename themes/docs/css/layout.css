@@ -14,36 +14,21 @@
    transform: translateY(-100%);
  }
 
-#top-bar #logo {
-  flex: 1 1 3em;
-  margin-left:2em;
-  align-items: center;
-  display: flex;
-  max-height: 3em;
+#top-bar #breadcrumbs {
+   height: auto;
+   display: block;
+   font-size:16px;
+   margin-bottom: 0;
+   padding:0 1rem;
+   line-height: 1.4;
+ }
+
+#top-bar #breadcrumbs span {
+ padding: 0 0.1rem;
 }
 
-#top-bar #menu {
-  flex: 1 1 80vw;
-  display: flex;
-  list-style: none;
-  margin:0;
-  padding:0;
-}
-
-#menu li {
-  margin: 0 1em;
-}
-
-#menu li.active {
-  border-bottom: 1px solid #555;
-}
-
-#menu a {
-  color: #555;
-}
-
-#menu a:hover {
-  color: #000;
+#sidebar-toggle {
+  display: none;
 }
 
 #body > main {
@@ -125,7 +110,6 @@
 
   #footer-nav > section {
     flex: 1 1 160px;
-    padding: 0 1em;
   }
 
   #footer-nav h3 {
