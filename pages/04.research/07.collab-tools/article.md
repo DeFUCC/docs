@@ -2,8 +2,6 @@
 title: 'Инструменты сотрудничества'
 date: '18:13 08-11-2019'
 taxonomy:
-    category:
-        - Исследование
     tag:
         - Технологии
 visible: true

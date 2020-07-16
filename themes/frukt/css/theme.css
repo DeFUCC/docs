@@ -3,11 +3,7 @@
   --text-color:#333;
 }
 
-.button, .button-secondary {
-  display: inline-block;
-  padding: 7px 12px; }
-  .button:active, .button-secondary:active {
-    margin: 2px 0 -2px 0; }
+
 
 body iframe {
     min-width:100%;
@@ -135,15 +131,23 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
 
 
 .button {
-  background: #1694CA;
+  background: #777;
   color: #fff;
-  box-shadow: 0 3px 0 #1380ae; }
-  .button:hover {
-    background: #1380ae;
-    box-shadow: 0 3px 0 #106c93;
-    color: #fff; }
-  .button:active {
-    box-shadow: 0 1px 0 #106c93; }
+  border-radius: 12px;
+  box-shadow: 0 4px 0px hsla(0,0%,50%,0.4);
+  transition: all 100ms ease;
+}
+
+
+.button:hover {
+  background: #999;
+  box-shadow: 0 6px 0px hsla(0,0%,50%,0.4);
+  color: #fff;
+}
+
+.button:active {
+  box-shadow: 0 1px 0 hsla(0,0%,50%,0.8);
+}
 
 .button-secondary {
   background: #F8B450;
@@ -156,6 +160,12 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   .button-secondary:active {
     box-shadow: 0 1px 0 #f69b15; }
 
+    .button, .button-secondary {
+      display: inline-block;
+      padding: 7px 12px; }
+
+      .button:active, .button-secondary:active {
+        margin: 2px 0 -2px 0; }
 
 .tooltipped {
   position: relative; }

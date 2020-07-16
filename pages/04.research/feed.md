@@ -1,6 +1,7 @@
 ---
 title: Исследования
 media_order: research.jpg
+background: research.jpg
 date: '14:57 25-06-2020'
 taxonomy:
     category:
