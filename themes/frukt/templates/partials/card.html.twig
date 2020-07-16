@@ -1,44 +1,59 @@
 {% if item.visible %}
 
-  <a href="{{item.url}}" class="card">
+  <div class="card">
+     <div  class="card-content">
+  	     <a href="{{item.url}}">
+          {% include 'partials/card-image.html.twig'%}
+         </a>
+          <div class="card-text">
 
-  	   {% include 'partials/card-image.html.twig'%}
+            {% if item.template == 'article' %}
 
-  	    <div class="card-content">
+            <div class="tags">
+              {% for tag in item.taxonomy.tag %}
+                     <span class="tag">
+                       {{tag}}
+                     </span>
+                 {% endfor %}
+            </div>
 
-          {% if item.template == 'article' %}
+            {% endif %}
+            <a href="{{item.url}}">
+            <h3 class="title">{{item.title}}
+            </h3>
 
-          <div class="tags">
-            {% for tag in item.taxonomy.tag %}
-                   <span class="tag">
-                     {{tag}}
-                   </span>
-               {% endfor %}
+            <p class="summary">
+              {{item.summary(150)|striptags}}
+            </p>
+
+            {% if item.template == 'article' %}
+            <small class="">
+              <i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }} /
+              <i class="fa fa-eye"></i>
+              {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
+              <i class="fa fa-pencil"></i> {{item.modified | nicetime}}
+             </small>
+            {% endif %}
+            </a>
+
           </div>
 
+          {% if item.children %}
+            <div class="child-cards">
+            {% for child in item.children %}
+                  <a href="{{child.url}}" class="card">
+                    {% include 'partials/card-image.html.twig' with {'size': 50, 'item': child } %}
+                    <h5 class="title">{{ child.title }}</h5>
+                  </a>
+            {% endfor %}
+            </div>
           {% endif %}
 
-
-          <h3 class="title">{{item.title}}
-          </h3>
-
-          <p class="summary">
-            {{item.summary(300)|striptags}}
-          </p>
-
-          {% if item.template == 'article' %}
-
-          <small class="">
-            <i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }} /
-            <i class="fa fa-eye"></i>
-            {{ (viewcounts[item.route] ?? 0)|nicenumber }} /
-            <i class="fa fa-pencil"></i> {{item.modified | nicetime}}
-           </small>
-
-          {% endif %}
+          </div>
 
 
-  	    </div>
-    </a>
+
+
+    </div>
 
 {% endif %}

@@ -1,7 +1,7 @@
 {% if item.header.icon or item.media.images or item.media.files %}
 {% set size = size ?: 150 %}
 
-    <div class="card-image">
+    <div style="max-width:{{size}}px" class="card-image">
 
             {% if item.header.icon %}
               {% set image  = item.media[item.header.icon] %}
