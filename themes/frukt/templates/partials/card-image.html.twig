@@ -4,14 +4,14 @@
     <div style="max-width:{{size}}px" class="card-image">
 
             {% if item.header.icon %}
-              {% set image  = item.media[item.header.icon] %}
+              {% set image  = item.media[item.header.icon].cropResize(size,size) %}
             {% elseif item.media.images %}
-              {% set image  = item.media.images|first %}
+              {% set image  = item.media.images|first.cropZoom(size,size) %}
             {% elseif item.media.files %}
-              {% set image  = item.media.files|first %}
+              {% set image  = item.media.files|first.cropResize(size,size) %}
             {% endif %}
 
-            <img src="{{ image.cropResize(size,size).url }}" width="{{size}}" />
+            <img src="{{ image.url }}" width="{{size}}" />
 
     </div>
 {% endif %}

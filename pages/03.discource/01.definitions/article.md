@@ -5,7 +5,7 @@ date: '12:53 25-06-2020'
 taxonomy:
     category:
         - Дискурс
-icon: books.jpg
+bg: books.jpg
 toc: true
 ---
 

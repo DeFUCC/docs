@@ -1,5 +1,5 @@
 main.article {
-  padding: 0 2em;
+  padding: 2em;
   max-width:1000px;
   display: grid;
   grid-template-columns: 280px minmax(auto,620px) auto;
@@ -75,6 +75,14 @@ main.article > article {
 main.article.no-toc header {
   position:sticky;
   top: 80px;
+}
+
+.article-back {
+  height: 70vh;
+  z-index: 40;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
