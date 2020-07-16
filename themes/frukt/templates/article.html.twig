@@ -16,7 +16,7 @@
 
           <a href="{{parent.url}}">{{ parent.title }}</a>
           <h1 class="">{{ page.title }}</h1>
-
+          {{page.header.subtitle|markdown }}
           <small>
           {% for tag in page.taxonomy.tag %}
               <a href="/tag:{{tag}}">
@@ -31,7 +31,7 @@
                {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
           </small>
 
-          <div class="info"> {{page.header.subtitle|markdown }} </div>
+
 
 
         </div>
