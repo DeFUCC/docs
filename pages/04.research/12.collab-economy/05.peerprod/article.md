@@ -1,7 +1,6 @@
 ---
-title: 'Равноправное производство'
+title: '5. Равноправное производство'
 media_order: cocreation.png
-icon: cocreation.png
 taxonomy:
     category:
         - Исследование

@@ -1,4 +1,4 @@
-{% extends 'layout/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
 {% block content %}
   <main class="index">
@@ -6,7 +6,7 @@
   {% for item in page.parent.children.visible %}
 
     <section>
-    
+
           {% include 'layout/list.html.twig' with {'page':item} %}
 
 

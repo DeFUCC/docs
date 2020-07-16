@@ -1,7 +1,7 @@
 ---
 title: 'Синтетический обзор экономики сотрудничества'
 media_order: collaborative-economy-s2012.jpg
-icon: collaborative-economy-s2012.jpg
+bg: collaborative-economy-s2012.jpg
 taxonomy:
     category:
         - Исследование

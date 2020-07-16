@@ -1,11 +1,10 @@
 ---
-title: 'Совместное потребление'
+title: '4. Совместное потребление'
 taxonomy:
     category:
         - Исследование
     tag:
         - Социология
-icon: circle.png
 toc: true
 ---
 

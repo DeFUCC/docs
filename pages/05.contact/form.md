@@ -1,5 +1,6 @@
 ---
 title: Связь
+routable: false
 form:
     name: contact-us
     fields:

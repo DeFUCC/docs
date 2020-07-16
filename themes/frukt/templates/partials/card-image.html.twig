@@ -1,14 +1,12 @@
-{% if item.header.icon or item.media.images or item.media.files %}
+{% if item.header.icon or item.header.bg %}
 {% set size = size ?: 150 %}
 
     <div style="max-width:{{size}}px" class="card-image">
 
             {% if item.header.icon %}
               {% set image  = item.media[item.header.icon].cropResize(size,size) %}
-            {% elseif item.media.images %}
-              {% set image  = item.media.images|first.cropZoom(size,size) %}
-            {% elseif item.media.files %}
-              {% set image  = item.media.files|first.cropResize(size,size) %}
+            {% elseif item.header.bg %}
+              {% set image  = item.media[item.header.bg].cropZoom(size,size) %}
             {% endif %}
 
             <img src="{{ image.url }}" width="{{size}}" />

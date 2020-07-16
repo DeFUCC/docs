@@ -26,11 +26,10 @@ main.article {
 .article-start {
   flex:1 1 200px;
   background: var(--bg-gray);
-  padding:1em;
+  padding:3em 1em 6em 1em;
   z-index:30;
   position: relative;
   background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
-  padding-bottom:60px;
 }
 
 .article-start h1 {
@@ -83,6 +82,7 @@ main.article.no-toc header {
   position: relative;
   background-attachment: fixed;
   background-size: cover;
+  background-position-y: center;
 }
 
 
@@ -99,12 +99,19 @@ main.article.no-toc header {
   margin: 0 4px 0 0;
 }
 
+.article img {
+  transition: transform 300ms ease;
+}
+
+.article img:hover {
+  transform: scale(1.5);
+}
 /*  table of contents  */
 
 .page-toc {
     position: fixed;
     z-index:20;
-    top: 80px;
+    top: 100px;
     max-width:200px;
     background: hsla(0,0%,50%,0);
     font-size: 14px;
@@ -118,6 +125,7 @@ main.article.no-toc header {
 
 .page-toc h5 {
   color: #555;
+  margin: 1em 0;
 }
 
 .page-toc ul {

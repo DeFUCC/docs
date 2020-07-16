@@ -1,11 +1,10 @@
 ---
-title: 'Концептуализации'
+title: '1. Концептуализации'
 taxonomy:
     category:
         - Исследование
     tag:
         - Социология
-icon: cube.png
 toc: true
 ---
 

@@ -1,10 +1,6 @@
-{% extends 'layout/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
 {% block content %}
-{% if page.header.bg %}
-  <section class="article-back" style="background-image: linear-gradient(hsla(0,0%,50%,0.2),hsla(0,0%,50%,0.2)), url('{{page.media[page.header.bg].url}}')"> </section>
-{% endif %}
-
     <main class="article {{ page.header.toc ? 'with-toc':'no-toc'}}">
       <header>
         {% if page.header.icon  %}

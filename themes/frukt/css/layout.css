@@ -25,6 +25,7 @@
 #top-bar #menu {
   flex: 1 1 80vw;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin:0;
   padding:0;

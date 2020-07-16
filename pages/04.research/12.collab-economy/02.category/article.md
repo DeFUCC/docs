@@ -1,11 +1,10 @@
 ---
-title: 'Категоризация'
+title: '2. Категоризация'
 taxonomy:
     category:
         - Исследование
     tag:
         - Социология
-icon: interaction.png
 toc: true
 ---
 
