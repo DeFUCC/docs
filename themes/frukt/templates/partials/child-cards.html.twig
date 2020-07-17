@@ -1,0 +1,8 @@
+<div class="child-cards">
+{% for child in item.children %}
+      <a href="{{child.url}}" class="card">
+        {% include 'partials/card-image.html.twig' with {'size': 50, 'item': child } %}
+        <h5 class="title">{{ child.title }}</h5>
+      </a>
+{% endfor %}
+</div>
