@@ -41,7 +41,9 @@
       </small>
 
     {% if page.header.additional %}
-      {{ page.header.additional|markdown }}
+      <div class="additional">
+        {{ page.header.additional|markdown }}
+      </div>
     {% endif %}
 
 

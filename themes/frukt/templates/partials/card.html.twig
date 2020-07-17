@@ -13,7 +13,12 @@
             </h3>
 
             <p class="summary">
-              {{item.summary(150)|striptags}}
+          {% if item.header.subtitle %}
+              {{ item.header.subtitle }}
+            {% else %}
+                {{item.summary(100)|striptags}}
+          {% endif %}
+
             </p>
 
             {% if item.template == 'article' %}

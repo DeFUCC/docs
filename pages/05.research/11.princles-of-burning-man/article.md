@@ -8,7 +8,8 @@ taxonomy:
         - Социология
 icon: territory.png
 toc: false
-subtitle: '[Burning Man Philosophical Center](https://burningman.org/culture/philosophical-center/10-principles/?target=_blank)'
+subtitle: '10 принципов, объединяющих сообщество «бёрнеров», ежегодно собирающихся в пустыне, чтобы прожить неделю вместе в ином мире, свободном от торговли, рекламы и денег'
+additional: '[Burning Man Philosophical Center](https://burningman.org/culture/philosophical-center/10-principles/?target=_blank)'
 ---
 
 Основатель ежегодного события в пустыне Ларри Харви написал эти 10 принципов в 2004 году в качестве ориентиров для вновь сформировавшейся региональной сети. Они были созданы не как указания людям как им быть и действовать, но как рефлексия этоса и культуры сообщества которая органически развивалась с момента зарождения события. 

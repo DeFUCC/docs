@@ -4,7 +4,7 @@
   position: relative;
   padding: 0;
   display: grid;
-  grid-template-columns: 280px minmax(auto,620px) auto;
+  grid-template-columns: 300px minmax(auto,620px) auto;
   grid-template-rows: 1fr auto;
   grid-template-areas:
   "header content"
@@ -51,7 +51,7 @@
   padding: 1em 0;
   font-size:14px;
 }
-.panels header .info a {
+.panels header .additional a {
   padding: 0.5em;
   border-radius: 0.5em;
   background-color: var(--accent-color, #ccc);
