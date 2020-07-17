@@ -1,0 +1,79 @@
+.panels {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 280px minmax(auto,620px) auto;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+  "header content"
+  "empty footer";
+  place-items: stretch stretch;
+  overflow-x:hidden;
+}
+
+.panels header {
+  background: var(--bg-gray);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.panels footer {
+  grid-area: footer;
+}
+
+.panels header .icon {
+  flex: 0 1 240px;
+  background: var(--bg-gray);
+  padding:3em 1em 0 1em;
+  z-index:30;
+  position: relative;
+}
+
+.panels header .start {
+  flex:1 1 200px;
+  height: min-content;
+  background: var(--bg-gray);
+  padding:3em 1em 6em 1em;
+  z-index:30;
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
+}
+
+.panels header .start h1 {
+  font-size:1.4em;
+  margin-bottom: 8px;
+}
+
+.panels header .info {
+  padding: 1em 0;
+  font-size:14px;
+}
+.panels header .info a {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--accent-color, #ccc);
+  color: #333;
+}
+
+
+.panels > article {
+  z-index: 40;
+  max-width: 600px;
+  word-wrap: break-word;
+  padding: 1em;
+  background: white;
+}
+
+.panels.no-toc > header {
+  position:sticky;
+  top: 80px;
+}
+
+.panels .back {
+  height: 70vh;
+  z-index: 40;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-y: center;
+}

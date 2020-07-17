@@ -1,0 +1,64 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 283.46">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.75;
+      }
+
+      .cls-2 {
+        fill: #004c4d;
+      }
+
+      .cls-3 {
+        fill: #01999a;
+      }
+    </style>
+  </defs>
+  <title>Feeds</title>
+  <g id="_Group_" data-name="&lt;Group&gt;">
+    <g class="cls-1">
+      <g id="_Group_2" data-name="&lt;Group&gt;">
+        <path class="cls-2" d="M40.17,159.63H28V139l13.57-12.32h22.7v33H52.18v-22h-12Z"/>
+      </g>
+      <g id="_Group_3" data-name="&lt;Group&gt;">
+        <path class="cls-2" d="M103.33,148.62v11H75.44L67.06,152V139l13.57-12.32h22.7v14.26l-8.26,7.69ZM91.2,137.67h-12v10.95h12Z"/>
+      </g>
+      <g id="_Group_4" data-name="&lt;Group&gt;">
+        <path class="cls-2" d="M143,126.67v33H130.85V144.37L126,148.74h-7.19v10.88H106.71v-33h12.13v11h12v-11Z"/>
+      </g>
+      <g id="_Group_5" data-name="&lt;Group&gt;">
+        <path class="cls-2" d="M158.49,126.67v7.69l8.44-7.69h13.45v7.69l8.44-7.69h13.44v33H190.13v-22h-9.75v22H168.24v-22h-9.76v22H146.36v-33Z"/>
+      </g>
+      <g id="_Group_6" data-name="&lt;Group&gt;">
+        <path class="cls-2" d="M217.77,138.49l6.88-6.32h17.26v15.07L228.4,159.62H205.64v-33h12.13Zm0,1.94v8.19h10.94v-8.19Zm37.64,19.2H243.29v-33h12.13v33Z"/>
+      </g>
+    </g>
+    <g>
+      <g id="_Group_7" data-name="&lt;Group&gt;">
+        <g id="_Group_8" data-name="&lt;Group&gt;">
+          <path class="cls-3" d="M40.17,156.79H28V136.15l13.57-12.32h22.7v33H52.18v-22h-12Z"/>
+        </g>
+      </g>
+      <g id="_Group_9" data-name="&lt;Group&gt;">
+        <g id="_Group_10" data-name="&lt;Group&gt;">
+          <path class="cls-3" d="M103.33,145.79v11H75.44l-8.38-7.63v-13l13.57-12.32h22.7v14.26l-8.26,7.69ZM91.2,134.84h-12v10.95h12Z"/>
+        </g>
+      </g>
+      <g id="_Group_11" data-name="&lt;Group&gt;">
+        <g id="_Group_12" data-name="&lt;Group&gt;">
+          <path class="cls-3" d="M143,123.83v33H130.85V141.53L126,145.91h-7.19v10.88H106.71v-33h12.13v11h12v-11Z"/>
+        </g>
+      </g>
+      <g id="_Group_13" data-name="&lt;Group&gt;">
+        <g id="_Group_14" data-name="&lt;Group&gt;">
+          <path class="cls-3" d="M158.49,123.83v7.69l8.44-7.69h13.45v7.69l8.44-7.69h13.44v33H190.13v-22h-9.75v22H168.24v-22h-9.76v22H146.36v-33Z"/>
+        </g>
+      </g>
+      <g id="_Group_15" data-name="&lt;Group&gt;">
+        <g id="_Group_16" data-name="&lt;Group&gt;">
+          <path class="cls-3" d="M217.77,135.65l6.88-6.32h17.26v15.07L228.4,156.79H205.64v-33h12.13Zm0,1.94v8.19h10.94v-8.19Zm37.64,19.2H243.29v-33h12.13v33Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

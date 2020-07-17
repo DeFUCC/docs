@@ -3,35 +3,33 @@
 {% set divider = breadcrumbs_config.icon_divider_classes %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-<div id="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-    {% if breadcrumbs_config.icon_home %}
-    <i class="{{ breadcrumbs_config.icon_home }}"></i>
-    {% endif %}
+
+<div id="breadcrumbs">
+
     {% for crumb in crumbs %}
-    <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <span>
         {% if not loop.last %}
             {% if crumb.routable %}
-                <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="{{ crumb.url }}" itemid="{{ crumb.url }}">
-                    <span itemprop="name">{{ crumb.menu }}</span>
+                <a href="{{ crumb.url }}" >
+                    {{ crumb.menu }}
                 </a>
             {% else  %}
-                <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="{{ crumb.url }}">
-                    <span itemprop="name">{{ crumb.menu }}</span>
+                <span >
+                    {{ crumb.menu }}
                 </span>
             {% endif %}
             <i class="{{ divider }}"></i>
         {% else %}
             {% if breadcrumbs_config.link_trailing %}
-                <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="{{ crumb.url }}" itemid="{{ crumb.url }}">
-                    <span itemprop="name">{{ crumb.menu }}</span>
+                <a href="{{ crumb.url }}">
+                    {{ crumb.menu }}
                 </a>
             {% else %}
-                <span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="{{ crumb.url }}">
-                    <span itemprop="name">{{ crumb.menu }}</span>
+                <span >
+                    {{ crumb.menu }}
                 </span>
             {% endif %}
         {% endif %}
-        <meta itemprop="position" content="{{ loop.index }}" />
     </span>
     {% endfor %}
 </div>

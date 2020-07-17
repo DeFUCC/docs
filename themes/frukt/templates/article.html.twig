@@ -1,99 +1,31 @@
-{% extends 'partials/base.html.twig' %}
+{% extends 'layout/panels.html.twig' %}
 
-{% block content %}
-    <main class="article {{ page.header.toc ? 'with-toc':'no-toc'}}">
-      <header>
-        {% if page.header.icon  %}
-            <div class="article-icon">
-                  {{page.media[page.header.icon].cropResize(300,300)}}
-            </div>
-        {% endif %}
-        <div class="article-start">
+{% do assets.addCss('theme://css/article.css',99) %}
 
-          {% if config.plugins.breadcrumbs.enabled %}
-                {% include 'partials/breadcrumbs.html.twig' %}
-          {% endif %}
+{% set toc = page.header.toc ? 'with-toc':'no-toc' %}
+{% set main_classes = 'article ' ~ toc %}
 
-
-
-          <a href="{{parent.url}}">{{ parent.title }}</a>
-          <h1 class="">{{ page.title }}</h1>
-          {{page.header.subtitle|markdown }}
-
-          <small>
-          {% for tag in page.taxonomy.tag %}
-              <a href="/tag:{{tag}}">
-                <span class="tag">{{tag}}</span>
-              </a>
-          {% endfor %}
-          <span class="tag"><i class="fa fa-eye"></i>
-             {{ viewcounts[page.route]|nicenumber }}
-          </span>
-          <span class="tag"><i class="fa fa-clock-o"></i>
-               {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
-          </span>
-
-          </small>
+{% block toc %}
+  {% if page.header.toc %}
+    {% set table_of_contents = toc(page.content, 2, 4) %}
+    {% if table_of_contents is not empty  %}
+    <div class="page-toc">
+        <a href="#"><h5>{{page.title}}</h5></a>
+        {{ table_of_contents }}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endblock %}
 
 
-
-
-        </div>
-
-          {% if page.header.toc %}
-            {% set table_of_contents = toc(page.content, 2, 4) %}
-            {% if table_of_contents is not empty  %}
-            <div class="page-toc">
-                <a href="#"><h5>{{page.title}}</h5></a>
-                {{ table_of_contents }}
-            </div>
-            {% endif %}
-          {% endif %}
-      </header>
-      <article class="content">
-
+{% block article %}
         <p>
             {{ page.content }}
         </p>
 
-
-        <div class="article-details">
-
-          {% if page.header.author %}
-
-              <div class="icon">
-                <i class="fa fa-user"></i>
-              </div>
-              <div class="text">
-                {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }}
-              </div>
-
-          {% endif %}
-
-            {% if page.header.date %}
-
-              <div class="icon">
-                <i class="fa fa-keyboard-o"></i>
-              </div>
-              <div class="text">
-                {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }}
-              </div>
-
-            {% endif %}
+        {% include 'partials/page-details.html.twig' %}
 
 
-              <div class="icon">
-                <i class="fa fa-pencil"></i>
-              </div>
-              <div class="text">
-                {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}
-              </div>
-
-
-        </div>
-
-
-      </article>
       {% set linked = backlinks[page.url] %}
       {% if linked|length >0 %}
        <footer>
@@ -104,6 +36,5 @@
           {% endfor %}
        </footer>
       {% endif %}
-   </main>
 
 {% endblock %}

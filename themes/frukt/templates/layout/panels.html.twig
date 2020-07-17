@@ -1,0 +1,54 @@
+{% extends 'partials/base.html.twig' %}
+
+  {% do assets.addCss('theme://css/panels.css',90) %}
+
+{% block content %}
+<main class="{{ main_classes }} panels">
+
+  <header class="{{ header_classes }}">
+    {% block side %}
+
+    {% if page.header.icon  %}
+        <div class="icon">
+              {{page.media[page.header.icon].cropResize(300,300)}}
+        </div>
+    {% endif %}
+    <div class="start">
+
+      {% if config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+      {% endif %}
+
+      <h1 class="">{{ page.title }}</h1>
+      {{page.header.subtitle|markdown }}
+
+      <small>
+      {% for tag in page.taxonomy.tag %}
+          <a href="/tag:{{tag}}">
+            <span class="tag">{{tag}}</span>
+          </a>
+      {% endfor %}
+      <span class="tag"><i class="fa fa-eye"></i>
+         {{ viewcounts[page.route]|nicenumber }}
+      </span>
+      <span class="tag"><i class="fa fa-clock-o"></i>
+           {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
+      </span>
+
+      </small>
+
+
+    </div>
+
+      {% block toc %}{% endblock %}
+
+    {% endblock side %}
+  </header>
+
+  <article class="content {{ article_classes }}">
+    {% block article %}
+    {% endblock article %}
+  </article>
+
+</main>
+{% endblock content %}

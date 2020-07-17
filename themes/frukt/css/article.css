@@ -1,91 +1,3 @@
-main.article {
-  padding: 2em;
-  max-width:1000px;
-  display: grid;
-  grid-template-columns: 280px minmax(auto,620px) auto;
-  grid-template-rows: 1fr auto;
-  grid-template-areas:
-  "header content"
-  "empty footer";
-  max-height: min-content;
-  place-items: start start;
-}
-
-.article footer {
-  grid-area: footer;
-}
-
-.article-icon {
-  flex: 0 1 240px;
-  background: var(--bg-gray);
-  padding:3em 1em 0 1em;
-  z-index:30;
-  position: relative;
-}
-
-.article-start {
-  flex:1 1 200px;
-  background: var(--bg-gray);
-  padding:3em 1em 6em 1em;
-  z-index:30;
-  position: relative;
-  background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
-}
-
-.article-start h1 {
-  font-size:1.4em;
-  margin-bottom: 8px;
-}
-
-.article header .info {
-  padding: 1em 0;
-  font-size:14px;
-}
-.article header .info a {
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background-color: var(--accent-color, #ccc);
-  color: #333;
-}
-
-.article-details {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  padding:2em;
-  color: #999;
-  background-color: #f5f5f5;
-  font-size:0.85em;
-}
-
-main.article header {
-  background: var(--bg-gray);
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-main.article > article {
-  z-index: 40;
-  max-width: 600px;
-  word-wrap: break-word;
-  padding: 1em;
-}
-
-main.article.no-toc header {
-  position:sticky;
-  top: 80px;
-}
-
-.article-back {
-  height: 70vh;
-  z-index: 40;
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position-y: center;
-}
-
-
 .tag {
   background: hsla(0,0%,70%,0.08);
   padding: 6px 10px;
@@ -112,6 +24,7 @@ main.article.no-toc header {
     position: fixed;
     z-index:20;
     top: 100px;
+    left:2em;
     max-width:200px;
     background: hsla(0,0%,50%,0);
     font-size: 14px;

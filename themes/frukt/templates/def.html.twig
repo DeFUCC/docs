@@ -1,24 +1,16 @@
-{% extends 'partials/base.html.twig' %}
+{% extends 'layout/panels.html.twig' %}
 
-{% block content %}
 
-<main class="article">
+{% block side %}
 
-      <header>
-        {% if page.header.icon  %}
-            <div class="article-icon">
-                  {{page.media[page.header.icon]}}
-            </div>
-        {% endif %}
-      </header>
+{% if page.header.icon  %}
+    <div class="icon">
+          {{page.media[page.header.icon].cropResize(300,300)}}
+    </div>
+{% endif %}
+{% endblock side %}
 
-      <article class="content">
-
-          <h2>{{ page.title }}</h2>
-          {{ page.content }}
-
-      </article>
-
-</main>
-
-{% endblock %}
+{% block article %}
+  <h1 class="">{{ page.title }}</h1>
+{{ page.content }}
+{% endblock article %}

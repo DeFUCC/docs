@@ -1,0 +1,100 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.73 141.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ed167f;
+      }
+
+      .cls-2 {
+        fill: #963291;
+      }
+
+      .cls-3 {
+        fill: #3c2589;
+      }
+
+      .cls-4 {
+        fill: #212c89;
+      }
+
+      .cls-5 {
+        fill: #36599f;
+      }
+
+      .cls-6 {
+        fill: #6cc0be;
+      }
+
+      .cls-7 {
+        fill: #3da87c;
+      }
+
+      .cls-8 {
+        fill: #5ab12c;
+      }
+
+      .cls-9 {
+        fill: #7abc21;
+      }
+
+      .cls-10 {
+        fill: #f7f719;
+      }
+
+      .cls-11 {
+        fill: #f88011;
+      }
+
+      .cls-12 {
+        fill: #f8150e;
+      }
+    </style>
+  </defs>
+  <title>ilca bague sq</title>
+  <g>
+    <g>
+      <path d="M16.46,91.05h-.39V48.19h.39Z"/>
+      <path d="M51.45,90.66v.39H25.69V48.19h.39V90.66Z"/>
+      <path d="M86.12,88.91a24.74,24.74,0,0,1-11.9,2.73c-6.83,0-12.23-2-16.07-6.11s-5.72-9.3-5.72-15.68S54.51,58,58.74,53.78a21.44,21.44,0,0,1,15.74-6.37,25.24,25.24,0,0,1,10,1.63v.46c-2.28-1.11-5.59-1.69-10-1.69a20.75,20.75,0,0,0-15.42,6.31,21.38,21.38,0,0,0-6.24,15.74q0,9.37,5.66,15.42c3.77,4,9,6,15.74,6a24,24,0,0,0,12-2.8Z"/>
+      <path d="M126.65,91.05,122,79.74H96.53L91.92,91.05h-.39l17.69-43.13h.13l17.76,43.13ZM109.28,48.51,96.73,79.35h25.11Z"/>
+    </g>
+    <g id="Chromanotes">
+      <g id="_11" data-name="11">
+        <ellipse class="cls-1" cx="122.38" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_10" data-name="10">
+        <ellipse class="cls-2" cx="112.73" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_9" data-name="9">
+        <ellipse class="cls-3" cx="103.08" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_8" data-name="8">
+        <ellipse class="cls-4" cx="93.43" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_7" data-name="7">
+        <ellipse class="cls-5" cx="83.78" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_6" data-name="6">
+        <ellipse class="cls-6" cx="74.13" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_5" data-name="5">
+        <ellipse class="cls-7" cx="64.48" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_4" data-name="4">
+        <ellipse class="cls-8" cx="54.83" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_3" data-name="3">
+        <ellipse class="cls-9" cx="45.19" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_2" data-name="2">
+        <ellipse class="cls-10" cx="35.54" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_1" data-name="1">
+        <ellipse class="cls-11" cx="25.89" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+      <g id="_0" data-name="0">
+        <ellipse class="cls-12" cx="16.24" cy="79.36" rx="1.61" ry="1.66"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,11 +1,18 @@
 {% set next = page.prevSibling %}
 {% set prev = page.nextSibling %}
 
+{% macro get_bg(item) %}
+	{% if item.header.bg %}
+		{% set media_url = item.media[item.header.bg].cropResize(700,200).url %}
+		style="background-image: linear-gradient(hsla(0,0%,100%,0.9),hsla(0,0%,100%,0.9)), url({{ media_url }})"
+	{% endif %}
+{% endmacro %}
+
 {% if prev or next %}
 	<footer id="bottom-page-nav">
 
 	{% if prev.title %}
-	    <a class="nav prev" href="{{ prev.url }}">
+	    <a class="nav prev" href="{{ prev.url }}" {{ _self.get_bg(prev) }}>
 	        <i class="fa fa-2x fa-chevron-left"></i>
 	        <div>
 	            <h6>{{ 'THEME_FRUKT_PREVIOUS'|t }}</h6>
@@ -15,7 +22,7 @@
 	{% endif %}
 
 	{% if next.title %}
-	    <a class="nav next" href="{{ next.url }}">
+	    <a class="nav next" href="{{ next.url }}" {{ _self.get_bg(next) }}>
 	        <i class="fa fa-2x fa-chevron-right"></i>
 	        <div>
 	            <h6>{{ 'THEME_FRUKT_NEXT'|t }}</h6>

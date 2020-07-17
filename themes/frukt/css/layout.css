@@ -22,6 +22,10 @@
   max-height: 3em;
 }
 
+#top-bar #logo img {
+  max-height: 3em;
+}
+
 #top-bar #menu {
   flex: 1 1 80vw;
   display: flex;
@@ -61,8 +65,9 @@
       flex: 1 1 40%;
       padding:1em;
       position: relative;
-      background: var(--bg-gray);
+      background: var(--darker-gray);
       z-index:20;
+      color: #777;
   }
 
   #bottom-page-nav h6 {
@@ -99,7 +104,8 @@
   }
 
   #bottom-page-nav .nav:hover {
-    background: #F6F6F6;
+    background: var(--bg-gray);
+    color: #333;
   }
 
   body > footer {

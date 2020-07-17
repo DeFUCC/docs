@@ -14,7 +14,7 @@
 
     {% block stylesheets %}
         {% do assets.addCss('theme://css/theme.css',102) %}
-        {% do assets.addCss('theme://css/article.css',99) %}
+
         {% do assets.addCss('theme://css/feed.css',99) %}
         {% do assets.addCss('theme://css/cards.css',99) %}
         {% do assets.addCss('theme://css/layout.css',101) %}
@@ -56,15 +56,16 @@
 
   {% block body %}
   <section id="body">
+
   {% if page.header.bg %}
     <section class="article-back" style="background-image: linear-gradient(hsla(0,0%,50%,0.1),hsla(0,0%,50%,0.1)), url('{{page.media[page.header.bg].cropResize(1920,1024).quality(70).url}}')"> </section>
   {% endif %}
+
+
       {% block content %}{% endblock %}
 
       {% block navigation %}
-
-        {% include 'partials/bottom_nav.html.twig' %}
-
+        {% include 'layout/bottom_nav.html.twig' %}
       {% endblock %}
 
   </section>

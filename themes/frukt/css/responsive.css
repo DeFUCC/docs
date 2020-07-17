@@ -1,6 +1,6 @@
 @media (max-width: 670px) {
 
-  main.article {
+  main.panels {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto;
     grid-template-areas:
@@ -15,15 +15,18 @@
     grid-template-columns: 1fr;
     position: relative;
   }
+  main.panels.no-toc > header {
+    position:static;
+  }
 
   .page-toc {
      display:none;
     }
-    main.article header {
+    main.panels header {
       flex: 1 1 100%;
     }
 
-    main.article {
+    main.panels {
       padding: 1em;
     }
     main.page > section {
@@ -37,7 +40,7 @@
     left: 940px;
   }
 
-  main.article header {
+  main.panels header {
     position:sticky;
     top: 30px;
   }

@@ -1,0 +1,34 @@
+<div class="page-details">
+
+  {% if page.header.author %}
+
+      <div class="icon">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="text">
+        {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }}
+      </div>
+
+  {% endif %}
+
+    {% if page.header.date %}
+
+      <div class="icon">
+        <i class="fa fa-keyboard-o"></i>
+      </div>
+      <div class="text">
+        {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }}
+      </div>
+
+    {% endif %}
+
+
+      <div class="icon">
+        <i class="fa fa-pencil"></i>
+      </div>
+      <div class="text">
+        {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}
+      </div>
+
+
+</div>
