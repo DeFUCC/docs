@@ -1,4 +1,4 @@
-title: Design
+title: Project
 '@extends':
     type: page
     context: theme://blueprints
@@ -31,3 +31,25 @@ form:
                       style: vertical
                       type: text
                       label: Website
+
+        details:
+          type: tab
+          title: Детали
+          ordering@: 1
+          fields:
+            header.abilities:
+              name: abilities
+              type: list
+              label: Возможности
+              style: vertical
+
+              fields:
+                .verd:
+                  type: text
+                  label: Глагол
+                .text:
+                  type: text
+                  label: Текст
+                .link:
+                  type: text
+                  label: Link

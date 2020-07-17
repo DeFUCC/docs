@@ -19,6 +19,10 @@
         {{ page.header.subtitle|markdown }}
       {% endif %}
 
+      {% if page.header.additional %}
+        {{ page.header.additional|markdown }}
+      {% endif %}
+
       {% if uri.param('tag') %}
           <h4><span class="tag is-large">{{uri.param('tag')}}</span></h4>
       {% endif %}

@@ -2,7 +2,7 @@
 
 {% do assets.addCss('theme://css/design.css',99) %}
 
-{% set main_id = 'design' %}
+{% set main_id = 'project' %}
 
 {% block info %}
 
@@ -17,16 +17,5 @@
         <p>
             {{ page.content }}
         </p>
-
-        <div class="projects">
-        <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
-
-        {% for item in page.children.visible %}
-
-              {% include '/partials/card.html.twig'  %}
-
-        {% endfor %}
-
-        </div>
 
 {% endblock %}
