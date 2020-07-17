@@ -25,9 +25,11 @@
     main.panels header {
       flex: 1 1 100%;
     }
-
+  .panels header .start {
+    padding: 3em !important;
+  }
     main.panels {
-      padding: 1em;
+      padding: 0;
     }
     main.page > section {
       flex-basis:100%;
@@ -35,7 +37,7 @@
     }
 }
 
-@media (min-width:1150px) {
+@media (min-width:3150px) {
   .page-toc {
     left: 940px;
   }

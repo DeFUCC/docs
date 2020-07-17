@@ -1,34 +1,26 @@
-<div class="page-details">
+<div id="page-details">
+
+  <div class="info">
+
+    <h4>{{ page.title }}</h4>
 
   {% if page.header.author %}
-
-      <div class="icon">
-        <i class="fa fa-user"></i>
-      </div>
-      <div class="text">
-        {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }}
-      </div>
-
+        {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }} <br />
   {% endif %}
 
     {% if page.header.date %}
-
-      <div class="icon">
-        <i class="fa fa-keyboard-o"></i>
-      </div>
-      <div class="text">
-        {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }}
-      </div>
-
+        {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }} <br />
     {% endif %}
 
-
-      <div class="icon">
-        <i class="fa fa-pencil"></i>
-      </div>
-      <div class="text">
         {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}
-      </div>
+
+  </div>
+
+  <div class="qr">
+    {{ qrcode_image_element( page.url(true), ["#888", '#7e7'] ) }}
+  </div>
+
+
 
 
 </div>

@@ -15,16 +15,48 @@
   transition: transform 300ms ease;
 }
 
-.article img:hover {
-  transform: scale(1.5);
+.article .content img:hover {
+  transform: scale(1.25);
 }
+
+#page-details {
+  display: flex;
+  flex-wrap: wrap;
+  padding:1em;
+  color: #999;
+  background-color: #f5f5f5;
+  font-size:0.85em;
+}
+
+#page-details .info {
+  padding: 1em;
+  flex: 1 1 100px;
+
+}
+
+#page-details .icon {
+  flex: 0 0 24px;
+  display: flex;
+  justify-content: center;
+}
+
+#page-details .qr {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-details h4 {
+  margin:0 0 0.5em 0;
+}
+
 /*  table of contents  */
 
 .page-toc {
     position: fixed;
     z-index:20;
-    top: 100px;
-    left:2em;
+    margin-left:2em;
     max-width:200px;
     background: hsla(0,0%,50%,0);
     font-size: 14px;

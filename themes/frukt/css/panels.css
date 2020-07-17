@@ -1,4 +1,7 @@
 .panels {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
   padding: 0;
   display: grid;
   grid-template-columns: 280px minmax(auto,620px) auto;
@@ -6,7 +9,7 @@
   grid-template-areas:
   "header content"
   "empty footer";
-  place-items: stretch stretch;
+  place-items: start start;
   overflow-x:hidden;
 }
 
@@ -60,7 +63,7 @@
   z-index: 40;
   max-width: 600px;
   word-wrap: break-word;
-  padding: 1em;
+  padding: 2em;
   background: white;
 }
 

@@ -1,4 +1,6 @@
-<article id="{{ page.slug }}" class="list {{ page.content|length > 800 ? 'wide' : '' }}">
+
+
+<article id="{{ page.slug }}" class="list">
 
   <section class="content" >
     <div class="sticky">
@@ -14,15 +16,13 @@
       {% endif %}
 
       {% if page.header.subtitle %}
-      <p>
         {{ page.header.subtitle|markdown }}
-      </p>
       {% endif %}
-
 
       {% if uri.param('tag') %}
           <h4><span class="tag is-large">{{uri.param('tag')}}</span></h4>
       {% endif %}
+
     </div>
   </section>
 

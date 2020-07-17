@@ -37,3 +37,9 @@ form:
                       type: textarea
                       rows: 3
                       label: Subtitle
+
+                    header.additional:
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Additional links

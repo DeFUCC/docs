@@ -20,7 +20,10 @@
       {% endif %}
 
       <h1 class="">{{ page.title }}</h1>
-      {{page.header.subtitle|markdown }}
+      {% if page.header.subtitle %}
+        {{page.header.subtitle|markdown }}
+      {% endif %}
+
 
       <small>
       {% for tag in page.taxonomy.tag %}
@@ -36,6 +39,10 @@
       </span>
 
       </small>
+
+    {% if page.header.additional %}
+      {{ page.header.additional|markdown }}
+    {% endif %}
 
 
     </div>

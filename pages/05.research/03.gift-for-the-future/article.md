@@ -1,5 +1,6 @@
 ---
 title: 'Дар для будущего'
+subtitle: 'Фундаментальное исследование экономики дарения с древних времен до современности'
 media_order: 'gift.jpg, stone-age.jpg, '
 date: '15:12 25-06-2020'
 taxonomy:
@@ -10,7 +11,7 @@ taxonomy:
 visible: true
 bg: gift.jpg
 toc: true
-subtitle: "![Подкаст-прочтение статьи](gift-podcast.mp3)\r\n\r\n[Apple Podcasts](https://podcasts.apple.com/ru/podcast/%D1%84%D0%BE%D0%BD%D0%B4-%D1%84%D1%80%D1%83%D0%BA%D1%82/id1495594629?target=_blank)\r\n\r\n[Яндекс.Музыка](https://music.yandex.ru/album/9835693/track/62398131?target=_blank)"
+additional: "![Подкаст-прочтение статьи](gift-podcast.mp3)\r\n\r\n[Apple Podcasts](https://podcasts.apple.com/ru/podcast/%D1%84%D0%BE%D0%BD%D0%B4-%D1%84%D1%80%D1%83%D0%BA%D1%82/id1495594629?target=_blank)\r\n\r\n[Яндекс.Музыка](https://music.yandex.ru/album/9835693/track/62398131?target=_blank)"
 ---
 
 >«Рыночно-индустриальная система сама порождает скудость, дефицит, причем делает это в невиданных масштабах и в такой степени, к какой не смогли даже близко подойти другие общества. Там, где производство и распределение основаны на поведении цен, а вся жизнь зависит от приобретения и расходования, недостаток материальных средств становится явным, предсказуемым начальным пунктом всякой экономической активности.»
