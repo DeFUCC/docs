@@ -14,14 +14,22 @@
 
 
 {% block article %}
+
         <p>
             {{ page.content }}
         </p>
+
+
       {% if page.header.opportunities %}
-        <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
+      <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
+      <div class="ops">
         {% for op in page.header.opportunities %}
-            <a href="{{op.link}}" target="_blank">{{op.verb}}</a> {{op.text}}
+          <div class="op card">
+              <a href="{{op.link}}" target="_blank">{{op.verb}}</a>  {{op.text}}
+          </div>
+
         {% endfor %}
+      </div>
       {% endif %}
 
 

@@ -14,9 +14,11 @@
 
 
 {% block article %}
-        <p>
-            {{ page.content }}
-        </p>
+
+      {{ page.content }}
+
+
+      {% if page.children.visible|count > 0 %}
 
         <div class="projects">
         <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
@@ -28,5 +30,8 @@
         {% endfor %}
 
         </div>
+
+      {% endif %}
+
 
 {% endblock %}

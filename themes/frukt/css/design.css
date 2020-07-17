@@ -6,3 +6,18 @@
   position:sticky;
   top: 80px;
 }
+
+#project .op {
+  padding: 1em;
+  margin: 0.5em 0;
+}
+
+#project .ops {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#project .op a {
+  font-weight: bold;
+  margin: 0 4px;
+}
