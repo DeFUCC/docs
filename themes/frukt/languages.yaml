@@ -1,5 +1,5 @@
 en:
-    THEME_FRUKT_GITHUB_NOTE: Found errors? Think you can improve this page?
+    THEME_FRUKT_GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
     THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
     THEME_FRUKT_MINUTES: min.
     THEME_FRUKT_AUTHOR: Author
@@ -9,7 +9,7 @@ en:
     THEME_FRUKT_PREVIOUS: Previous
     THEME_FRUKT_NEXT: Next
 ru:
-    THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на GitHub. 
+    THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на 
     THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
     THEME_FRUKT_MINUTES: мин.
     THEME_FRUKT_AUTHOR: Автор

@@ -1,0 +1,34 @@
+title: Article
+'@extends':
+    type: page
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            columns:
+              type: columns
+              fields:
+
+                column1:
+                  type: column
+                  fields:
+
+
+                    header.subtitle:
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Subtitle
+
+                    header.website:
+                      style: vertical
+                      type: text
+                      label: Website

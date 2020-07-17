@@ -1,0 +1,8 @@
+#design header h1 {
+  font-size: 2em;
+}
+
+#design .top {
+  position:sticky;
+  top: 80px;
+}

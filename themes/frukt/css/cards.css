@@ -4,7 +4,7 @@
   padding: 0.5em;
   border-radius: 6px;
   transition: all 300ms ease;
-  box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.1),0 0.05rem 0.71rem rgba(0,0,0,0.05);
+  box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.05),0 0.05rem 0.71rem rgba(0,0,0,0.05);
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

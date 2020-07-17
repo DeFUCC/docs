@@ -16,10 +16,10 @@
 
 #top-bar #logo {
   flex: 1 1 3em;
-  margin-left:2em;
   align-items: center;
   display: flex;
   max-height: 3em;
+  justify-content: center;
 }
 
 #top-bar #logo img {
@@ -27,7 +27,7 @@
 }
 
 #top-bar #menu {
-  flex: 1 1 80vw;
+  flex: 1 1 400px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;

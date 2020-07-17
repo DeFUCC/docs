@@ -1,8 +1,14 @@
 {% extends 'layout/panels.html.twig' %}
 
-{% set main_classes = 'design' %}
+{% do assets.addCss('theme://css/design.css',99) %}
 
-{% block toc %}
+{% set main_id = 'design' %}
+
+{% block info %}
+
+{% if page.header.website %}
+  <a href="https://{{ page.header.website}}" target="_blank">{{page.header.website}}</a>
+{% endif %}
 
 {% endblock %}
 

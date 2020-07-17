@@ -9,14 +9,12 @@
   grid-template-areas:
   "header content"
   "empty footer";
-  place-items: start start;
-  overflow-x:hidden;
 }
 
 .panels header {
   background: var(--bg-gray);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -67,7 +65,7 @@
   background: white;
 }
 
-.panels.no-toc > header {
+.panels.no-toc .top {
   position:sticky;
   top: 80px;
 }

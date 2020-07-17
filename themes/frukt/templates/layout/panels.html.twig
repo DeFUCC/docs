@@ -3,10 +3,11 @@
   {% do assets.addCss('theme://css/panels.css',90) %}
 
 {% block content %}
-<main class="{{ main_classes }} panels">
+<main id="{{ main_id }}" class="{{ main_classes }} panels">
 
   <header class="{{ header_classes }}">
     {% block side %}
+    <div class="top">
 
     {% if page.header.icon  %}
         <div class="icon">
@@ -24,7 +25,7 @@
         {{page.header.subtitle|markdown }}
       {% endif %}
 
-
+    {% block info %}
       <small>
       {% for tag in page.taxonomy.tag %}
           <a href="/tag:{{tag}}">
@@ -37,8 +38,9 @@
       <span class="tag"><i class="fa fa-clock-o"></i>
            {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
       </span>
-
       </small>
+    {% endblock info %}
+
 
     {% if page.header.additional %}
       <div class="additional">
@@ -46,6 +48,8 @@
       </div>
     {% endif %}
 
+
+    </div>
 
     </div>
 

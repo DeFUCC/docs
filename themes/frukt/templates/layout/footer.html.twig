@@ -11,12 +11,13 @@
       {{site.title}} {{"now"|date("Y") }}
      </p>
 
-     <p>
-     {{ 'THEME_FRUKT_GITHUB_NOTE'|t }}
      {% if  theme_config.github.tree %}
+     <p>
+       {{ 'THEME_FRUKT_GITHUB_NOTE'|t }} <a href="{{theme_config.github.tree}}" target="_blank">GitHub</a><br />
        {% include 'partials/github_link.html.twig' %}
-     {% endif %}
      </p>
+     {% endif %}
+
    </section>
 
      {% for p in pages.children.routable.visible %}

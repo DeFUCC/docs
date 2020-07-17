@@ -49,24 +49,12 @@ form:
                         - .svg
 
 
-                    taxonomies:
-                      type: section
-                      title: PLUGIN_ADMIN.TAXONOMIES
-                      underline: true
-
-                      fields:
-                        header.taxonomy:
-                          type: taxonomy
-                          label: PLUGIN_ADMIN.TAXONOMY
-                          multiple: true
-                          validate:
-                            type: array
 
                 column2:
                   type: column
                   fields:
 
-                    
+
 
                     content:
                         type: markdown
@@ -168,6 +156,19 @@ form:
                     header.body_classes:
                       type: text
                       label: PLUGIN_ADMIN.BODY_CLASSES
+
+                    taxonomies:
+                      type: section
+                      title: PLUGIN_ADMIN.TAXONOMIES
+                      underline: true
+
+                      fields:
+                        header.taxonomy:
+                          type: taxonomy
+                          label: PLUGIN_ADMIN.TAXONOMY
+                          multiple: true
+                          validate:
+                            type: array
 
 
                 column2:
