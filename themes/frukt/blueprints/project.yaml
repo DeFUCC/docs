@@ -37,14 +37,14 @@ form:
           title: Детали
           ordering@: 1
           fields:
-            header.abilities:
-              name: abilities
+            header.opportunities:
+              name: opportunities
               type: list
               label: Возможности
               style: vertical
 
               fields:
-                .verd:
+                .verb:
                   type: text
                   label: Глагол
                 .text:

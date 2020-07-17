@@ -9,6 +9,7 @@ en:
     THEME_FRUKT_PREVIOUS: Previous
     THEME_FRUKT_NEXT: Next
     THEME_FRUKT_PROJECTS: Projects
+    THEME_FRUKT_OPPORTUNITIES: Opportunities
 ru:
     THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
     THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
@@ -20,3 +21,4 @@ ru:
     THEME_FRUKT_PREVIOUS: Ранее
     THEME_FRUKT_NEXT: Далее
     THEME_FRUKT_PROJECTS: Проекты
+    THEME_FRUKT_OPPORTUNITIES: Возможности

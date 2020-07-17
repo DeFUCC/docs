@@ -125,16 +125,3 @@ hr {
 .content ul {
   margin-top:-0.5em;
 }
-
-.page-details {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  padding:2em;
-  color: #999;
-  background-color: #f5f5f5;
-  font-size:0.85em;
-}
-
-.page-details .icon {
-  place-self: center;
-}
