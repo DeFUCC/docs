@@ -46,7 +46,11 @@
 {% block topbar %}
 <header id="top-bar">
   <a id="logo" href="{{ base_url_absolute }}">
+  {% if theme.custom_logo %}
     <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
+    {% else %}
+        {{ site.title }}
+  {% endif %}
   </a>
 
     {% include 'partials/menu.html.twig' %}

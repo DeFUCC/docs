@@ -3,9 +3,13 @@
 
    <section class="site-info">
 
-     <a href="{{ base_url_absolute }}">
-       <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.footer_logo|first.path }}" />
-     </a>
+
+     {% if theme.custom_logo %}
+       <a href="{{ base_url_absolute }}">
+         <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
+       </a>
+     {% endif %}
+     
 
      <p>
       {{site.title}} {{"now"|date("Y") }}

@@ -25,7 +25,7 @@ form:
                       type: toggle
                       label: TOC enabled
                       highlight: 1
-                      default: 1
+                      default: 0
                       options:
                           1: Enabled
                           0: Disabled
