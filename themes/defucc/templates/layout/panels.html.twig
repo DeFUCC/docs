@@ -30,12 +30,18 @@
             <span class="tag">{{tag}}</span>
           </a>
       {% endfor %}
+
+      {% if config.plugins['count-views'].enabled %}
       <span class="tag"><i class="fa fa-eye"></i>
          {{ viewcounts[page.route]|nicenumber }}
       </span>
+      {% endif %}
+      {% if config.plugins.readingtime.enabled %}
       <span class="tag"><i class="fa fa-clock-o"></i>
            {{ page.content|readingtime({'minutes_label':'THEME_FRUKT_MINUTES'|t, 'minute_label': 'THEME_FRUKT_MINUTES'|t}) }}
       </span>
+      {% endif %}
+
       </small>
     {% endblock info %}
 
