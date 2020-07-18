@@ -2,4 +2,5 @@
 ##  07/18/2020
 
 1. [](#new)
-    * ChangeLog started...
+    * Design and project templates and blueprints
+    * Projects have opportunities
