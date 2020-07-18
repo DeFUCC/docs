@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class Frukt extends Theme
+class DeFUCC extends Theme
 {
 
 }
