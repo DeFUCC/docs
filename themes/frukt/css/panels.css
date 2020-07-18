@@ -65,9 +65,14 @@
   background: white;
 }
 
-.panels.no-toc .top {
+.panels .top {
   position:sticky;
   top: 80px;
+}
+
+.panels.with-toc .top {
+  position: static;
+  top:none;
 }
 
 .panels .back {

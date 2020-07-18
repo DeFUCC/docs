@@ -32,7 +32,7 @@
           <h3 class="mt-3">{{'THEME_FRUKT_LINKS'|t}}:</h3>
           {%  for link in linked %}
               {% set backlink = page.find(link) %}
-              {% include 'partials/card.html.twig' with {'item':backlink} %}
+              {% include 'cards/card.html.twig' with {'item':backlink} %}
           {% endfor %}
        </footer>
       {% endif %}

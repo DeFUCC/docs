@@ -3,7 +3,7 @@
   <div class="card">
      <div  class="card-content">
   	     <a href="{{item.url}}">
-          {% include 'partials/card-image.html.twig'%}
+          {% include 'cards/card-image.html.twig'%}
          </a>
           <div class="card-text">
 
@@ -48,7 +48,7 @@
           </div>
 
           {% if item.children %}
-            {% include 'partials/child-cards.html.twig' %}
+            {% include 'cards/child-cards.html.twig' %}
           {% endif %}
 
           </div>

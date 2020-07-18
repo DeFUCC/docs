@@ -1,6 +1,6 @@
 @media (max-width: 670px) {
 
-  main.panels {
+#body .panels {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto auto;
     grid-template-areas:
@@ -15,7 +15,7 @@
     grid-template-columns: 1fr;
     position: relative;
   }
-  main.panels.no-toc > header {
+.panels > header {
     position:static;
   }
 
@@ -28,10 +28,10 @@
   .panels header .start {
     padding: 3em !important;
   }
-    main.panels {
+.panels {
       padding: 0;
     }
-    main.page > section {
+.page > section {
       flex-basis:100%;
       position:static;
     }
@@ -42,7 +42,7 @@
     left: 940px;
   }
 
-  main.panels header {
+  main.panels.with-toc header {
     position:sticky;
     top: 30px;
   }

@@ -1,9 +1,9 @@
 
 
-<article id="{{ page.slug }}" class="list">
+<article id="{{ page.slug }}" class="panels">
 
-  <section class="content" >
-    <div class="sticky">
+  <header class="content" >
+    <div class="top">
 
       {% if config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}
@@ -28,16 +28,16 @@
       {% endif %}
 
     </div>
-  </section>
+  </header>
 
-  <section class="cards">
+  <article class="cards">
 
       {{ page.content }}
 
       {% set collection = page.collection %}
       {% for item in collection %}
 
-            {% include 'cards/card.html.twig'  %}
+            {% include '/partials/card.html.twig'  %}
 
       {% endfor %}
 
@@ -46,6 +46,6 @@
             {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
         {% endif %}
 
-  </section>
+  </article>
 
 </article>
