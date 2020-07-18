@@ -1,19 +1,21 @@
-name: DeFUCC
-version: 1.0.0
-description: "DeFUCC foundation theme"
-icon: th
+name: Frkt
+slug: frkt
+type: theme
+version: 0.1.0
+description: FRUKT inheritance theme from DeFUCC
+icon: book
 author:
   name: Davay
   email: davay@frkt.ru
-  url: http://docs.frkt.ru
-homepage: https://github.com/defucc/docs
-demo: http://docs.frkt.ru
-keywords: articles, modular, modern, fast, responsive, html5, css3
-bugs: https://github.com/defucc/docs/issues
+homepage: https://github.com/DeFUCC/grav-theme-frkt
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/DeFUCC/grav-theme-frkt/issues
+readme: https://github.com/DeFUCC/grav-theme-frkt/blob/develop/README.md
 license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.7.10' }
+  - { name: grav, version: '>=1.6.0' }
 
 form:
   validation: loose

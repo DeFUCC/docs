@@ -1,0 +1,17 @@
+streams:
+ schemes:
+   theme:
+     type: ReadOnlyStream
+     prefixes:
+       '':
+         - user/themes/frkt
+         - user/themes/defucc
+
+
+enabled: true
+google_analytics_code:                              # Enter your `UA-XXXXXXXX-X` code here
+home_url:
+github:
+    position: off                                # top | bottom | off
+    tree:
+    commits:
