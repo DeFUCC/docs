@@ -16,11 +16,10 @@
 
   </div>
 
-  <div class="qr">
-    {{ qrcode_image_element( page.url(true), ["#888", '#7e7'] ) }}
-  </div>
-
-
-
+  {% if config.plugins.qrcode.enabled %}
+    <div class="qr">
+      {{ qrcode_image_element( page.url(true), ["#888", '#7e7'] ) }}
+    </div>
+  {% endif %}
 
 </div>
