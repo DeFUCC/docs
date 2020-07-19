@@ -1,0 +1,57 @@
+/* https://google-webfonts-helper.herokuapp.com/fonts/mukta?subsets=devanagari,latin
+
+mukta-200 - latin_devanagari */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/mukta-v7-latin_devanagari-200.eot'); /* IE9 Compat Modes */
+  src: local('Mukta ExtraLight'), local('Mukta-ExtraLight'),
+       url('../fonts/mukta-v7-latin_devanagari-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v7-latin_devanagari-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-200.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v7-latin_devanagari-200.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+
+/* mukta-regular - latin_devanagari */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/mukta-v7-latin_devanagari-regular.eot'); /* IE9 Compat Modes */
+  src: local('Mukta Regular'), local('Mukta-Regular'),
+       url('../fonts/mukta-v7-latin_devanagari-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v7-latin_devanagari-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v7-latin_devanagari-regular.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+
+/* mukta-500 - latin_devanagari */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/mukta-v7-latin_devanagari-500.eot'); /* IE9 Compat Modes */
+  src: local('Mukta Medium'), local('Mukta-Medium'),
+       url('../fonts/mukta-v7-latin_devanagari-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v7-latin_devanagari-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v7-latin_devanagari-500.svg#Mukta') format('svg'); /* Legacy iOS */
+}
+
+/* mukta-700 - latin_devanagari */
+@font-face {
+  font-family: 'Mukta';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/mukta-v7-latin_devanagari-700.eot'); /* IE9 Compat Modes */
+  src: local('Mukta Bold'), local('Mukta-Bold'),
+       url('../fonts/mukta-v7-latin_devanagari-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/mukta-v7-latin_devanagari-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/mukta-v7-latin_devanagari-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/mukta-v7-latin_devanagari-700.svg#Mukta') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,62 @@
+name: Trika
+slug: trika
+type: theme
+version: 0.1.0
+description: FRUKT inheritance theme from DeFUCC
+icon: book
+author:
+  name: Davay
+  email: davay@frkt.ru
+homepage: https://github.com/DeFUCC/docs
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/DeFUCC/docs
+readme: https://github.com/DeFUCC/docs/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+
+    home_url:
+        type: text
+        label: Home URL
+        placeholder: http://getgrav.org
+        validate:
+          type: text
+
+    custom_logo:
+      type: file
+      label: Logo
+      destination: 'user/assets'
+      multiple: false
+      accept:
+        - image/*
+
+    footer_logo:
+      type: file
+      label: Footer logo
+      destination: 'user/assets'
+      multiple: false
+      accept:
+        - image/*
+
+    google_analytics_code:
+        type: text
+        label: Google Analytics Code
+        placeholder: UA-XXXXXXXX-X
+        validate:
+          type: text
+
+    github.tree:
+        type: text
+        label: GitHub Tree
+        default:
+
+    github.commits:
+        type: text
+        label: GitHub Commits
+        default:

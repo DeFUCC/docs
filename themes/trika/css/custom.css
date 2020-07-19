@@ -1,0 +1,132 @@
+@import 'fonts.css'
+
+.credits p {
+  display:none;
+}
+
+.credits-menu a {
+  color: #fff !important;
+}
+main {
+    font-size:14pt;
+  	line-height:1.8em;
+    margin:0 0 8px 0;
+}
+
+.content p:empty {
+ 	display:none;
+}
+
+.content p.english {
+  display:none;
+}
+
+i {
+  font-style: normal;
+  color:#888;
+}
+
+.content article {
+	counter-reset: stanza 1;
+}
+
+.content section {
+  position:relative;
+  margin:40px 0;
+  padding-bottom: 20px;
+  border-bottom:2px solid #ccc;
+}
+
+.content section:hover:before {
+  display: block;
+}
+
+.content section:before {
+  content: counter(stanza);
+  display:none;
+  position:absolute;
+  top:40%;
+  left: -80px;
+  color:#ccc;
+  font-size:30pt;
+}
+
+.content section.nonum:last-child:before {
+  content:'';
+}
+.content article section {
+  counter-increment: stanza;
+}
+
+
+.sanskrt {
+	font-weight:500;
+	font-size:26pt;
+	margin-bottom:0 !important;
+	margin-top:16px;
+    line-height: 1.3;
+    font-family: 'Mukta';
+}
+.sanskrt h1 {
+	font-size:300%;
+}
+.sanskrt h2 {
+  font-size:270%;
+}
+.sanskrt h3 {
+	font-size:250%;
+}
+.transcript {
+  font-size:16pt;
+	color:#999;
+  margin-bottom:4px;
+}
+p.translation {
+  margin-top:16px;
+}
+.num {
+	font-size:75%;
+	color:#999;
+}
+.title {
+	font-weight:bold;
+	font-size:150%;
+}
+.note {
+	font-size:80%;
+	color:#444;
+}
+.kala {
+	border-left: 3px #aaa solid;
+  	margin:10px 0;
+}
+.bhuta td {
+  border-right:1px solid #ccc;
+}
+.bhuta tr:not(.head) th {
+  border: 12px solid white;
+  background:#eee;
+}
+.bhuta td, .bhuta td p {
+  text-align:center !important;
+}
+.bhuta td.line {
+	border-right:1px solid black;
+}
+
+.page-id-154 .sanskrt, .page-id-171 .sanskrt {
+  font-size:140%;
+}
+
+@media screen and (max-width:600px) {
+  .page-template-template-fullwidth .content .section-inner {
+  margin:0;
+}
+}
+h1,h2,h3,h4,h5,h6 {
+ font-family:inherit !important;
+}
+
+#tattvas .title {
+	line-height:1.6em;
+}
