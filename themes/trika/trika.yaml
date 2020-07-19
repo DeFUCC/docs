@@ -4,7 +4,7 @@ streams:
      type: ReadOnlyStream
      prefixes:
        '':
-         - user/themes/frkt
+         - user/themes/trika
          - user/themes/defucc
 
 
