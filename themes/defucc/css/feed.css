@@ -8,7 +8,7 @@ main.index > section {
 }
 
 main.index > section:nth-child(even) {
-  background: #fff;
+  background: var(--darker-gray);
 }
 
 .list {
