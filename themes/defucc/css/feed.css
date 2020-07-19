@@ -13,7 +13,7 @@ main.index > section:nth-child(even) {
 
 .list {
   max-width: 980px;
-  padding: 4em 0;
+  padding: 2em 0;
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(280px,25%) 1fr;

@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   align-items: center;
   border: 1px solid hsla(0,0%,50%,0.1);
+  background-color: #fff;
 }
 
 .card:hover {
@@ -28,13 +29,11 @@
   flex: 0 0 150px;
 }
 
-.card:hover a {
-  color: var(--text-color);
-}
+
 
 .card a {
   transition: all 300ms ease;
-  color: var(--text-light-color);
+  color: var(--text-color);
   font-weight: normal;
 }
 
