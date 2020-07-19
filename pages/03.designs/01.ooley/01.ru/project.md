@@ -2,6 +2,7 @@
 title: 'Медиапортал о развитии открытых мастерских в России и мире'
 subtitle: 'Постоянно обновляемый источник информации по всем аспектам свободного творчества в открытых мастерских.'
 icon: ooleyru.png
+status: В процессе
 website: ooley.ru
 opportunities:
     -
@@ -13,4 +14,3 @@ opportunities:
         text: 'новую точку на карту открытых мастерских страны'
         link: 'https://airtable.com/shrNRxukLifF40tf3'
 ---
-

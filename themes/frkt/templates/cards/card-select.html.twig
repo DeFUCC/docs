@@ -2,6 +2,10 @@
 
   {% include 'cards/design-card.html.twig'  %}
 
+{% elseif item.template == 'project' %}
+
+  {% include 'cards/project-card.html.twig'  %}
+
 {% else %}
 
     {% include 'cards/card.html.twig' %}

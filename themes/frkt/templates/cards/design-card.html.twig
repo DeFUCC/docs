@@ -21,10 +21,12 @@
           </p>
 
           <small class="">
+          {% if item.header.status %}
+          <span class="tag">
+            {{item.header.status}}
+          </span>
+          {% endif %}
 
-            <span class="tag">
-              {{item.status}}
-            </span>
             {% if config.plugin['count-views'].enabled %}
               <span class="tag">
                 <i class="fa fa-eye"></i>

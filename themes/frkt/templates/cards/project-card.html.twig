@@ -1,0 +1,63 @@
+{% if item.visible %}
+
+  {% do
+    assets.addCss('theme://css/design.css', 90) %}
+
+  <div class="design card">
+
+    {% include 'cards/card-image.html.twig' with { size: 280, url:item.url }%}
+
+    <div class="card-text">
+
+      <a href="{{item.url}}">
+        <h3 class="title">{{item.title}}
+        </h3>
+
+        <p class="summary">
+          {% if item.header.subtitle %}
+            {{ item.header.subtitle }}
+          {% endif %}
+
+        </p>
+
+    </a>
+      <footer>
+
+      {% if item.header.status %}
+        <span class="tag">
+          {{item.header.status}}
+        </span>
+      {% endif %}
+
+
+      {% if config.plugin['count-views'].enabled %}
+        <span class="tag">
+          <i class="fa fa-eye"></i>
+          {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
+      {% endif %}
+
+      {% if item.header.date %}
+        <span class="tag">
+          <i class="fa fa-clock-o"></i>
+          {{ item.header.date|nicetime }}</span>
+      {% endif %}
+
+      {% if item.header.opportunities|count > 0 %}
+        <span class="tag">
+          {{ read_file('theme://icons/opportunity.svg') }}  {{item.header.opportunities|count}}
+        </span>
+      {% endif %}
+
+
+      </footer>
+    </div>
+
+
+
+    {% if item.children.visible %}
+      {% include 'cards/child-cards.html.twig' %}
+    {% endif %}
+
+  </div>
+
+{% endif %}

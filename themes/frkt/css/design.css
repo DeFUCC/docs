@@ -6,19 +6,41 @@
   font-size: 2em;
 }
 
-#project .op {
-  padding: 1em;
-  margin: 0.5em 0;
+.ops {
+ display: flex;
+ flex-flow: wrap;
 }
 
-#project .ops {
+ .card.op {
+  padding: 4px;
+  margin: 0.5em;
+  flex: 1 1 300px;
+  background-color: #efefef;
+  border-radius: 12px;
   display: flex;
-  flex-flow: wrap;
+  flex-flow: row wrap;
 }
 
-#project .op a {
+.op .verb {
+    flex: 1 1 90px;
+    max-width: max-content;
+    margin: 0 8px 0 0;
+}
+
+
+.op .text {
+  flex: 1 1 40%;
+}
+
+.op a {
+
   font-weight: bold;
   margin: 0 4px;
+  background-color: #cecece;
+  border-radius: 12px;
+  padding: 8px;
+  display:block;
+
 }
 
 

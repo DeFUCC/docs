@@ -129,19 +129,33 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   font-weight: normal;
 }
 
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  margin-bottom: 0.2em;
+}
+
+.tag {
+  padding: 4px 6px;
+  border-radius: 12px;
+  background-color: #eaeaea;
+  font-size: 0.9em;
+
+}
 
 .button {
-  background: #777;
+  background: hsla(0,0%,90%,1);
   color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 0px hsla(0,0%,50%,0.4);
+  box-shadow: 0 2px 0px hsla(0,0%,50%,0.1);
   transition: all 100ms ease;
 }
 
 
 .button:hover {
   background: #999;
-  box-shadow: 0 6px 0px hsla(0,0%,50%,0.4);
+  box-shadow: 0 4px 0px hsla(0,0%,50%,0.4);
   color: #fff;
 }
 

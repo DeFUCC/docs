@@ -1,39 +1,64 @@
 {% extends 'layout/panels.html.twig' %}
 
-{% do assets.addCss('theme://css/design.css',99) %}
+{% do
+  assets.addCss('theme://css/design.css', 99) %}
 
 {% set main_id = 'design' %}
 
 {% set bg_color = 'var(--darker-gray)'%}
 
-{% block info %}
+{% block side %}
+  <div class="top">
 
-{% if page.header.website %}
-  <a href="https://{{ page.header.website}}" target="_blank">{{page.header.website}}</a>
-{% endif %}
+    {% if page.header.icon %}
+      <div class="icon">
+        {{page.media[page.header.icon].cropResize(300,300)}}
+      </div>
+    {% endif %}
 
-{% endblock %}
+    <div class="start">
 
+      {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+      {% endif %}
+
+      <h1>{{ page.title }}</h1>
+      {% if page.header.subtitle %}
+        {{page.header.subtitle|markdown }}
+      {% endif %}
+
+      {% if page.header.website %}
+        <a href="https://{{ page.header.website}}" target="_blank">{{page.header.website}}</a>
+      {% endif %}
+
+      {% if page.header.additional %}
+        <div class="additional">
+          {{ page.header.additional|markdown }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock side %}
+
+{% block info %}{% endblock %}
 
 {% block article %}
 
-      {{ page.content }}
+  {{ page.content }}
 
+  {% if page.children.visible | count > 0 %}
 
-      {% if page.children.visible|count > 0 %}
+    <div class="projects">
+      <h2 class="sticky">{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
 
-        <div class="projects">
-        <h2 class="sticky">{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
+      {% for item in page.children.visible %}
 
-        {% for item in page.children.visible %}
+        {% include 'cards/project-card.html.twig' %}
 
-              {% include 'cards/card.html.twig'  %}
+      {% endfor %}
 
-        {% endfor %}
+    </div>
 
-        </div>
-
-      {% endif %}
-
+  {% endif %}
 
 {% endblock %}

@@ -1,6 +1,6 @@
 title: Article
 '@extends':
-    type: page
+    type: main
     context: theme://blueprints
 
 form:
@@ -31,3 +31,9 @@ form:
                           0: Disabled
                       validate:
                            type: bool
+
+                    header.additional:
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Additional links

@@ -24,10 +24,7 @@
       <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
       <div class="ops">
         {% for op in page.header.opportunities %}
-          <div class="op card">
-              <a href="{{op.link}}" target="_blank">{{op.verb}}</a>  {{op.text}}
-          </div>
-
+          {% include 'cards/op-card.html.twig' %}
         {% endfor %}
       </div>
       {% endif %}

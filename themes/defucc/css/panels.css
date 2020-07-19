@@ -11,7 +11,7 @@
   "empty footer";
 }
 
-.panels header {
+.panels > header {
 
   display: flex;
   flex-direction: column;
@@ -20,18 +20,18 @@
 
 
 
-.panels footer {
+.panels > footer {
   grid-area: footer;
 }
 
-.panels header .icon {
+.panels > header > .icon {
   flex: 0 1 240px;
   padding:3em 1em 0 1em;
   z-index:30;
   position: relative;
 }
 
-.panels header .start {
+.panels > header > .start {
   flex:1 1 200px;
   height: min-content;
   padding:3em 1em 1em 1em;
@@ -40,16 +40,16 @@
 
 }
 
-.panels header .start h1 {
+.panels > header > .start h1 {
   font-size:1.4em;
   margin-bottom: 8px;
 }
 
-.panels header .info {
+.panels > header > .info {
   padding: 1em 0;
   font-size:14px;
 }
-.panels header .additional a {
+.panels > header .additional a {
   padding: 0.5em;
   border-radius: 0.5em;
   background-color: var(--accent-color, #ccc);
@@ -68,6 +68,8 @@
 .panels .top {
   position:sticky;
   top: 80px;
+  padding: 1em;
+  z-index: 50;
 }
 
 
