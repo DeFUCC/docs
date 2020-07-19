@@ -4,7 +4,7 @@
      <div  class="card-content">
 
           {% include 'cards/card-image.html.twig' with { url:item.url }%}
-         
+
           <div class="card-text">
 
 
@@ -15,7 +15,7 @@
             <p class="summary">
           {% if item.header.subtitle %}
               {{ item.header.subtitle }}
-            {% else %}
+            {% elseif item.template == 'article' or item.template == 'def' %}
                 {{item.summary(300)|striptags}}
           {% endif %}
 
