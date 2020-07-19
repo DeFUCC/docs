@@ -1,6 +1,6 @@
 ---
 title: Chromatone
-subtitle: Визуальный музыкальный язык и средства для его изучения и использования.
+subtitle: 'Визуальный музыкальный язык и средства для его изучения и использования.'
 icon: circle-of-fifths.svg
 website: chromatone.center
 ---

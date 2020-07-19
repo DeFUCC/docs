@@ -1,6 +1,6 @@
 ---
 title: SKILLPAD
-subtitle: Лаборатория грамотного блокнота
+subtitle: 'Лаборатория грамотного блокнота'
 icon: skillpad.svg
 website: skillpad.ru
 ---
