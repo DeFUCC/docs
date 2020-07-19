@@ -1,0 +1,9 @@
+{% if item.template == 'design' %}
+
+  {% include 'cards/design-card.html.twig'  %}
+
+{% else %}
+
+    {% include 'cards/card.html.twig' %}
+
+{% endif %}

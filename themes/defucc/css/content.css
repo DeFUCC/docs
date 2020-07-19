@@ -125,3 +125,11 @@ hr {
 .content ul {
   margin-top:-0.5em;
 }
+
+.content .sticky {
+  position: sticky;
+  top:0;
+  padding:1em 1.5em;
+  margin: 0 -2em;
+  background-color: var(--darker-gray);
+}

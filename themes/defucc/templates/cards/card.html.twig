@@ -2,9 +2,9 @@
 
   <div class="card">
      <div  class="card-content">
-  	     <a href="{{item.url}}">
-          {% include 'cards/card-image.html.twig'%}
-         </a>
+
+          {% include 'cards/card-image.html.twig' with { url:item.url }%}
+         
           <div class="card-text">
 
 
@@ -47,7 +47,7 @@
 
           </div>
 
-          {% if item.children %}
+          {% if item.template == 'feed' and item.children %}
             {% include 'cards/child-cards.html.twig' %}
           {% endif %}
 

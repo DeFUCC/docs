@@ -12,11 +12,13 @@
 }
 
 .panels header {
-  background: var(--bg-gray);
+
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
+
 
 .panels footer {
   grid-area: footer;
@@ -24,7 +26,6 @@
 
 .panels header .icon {
   flex: 0 1 240px;
-  background: var(--bg-gray);
   padding:3em 1em 0 1em;
   z-index:30;
   position: relative;
@@ -33,11 +34,10 @@
 .panels header .start {
   flex:1 1 200px;
   height: min-content;
-  background: var(--bg-gray);
-  padding:3em 1em 6em 1em;
+  padding:3em 1em 1em 1em;
   z-index:30;
   position: relative;
-  background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
+
 }
 
 .panels header .start h1 {
@@ -70,10 +70,7 @@
   top: 80px;
 }
 
-.panels.with-toc .top {
-  position: static;
-  top:none;
-}
+
 
 .panels .back {
   height: 70vh;

@@ -1,10 +1,9 @@
 :root {
   --bg-gray: #fbfbfb;
-  --darker-gray: #eee;
+  --darker-gray: #e6e6e6;
   --text-color:#333;
+  --text-light-color: #696969;
 }
-
-
 
 body iframe {
     min-width:100%;
@@ -95,7 +94,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   position: relative;
 }
 
-  #body img, #body .video-container {
+  body img, #body .video-container {
     max-width: 100%;
     display: block;
     text-align: center; }

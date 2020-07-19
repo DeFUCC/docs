@@ -1,7 +1,8 @@
 {% if item.header.icon or item.header.bg %}
 {% set size = size ?: 150 %}
+{% set max = max ? 'max-width:' ~ max ~ 'px;' : '' %}
 
-    <div style="max-width:{{size}}px" class="card-image">
+    <div style="{{max}}" class="card-image">
 
             {% if item.header.icon %}
               {% set image  = item.media[item.header.icon].cropResize(size,size) %}
@@ -9,7 +10,14 @@
               {% set image  = item.media[item.header.bg].cropZoom(size,size) %}
             {% endif %}
 
-            <img src="{{ image.url }}" width="{{size}}" />
+          {% if url %}
+            <a href="{{item.url}}">
+              <img src="{{ image.url }}"  />
+            </a>
+            {% else %}
+                <img src="{{ image.url }}"  />
+          {% endif %}
+
 
     </div>
 {% endif %}

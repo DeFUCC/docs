@@ -19,6 +19,18 @@
   transform: scale(1.25);
 }
 
+.panels.with-toc .top {
+  position: static;
+}
+.panels.with-toc header, .panels.with-toc header .icon {
+    background: var(--bg-gray);
+}
+
+.panels.with-toc header .start {
+    padding:3em 1em 6em 1em;
+    background: linear-gradient(180deg, var(--bg-gray) 0%, var(--bg-gray) 75%, rgba(255,255,255,0) 100%);
+}
+
 #page-details {
   display: flex;
   flex-wrap: wrap;

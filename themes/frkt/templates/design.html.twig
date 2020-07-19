@@ -4,6 +4,8 @@
 
 {% set main_id = 'design' %}
 
+{% set bg_color = 'var(--darker-gray)'%}
+
 {% block info %}
 
 {% if page.header.website %}
@@ -21,7 +23,7 @@
       {% if page.children.visible|count > 0 %}
 
         <div class="projects">
-        <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
+        <h2 class="sticky">{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
 
         {% for item in page.children.visible %}
 

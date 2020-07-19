@@ -7,7 +7,7 @@
   box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.05),0 0.05rem 0.71rem rgba(0,0,0,0.05);
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   border: 1px solid hsla(0,0%,50%,0.1);
 }
 
@@ -28,8 +28,13 @@
   flex: 0 0 150px;
 }
 
-.card a {
+.card:hover a {
   color: var(--text-color);
+}
+
+.card a {
+  transition: all 300ms ease;
+  color: var(--text-light-color);
   font-weight: normal;
 }
 

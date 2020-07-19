@@ -1,10 +1,9 @@
-#design header h1 {
-  font-size: 2em;
+#design {
+  background-color: var(--darker-gray);
 }
 
-#design .top {
-  position:sticky;
-  top: 80px;
+#design header h1 {
+  font-size: 2em;
 }
 
 #project .op {
@@ -20,4 +19,30 @@
 #project .op a {
   font-weight: bold;
   margin: 0 4px;
+}
+
+
+
+.card.design {
+
+}
+
+.card.design:hover {
+
+}
+
+.card.design .card-image {
+
+}
+
+.card.design img {
+
+}
+
+.card.design .card-text {
+
+}
+
+.card.design:hover .card-text {
+
 }

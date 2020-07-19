@@ -2,7 +2,7 @@
 
 <article id="{{ page.slug }}" class="list">
 
-  <section class="content" >
+  <header>
     <div class="sticky">
 
       {% if config.plugins.breadcrumbs.enabled %}
@@ -28,7 +28,7 @@
       {% endif %}
 
     </div>
-  </section>
+  </header>
 
   <section class="cards">
 
@@ -37,7 +37,7 @@
       {% set collection = page.collection %}
       {% for item in collection %}
 
-            {% include 'cards/card.html.twig'  %}
+            {% include 'cards/card-select.html.twig'  %}
 
       {% endfor %}
 
