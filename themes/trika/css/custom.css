@@ -36,11 +36,11 @@ article.content  {
   border-bottom:2px solid #ccc;
 }
 
-.content section:hover:before {
+.count section:hover:before {
   opacity: 1;
 }
 
-.content section:before {
+.count section:before {
   content: counter(stanza);
   opacity:0;
   transition: opacity 300ms ease;
@@ -49,13 +49,12 @@ article.content  {
   left: -80px;
   color:#ccc;
   font-size:30pt;
-
 }
 
-.content section.nonum:last-child:before {
+.count section.nonum:last-child:before {
   content:'';
 }
-.content article section {
+.count section {
   counter-increment: stanza;
 }
 
