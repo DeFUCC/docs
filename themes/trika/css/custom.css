@@ -72,8 +72,12 @@ article.content  {
 	color:#999;
   margin: 12px 0;
 }
-p.translation {
+.translation {
   margin-top:16px;
+}
+.content small {
+  display:block;
+  margin:12px 0;
 }
 .num {
 	font-size:75%;
