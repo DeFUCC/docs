@@ -37,17 +37,19 @@ article.content  {
 }
 
 .content section:hover:before {
-  display: block;
+  opacity: 1;
 }
 
 .content section:before {
   content: counter(stanza);
-  display:none;
+  opacity:0;
+  transition: opacity 300ms ease;
   position:absolute;
   top:40%;
   left: -80px;
   color:#ccc;
   font-size:30pt;
+
 }
 
 .content section.nonum:last-child:before {
@@ -60,8 +62,7 @@ article.content  {
 .sanskrt, .sanskrit {
 	font-weight:400;
 	font-size:24pt;
-	margin-bottom:0 !important;
-	margin-top:16px;
+	margin: 12px 0;
     line-height: 1.42;
     font-family: 'Mukta';
 }
@@ -69,7 +70,7 @@ article.content  {
 .transcript {
   font-size:16pt;
 	color:#999;
-  margin-bottom:4px;
+  margin: 12px 0;
 }
 p.translation {
   margin-top:16px;
