@@ -57,8 +57,7 @@ i {
   counter-increment: stanza;
 }
 
-
-.sanskrt {
+.sanskrt, .sanskrit {
 	font-weight:400;
 	font-size:24pt;
 	margin-bottom:0 !important;
@@ -66,15 +65,7 @@ i {
     line-height: 1.42;
     font-family: 'Mukta';
 }
-.sanskrt h1 {
-	font-size:300%;
-}
-.sanskrt h2 {
-  font-size:270%;
-}
-.sanskrt h3 {
-	font-size:250%;
-}
+
 .transcript {
   font-size:16pt;
 	color:#999;
@@ -111,18 +102,4 @@ p.translation {
 }
 .bhuta td.line {
 	border-right:1px solid black;
-}
-
-.page-id-154 .sanskrt, .page-id-171 .sanskrt {
-  font-size:140%;
-}
-
-@media screen and (max-width:600px) {
-  .page-template-template-fullwidth .content .section-inner {
-  margin:0;
-}
-}
-
-#tattvas .title {
-	line-height:1.6em;
 }
