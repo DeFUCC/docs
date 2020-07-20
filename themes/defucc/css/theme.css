@@ -11,6 +11,10 @@ body iframe {
     margin: 1em 0;
 }
 
+.grav-youtube {
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
