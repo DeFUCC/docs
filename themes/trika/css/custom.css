@@ -20,7 +20,7 @@ main {
   display:none;
 }
 
-i {
+i, em {
   font-style: normal;
   color:#888;
 }
@@ -34,6 +34,10 @@ article.content  {
   margin:40px 0;
   padding-bottom: 20px;
   border-bottom:2px solid #ccc;
+}
+
+.content section:nth-child(even) {
+
 }
 
 .count section:hover:before {
@@ -64,6 +68,10 @@ article.content  {
 	margin: 12px 0;
     line-height: 1.42;
     font-family: 'Mukta';
+}
+
+.big {
+  font-size: 350%;
 }
 
 .transcript {
