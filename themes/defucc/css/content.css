@@ -104,7 +104,8 @@ pre {
     font-size: 1rem; }
 
 hr {
-  border-bottom: 4px solid #F0F2F4; }
+  color: #eee;
+}
 
 .content table {
   border: 1px solid #eaeaea;
