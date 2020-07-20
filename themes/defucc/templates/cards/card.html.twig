@@ -30,12 +30,13 @@
                        {{tag}}
                      </span>
                  {% endfor %}
-
+                {% if config.plugins['count-views'].enabled %}
                  <span class="tag"><i class="fa fa-eye"></i>
                  {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
-
-              <span class="tag"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</span>
-
+               {% endif %}
+               {% if config.plugins.readingtime.enabled %}
+                  <span class="tag"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</span>
+              {% endif %}
             {% if false %}
                 <span class="tag"><i class="fa fa-pencil"></i> {{item.modified | nicetime}}</span>
             {% endif %}
