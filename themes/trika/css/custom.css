@@ -25,7 +25,7 @@ i {
   color:#888;
 }
 
-.content article {
+article.content  {
 	counter-reset: stanza 1;
 }
 
