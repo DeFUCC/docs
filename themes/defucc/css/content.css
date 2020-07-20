@@ -108,16 +108,22 @@ hr {
 }
 
 .content table {
-  border: 1px solid #eaeaea;
-  table-layout: auto; }
+  border: 1px solid #eee;
+  table-layout: auto;
+  border-collapse: collapse;
+}
 
 .content th {
-  background: #f7f7f7;
+  background: var(--bg-gray);
   padding: 0.5rem; }
 
 .content td {
   padding: 0.5rem;
-  border: 1px solid #eaeaea; }
+}
+
+.content tr:nth-child(even) {
+  background-color: var(--darker-gray);
+}
 
 .content li {
   margin-top: 0.5em;

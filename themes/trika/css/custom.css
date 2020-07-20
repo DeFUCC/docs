@@ -115,3 +115,45 @@ article.content  {
 .bhuta td.line {
 	border-right:1px solid black;
 }
+
+.ligatures td:nth-child(2n+1) {
+    font-family: 'Mukta';
+    font-size: 22px;
+    word-break: keep-all;
+}
+
+.only-ligatures {
+    font-family: 'Mukta';
+    font-size: 22px;
+    word-break: keep-all;
+}
+
+.only-ligatures td:nth-child(odd)) {
+  background-color: hsla(0,0%,80%,0.3);
+}
+
+.megatable {
+    width: 100%;
+    overflow: scroll;
+    height:80vh;
+    position: relative;
+}
+.megatable tr:first-child {
+  background-color: hsla(0,0%,100%,1);
+  position: sticky;
+  top: 0;
+}
+
+.megatable td:first-child {
+  background-color: hsla(0,0%,100%,1);
+  position: sticky;
+  left: 0;
+}
+
+table.names {
+  width:100%
+}
+
+table.names td:nth-child(2) {
+  font-family: 'Mukta';
+}
