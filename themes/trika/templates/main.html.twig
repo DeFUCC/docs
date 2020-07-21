@@ -4,6 +4,26 @@
 
 {% set main_id = page.slug %}
 
+{% block info %}
+  <small>
+
+
+  {% if page.header.sans %}
+  <p class="sanskrit">
+     {{ page.header.sans }}
+  </p>
+  {% endif %}
+
+  {% if page.header.trans %}
+  <p class="transcript">
+     {{ page.header.trans }}
+  </p>
+  {% endif %}
+
+
+  </small>
+{% endblock info %}
+
 {% block article %}
 
   {{ page.content }}
