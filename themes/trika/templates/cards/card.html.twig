@@ -1,0 +1,75 @@
+{% if item.visible %}
+
+  <div class="card">
+     <div  class="card-content">
+
+          {% include 'cards/card-image.html.twig' with { url:item.url }%}
+
+          <div class="card-text">
+
+
+            <a href="{{item.url}}">
+            <h3 class="title">{{item.title}}
+            </h3>
+
+
+              {% if item.header.sans %}
+              <p class="sanskrit">
+                 {{ item.header.sans }}
+              </p>
+              {% endif %}
+
+              {% if item.header.trans %}
+              <p class="transcript">
+                 {{ item.header.trans }}
+              </p>
+              {% endif %}
+
+            <p class="summary">
+          {% if item.header.subtitle %}
+              {{ item.header.subtitle|markdown }}
+            {% elseif item.template == 'article' or item.template == 'def' %}
+                {{item.summary(300)|striptags}}
+          {% endif %}
+
+            </p>
+
+            {% if item.template == 'article' %}
+            <small class="">
+
+
+              {% for tag in item.taxonomy.tag %}
+                     <span class="tag">
+                       {{tag}}
+                     </span>
+                 {% endfor %}
+                {% if config.plugins['count-views'].enabled %}
+                 <span class="tag"><i class="fa fa-eye"></i>
+                 {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
+               {% endif %}
+               {% if config.plugins.readingtime.enabled %}
+                  <span class="tag"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</span>
+              {% endif %}
+            {% if false %}
+                <span class="tag"><i class="fa fa-pencil"></i> {{item.modified | nicetime}}</span>
+            {% endif %}
+
+
+             </small>
+            {% endif %}
+            </a>
+
+          </div>
+
+          {% if item.template == 'feed' and item.children %}
+            {% include 'cards/child-cards.html.twig' %}
+          {% endif %}
+
+          </div>
+
+
+
+
+    </div>
+
+{% endif %}
