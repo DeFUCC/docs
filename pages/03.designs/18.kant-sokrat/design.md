@@ -2,7 +2,7 @@
 title: 'Кант — Сократ'
 subtitle: 'Журнал о прекрасном в искусстве, творчестве и ремесле'
 icon: KS.svg
-media_order: 'KS.svg,sokrat-umiraet.jpg,kant.jpeg'
+media_order: 'KS.svg,sokrat-umiraet.jpg,kant.jpeg,sokrat.jpg'
 ---
 
 ## Кант
@@ -22,4 +22,4 @@ media_order: 'KS.svg,sokrat-umiraet.jpg,kant.jpeg'
 - То, что хорошо от голода, бывает дурно от лихорадки и наоборот.
 - Всё хорошо и прекрасно по отношению к тому, для чего оно хорошо приспособлено и, наоборот, дурно и безобразно по отношению к тому, для чего оно дурно приспособлено. 
 	
-    ![](sokrat-umiraet.jpg?resize=400,400)
+    ![](sokrat.jpg)
