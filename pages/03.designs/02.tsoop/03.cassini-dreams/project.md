@@ -28,3 +28,5 @@ status: product
 ---
 
 Альбом-экспедиция, посвященный истории космической миссии Кассини-Гюйгенс, отправившей к Сатурну и его спутникам зонд, собравшей беспрецендентное количество информации и завершившейся уничтожением аппарата в атмосфере гиганта.
+
+<iframe style="border: 0; width: 400px; height: 373px;" src="https://bandcamp.com/EmbeddedPlayer/album=3099555767/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://tsoop.bandcamp.com/album/cassini-dreams">cassini dreams by tsoop</a></iframe>
