@@ -1,0 +1,49 @@
+{% extends 'layout/panels.html.twig' %}
+
+{% do assets.addCss('theme://css/article.css',99) %}
+
+{% set toc = page.header.toc ? 'with-toc':'no-toc' %}
+{% set main_classes = 'article ' ~ toc %}
+
+{% block toc %}
+  {% if page.header.toc %}
+    {% set table_of_contents = toc(page.content, 2, 4) %}
+    {% if table_of_contents is not empty  %}
+    <div class="page-toc">
+        <a href="#"><h5>{{page.title}}</h5></a>
+        {{ table_of_contents }}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+
+{% block info %}
+  <small>
+
+  {% if page.header.sans %}
+  <p class="sanskrit">
+     {{ page.header.sans }}
+  </p>
+  {% endif %}
+
+  {% if page.header.trans %}
+  <p class="transcript">
+     {{ page.header.trans }}
+  </p>
+  {% endif %}
+
+
+  </small>
+{% endblock info %}
+
+
+{% block article %}
+
+            {{ page.content }}
+
+
+        {% include 'partials/page-details.html.twig' %}
+
+
+{% endblock %}
