@@ -4,9 +4,7 @@ subtitle: 'То, что цепляет глаз. Приятные мелочи �
 icon: small-square.svg
 website: eye-point.ru
 status: process
-permissions:
-    authors:
-        - annastarova
+permissions: {  }
 ---
 
 То, что привлекает взгляд
