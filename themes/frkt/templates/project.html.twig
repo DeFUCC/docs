@@ -8,8 +8,8 @@
 
 {% block info %}
 
-{% if page.header.website %}
-  <a href="https://{{ page.header.website}}" target="_blank">{{page.header.website}}</a>
+{% if page.header.status %}
+  {% include 'partials/status.html.twig' with { item: page } %}
 {% endif %}
 
 {% endblock %}

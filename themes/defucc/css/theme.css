@@ -163,23 +163,27 @@ svg {
   max-width: min-content;
 }
 
+.tag i, .tag svg {
+  margin: 0 0.5em 0 0;
+}
+
 .tag .text {
-  width:max-content;
-  margin: 0 0 0 0.5em;
+    width:max-content;
 }
 
 .button {
   background: hsla(0,0%,90%,1);
   color: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 0px hsla(0,0%,50%,0.1);
+  box-shadow: 0 4px 2px hsla(0,0%,50%,0.1);
   transition: all 100ms ease;
 }
 
 
 .button:hover {
   background: #999;
-  box-shadow: 0 4px 0px hsla(0,0%,50%,0.4);
+  box-shadow: 0 4px 6px hsla(0,0%,50%,0.4);
+  stroke: #fff !important;
   color: #fff;
 }
 

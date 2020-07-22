@@ -20,21 +20,12 @@
 
           </p>
 
+
           <small class="">
 
           {% include 'partials/status.html.twig' %}
 
-            {% if config.plugin['count-views'].enabled %}
-              <span class="tag">
-                <i class="fa fa-eye"></i>
-                {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
-            {% endif %}
-
-            {% if item.header.date %}
-              <span class="tag">
-                <i class="fa fa-clock-o"></i>
-                {{ item.header.date|nicetime }}</span>
-            {% endif %}
+          
 
           </small>
 

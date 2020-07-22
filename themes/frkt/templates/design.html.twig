@@ -28,12 +28,18 @@
       {% endif %}
 
       <h1>{{ page.title }}</h1>
+
+
       {% if page.header.subtitle %}
         {{page.header.subtitle|markdown }}
       {% endif %}
 
       {% if page.header.website %}
         <a href="https://{{ page.header.website}}" target="_blank">{{page.header.website}}</a>
+      {% endif %} <br>
+
+      {% if page.header.status %}
+        {% include 'partials/status.html.twig' with { item: page } %}
       {% endif %}
 
       {% if page.header.additional %}

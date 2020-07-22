@@ -39,8 +39,7 @@
   font-weight: bold;
   margin: 0 4px;
   background-color: var(--opportunity);
-  border-radius: 12px;
-  padding: 8px;
+  
   display: flex;
 align-items: center;
 word-break: keep-all;
@@ -72,7 +71,7 @@ word-break: keep-all;
 }
 
 .lister header {
-  background-color:  var(--darker-gray);
+  background-color:  var(--bg-gray);
   padding: 0 2em;
   position: sticky;
   top:0;

@@ -25,13 +25,6 @@
 
       {% include 'partials/status.html.twig' %}
 
-
-      {% if config.plugin['count-views'].enabled %}
-        <span class="tag">
-          <i class="fa fa-eye"></i>
-          {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
-      {% endif %}
-
       {% if item.header.date %}
         <span class="tag">
           <i class="fa fa-clock-o"></i>
@@ -39,9 +32,11 @@
       {% endif %}
 
       {% if item.header.opportunities|count > 0 %}
-        <span class="tag op">
-          {{ read_file('theme://icons/lines/opportunity.svg') }}  {{item.header.opportunities|count}}
-        </span>
+        {% include 'partials/tag.html.twig' with {
+          type: 'op',
+          icon_file: 'lines/opportunity.svg',
+          text: item.header.opportunities|count
+        } only %}
       {% endif %}
 
 

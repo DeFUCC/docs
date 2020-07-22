@@ -24,9 +24,10 @@
             <small class="">
 
               {% for tag in item.taxonomy.tag %}
-                <span class="tag">
-                  {{tag}}
-                </span>
+                {% include 'partials/tag.html.twig' with {
+                  type:'tag',
+                  text: tag
+                } only %}
               {% endfor %}
 
               {% if config.plugins['count-views'].enabled %}

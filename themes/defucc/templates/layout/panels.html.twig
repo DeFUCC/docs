@@ -25,25 +25,7 @@
       {% endif %}
 
     {% block info %}
-      <small>
-      {% for tag in page.taxonomy.tag %}
-          <a href="/tag:{{tag}}">
-            <span class="tag">{{tag}}</span>
-          </a>
-      {% endfor %}
-
-      {% if config.plugins['count-views'].enabled %}
-      <span class="tag"><i class="fa fa-eye"></i>
-         {{ viewcounts[page.route]|nicenumber }}
-      </span>
-      {% endif %}
-      {% if config.plugins.readingtime.enabled %}
-      <span class="tag"><i class="fa fa-clock-o"></i>
-           {{ page.content|readingtime({'minutes_label':'THEME_FRUKT.MINUTES'|t, 'minute_label': 'THEME_FRUKT.MINUTES'|t}) }}
-      </span>
-      {% endif %}
-
-      </small>
+      {% include 'partials/article-tags.html.twig' with {item: page} %}
     {% endblock info %}
 
 

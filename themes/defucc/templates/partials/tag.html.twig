@@ -2,6 +2,9 @@
   {% if icon %}
     <i class="fa {{ icon }}"></i>
   {% endif %}
+{% if icon_file %}
+  {{ read_file('theme://icons/' ~ icon_file) }} 
+{% endif %}
   {% if text %}
     <span class="text">{{ text }}</span>
   {% endif %}

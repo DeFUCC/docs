@@ -14,3 +14,4 @@ opportunities:
         text: 'новую точку на карту открытых мастерских страны'
         link: 'https://airtable.com/shrNRxukLifF40tf3'
 ---
+
