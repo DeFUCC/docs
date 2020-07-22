@@ -22,6 +22,7 @@ form:
                   fields:
 
                     content:
+                      type
                         items: '@self.children'
                         order:
                             by: default
@@ -37,3 +38,21 @@ form:
                       style: vertical
                       type: text
                       label: Website
+
+                column2:
+                  type: column
+                  fields:
+
+                    header.idea:
+                      ordering@: -2
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Idea
+
+                    header.purpose:
+                      ordering@: -1
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Purpose

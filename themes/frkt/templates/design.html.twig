@@ -52,8 +52,10 @@
   {% if page.children.visible | count > 0 %}
 
     <div class="projects">
-      <h2 class="sticky">{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
-
+      <header>
+            <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
+            <h3>{{page.children.visible.count}}</h3>
+      </header>
       {% for item in page.children.visible %}
 
         {% include 'cards/project-card.html.twig' %}

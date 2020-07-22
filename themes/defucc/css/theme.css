@@ -3,6 +3,7 @@
   --darker-gray: #f4f4f4;
   --text-color:#333;
   --text-light-color: #696969;
+  --accent: #F7BF76;
 }
 
 body iframe {
@@ -138,6 +139,10 @@ svg {
   vertical-align: middle;
   height: 1em;
   margin-bottom: 0.2em;
+}
+
+.tag:first-child {
+  margin-left:0;
 }
 
 .tag {
