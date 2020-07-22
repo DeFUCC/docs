@@ -1,5 +1,5 @@
 ---
-title: 'Cassini dreams'
+title: 'cassini dreams'
 subtitle: 'Альбом 2017 года <br> 7 треков, 77 минут'
 icon: cassini.jpg
 media_order: cassini.jpg
@@ -8,6 +8,10 @@ opportunities:
         verb: Приобрести
         text: 'альбом на Bandcamp'
         link: 'https://tsoop.bandcamp.com/album/cassini-dreams'
+    -
+        verb: Слушать
+        text: 'в Apple.Music'
+        link: 'https://music.apple.com/us/album/cassini-dreams/1500023423'
     -
         verb: Слушать
         text: 'на Youtube.Music'
