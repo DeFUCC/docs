@@ -8,11 +8,11 @@
   grid-template-rows: 1fr auto;
   grid-template-areas:
   "header content"
-  "empty footer";
+  "header footer";
 }
 
 .panels > header {
-
+  grid-area: header;
   display: flex;
   flex-direction: column;
   width: 100%;
