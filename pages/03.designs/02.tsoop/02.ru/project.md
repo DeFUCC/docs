@@ -9,6 +9,7 @@ opportunities:
         link: 'https://tsoop.ru'
 media_order: 'Screenshot 2020-07-22 at 15.43.15.png'
 icon: 'Screenshot 2020-07-22 at 15.43.15.png'
+status: process
 ---
 
 Сайт — центральная точка сборки проекта. Ссылки и материалы на других ресурсах аккумулируются именно здесь.
