@@ -25,32 +25,43 @@
 
   <div class="ukts">
   <h4>Универсализация:</h4>
+  <ul>
+    <li>0 — «Делать то, что уже хорошо умеешь»</li>
+    <li>5 — «Делать что-то для себя совершенно новое»</li>
+  </ul>
     <div class="row">
     {% for u in 0..5 %}
       {{ _self.col(u,0,0,file) }}
     {% endfor %}
     </div>
     <h4>Кооперация:</h4>
+    <ul>
+      <li>0 — «Делаю в одиночку»</li>
+      <li>5 — «Делаем то, что реализуемо только слаженной командой»</li>
+    </ul>
     <div class="row">
     {% for k in 0..5 %}
       {{ _self.col(0,k,0,file) }}
     {% endfor %}
     </div>
     <h4>Творчество:</h4>
+    <ul>
+      <li>0 — «В результате все останется как было»</li>
+      <li>5 — «Будет создано что-то красивое и полезное»</li>
+    </ul>
     <div class="row">
     {% for t in 0..5 %}
       {{ _self.col(0,0,t,file) }}
     {% endfor %}
     </div>
 
-<h2>Примеры:</h2>
+<h4>Случайные примеры:</h4>
   {% for ran in 0..3 %}
     <div class="row">
       {% for r in 0..5 %}
         {{ _self.col(random(5),random(5),random(5),file) }}
       {% endfor %}
       </div>
-
   {% endfor %}
 </div>
 
