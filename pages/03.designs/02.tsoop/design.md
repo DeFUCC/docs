@@ -5,6 +5,7 @@ icon: tsoop-room.jpg
 website: tsoop.ru
 content:
     items: '@self.children'
+status: process
 ---
 
 Проект живой совместной музыкальной импровизации. Дружелюбная среда для всех желающих творить вместе спонтанную музыку.
