@@ -1,6 +1,6 @@
 title: Design
 '@extends':
-    type: main
+    type: mainpro
     context: theme://blueprints
 
 form:
@@ -20,19 +20,6 @@ form:
                 column1:
                   type: column
                   fields:
-
-                    content:
-                      type
-                        items: '@self.children'
-                        order:
-                            by: default
-                            dir: asc
-
-                    header.subtitle:
-                      style: vertical
-                      type: textarea
-                      rows: 3
-                      label: Subtitle
 
                     header.website:
                       style: vertical

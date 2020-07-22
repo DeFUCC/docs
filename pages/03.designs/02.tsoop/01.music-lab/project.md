@@ -12,6 +12,7 @@ opportunities:
         verb: 'Предложить '
         text: 'музыкальную коллаборацию '
         link: 'https://www.instagram.com/tsoopru'
+status: process
 ---
 
 - Помещающийся в рюкзак электронный сетап

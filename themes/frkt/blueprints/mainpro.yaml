@@ -1,0 +1,44 @@
+title: Mainpro
+'@extends':
+    type: main
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            columns:
+              type: columns
+              fields:
+
+                column1:
+                  type: column
+                  fields:
+
+                    header.subtitle:
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: Subtitle
+
+                    header.status:
+                      type: select
+                      size: short
+                      style: vertical
+                      classes: fancy
+                      label: 'Status'
+                      help: 'What is the status?'
+                      options:
+                          development: 'Разработка'
+                          process: 'Процесс'
+                          pause: 'Пауза'
+                          collect: 'Сбор средств'
+                          request: 'По запросу'
+                          finish: 'Завершен'
+                          product:  'Продукт'
