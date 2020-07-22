@@ -54,22 +54,5 @@
 {% endblock %}
 
 {% block lists %}
-<footer class="listers">
-  {% if page.children.visible | count > 0 %}
-
-    <div id="projects" class="lister">
-      <header>
-            <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
-            <h3>{{page.children.visible.count}}</h3>
-      </header>
-      {% for item in page.children.visible %}
-
-        {% include 'cards/project-card.html.twig' %}
-
-      {% endfor %}
-
-    </div>
-
-  {% endif %}
-</footer>
+  {% include 'partials/lister.html.twig' with {type: 'projects', title:'THEME_FRUKT_PROJECTS', template: 'project-card', collect: page.children.visible}  %}
 {% endblock %}

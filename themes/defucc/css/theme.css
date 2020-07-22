@@ -151,7 +151,10 @@ svg {
   border-radius: 12px;
   background-color: #eaeaea;
   font-size: 0.9em;
-
+  display: flex;
+  align-items: center;
+  word-break: keep-all;
+  max-width: min-content;
 }
 
 .button {

@@ -41,7 +41,10 @@
   background-color: var(--opportunity);
   border-radius: 12px;
   padding: 8px;
-  display:block;
+  display: flex;
+align-items: center;
+word-break: keep-all;
+
 
 }
 
@@ -50,18 +53,22 @@
 }
 
 .tag svg, .op a svg {
-  margin-left:-2px;
+  margin: 0 4px 0 -2px;
 }
 
 .tag svg path, .op a svg path {
   stroke: #555;
-  stroke-width: 6px;
+  stroke-width: 10px;
   transform: scale(1.1);
   transform-origin: center center;
 }
 
 .listers {
   padding: 0 0 4em 0;
+}
+
+.alist {
+  padding: 0 1em;
 }
 
 .lister header {
@@ -73,7 +80,7 @@
   justify-content: space-between;
 }
 
-.lister header h2, #projects header h3 {
+.lister header h2, .lister header h3 {
   margin:1em 0;
 }
 

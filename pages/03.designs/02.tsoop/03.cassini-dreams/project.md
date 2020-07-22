@@ -1,6 +1,6 @@
 ---
 title: 'Cassini dreams'
-subtitle: 'Музыкальный альбом. 7 треков, 77 минут'
+subtitle: 'Альбом 2017 года <br> 7 треков, 77 минут'
 icon: cassini.jpg
 media_order: cassini.jpg
 opportunities:

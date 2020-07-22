@@ -18,10 +18,20 @@
   width: 100%;
 }
 
+#breadcrumbs {
+    padding: 1em 0 0.5em 0;
+}
+
+.panels .top .icon {
+  justify-content: center;
+  display: flex;
+}
 
 
 .panels > footer {
   grid-area: footer;
+  width: 100%;
+
 }
 
 .panels > header > .icon {

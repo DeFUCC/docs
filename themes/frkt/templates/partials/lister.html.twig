@@ -1,0 +1,21 @@
+<footer id="{{type}}" class="listers">
+  {% if collect | count > 0 %}
+
+    <div id="{{ page.slug }}" class="lister">
+      <header>
+            <h2>{{ title|t }}</h2>
+            <h3>{{collect|count}}</h3>
+      </header>
+      <section class="alist">
+      {% for item in collect %}
+
+        {% include 'cards/' ~ template ~ '.html.twig' %}
+
+      {% endfor %}
+      </section>
+
+
+    </div>
+
+  {% endif %}
+</footer>

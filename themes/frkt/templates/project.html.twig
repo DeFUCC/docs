@@ -27,14 +27,5 @@
 {% endblock %}
 
 {% block lists %}
-  <footer class="listers">
-    {% if page.header.opportunities %}
-    <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
-    <div class="ops">
-      {% for op in page.header.opportunities %}
-        {% include 'cards/op-card.html.twig' %}
-      {% endfor %}
-    </div>
-    {% endif %}
-  </footer>
+  {% include 'partials/lister.html.twig' with { title: 'THEME_FRUKT_OPPORTUNITIES', template: 'op-card', collect: page.header.opportunities } %}
 {% endblock %}
