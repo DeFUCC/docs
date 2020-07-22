@@ -2,6 +2,8 @@
 
 {% do
   assets.addCss('theme://css/design.css', 99) %}
+  {% do
+    assets.addCss('theme://css/icons.css', 99) %}
 
 {% set main_id = 'design' %}
 
@@ -49,9 +51,13 @@
 
   {{ page.content }}
 
+{% endblock %}
+
+{% block lists %}
+<footer class="listers">
   {% if page.children.visible | count > 0 %}
 
-    <div class="projects">
+    <div id="projects" class="lister">
       <header>
             <h2>{{ 'THEME_FRUKT_PROJECTS'|t }}</h2>
             <h3>{{page.children.visible.count}}</h3>
@@ -65,5 +71,5 @@
     </div>
 
   {% endif %}
-
+</footer>
 {% endblock %}

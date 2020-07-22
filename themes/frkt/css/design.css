@@ -1,3 +1,5 @@
+
+
 #design {
   background-color: var(--darker-gray);
 }
@@ -36,7 +38,7 @@
 
   font-weight: bold;
   margin: 0 4px;
-  background-color: var(--accent);
+  background-color: var(--opportunity);
   border-radius: 12px;
   padding: 8px;
   display:block;
@@ -44,7 +46,7 @@
 }
 
 .tag.op {
-  background-color:  var(--accent);
+  background-color:  var(--opportunity);
 }
 
 .tag svg, .op a svg {
@@ -58,22 +60,25 @@
   transform-origin: center center;
 }
 
-#design .projects header {
+.listers {
+  padding: 0 0 4em 0;
+}
+
+.lister header {
   background-color:  var(--darker-gray);
   padding: 0 2em;
   position: sticky;
   top:0;
   display: flex;
   justify-content: space-between;
-  margin: 0 -2em;
 }
 
-.projects header h2, .projects header h3 {
+.lister header h2, #projects header h3 {
   margin:1em 0;
 }
 
-.projects header h3 {
+#projects header h3 {
   padding:4px 8px;
-  background-color: #dedede;
+  background-color: var(--project);
   border-radius: 12px;
 }

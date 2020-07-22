@@ -1,6 +1,8 @@
 {% extends 'layout/panels.html.twig' %}
 
 {% do assets.addCss('theme://css/design.css',99) %}
+{% do
+  assets.addCss('theme://css/icons.css', 99) %}
 
 {% set main_id = 'project' %}
 
@@ -20,14 +22,19 @@
         </p>
 
 
-      {% if page.header.opportunities %}
-      <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
-      <div class="ops">
-        {% for op in page.header.opportunities %}
-          {% include 'cards/op-card.html.twig' %}
-        {% endfor %}
-      </div>
-      {% endif %}
 
 
+{% endblock %}
+
+{% block lists %}
+  <footer class="listers">
+    {% if page.header.opportunities %}
+    <h2>{{ 'THEME_FRUKT_OPPORTUNITIES'|t }}</h2>
+    <div class="ops">
+      {% for op in page.header.opportunities %}
+        {% include 'cards/op-card.html.twig' %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </footer>
 {% endblock %}
