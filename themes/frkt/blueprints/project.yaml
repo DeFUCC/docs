@@ -1,6 +1,6 @@
 title: Project
 '@extends':
-    type: page
+    type: main
     context: theme://blueprints
 
 form:
