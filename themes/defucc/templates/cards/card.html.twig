@@ -1,62 +1,68 @@
 {% if item.visible %}
 
   <div class="card">
-     <div  class="card-content">
+    <div class="card-content">
 
-          {% include 'cards/card-image.html.twig' with { url:item.url }%}
+      {% include 'cards/card-image.html.twig' with { url:item.url }%}
 
-          <div class="card-text">
+      <div class="card-text">
 
+        <a href="{{item.url}}">
+          <h3 class="title">{{item.title}}
+          </h3>
 
-            <a href="{{item.url}}">
-            <h3 class="title">{{item.title}}
-            </h3>
-
-            <p class="summary">
-          {% if item.header.subtitle %}
+          <p class="summary">
+            {% if item.header.subtitle %}
               {{ item.header.subtitle|markdown }}
             {% elseif item.template == 'article' or item.template == 'def' %}
-                {{item.summary(300)|striptags}}
-          {% endif %}
+              {{item.summary(300)|striptags}}
+            {% endif %}
 
-            </p>
+          </p>
 
-            {% if item.template == 'article' %}
+          {% if item.template == 'article' %}
             <small class="">
 
-
               {% for tag in item.taxonomy.tag %}
-                     <span class="tag">
-                       {{tag}}
-                     </span>
-                 {% endfor %}
-                {% if config.plugins['count-views'].enabled %}
-                 <span class="tag"><i class="fa fa-eye"></i>
-                 {{ (viewcounts[item.route] ?? 0)|nicenumber }}</span>
-               {% endif %}
-               {% if config.plugins.readingtime.enabled %}
-                  <span class="tag"><i class="fa fa-clock-o"></i> {{ item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'}) }}</span>
+                <span class="tag">
+                  {{tag}}
+                </span>
+              {% endfor %}
+
+              {% if config.plugins['count-views'].enabled %}
+                {% include 'partials/tag.html.twig' with {
+                  type:'views',
+                  icon:'fa-eye',
+                  text: (viewcounts[item.route] ?? 0)|nicenumber
+                } only %}
               {% endif %}
-            {% if false %}
-                <span class="tag"><i class="fa fa-pencil"></i> {{item.modified | nicetime}}</span>
-            {% endif %}
 
+              {% if config.plugins.readingtime.enabled %}
+                {% include 'partials/tag.html.twig' with {
+                  type:'reading-time',
+                  icon:'fa-clock-o',
+                  text: item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'})
+                } only %}
+              {% endif %}
 
-             </small>
-            {% endif %}
-            </a>
+              {% if false %}
+                <span class="tag">
+                  <i class="fa fa-pencil"></i>
+                  {{item.modified | nicetime}}</span>
+              {% endif %}
 
-          </div>
-
-          {% if item.template == 'feed' and item.children %}
-            {% include 'cards/child-cards.html.twig' %}
+            </small>
           {% endif %}
+        </a>
 
-          </div>
+      </div>
 
-
-
+      {% if item.template == 'feed' and item.children %}
+        {% include 'cards/child-cards.html.twig' %}
+      {% endif %}
 
     </div>
+
+  </div>
 
 {% endif %}
