@@ -23,7 +23,7 @@
           <small class="">
           {% if item.header.status %}
           <span class="tag">
-            {{item.header.status}}
+            {{ 'THEME_FRUKT.STATUSES.' ~ item.header.status|capitalize)|t}}
           </span>
           {% endif %}
 

@@ -52,7 +52,7 @@ form:
                       style: vertical
                       type: textarea
                       rows: 3
-                      label: Subtitle
+                      label: THEME_FRUKT.DESIGN
 
 
                 column2:

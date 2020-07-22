@@ -5,14 +5,14 @@
     <h4>{{ page.title }}</h4>
 
   {% if page.header.author %}
-        {{'THEME_FRUKT_AUTHOR'|t}}: {{page.header.author }} <br />
+        {{'THEME_FRUKT.AUTHOR'|t}}: {{page.header.author }} <br />
   {% endif %}
 
     {% if page.header.date %}
-        {{'THEME_FRUKT_PUBLISHED'|t}} {{page.header.date | nicetime }} <br />
+        {{'THEME_FRUKT.PUBLISHED'|t}} {{page.header.date | nicetime }} <br />
     {% endif %}
 
-        {{'THEME_FRUKT_EDITED'|t}} {{page.modified | nicetime}}
+        {{'THEME_FRUKT.EDITED'|t}} {{page.modified | nicetime}}
 
   </div>
 

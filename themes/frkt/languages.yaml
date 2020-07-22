@@ -1,0 +1,62 @@
+en:
+  THEME_FRUKT:
+    GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
+    GITHUB_EDIT_THIS_PAGE: Edit this page
+    MINUTES: min.
+    AUTHOR: Author
+    PUBLISHED: First published
+    EDITED: Last edited
+    LINKS: Mentions
+    PREVIOUS: Previous
+    NEXT: Next
+    SUBTITLE: Subtitle
+    VERB: Verb
+    TEXT: Text
+    LINK: Link
+    PROJECTS: Projects
+    OPPORTUNITIES: Opportunities
+    DESIGN: Design
+    IDEA: Idea
+    PURPOSE: Purpose
+    WEBSITE: Website
+    STATUS: Status
+    STATUSES:
+      DEVELOPMENT: Development
+      PROCESS: Process
+      PAUSE: Pause
+      COLLECT: Collecting resources
+      REQUEST: Request
+      FROZEN: Frozen
+      FINISHED: Finished
+      PRODUCT: Product
+ru:
+  THEME_FRUKT:
+    GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
+    GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
+    MINUTES: мин.
+    AUTHOR: Автор
+    PUBLISHED: Впервые опубликовано
+    EDITED: Последняя редакция
+    LINKS: На этот материал ссылаются
+    PREVIOUS: Ранее
+    NEXT: Далее
+    SUBTITLE: Подзаголовок
+    VERB: Глагол
+    TEXT: Текст
+    LINK: Ссылка
+    PROJECTS: Проекты
+    OPPORTUNITIES: Возможности
+    DESIGN: Программа
+    IDEA: Идея
+    PURPOSE: Цель
+    WEBSITE: Сайт
+    STATUS: Статус
+    STATUSES:
+      DEVELOPMENT: Разработка
+      PROCESS: Процесс
+      PAUSE: Пауза
+      COLLECT: Сбор средств
+      REQUEST: По запросу
+      FROZEN: Заморожено
+      FINISHED: Завершено
+      PRODUCT: Продукт

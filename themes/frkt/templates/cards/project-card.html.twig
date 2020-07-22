@@ -24,8 +24,9 @@
       <footer>
 
       {% if item.header.status %}
-        <span class="tag">
-          {{item.header.status}}
+      {% set status =  item.header.status %}
+        <span class="tag {{status}}">
+          {{ ('THEME_FRUKT.STATUSES.' ~ status|upper)|t}}
         </span>
       {% endif %}
 

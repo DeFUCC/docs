@@ -35,11 +35,11 @@ form:
                       style: vertical
                       type: textarea
                       rows: 3
-                      label: Idea
+                      label: THEME_FRUKT.IDEA
 
                     header.purpose:
                       ordering@: -1
                       style: vertical
                       type: textarea
                       rows: 3
-                      label: Purpose
+                      label: THEME_FRUKT.PURPOSE

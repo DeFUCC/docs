@@ -24,10 +24,10 @@ form:
               fields:
                 .verb:
                   type: text
-                  label: Глагол
+                  label: THEME_FRUKT.VERB
                 .text:
                   type: text
-                  label: Текст
+                  label: THEME_FRUKT.TEXT
                 .link:
                   type: text
-                  label: Link
+                  label: THEME_FRUKT.LINK

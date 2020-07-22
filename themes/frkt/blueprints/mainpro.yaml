@@ -21,24 +21,18 @@ form:
                   type: column
                   fields:
 
-                    header.subtitle:
-                      style: vertical
-                      type: textarea
-                      rows: 3
-                      label: Subtitle
-
                     header.status:
                       type: select
                       size: short
                       style: vertical
                       classes: fancy
-                      label: 'Status'
+                      label: THEME_FRUKT.STATUS
                       help: 'What is the status?'
                       options:
-                          development: 'Разработка'
-                          process: 'Процесс'
-                          pause: 'Пауза'
-                          collect: 'Сбор средств'
-                          request: 'По запросу'
-                          finish: 'Завершен'
-                          product:  'Продукт'
+                          development: THEME_FRUKT.STATUSES.DEVELOPMENT
+                          process: THEME_FRUKT.STATUSES.PROCESS
+                          pause: THEME_FRUKT.STATUSES.PAUSE
+                          collect: THEME_FRUKT.STATUSES.COLLECT
+                          request: THEME_FRUKT.STATUSES.REQUEST
+                          finished: THEME_FRUKT.STATUSES.FINISHED
+                          product:  THEME_FRUKT.STATUSES.PRODUCT

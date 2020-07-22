@@ -1,26 +1,24 @@
 en:
-    THEME_FRUKT_GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
-    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Edit this page
-    THEME_FRUKT_MINUTES: min.
-    THEME_FRUKT_AUTHOR: Author
-    THEME_FRUKT_PUBLISHED: First published
-    THEME_FRUKT_EDITED: Last edited
-    THEME_FRUKT_LINKS: Mentions
-    THEME_FRUKT_PREVIOUS: Previous
-    THEME_FRUKT_NEXT: Next
-    THEME_FRUKT_PROJECTS: Projects
-    THEME_FRUKT_OPPORTUNITIES: Opportunities
-    THEME_FRUKT_DESIGN: Design
+  THEME_FRUKT:
+    GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
+    GITHUB_EDIT_THIS_PAGE: Edit this page
+    MINUTES: min.
+    AUTHOR: Author
+    PUBLISHED: First published
+    EDITED: Last edited
+    LINKS: Mentions
+    PREVIOUS: Previous
+    NEXT: Next
+    SUBTITLE: Subtitle
 ru:
-    THEME_FRUKT_GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
-    THEME_FRUKT_GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
-    THEME_FRUKT_MINUTES: мин.
-    THEME_FRUKT_AUTHOR: Автор
-    THEME_FRUKT_PUBLISHED: Впервые опубликовано
-    THEME_FRUKT_EDITED: Последняя редакция
-    THEME_FRUKT_LINKS: На этот материал ссылаются
-    THEME_FRUKT_PREVIOUS: Ранее
-    THEME_FRUKT_NEXT: Далее
-    THEME_FRUKT_PROJECTS: Проекты
-    THEME_FRUKT_OPPORTUNITIES: Возможности
-    THEME_FRUKT_DESIGN: Программа
+  THEME_FRUKT:
+    GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
+    GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
+    MINUTES: мин.
+    AUTHOR: Автор
+    PUBLISHED: Впервые опубликовано
+    EDITED: Последняя редакция
+    LINKS: На этот материал ссылаются
+    PREVIOUS: Ранее
+    NEXT: Далее
+    SUBTITLE: Подзаголовок
