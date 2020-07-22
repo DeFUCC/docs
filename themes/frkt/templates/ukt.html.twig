@@ -1,0 +1,62 @@
+{% extends 'layout/panels.html.twig' %}
+
+{% do assets.addCss('theme://css/design.css', 99) %}
+{% do assets.addCss('theme://css/ukt.css', 99) %}
+
+{% set main_id = 'ukt' %}
+
+{% block info %}{% endblock %}
+
+{% set file = read_file(page.path() ~ '/ukt.svg') %}
+
+{% macro col(u,k,t,file) %}
+  {% set classes = 'u' ~ u ~ ' k' ~ k ~ ' t' ~ t %}
+  {% set text = 'Y' ~ u ~ ' K' ~ k ~ ' T' ~ t %}
+    <div class="col {{classes}}">
+      <div class="svg">{{file}}</div>
+      <div class="text">{{text}}</div>
+    </div>
+{% endmacro %}
+
+{% block article %}
+
+  {{ page.content }}
+
+
+  <div class="ukts">
+  <h4>Универсализация:</h4>
+    <div class="row">
+    {% for u in 0..5 %}
+      {{ _self.col(u,0,0,file) }}
+    {% endfor %}
+    </div>
+    <h4>Кооперация:</h4>
+    <div class="row">
+    {% for k in 0..5 %}
+      {{ _self.col(0,k,0,file) }}
+    {% endfor %}
+    </div>
+    <h4>Творчество:</h4>
+    <div class="row">
+    {% for t in 0..5 %}
+      {{ _self.col(0,0,t,file) }}
+    {% endfor %}
+    </div>
+
+<h2>Примеры:</h2>
+  {% for ran in 0..3 %}
+    <div class="row">
+      {% for r in 0..5 %}
+        {{ _self.col(random(5),random(5),random(5),file) }}
+      {% endfor %}
+      </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block lists %}
+
+
+{% endblock %}
