@@ -141,6 +141,7 @@ svg {
 }
 
 .tag {
+  margin:4px;
   padding: 4px 6px;
   border-radius: 12px;
   background-color: #eaeaea;

@@ -8,8 +8,7 @@ content:
     order:
         by: default
         dir: asc
-    pagination: true
-    limit: 12
+
 visible: false
 ---
 

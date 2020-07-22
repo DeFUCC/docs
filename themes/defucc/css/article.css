@@ -12,11 +12,12 @@
 }
 
 .article img {
-  transition: transform 300ms ease;
+  transition: transform 4400ms ease;
 }
 
 .article .content img:hover {
   transform: scale(1.25);
+  cursor: crosshair;
 }
 
 .panels.with-toc .top {

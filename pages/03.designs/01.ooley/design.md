@@ -3,6 +3,11 @@ title: OOLEY
 subtitle: 'Открытый социокультурный проект развития творческих возможностей человека и общества'
 icon: circle.svg
 website: ooley.ru
+content:
+    items: '@self.children'
+    order:
+        by: default
+        dir: asc
 ---
 
 ## Мастера делают мастерские открытыми, открытые мастерские делают мастеров свободными.

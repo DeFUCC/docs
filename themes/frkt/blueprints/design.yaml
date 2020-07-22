@@ -21,6 +21,12 @@ form:
                   type: column
                   fields:
 
+                    content:
+                        items: '@self.children'
+                        order:
+                            by: default
+                            dir: asc
+
                     header.subtitle:
                       style: vertical
                       type: textarea

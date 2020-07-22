@@ -43,6 +43,17 @@
 
 }
 
+.tag svg {
+  margin-left:-2px;
+}
+
+.tag svg path {
+  stroke: #555;
+  stroke-width: 6px;
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+
 
 
 .card.design {

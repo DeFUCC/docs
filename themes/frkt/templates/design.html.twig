@@ -5,6 +5,9 @@
 
 {% set main_id = 'design' %}
 
+{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
+{% set my_collection = page.collection(options) %}
+
 {% set bg_color = 'var(--darker-gray)'%}
 
 {% block side %}

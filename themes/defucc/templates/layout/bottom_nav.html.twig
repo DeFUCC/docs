@@ -1,5 +1,16 @@
-{% set next = page.prevSibling %}
-{% set prev = page.nextSibling %}
+{% if page.prevSibling %}
+	{% set next = page.prevSibling %}
+{% else %}
+	{% set next = page.parent.prevSibling %}
+{% endif %}
+
+{% if page.nextSibling %}
+	{% set prev = page.nextSibling %}
+	{% else %}
+	{% set prev = page.parent.nextSibling %}
+{% endif %}
+
+{{page.parent.nextSibling.title}}
 
 {% macro get_bg(item) %}
 	{% if item.header.bg %}
@@ -9,6 +20,7 @@
 {% endmacro %}
 
 {% if prev or next %}
+
 	<footer id="bottom-page-nav">
 
 	{% if prev.title %}
