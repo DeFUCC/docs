@@ -6,7 +6,7 @@ website: eye-point.ru
 status: process
 permissions:
     authors:
-        - 'Anna Starove'
+        - annastarova
 ---
 
 То, что привлекает взгляд
