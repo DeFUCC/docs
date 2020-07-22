@@ -1,6 +1,7 @@
 ---
 title: 'Мобильная музыкальная лаборатория'
 subtitle: 'Портативная станция для потокового производства музыки'
+icon: f698b85c.jpeg
 media_order: f698b85c.jpeg
 opportunities:
     -
