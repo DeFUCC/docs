@@ -7,6 +7,10 @@ opportunities:
         verb: Пригласить
         text: 'провести музыкально-визуальный коллективный перформанс на вашей площадке'
         link: 'https://www.airtable.com/shrOGKejKAhvZuLSz'
+    -
+        verb: 'Предложить '
+        text: 'музыкальную коллаборацию '
+        link: 'https://www.instagram.com/tsoopru'
 ---
 
 - Помещающийся в рюкзак электронный сетап
