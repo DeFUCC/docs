@@ -25,6 +25,7 @@
 .panels .top .icon {
   justify-content: center;
   display: flex;
+  flex: 1 1 150px;
 }
 
 
@@ -41,7 +42,7 @@
   position: relative;
 }
 
-.panels > header > .start {
+.panels > header  .start {
   flex:1 1 200px;
   height: min-content;
   padding:3em 1em 1em 1em;
@@ -80,6 +81,8 @@
   top: 80px;
   padding: 1em;
   z-index: 50;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 

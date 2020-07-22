@@ -102,7 +102,9 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   body img, #body .video-container {
     max-width: 100%;
     display: block;
-    text-align: center; }
+    text-align: center;
+    object-fit: contain;
+   }
 
     #body img.border, #body .video-container.border {
       border: 2px solid #e6e6e6 !important;
@@ -134,6 +136,10 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
   font-weight: normal;
 }
 
+#breadcrumbs span:last-child a {
+    font-weight: bold;
+}
+
 svg {
   display: inline-block;
   vertical-align: middle;
@@ -151,7 +157,7 @@ svg {
   border-radius: 12px;
   background-color: #eaeaea;
   font-size: 0.9em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   word-break: keep-all;
   max-width: min-content;
