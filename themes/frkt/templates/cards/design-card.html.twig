@@ -21,11 +21,8 @@
           </p>
 
           <small class="">
-          {% if item.header.status %}
-          <span class="tag">
-            {{ 'THEME_FRUKT.STATUSES.' ~ item.header.status|capitalize)|t}}
-          </span>
-          {% endif %}
+
+          {% include 'partials/status.html.twig' %}
 
             {% if config.plugin['count-views'].enabled %}
               <span class="tag">
