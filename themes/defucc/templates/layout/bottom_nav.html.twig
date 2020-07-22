@@ -10,8 +10,6 @@
 	{% set prev = page.parent.nextSibling %}
 {% endif %}
 
-{{page.parent.nextSibling.title}}
-
 {% macro get_bg(item) %}
 	{% if item.header.bg %}
 		{% set media_url = item.media[item.header.bg].cropResize(700,200).url %}
