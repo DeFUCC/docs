@@ -7,5 +7,6 @@ opportunities:
         verb: Посмотреть
         text: 'записи выступлений и музыкальных композиций'
         link: 'https://tsoop.ru'
+media_order: 'Screenshot 2020-07-22 at 15.43.15.png'
 ---
 
