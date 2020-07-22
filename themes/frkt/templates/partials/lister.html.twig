@@ -4,7 +4,12 @@
     <div id="{{ page.slug }}" class="lister">
       <header>
             <h2>{{ title|t }}</h2>
-            <h3>{{collect|count}}</h3>
+            <h3 class="{{type}}">
+              {% if icon_file %}
+                {{ read_file('theme://icons/' ~ icon_file) }}
+              {% endif %}
+              {{collect|count}}
+            </h3>
       </header>
       <section class="alist">
       {% for item in collect %}

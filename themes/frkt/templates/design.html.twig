@@ -55,10 +55,28 @@
 
 {% block article %}
 
+{% if page.header.idea %}
+  <div class="idea">
+    {{page.header.idea}}
+  </div>
+{% endif %}
+
+{% if page.header.purpose %}
+  <div class="purpose">
+    {{page.header.purpose}}
+  </div>
+{% endif %}
+
   {{ page.content }}
 
 {% endblock %}
 
 {% block lists %}
-  {% include 'partials/lister.html.twig' with {type: 'projects', title:'THEME_FRUKT.PROJECTS', template: 'project-card', collect: page.children.visible}  %}
+  {% include 'partials/lister.html.twig' with {
+    type: 'project',
+    title:'THEME_FRUKT.PROJECTS',
+    icon_file: 'lines/project.svg',
+    template: 'project-card',
+    collect: page.children.visible
+  }  %}
 {% endblock %}

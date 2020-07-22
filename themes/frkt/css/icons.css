@@ -7,15 +7,26 @@
   --gift: #754C29;
 }
 
+.project {
+  background-color: var(--project);
+}
+
+.opportunity {
+  background-color: var(--opportunity);
+}
+
 .tag.process {
   background-color: hsla(156,48%,77%,1);
 }
 
 .tag.development {
   background-color: hsla(0,0%,75%,1);
-  background-color: #8DC5EF;
 }
 
 .tag.paused {
   background-color: hsla(0,0%,75%,1);
+}
+
+.tag.request {
+  background-color: hsla(67,58%,87%,1);
 }

@@ -39,7 +39,7 @@
   font-weight: bold;
   margin: 0 4px;
   background-color: var(--opportunity);
-  
+
   display: flex;
 align-items: center;
 word-break: keep-all;
@@ -51,15 +51,19 @@ word-break: keep-all;
   background-color:  var(--opportunity);
 }
 
-.tag svg, .op a svg {
+.tag svg, .op a svg  {
   margin: 0 4px 0 -2px;
 }
 
-.tag svg path, .op a svg path {
+.tag svg path, .op a svg path, .lister header h3 svg path {
   stroke: #555;
   stroke-width: 10px;
   transform: scale(1.1);
   transform-origin: center center;
+}
+
+.lister header h3 svg {
+  margin:0 0 0.13em 0;
 }
 
 .listers {
@@ -83,8 +87,7 @@ word-break: keep-all;
   margin:1em 0;
 }
 
-#projects header h3 {
+.lister header h3 {
   padding:4px 8px;
-  background-color: var(--project);
   border-radius: 12px;
 }

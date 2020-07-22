@@ -27,5 +27,10 @@
 {% endblock %}
 
 {% block lists %}
-  {% include 'partials/lister.html.twig' with { title: 'THEME_FRUKT.OPPORTUNITIES', template: 'op-card', collect: page.header.opportunities } %}
+  {% include 'partials/lister.html.twig' with {
+  type: 'opportunity',
+  title: 'THEME_FRUKT.OPPORTUNITIES',
+  template: 'op-card',
+  icon_file: 'lines/opportunity.svg',
+  collect: page.header.opportunities } %}
 {% endblock %}
