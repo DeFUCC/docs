@@ -1,0 +1,6 @@
+{% if item.header.status %}
+{% set status =  item.header.status %}
+  <span class="tag {{status}}">
+    {{ ('THEME_FRUKT.STATUSES.' ~ status|upper)|t}}
+  </span>
+{% endif %}

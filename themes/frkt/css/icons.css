@@ -6,3 +6,16 @@
   --event: #FEE000;
   --gift: #754C29;
 }
+
+.tag.process {
+  background-color: hsla(156,48%,77%,1);
+}
+
+.tag.development {
+  background-color: hsla(0,0%,75%,1);
+  background-color: #8DC5EF;
+}
+
+.tag.paused {
+  background-color: hsla(0,0%,75%,1);
+}
