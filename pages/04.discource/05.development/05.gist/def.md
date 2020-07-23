@@ -1,6 +1,6 @@
 ---
 title: Суть
-media_order:  gist.svg
+media_order: gist.svg
 icon: gist.svg
 taxonomy:
     category:
