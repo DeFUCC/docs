@@ -34,7 +34,7 @@
 
           {% include 'partials/tag.html.twig' with {
             type : 'time',
-            icon_file: 'lines/time.svg',
+            icon: 'fa-clock-o',
             text: item.header.start_date | nicetime
           }
           only %}
@@ -43,6 +43,7 @@
         {% if item.header.opportunities and item.header.opportunities | count > 0 %}
           {% include 'partials/tag.html.twig' with {
             type : 'opportunity',
+            icon_file: 'lines/opportunity.svg',
             text: item.header.opportunities | count
           }
           only %}
@@ -52,7 +53,8 @@
           {% if item.children.ofType(type).visible | count > 0 %}
             {% include 'partials/tag.html.twig' with {
               type : type,
-              text: item.children.ofType(type) | count
+              icon_file: 'lines/' ~ type ~ '.svg',
+              text: item.children.ofType(type).visible | count
             } %}
           {% endif %}
         {% endfor %}

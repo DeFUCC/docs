@@ -1,4 +1,4 @@
-{% extends 'layout/panels.html.twig' %}
+{% extends 'partials/item-page.html.twig' %}
 
 
 {% set options = { items: {'@root.descendants':''}, 'filter': { 'type': page.slug }, 'order': {'by': 'date', 'dir': 'asc'}} %}

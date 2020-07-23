@@ -24,6 +24,8 @@ en:
     OBJECTS: Objects
     THING: Thing
     THINGS: Things
+    START_DATE: Start date
+    END_DATE: End date
     WEBSITE: Website
     STATUS: Status
     STATUSES:
@@ -62,6 +64,8 @@ ru:
     THING: Штука
     THINGS: Штуки
     WEBSITE: Сайт
+    START_DATE: Дата начала
+    END_DATE: дата завершения
     STATUS: Статус
     STATUSES:
       DEVELOPMENT: Разработка
