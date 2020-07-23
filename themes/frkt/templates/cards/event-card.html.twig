@@ -26,9 +26,19 @@
     </div>
     <footer>
 
+    {% if item.header.start_date %}
+    {% set start_date = date(item.header.start_date) %}
+      <div class="date">
+          {{ start_date|date('d M Y') }}
+      </div>
+    {% endif %}
+
     {% include 'partials/status.html.twig' %}
 
+
+
     {% if item.header.start_date %}
+
       {% include 'partials/tag.html.twig' with {
         type: 'time',
         icon_file: 'lines/time.svg',
@@ -37,14 +47,14 @@
     {% endif %}
 
 
-    </footer>
+
 
 
 
     {% if item.children.visible %}
       {% include 'cards/child-cards.html.twig' %}
     {% endif %}
-
+</footer>
   </div>
 
 {% endif %}

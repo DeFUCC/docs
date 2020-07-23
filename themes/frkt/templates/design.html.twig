@@ -72,6 +72,7 @@
 {% endblock %}
 
 {% block lists %}
+<footer>
   {% include 'partials/lister.html.twig' with {
     type: 'project',
     title:'THEME_FRUKT.PROJECTS',
@@ -79,4 +80,5 @@
     template: 'project-card',
     collect: page.children.visible
   }  %}
+  </footer>
 {% endblock %}

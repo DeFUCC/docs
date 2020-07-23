@@ -1,4 +1,21 @@
+.event footer {
+  flex:1 1 75px;
+}
 
+.event .card-text {
+  flex-grow: 50;
+}
+
+.event .date {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding:0.5em;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: var(--darker-gray);
+}
 
 #design {
   background-color: var(--darker-gray);

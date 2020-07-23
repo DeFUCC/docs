@@ -3,7 +3,7 @@
   {% do
     assets.addCss('theme://css/design.css', 90) %}
 
-  <div class="design card">
+  <div class="project card">
 
     {% include 'cards/card-image.html.twig' with { size: 280, url:item.url }%}
 
@@ -25,7 +25,7 @@
 
       {% include 'partials/status.html.twig' %}
 
-      {% if item.header.date %}
+      {% if item.header.start_date %}
         <span class="tag">
           <i class="fa fa-clock-o"></i>
           {{ item.header.date|nicetime }}</span>
@@ -39,15 +39,21 @@
         } only %}
       {% endif %}
 
+      {% if item.children.visible|count>0 %}
+        {% include 'partials/tag.html.twig' with {
+          type: 'event',
+          icon_file: 'lines/event.svg',
+          text: item.children.ofType('event')|count
+        } %}
+      {% endif %}
+
 
       </footer>
     </div>
 
 
 
-    {% if item.children.visible %}
-      {% include 'cards/child-cards.html.twig' %}
-    {% endif %}
+
 
   </div>
 

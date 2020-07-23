@@ -74,6 +74,7 @@
   word-wrap: break-word;
   padding: 2em;
   background: white;
+  min-width:280px;
 }
 
 .panels .top {
