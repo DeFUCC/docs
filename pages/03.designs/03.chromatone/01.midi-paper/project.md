@@ -22,7 +22,7 @@ opportunities:
 
 ## JS библиотеки
 
-- [(VueJS](https://vuejs.org)
+- [VueJS](https://vuejs.org)
 - [PaperJS](https://paperjs.org)
 - [WebMIDI](https://djipco.github.io/webmidi/latest/classes/WebMidi.html)
 
