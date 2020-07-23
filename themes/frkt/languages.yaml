@@ -4,6 +4,7 @@ en:
     GITHUB_EDIT_THIS_PAGE: Edit this page
     MINUTES: min.
     DETAILS: Details
+    ICON: Icon
     AUTHOR: Author
     PUBLISHED: First published
     EDITED: Last edited
@@ -44,6 +45,7 @@ ru:
     GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
     MINUTES: мин.
     DETAILS: Детали
+    ICON: Иконка
     AUTHOR: Автор
     PUBLISHED: Впервые опубликовано
     EDITED: Последняя редакция

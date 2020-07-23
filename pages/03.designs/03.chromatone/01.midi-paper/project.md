@@ -13,7 +13,7 @@ opportunities:
         link: 'https://paper.chromatone.center'
     -
         icon: 'fa fa-github-alt'
-        verb: Разработать
+        verb: Разрабатывать
         text: 'свои модули для графического представления MIDI-сигналов в браузере'
         link: 'https://github.com/DeFUCC/midi-paper'
 ---

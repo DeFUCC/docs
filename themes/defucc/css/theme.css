@@ -179,11 +179,13 @@ svg {
   transition: all 100ms ease;
 }
 
+.button i {
+    margin: 0 8px 0 0;
+}
 
 .button:hover {
   background: #999;
   box-shadow: 0 4px 6px hsla(0,0%,50%,0.4);
-  stroke: #fff !important;
   color: #fff;
 }
 

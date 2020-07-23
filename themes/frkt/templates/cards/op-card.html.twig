@@ -1,6 +1,11 @@
 <div class="op card">
   <div class="verb">
-    <a class="button" href="{{item.link}}" target="_blank"> {{item.verb}}</a>
+    <a class="button" href="{{item.link}}" target="_blank">
+      {% if item.icon %}
+        <i class="{{item.icon}}"></i>
+      {% endif %}
+      {{item.verb}}
+     </a>
   </div>
   <div class="text">
     {{item.text}}
