@@ -26,9 +26,16 @@
       {% include 'partials/status.html.twig' %}
 
       {% if item.header.start_date %}
-        <span class="tag">
-          <i class="fa fa-clock-o"></i>
-          {{ item.header.date|nicetime }}</span>
+      {% set thedate = item.header.start_date|nicetime %}
+        {% if item.header.end_date %}
+          {% set thedate = item.header.end_date|nicetime %}
+        {% endif %}
+
+        {% include 'partials/tag.html.twig' with {
+          type: 'time',
+          icon_file: 'lines/time.svg',
+          text: item.header.start_date|nicetime
+        } only %}
       {% endif %}
 
       {% if item.header.opportunities|count > 0 %}

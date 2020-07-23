@@ -35,6 +35,8 @@ opportunities:
         verb: Слушать
         text: 'на Amazon Music'
         link: 'https://www.amazon.com/Miracle-Mechanism-tsoop/dp/B07YNC3KBX/ref=sr_1_1?keywords=tsoop&qid=1577706006&s=dmusic&sr=1-1'
+start_date: '07-07-2019 15:34'
+end_date: '17-08-2019 15:34'
 ---
 
 <iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=3719716987/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://tsoop.bandcamp.com/album/miracle-mechanism-feat-daria-dubovik-live-wafest19">miracle mechanism (feat. daria dubovik) live @ wafest&#39;19 by tsoop</a></iframe>
