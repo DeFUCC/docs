@@ -7,10 +7,12 @@ media_order: fd3add3f.png
 icon: fd3add3f.png
 opportunities:
     -
+        icon: 'fa fa-hand-o-up'
         verb: Рисовать
         text: 'на виртуальной бумаге в вашем браузере с помощью MIDI-сигналов контроллера или секвенсора'
         link: 'https://paper.chromatone.center'
     -
+        icon: 'fa fa-github-alt'
         verb: Разработать
         text: 'свои модули для графического представления MIDI-сигналов в браузере'
         link: 'https://github.com/DeFUCC/midi-paper'

@@ -23,6 +23,9 @@ form:
               style: vertical
 
               fields:
+                .icon:
+                  type: iconPicker
+                  label: THEME_FRUKT.ICON
                 .verb:
                   type: text
                   label: THEME_FRUKT.VERB
