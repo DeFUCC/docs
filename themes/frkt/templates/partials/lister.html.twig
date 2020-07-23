@@ -2,7 +2,7 @@
 {% set template = template ?: 'item-card' %}
 
 
-  {% if collect | count > 0 %}
+  {% if collect and collect | count > 0 %}
 
     <div id="{{ page.slug }}" class="lister">
       <header>
