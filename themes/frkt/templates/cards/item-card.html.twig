@@ -40,7 +40,7 @@
           only %}
         {% endif %}
 
-        {% if item.header.opportunities | count > 0 %}
+        {% if item.header.opportunities and item.header.opportunities | count > 0 %}
           {% include 'partials/tag.html.twig' with {
             type : 'opportunity',
             text: item.header.opportunities | count
