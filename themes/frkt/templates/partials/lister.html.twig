@@ -1,3 +1,6 @@
+{% set icon_file = icon_file ?: 'lines/' ~ type ~ '.svg' %}
+{% set template = template ?: 'item-card' %}
+
 
   {% if collect | count > 0 %}
 

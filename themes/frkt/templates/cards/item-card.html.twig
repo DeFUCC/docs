@@ -1,0 +1,64 @@
+{% if item.visible %}
+
+  {% do
+    assets.addCss('theme://css/design.css', 90) %}
+
+  <div class="project card">
+
+    {% include 'cards/card-image.html.twig' with { size: 280, url:item.url }%}
+
+    <div class="card-text">
+
+      <a href="{{item.url}}">
+        <h3 class="title">{{item.title}}
+        </h3>
+
+        <p class="summary">
+          {% if item.header.subtitle %}
+            {{ item.header.subtitle }}
+          {% endif %}
+
+        </p>
+
+      </a>
+
+      <footer>
+
+        {% include 'partials/status.html.twig' %}
+
+        {% if item.header.start_date %}
+          {% set thedate = item.header.start_date | nicetime %}
+          {% if item.header.end_date %}
+            {% set thedate = item.header.end_date | nicetime %}
+          {% endif %}
+
+          {% include 'partials/tag.html.twig' with {
+            type : 'time',
+            icon_file: 'lines/time.svg',
+            text: item.header.start_date | nicetime
+          }
+          only %}
+        {% endif %}
+
+        {% if item.header.opportunities | count > 0 %}
+          {% include 'partials/tag.html.twig' with {
+            type : 'opportunity',
+            text: item.header.opportunities | count
+          }
+          only %}
+        {% endif %}
+
+        {% for type in types %}
+          {% if item.children.ofType(type).visible | count > 0 %}
+            {% include 'partials/tag.html.twig' with {
+              type : type,
+              text: item.children.ofType(type) | count
+            } %}
+          {% endif %}
+        {% endfor %}
+
+      </footer>
+    </div>
+  </div>
+
+{% endif %}

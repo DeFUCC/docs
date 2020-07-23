@@ -7,34 +7,34 @@
   --gift: #754C29;
 }
 
-.design {
+.tag.design {
   background-color: var(--design);
 }
 
-.project {
+.tag.project {
   background-color: var(--project);
 }
 
-.opportunity {
+.tag.opportunity {
   background-color: var(--opportunity);
 }
 
-.event {
+.tag.event {
   background-color: var(--event);
 }
 
-.process {
+.tag.process {
   background-color: hsla(156,48%,77%,1);
 }
 
-.development {
+.tag.development {
   background-color: hsla(0,0%,75%,1);
 }
 
-.paused {
+.tag.paused {
   background-color: hsla(0,0%,75%,1);
 }
 
-.request {
+.tag.request {
   background-color: hsla(67,58%,87%,1);
 }

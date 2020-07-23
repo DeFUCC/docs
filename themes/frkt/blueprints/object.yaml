@@ -1,4 +1,4 @@
-title: Design
+title: Project
 '@extends':
     type: mainpro
     context: theme://blueprints
@@ -30,3 +30,26 @@ form:
                       style: vertical
                       type: datetime
                       label: FRUKT_THEME.END_DATE
+
+      fields:
+        details:
+          type: tab
+          title: Детали
+          ordering@: 1
+          fields:
+            header.opportunities:
+              name: opportunities
+              type: list
+              label: Возможности
+              style: vertical
+
+              fields:
+                .verb:
+                  type: text
+                  label: THEME_FRUKT.VERB
+                .text:
+                  type: text
+                  label: THEME_FRUKT.TEXT
+                .link:
+                  type: text
+                  label: THEME_FRUKT.LINK

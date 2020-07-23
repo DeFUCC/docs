@@ -21,6 +21,9 @@ en:
     EVENT: Event
     EVENTS: Events
     OBJECT: Object
+    OBJECTS: Objects
+    THING: Thing
+    THINGS: Things
     WEBSITE: Website
     STATUS: Status
     STATUSES:
@@ -55,6 +58,9 @@ ru:
     EVENT: Событие
     EVENTS: События
     OBJECT: Объект
+    OBJECTS: Объекты
+    THING: Штука
+    THINGS: Штуки
     WEBSITE: Сайт
     STATUS: Статус
     STATUSES:

@@ -1,0 +1,4 @@
+title: Thing
+'@extends':
+    type: mainpro
+    context: theme://blueprints

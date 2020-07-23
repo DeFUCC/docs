@@ -46,7 +46,15 @@
         } only %}
       {% endif %}
 
-      {% if item.children.visible|count>0 %}
+      {% if item.children.ofType('object').visible|count>0 %}
+        {% include 'partials/tag.html.twig' with {
+          type: 'object',
+          icon_file: 'lines/object.svg',
+          text: item.children.ofType('object')|count
+        } %}
+      {% endif %}
+
+      {% if item.children.ofType('event').visible|count>0 %}
         {% include 'partials/tag.html.twig' with {
           type: 'event',
           icon_file: 'lines/event.svg',
