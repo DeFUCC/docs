@@ -3,6 +3,7 @@ en:
     GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
     GITHUB_EDIT_THIS_PAGE: Edit this page
     MINUTES: min.
+    DETAILS: Details
     AUTHOR: Author
     PUBLISHED: First published
     EDITED: Last edited
@@ -42,6 +43,7 @@ ru:
     GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
     GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
     MINUTES: мин.
+    DETAILS: Детали
     AUTHOR: Автор
     PUBLISHED: Впервые опубликовано
     EDITED: Последняя редакция

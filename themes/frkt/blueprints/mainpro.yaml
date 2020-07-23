@@ -21,6 +21,16 @@ form:
                   type: column
                   fields:
 
+                    header.start_date:
+                      style: vertical
+                      type: datetime
+                      label: THEME_FRUKT.START_DATE
+
+                    header.end_date:
+                      style: vertical
+                      type: datetime
+                      label: THEME_FRUKT.END_DATE
+
                     header.status:
                       type: select
                       size: short

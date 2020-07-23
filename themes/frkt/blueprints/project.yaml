@@ -10,37 +10,16 @@ form:
       active: 1
 
       fields:
-        content:
-          fields:
-
-            columns:
-              type: columns
-              fields:
-
-                column1:
-                  type: column
-                  fields:
-
-                    header.start_date:
-                      style: vertical
-                      type: datetime
-                      label: FRUKT_THEME.START_DATE
-
-                    header.end_date:
-                      style: vertical
-                      type: datetime
-                      label: FRUKT_THEME.END_DATE
-
-      fields:
         details:
           type: tab
-          title: Детали
+          title: THEME_FRUKT.OPPORTUNITIES
           ordering@: 1
           fields:
+
             header.opportunities:
               name: opportunities
               type: list
-              label: Возможности
+              label: THEME_FRUKT.OPPORTUNITIES
               style: vertical
 
               fields:
@@ -53,3 +32,25 @@ form:
                 .link:
                   type: text
                   label: THEME_FRUKT.LINK
+
+        fields:
+          content:
+            fields:
+
+              columns:
+                type: columns
+                fields:
+
+                  column1:
+                    type: column
+                    fields:
+
+                      header.start_date:
+                        style: vertical
+                        type: datetime
+                        label: FRUKT_THEME.START_DATE
+
+                      header.end_date:
+                        style: vertical
+                        type: datetime
+                        label: FRUKT_THEME.END_DATE
