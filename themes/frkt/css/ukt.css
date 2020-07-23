@@ -24,3 +24,14 @@
   border-radius: 14px;
   margin: 0 4px;
 }
+
+.ukts .col {
+  background-color: hsla(0,0%,100%,0);
+    transition: all 350ms ease;
+}
+
+.ukts .col:hover {
+  transform: scale(2);
+  border-radius: 12px;
+  background-color: hsla(0,0%,100%,1);
+}

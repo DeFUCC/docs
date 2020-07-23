@@ -26,18 +26,7 @@
 
 {% block lists %}
 <footer id="{{type}}" class="listers">
-    {% include 'partials/lister.html.twig' with {
-    type: 'event',
-    title: 'THEME_FRUKT.EVENTS',
-    template: 'event-card',
-    icon_file: 'lines/event.svg',
-    collect: page.children } %}
 
-  {% include 'partials/lister.html.twig' with {
-  type: 'opportunity',
-  title: 'THEME_FRUKT.OPPORTUNITIES',
-  template: 'op-card',
-  icon_file: 'lines/opportunity.svg',
-  collect: page.header.opportunities } %}
+
 </footer>
 {% endblock %}

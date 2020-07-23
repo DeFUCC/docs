@@ -3,6 +3,8 @@ title: 'miracle mechanism (feat. daria dubovik)'
 status: product
 icon: miracle.png
 subtitle: 'recorded live at the 7th wafest festival @ 2019/7/6, released @ 2019/7/17'
+content:
+    items: '@self.children'
 media_order: miracle.png
 opportunities:
     -

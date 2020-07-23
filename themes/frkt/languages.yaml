@@ -18,6 +18,9 @@ en:
     DESIGN: Design
     IDEA: Idea
     PURPOSE: Purpose
+    EVENT: Event
+    EVENTS: Events
+    OBJECT: Object
     WEBSITE: Website
     STATUS: Status
     STATUSES:
@@ -49,6 +52,9 @@ ru:
     DESIGN: Программа
     IDEA: Идея
     PURPOSE: Цель
+    EVENT: Событие
+    EVENTS: События
+    OBJECT: Объект
     WEBSITE: Сайт
     STATUS: Статус
     STATUSES:
