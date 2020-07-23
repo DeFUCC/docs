@@ -6,10 +6,8 @@ taxonomy:
     category:
         - Дискурс
 content:
-    items:
-        - '@root.descendants'
-        -
-            type: event
+    items: '@root.descendants'
+    type: event
 ---
 
 ### Cовместная деятельность людей в конкретном месте в определенное время или всё необходимое для её совершения
