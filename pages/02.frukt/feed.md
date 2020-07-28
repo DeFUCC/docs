@@ -1,5 +1,5 @@
 ---
-title: 'Фонд ФРУКТ'
+title: Фонд
 date: '20:13 23-06-2020'
 taxonomy:
     category:
