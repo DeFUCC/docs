@@ -26,6 +26,8 @@ en:
     OBJECTS: Objects
     THING: Thing
     THINGS: Things
+    PURCHASE: Purchase
+    PURCHASES: Purchases
     START_DATE: Start date
     END_DATE: End date
     WEBSITE: Website
@@ -67,6 +69,8 @@ ru:
     OBJECTS: Объекты
     THING: Штука
     THINGS: Штуки
+    PURCHASE: Приобретение
+    PURCHASES: Приобретения
     WEBSITE: Сайт
     START_DATE: Дата начала
     END_DATE: дата завершения

@@ -38,7 +38,7 @@
         } only %}
       {% endif %}
 
-      {% if item.header.opportunities|count > 0 %}
+      {% if item.header.opportunities and item.header.opportunities|count > 0 %}
         {% include 'partials/tag.html.twig' with {
           type: 'op',
           icon_file: 'lines/opportunity.svg',
@@ -46,7 +46,7 @@
         } only %}
       {% endif %}
 
-      {% if item.children.ofType('object').visible|count>0 %}
+      {% if item.children.ofType('object').visible and item.children.ofType('object').visible|count>0 %}
         {% include 'partials/tag.html.twig' with {
           type: 'object',
           icon_file: 'lines/object.svg',
@@ -54,7 +54,7 @@
         } %}
       {% endif %}
 
-      {% if item.children.ofType('event').visible|count>0 %}
+      {% if item.children.ofType('event').visible and item.children.ofType('event').visible|count>0 %}
         {% include 'partials/tag.html.twig' with {
           type: 'event',
           icon_file: 'lines/event.svg',

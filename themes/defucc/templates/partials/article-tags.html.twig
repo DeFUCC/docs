@@ -14,7 +14,7 @@
     } only %}
   {% endif %}
 
-  {% if config.plugins.readingtime.enabled %}
+  {% if config.plugins.readingtime.enabled and page.template == 'article' %}
     {% include 'partials/tag.html.twig' with {
       type:'reading-time',
       icon:'fa-clock-o',

@@ -1,3 +1,4 @@
 ---
 title: flex
+directory: contacts
 ---
