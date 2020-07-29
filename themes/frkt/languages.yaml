@@ -11,6 +11,7 @@ en:
     LINKS: Mentions
     PREVIOUS: Previous
     NEXT: Next
+    TITLE: Title
     SUBTITLE: Subtitle
     VERB: Verb
     TEXT: Text
@@ -56,6 +57,7 @@ ru:
     LINKS: На этот материал ссылаются
     PREVIOUS: Ранее
     NEXT: Далее
+    TITLE: Заголовок
     SUBTITLE: Подзаголовок
     VERB: Глагол
     TEXT: Текст

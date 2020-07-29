@@ -30,7 +30,8 @@ form:
                   type: text
                   label: THEME_FRUKT.TITLE
                 .text:
-                  type: text
+                  type: textarea
+                  rows: 3
                   label: THEME_FRUKT.TEXT
 
       fields:
