@@ -27,6 +27,14 @@
 
           {% include 'partials/status.html.twig' %}
 
+          {% if item.header.ideas and item.header.ideas|count > 0 %}
+            {% include 'partials/tag.html.twig' with {
+              type: 'idea',
+              icon_file: 'lines/idea.svg',
+              text: item.header.ideas|count
+            } only %}
+          {% endif %}
+
           {% if item.children|count > 0 %}
             {% include 'partials/tag.html.twig' with {
               type: 'project',
@@ -40,10 +48,6 @@
         </a>
 
       </div>
-
-      {% if item.template == 'feed' and item.children %}
-        {% include 'cards/child-cards.html.twig' %}
-      {% endif %}
 
 
   </div>

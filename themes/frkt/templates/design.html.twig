@@ -57,30 +57,21 @@
 
 {% block article %}
 
-{% if page.header.ideas and page.header.ideas|count>0 %}
-  <div class="ideas blocks">
-      <h3>{{ 'THEME_FRUKT.IDEAS'|t }}</h3>
-      <ul>
-      {% for idea in page.header.ideas %}
-          <li class="block">
-          <h4>{{ idea.title }}</h4>
-          <p>
-          {{ idea.text }}
-          </p>
-          </li>
-      {% endfor %}
-      </ul>
-
-
-  </div>
-{% endif %}
-
   {{ page.content }}
 
 {% endblock %}
 
 {% block lists %}
 <footer>
+  {% if page.header.ideas and page.header.ideas|count > 0 %}
+    {% include 'partials/lister.html.twig' with {
+      type: 'idea',
+      title:'THEME_FRUKT.IDEAS',
+      icon_file: 'lines/idea.svg',
+      template: 'idea-card',
+      collect: page.header.ideas
+    }  %}
+  {% endif %}
   {% include 'partials/lister.html.twig' with {
     type: 'project',
     title:'THEME_FRUKT.PROJECTS',

@@ -73,7 +73,7 @@
   max-width: 600px;
   word-wrap: break-word;
   padding: 2em;
-  background: white;
+  background: var(--bg-grey);
   min-width:280px;
 }
 

@@ -1,10 +1,24 @@
 :root {
+  --bg-light: #fefefe;
   --bg-gray: #f8f8f8;
   --darker-gray: #f4f4f4;
   --text-color:#333;
   --text-light-color: #696969;
   --accent: #F7BF76;
 }
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: #444;
+    --bg-gray: #555;
+    --darker-gray: #333;
+    --text-color:#eee;
+    --text-light-color: #ccc;
+  }
+
+}
+
 
 body iframe {
     min-width:100%;

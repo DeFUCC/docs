@@ -3,7 +3,7 @@
 
 body {
   background: var(--bg-gray);
-  color: #555;
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 100%;
