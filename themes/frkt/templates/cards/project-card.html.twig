@@ -33,14 +33,14 @@
 
         {% include 'partials/tag.html.twig' with {
           type: 'time',
-          icon_file: 'lines/time.svg',
+          icon: 'fa-clock-o',
           text: item.header.start_date|nicetime
         } only %}
       {% endif %}
 
       {% if item.header.opportunities and item.header.opportunities|count > 0 %}
         {% include 'partials/tag.html.twig' with {
-          type: 'op',
+          type: 'opportunity',
           icon_file: 'lines/opportunity.svg',
           text: item.header.opportunities|count
         } only %}

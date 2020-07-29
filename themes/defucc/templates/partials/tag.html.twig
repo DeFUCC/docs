@@ -1,9 +1,13 @@
-<span class="tag {{type}}">
+<span class="tag {{type}}"
+{% if type %}
+  style="background-color: var(--{{type}})"
+{% endif %}
+ >
   {% if icon %}
     <i class="fa {{ icon }}"></i>
   {% endif %}
 {% if icon_file %}
-  {{ read_file('theme://icons/' ~ icon_file) }} 
+  {{ read_file('theme://icons/' ~ icon_file) }}
 {% endif %}
   {% if text %}
     <span class="text">{{ text }}</span>

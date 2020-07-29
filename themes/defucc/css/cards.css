@@ -27,14 +27,15 @@
 .card-image {
   padding:0.5em;
   flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
 }
-
-
 
 .card a {
   transition: all 300ms ease;
   color: var(--text-color);
   font-weight: normal;
+  width: 150px;
 }
 
 .card-text {

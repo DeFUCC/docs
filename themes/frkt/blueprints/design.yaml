@@ -10,6 +10,30 @@ form:
       active: 1
 
       fields:
+        details:
+          type: tab
+          title: THEME_FRUKT.IDEAS
+          ordering@: 1
+          fields:
+
+            header.ideas:
+              name: opportunities
+              type: list
+              label: THEME_FRUKT.IDEAS
+              style: vertical
+
+              fields:
+                .icon:
+                  type: iconPicker
+                  label: THEME_FRUKT.ICON
+                .title:
+                  type: text
+                  label: THEME_FRUKT.TITLE
+                .text:
+                  type: text
+                  label: THEME_FRUKT.TEXT
+
+      fields:
         content:
           fields:
 
@@ -25,21 +49,3 @@ form:
                       style: vertical
                       type: text
                       label: Website
-
-                column2:
-                  type: column
-                  fields:
-
-                    header.idea:
-                      ordering@: -2
-                      style: vertical
-                      type: textarea
-                      rows: 3
-                      label: THEME_FRUKT.IDEA
-
-                    header.purpose:
-                      ordering@: -1
-                      style: vertical
-                      type: textarea
-                      rows: 3
-                      label: THEME_FRUKT.PURPOSE

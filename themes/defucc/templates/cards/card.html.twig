@@ -19,40 +19,10 @@
             {% endif %}
 
           </p>
+          
 
           {% if item.template == 'article' %}
-            <small class="">
-
-              {% for tag in item.taxonomy.tag %}
-                {% include 'partials/tag.html.twig' with {
-                  type:'tag',
-                  text: tag
-                } only %}
-              {% endfor %}
-
-              {% if config.plugins['count-views'].enabled %}
-                {% include 'partials/tag.html.twig' with {
-                  type:'views',
-                  icon:'fa-eye',
-                  text: (viewcounts[item.route] ?? 0)|nicenumber
-                } only %}
-              {% endif %}
-
-              {% if config.plugins.readingtime.enabled %}
-                {% include 'partials/tag.html.twig' with {
-                  type:'reading-time',
-                  icon:'fa-clock-o',
-                  text: item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'})
-                } only %}
-              {% endif %}
-
-              {% if false %}
-                <span class="tag">
-                  <i class="fa fa-pencil"></i>
-                  {{item.modified | nicetime}}</span>
-              {% endif %}
-
-            </small>
+            {% include 'partials/article-tags.html.twig' %}
           {% endif %}
         </a>
 

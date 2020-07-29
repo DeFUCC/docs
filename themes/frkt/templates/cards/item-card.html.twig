@@ -33,7 +33,6 @@
           {% endif %}
 
           {% include 'partials/tag.html.twig' with {
-            type : 'time',
             icon: 'fa-clock-o',
             text: item.header.start_date | nicetime
           }

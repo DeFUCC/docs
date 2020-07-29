@@ -1,9 +1,11 @@
 {% extends 'layout/panels.html.twig' %}
 
-{% do
-  assets.addCss('theme://css/design.css', 99) %}
+
   {% do
-    assets.addCss('theme://css/icons.css', 99) %}
+    assets.addCss('theme://css/design.css', 90) %}
+    {% do
+      assets.addCss('theme://css/icons.css', 90) %}
+
 
 {% set main_id = 'design' %}
 
@@ -55,15 +57,10 @@
 
 {% block article %}
 
-{% if page.header.idea %}
-  <div class="idea">
+{% if page.header.ideas and page.header.ideas|count>0 %}
+  <div class="ideas">
+      <h3>{{ 'THEME_FRUKT.IDEAS'|t }}</h3>
     {{page.header.idea}}
-  </div>
-{% endif %}
-
-{% if page.header.purpose %}
-  <div class="purpose">
-    {{page.header.purpose}}
   </div>
 {% endif %}
 

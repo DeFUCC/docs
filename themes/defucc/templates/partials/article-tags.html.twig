@@ -8,7 +8,6 @@
 
   {% if config.plugins['count-views'].enabled %}
     {% include 'partials/tag.html.twig' with {
-      type:'views',
       icon:'fa-eye',
       text: (viewcounts[item.route] ?? 0)|nicenumber
     } only %}
@@ -16,7 +15,6 @@
 
   {% if config.plugins.readingtime.enabled and page.template == 'article' %}
     {% include 'partials/tag.html.twig' with {
-      type:'reading-time',
       icon:'fa-clock-o',
       text: item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'})
     } only %}

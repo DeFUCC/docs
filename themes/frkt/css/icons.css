@@ -5,36 +5,32 @@
   --object: #8C8C8C;
   --event: #FEE000;
   --gift: #754C29;
-}
+  --author: #EE8922;
+  --designer: #98509F;
+  --doer: #E9E611;
+  --person: #6BBD45;
+  --persona: #71CBD3;
+  --host: #37B44A;
+  --idea: #C965A7;
+  --purpose: #DB4599;
+  --gist: #B7B7B7;
+  --task: #ED1C24;
+  --purchase: #37A886;
+  --present: #9E8A71;
+  --place: #3BB54A;
+  --time: #488ECC;
+  --tool: #A0B8BC;
+  --material: #50873E;
+  --skill: #DC7F27;
+  --craft: #AA6828;
+  --result: #ED80B3;
+  --thing: #CEC19D;
+  --class: #723393;
+  --course: #797EBA;
 
-.tag.design {
-  background-color: var(--design);
-}
-
-.tag.project {
-  background-color: var(--project);
-}
-
-.tag.opportunity {
-  background-color: var(--opportunity);
-}
-
-.tag.event {
-  background-color: var(--event);
-}
-
-.tag.process {
-  background-color: hsla(156,48%,77%,1);
-}
-
-.tag.development {
-  background-color: hsla(0,0%,75%,1);
-}
-
-.tag.paused {
-  background-color: hsla(0,0%,75%,1);
-}
-
-.tag.request {
-  background-color: hsla(67,58%,87%,1);
+  --development: hsla(0,0%,75%,1);
+  --process: hsla(156,48%,77%,1);
+  --paused: hsla(0,0%,75%,1);
+  --request: hsla(67,58%,87%,1);
+  --product: hsla(110,42%,78%,1);
 }
