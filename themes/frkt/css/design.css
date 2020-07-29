@@ -110,3 +110,7 @@ word-break: keep-all;
 
   border-radius: 12px;
 }
+
+.blocks h2, .blocks h3, .blocks h4 {
+  margin:0.5em;
+}

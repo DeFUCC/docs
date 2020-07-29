@@ -58,9 +58,20 @@
 {% block article %}
 
 {% if page.header.ideas and page.header.ideas|count>0 %}
-  <div class="ideas">
+  <div class="ideas blocks">
       <h3>{{ 'THEME_FRUKT.IDEAS'|t }}</h3>
-    {{page.header.idea}}
+      <ul>
+      {% for idea in page.header.ideas %}
+          <li class="block">
+          <h4>{{ idea.title }}</h4>
+          <p>
+          {{ idea.text }}
+          </p>
+          </li>
+      {% endfor %}
+      </ul>
+
+
   </div>
 {% endif %}
 
