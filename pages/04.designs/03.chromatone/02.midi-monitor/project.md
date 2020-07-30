@@ -5,7 +5,7 @@ status: product
 opportunities:
     -
         icon: null
-        verb: 'Наблюдать и направлять'
+        verb: Мониторить
         text: 'MIDI-события прямо в браузере'
         link: 'https://midi.chromatone.center'
 ---
