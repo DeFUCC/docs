@@ -33,6 +33,15 @@ form:
                   type: textarea
                   rows: 3
                   label: THEME_FRUKT.TEXT
+                .alias:
+                  type: pages
+                  size: medium
+                  classes: fancy
+                  label: дом
+                  show_all: false
+                  show_modular: false
+                  show_root: false
+                  help: помощь
 
       fields:
         content:
