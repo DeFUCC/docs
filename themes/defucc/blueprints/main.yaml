@@ -39,8 +39,15 @@ form:
                       style: vertical
                       label: PLUGIN_ADMIN.TITLE
 
+                    header.subtitle:
+                      style: vertical
+                      type: textarea
+                      rows: 3
+                      label: THEME_FRUKT.SUBTITLE
+
                     header.icon:
                       type: filepicker
+                      toggleable: true
                       preview_images: true
                       label: Page icon
                       accept:
@@ -48,11 +55,7 @@ form:
                         - .jpg
                         - .svg
 
-                    header.subtitle:
-                      style: vertical
-                      type: textarea
-                      rows: 3
-                      label: THEME_FRUKT.SUBTITLE
+
 
 
                 column2:

@@ -14,6 +14,7 @@ form:
           fields:
             header.icon:
               ordering@: header.title
+              toggleable: true
               type: filepicker
               preview_images: true
               label: Page icon

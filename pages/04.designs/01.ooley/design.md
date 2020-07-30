@@ -9,6 +9,10 @@ content:
         by: default
         dir: asc
 status: process
+people:
+    -
+        alias: davay
+        role: author
 ideas:
     -
         icon: null

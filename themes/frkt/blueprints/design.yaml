@@ -37,11 +37,11 @@ form:
                   type: pages
                   size: medium
                   classes: fancy
-                  label: дом
+                  label: Page
                   show_all: false
                   show_modular: false
                   show_root: false
-                  help: помощь
+                  help: does it have a page?
                   toggleable: true
 
       fields:
@@ -57,6 +57,7 @@ form:
                   fields:
 
                     header.website:
+                      toggleable: true
                       style: vertical
                       type: text
                       label: Website

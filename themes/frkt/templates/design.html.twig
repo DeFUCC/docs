@@ -72,6 +72,13 @@
       collect: page.header.ideas
     }  %}
   {% endif %}
+  {% if page.header.people and page.header.people|count > 0 %}
+    {% for id in page.header.people %}
+        {{ id }}
+    {% endfor %}
+
+  {% endif %}
+
   {% include 'partials/lister.html.twig' with {
     type: 'project',
     title:'THEME_FRUKT.PROJECTS',

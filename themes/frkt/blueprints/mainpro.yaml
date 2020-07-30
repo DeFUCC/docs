@@ -21,20 +21,35 @@ form:
                   type: column
                   fields:
 
-                    header.start_date:
-                      style: vertical
-                      type: datetime
-                      label: THEME_FRUKT.START_DATE
+                    columns:
+                      type: columns
+                      fields:
 
-                    header.end_date:
-                      style: vertical
-                      type: datetime
-                      label: THEME_FRUKT.END_DATE
+                        datecol1:
+                          type: column
+                          fields:
+
+                            header.start_date:
+                              style: vertical
+                              type: datetime
+                              toggleable: true
+                              label: THEME_FRUKT.START_DATE
+
+                        datecol2:
+                          type: column
+                          fields:
+
+                            header.end_date:
+                              style: vertical
+                              type: datetime
+                              toggleable: true
+                              label: THEME_FRUKT.END_DATE
 
                     header.status:
                       type: select
                       size: short
                       style: vertical
+                      toggleable: true
                       classes: fancy
                       label: THEME_FRUKT.STATUS
                       help: 'What is the status?'
