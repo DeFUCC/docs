@@ -6,7 +6,4 @@ content:
     order:
         by: default
         dir: asc
-toc: false
 ---
-
-.

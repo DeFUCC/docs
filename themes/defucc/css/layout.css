@@ -1,5 +1,5 @@
 #top-bar {
-  background: #F6F6F6;
+  background: var(--darker-gray);
   padding: 1rem;
   display:flex;
   justify-content: flex-start;
@@ -40,15 +40,15 @@
 }
 
 #menu li.active {
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid var(--text-light-color);
 }
 
 #menu a {
-  color: #555;
+  color: var(--text-light-color);
 }
 
 #menu a:hover {
-  color: #000;
+  color: var(--accent);
 }
 
 #body {

@@ -73,7 +73,7 @@ word-break: keep-all;
 }
 
 .tag svg path, .op a svg path, .lister header h3 svg path {
-  stroke: #555;
+  stroke: var(--text-color);
   stroke-width: 10px;
   transform: scale(1.1);
   transform-origin: center center;
