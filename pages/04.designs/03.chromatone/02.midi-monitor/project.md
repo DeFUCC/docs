@@ -13,5 +13,7 @@ opportunities:
         verb: Разрабатывать
         text: 'приложение совместно на GitHub'
         link: 'https://github.com/DeFUCC/midi-paper'
+icon: screencapture-chromatone-center-apps-web-audio-components-2019-11-21-20_18_36.png
+media_order: screencapture-chromatone-center-apps-web-audio-components-2019-11-21-20_18_36.png
 ---
 
