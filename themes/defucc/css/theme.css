@@ -39,6 +39,10 @@ html {
   scroll-behavior: smooth;
 }
 
+i {
+  transition: all .3s ease;
+}
+
 .default-animation, #header #logo-svg, #header #logo-svg path, #body, #body .padding, #body .nav {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;

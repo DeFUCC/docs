@@ -149,17 +149,30 @@ word-break: keep-all;
   top:60px;
 }
 
-.lister header.active {
+.lister > header.active {
   box-shadow: 0px 2px 6px -3px var(--shadow-color);
 }
 
-.lister header h2, .lister header h3 {
+.lister > header.active i {
+  transform: rotate(180deg);
+}
+
+.lister > header h2, .lister > header h3 {
   margin:1em 0;
   padding:4px 8px;
   font-size: 1.1rem;
 }
 
-.lister header h3 {
+.lister > header h2 svg {
+  width:30px;
+  height:30px;
+}
+
+.lister > header h2 svg path {
+  stroke: var(--text-color);
+}
+
+.lister > header h3 {
   cursor: pointer;
   border-radius: 12px;
 }

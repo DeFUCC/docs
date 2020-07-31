@@ -8,12 +8,11 @@
 
     <div id="{{ type }}" class="lister">
       <header class="list-toggle up" data-type="{{type}}">
-            <h2>{{ title|t }}</h2>
-            <h3 class="{{type}}"  style="background-color:var(--{{type}})">
-              {% if icon_file %}
-                {{ read_file('theme://icons/' ~ icon_file) }}
-              {% endif %}
-              {{collect|count}}
+            <h2>{% if icon_file %}
+              {{ read_file('theme://icons/' ~ icon_file) }}
+            {% endif %} {{ title|t }}</h2>
+            <h3 >
+              {{collect|count}} <i class="fa fa-chevron-down"></i>
             </h3>
       </header>
       <section class="alist open" id="{{type}}-list">
