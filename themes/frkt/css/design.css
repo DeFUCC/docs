@@ -1,5 +1,7 @@
 a.avatar {
   display: inline-block;
+  max-height: 100px;
+  max-width: 100px;
 }
 
 .avatar img {
@@ -116,20 +118,19 @@ word-break: keep-all;
 
 .alist {
   padding: 0 1em;
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   transition: all 800ms ease-in-out;
   overflow: hidden;
   visibility: hidden;
-  position:absolute;
   opacity: 0;
   max-height: 0;
   max-width: 100%;
 }
 
 .alist.open {
+  display: flex;
   visibility: visible;
-  position: static;
   opacity: 1;
   max-height: 800vh;
   overflow-y: scroll;
