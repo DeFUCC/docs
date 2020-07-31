@@ -5,7 +5,12 @@ en:
     MINUTES: min.
     DETAILS: Details
     ICON: Icon
+    ROLE: Role
     AUTHOR: Author
+    DESIGNER: Designer
+    DOER: Doer
+    PERSON: Person
+    PERSONA: Persona
     PUBLISHED: First published
     EDITED: Last edited
     LINKS: Mentions
@@ -51,7 +56,12 @@ ru:
     MINUTES: мин.
     DETAILS: Детали
     ICON: Иконка
+    ROLE: Роль
     AUTHOR: Автор
+    DESIGNER: Ведущий
+    DOER: Деятель
+    PERSON: Лицо
+    PERSONA: Личность
     PUBLISHED: Впервые опубликовано
     EDITED: Последняя редакция
     LINKS: На этот материал ссылаются
