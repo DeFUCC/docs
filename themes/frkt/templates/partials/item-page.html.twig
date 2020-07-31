@@ -16,6 +16,18 @@
 
 {% endblock %}
 
+{% block people %}
+{% if header.people and header.people|count > 0 %}
+<div class="people">
+  {% for persona in header.people %}
+  {% set person = pages.find(persona.alias) %}
+    <a class="avatar" href="{{person.url}}">
+    {{ person.media[person.header.icon].cropResize(300, 300).html(person.title) }} </a>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
 
 {% block article %}
 

@@ -5,6 +5,7 @@
 
 {% set options = { items: {'@root.descendants':''}, filter:{ visible: true }, 'order': {'by': 'modified', 'dir': 'asc'}} %}
 {% set authorOf = page.collection('authorOf') %}
+{% set doerOf = page.collection('doerOf') %}
 {% set all_pages = page.collection(options) %}
 
 {% for a_page in all_pages %}
@@ -14,6 +15,9 @@
       {% if person.alias == page.url %}
         {% if person.role == 'author' %}
           {% do authorOf.addPage(a_page) %}
+        {% endif %}
+        {% if person.role == 'doer' %}
+          {% do doerOf.addPage(a_page) %}
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -25,9 +29,13 @@
 
 {% include 'partials/lister.html.twig' with {
 type: 'design',
-title: 'THEME_FRUKT.DESIGNS',
-template: 'design-card',
+title: 'THEME_FRUKT.AUTHOR',
 collect: authorOf } %}
+
+{% include 'partials/lister.html.twig' with {
+type: 'project',
+title: 'THEME_FRUKT.DOER',
+collect: doerOf } %}
 
 </footer>
 {% endblock %}

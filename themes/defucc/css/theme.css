@@ -190,6 +190,11 @@ svg {
     width:max-content;
 }
 
+.tag img {
+  border-radius: 8px;
+  margin:2px 0;
+}
+
 .button {
   background: hsla(0,0%,90%,1);
   color: #fff;

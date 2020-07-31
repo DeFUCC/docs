@@ -28,6 +28,10 @@
         {{page.header.subtitle|markdown }}
       {% endif %}
 
+    {% block people %}
+
+    {% endblock %}
+
     {% block info %}
       {% include 'partials/article-tags.html.twig' with {item: page} %}
     {% endblock info %}

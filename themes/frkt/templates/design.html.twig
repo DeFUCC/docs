@@ -27,15 +27,6 @@
 
   {{ page.content }}
 
-  {% if header.people and header.people|count > 0 %}
-  <h4>Ведущие:</h4>
-    {% for persona in header.people %}
-    {% set person = pages.find(persona.alias) %}
-      <a class="avatar" href="{{person.url}}">
-      {{ person.media[person.header.icon].cropResize(300, 300).html(person.title) }} </a>
-    {% endfor %}
-  {% endif %}
-
 {% endblock %}
 
 {% block lists %}
@@ -54,7 +45,6 @@
     type: 'project',
     title:'THEME_FRUKT.PROJECTS',
     icon_file: 'lines/project.svg',
-    template: 'project-card',
     collect: page.children.visible
   }  %}
   </footer>

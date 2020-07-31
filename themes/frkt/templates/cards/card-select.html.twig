@@ -1,10 +1,7 @@
-{% if item.template == 'design' %}
+{% if item.template == 'design' or item.template == 'project' %}
 
-  {% include 'cards/design-card.html.twig'  %}
+  {% include 'cards/item-card.html.twig'  %}
 
-{% elseif item.template == 'project' %}
-
-  {% include 'cards/project-card.html.twig'  %}
 
 {% else %}
 
