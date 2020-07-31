@@ -1,3 +1,12 @@
+a.avatar {
+  display: inline-block;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+
 .event footer {
   flex:1 1 75px;
 }

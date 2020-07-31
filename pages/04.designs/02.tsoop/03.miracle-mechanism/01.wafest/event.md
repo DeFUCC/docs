@@ -6,3 +6,4 @@ long: false
 status: finished
 ---
 
+Музыка и ручь исполнены вживую и записаны с помощью [мобильной студии tsoop](/designs/tsoop/music-lab)

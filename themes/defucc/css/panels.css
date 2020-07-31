@@ -51,7 +51,7 @@
 
 }
 
-.panels > header > .start h1 {
+.panels > header  .start h1 {
   font-size:1.4em;
   margin-bottom: 8px;
 }
