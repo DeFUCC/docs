@@ -8,11 +8,15 @@
     {% block side %}
     <div class="top">
 
-    {% if page.header.icon  %}
-        <div class="icon">
-              {{page.media[page.header.icon].cropResize(300,300)}}
-        </div>
-    {% endif %}
+    {% block icon %}
+      {% if page.header.icon  %}
+          <div class="icon">
+                {{page.media[page.header.icon].cropResize(300,300)}}
+          </div>
+      {% endif %}
+    {% endblock %}
+
+
     <div class="start">
 
       {% if config.plugins.breadcrumbs.enabled %}

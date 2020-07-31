@@ -61,3 +61,22 @@ form:
                           request: THEME_FRUKT.STATUSES.REQUEST
                           finished: THEME_FRUKT.STATUSES.FINISHED
                           product:  THEME_FRUKT.STATUSES.PRODUCT
+
+                    header.people:
+                      name: people
+                      type: list
+                      style: vertical
+                      label: THEME_FRUKT.PEOPLE
+                      fields:
+
+                        .alias:
+                          type: pages
+                          start_route: '/people'
+
+                        .role:
+                              type: select
+                              label: THEME_FRUKT.ROLE
+                              options:
+                                  author: THEME_FRUKT.AUTHOR
+                                  designer: THEME_FRUKT.DESIGNER
+                  

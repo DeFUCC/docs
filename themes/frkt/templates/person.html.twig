@@ -1,102 +1,31 @@
 {% extends 'partials/item-page.html.twig' %}
 
 
-  {% do
-    assets.addCss('theme://css/design.css', 90) %}
-    {% do
-      assets.addCss('theme://css/icons.css', 90) %}
+{% set main_id = 'person' %}
 
+{% set options = { items: {'@root.descendants':''}, filter:{ type: 'design'}, 'order': {'by': 'modified', 'dir': 'asc'}} %}
+{% set my_designs = page.collection('my') %}
+{% set designs = page.collection(options) %}
 
-{% set main_id = 'design' %}
-
-{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
-{% set my_collection = page.collection(options) %}
-
-{% set bg_color = 'var(--darker-gray)'%}
-
-{% block side %}
-  <div class="top">
-
-    {% if page.header.icon %}
-      <div class="icon">
-        {{page.media[page.header.icon].cropResize(300,300)}}
-      </div>
-    {% endif %}
-
-    <div class="start">
-
-      {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
+{% for design in designs %}
+  {% set designers = design.header.designers %}
+  {% if designers and designers|count > 0 %}
+    {% for person in designers %}
+      {% if person.alias == page.url %}
+        {% do my_designs.addPage(design) %}
       {% endif %}
-
-      <h1>{{ page.title }}</h1>
-
-
-      {% if header.subtitle %}
-        {{ header.subtitle|markdown }}
-      {% endif %}
-
-      {% if header.website %}
-        <a href="https://{{ header.website}}" target="_blank">{{header.website}}</a>
-      {% endif %} <br>
-
-      {% if header.status %}
-        {% include 'partials/status.html.twig' with { item: page } %}
-      {% endif %}
-
-      {% if header.additional %}
-        <div class="additional">
-          {{ header.additional|markdown }}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-{% endblock side %}
-
-{% block info %}
-
-{% endblock %}
-
-{% block article %}
-
-  {{ page.content }}
-
-  {% if header.designers and header.designers|count > 0 %}
-  <h4>Ведущие:</h4>
-    {% for des in header.designers %}
-    {% set designer = pages.find(des.alias) %}
-      <a class="avatar" href="{{des.alias}}">
-      {{ designer.media[designer.header.icon].cropResize(100, 100).html(designer.title) }} </a>
     {% endfor %}
-    <br />
   {% endif %}
-
-{% endblock %}
+{% endfor %}
 
 {% block lists %}
-<footer>
-  {% if page.header.ideas and page.header.ideas|count > 0 %}
-    {% include 'partials/lister.html.twig' with {
-      type: 'idea',
-      title:'THEME_FRUKT.IDEAS',
-      icon_file: 'lines/idea.svg',
-      template: 'idea-card',
-      collect: page.header.ideas
-    }  %}
-  {% endif %}
-  {% if page.header.people and page.header.people|count > 0 %}
-    {% for id in page.header.people %}
-        {{ id }}
-    {% endfor %}
+<footer class="listers">
 
-  {% endif %}
+{% include 'partials/lister.html.twig' with {
+type: 'design',
+title: 'THEME_FRUKT.DESIGNS',
+template: 'design-card',
+collect: my_designs } %}
 
-  {% include 'partials/lister.html.twig' with {
-    type: 'project',
-    title:'THEME_FRUKT.PROJECTS',
-    icon_file: 'lines/project.svg',
-    template: 'project-card',
-    collect: page.children.visible
-  }  %}
-  </footer>
+</footer>
 {% endblock %}

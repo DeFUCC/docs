@@ -1,32 +1,3 @@
 {% extends 'partials/item-page.html.twig' %}
 
-{% do assets.addCss('theme://css/design.css',99) %}
-{% do
-  assets.addCss('theme://css/icons.css', 99) %}
-
 {% set main_id = 'project' %}
-
-{% block info %}
-
-{% if page.header.status %}
-  {% include 'partials/status.html.twig' with { item: page } %}
-{% endif %}
-
-{% endblock %}
-
-
-{% block article %}
-
-        <p>
-            {{ page.content }}
-        </p>
-
-
-{% endblock %}
-
-{% block lists %}
-<footer id="{{type}}" class="listers">
-
-
-</footer>
-{% endblock %}

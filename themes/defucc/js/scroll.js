@@ -42,13 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
    window.removeEventListener('scrolldownstart', onScrollUpStart, true);
  })
 
+function toggleHeaders() {
+	let tg = document.getElementsByClassName('list-toggle')
+	for (let el of tg) {
+		el.classList.toggle('up')
+	}
+}
 
  function onScrollUpStart() {
    		document.querySelector('#top-bar').classList.remove("hidden");
+			toggleHeaders()
  }
 
  function onScrollDownStart() {
        document.querySelector('#top-bar').classList.add("hidden");
+			 toggleHeaders()
  }
 
 

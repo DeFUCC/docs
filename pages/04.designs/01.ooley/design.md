@@ -9,10 +9,6 @@ content:
         by: default
         dir: asc
 status: process
-designers:
-    -
-        alias: davay
-        author: true
 ideas:
     -
         icon: null
@@ -22,6 +18,10 @@ ideas:
         icon: 'fa fa-cogs'
         title: 'Открытые мастерские'
         text: 'Сеть разнообразных общедоступных творческих пространств как среда для саморазвития и самореализации человека.'
+people:
+    -
+        alias: /people/davay
+        role: author
 ---
 
 #### OOLEY развивает творческие возможности человека и общества

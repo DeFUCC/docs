@@ -62,24 +62,4 @@ form:
                       type: text
                       label: Website
 
-            header.designers:
-              name: designers
-              type: list
-              style: vertical
-              label: THEME_FRUKT.DESIGNERS
-              fields:
-              
-                .alias:
-                  type: pages
-                  start_route: '/people'
-
-                .author:
-                  type: toggle
-                  label: THEME_FRUKT.ROLE
-                  highlight: 1
-                  default: 0
-                  options:
-                    1: THEME_FRUKT.AUTHOR
-                    0: THEME_FRUKT.DESIGNER
-                  validate:
-                    type: bool
+            

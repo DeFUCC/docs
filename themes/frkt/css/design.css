@@ -8,6 +8,10 @@ a.avatar {
   border-radius: 50%;
 }
 
+#person .top .icon {
+  border-radius: 50%;
+}
+
 .small.card .type svg {
   width:30px;
   height: 30px;
@@ -46,13 +50,6 @@ a.avatar {
   background-color: var(--darker-gray);
 }
 
-#design {
-  background-color: var(--darker-gray);
-}
-
-#design header h1 {
-  font-size: 2em;
-}
 
 .ops {
  display: flex;
@@ -124,28 +121,36 @@ word-break: keep-all;
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  max-height: 0;
-  max-width: 100%;
 }
 
 .alist.open {
   display: flex;
   visibility: visible;
   opacity: 1;
-  max-height: 800vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
+}
+
+.lister {
+  margin: 0.5em 0;
 }
 
 .lister header {
-  background-color:  var(--bg-gray);
+  background-color:  var(--darker-gray);
   padding: 0 2em;
   position: sticky;
   top:0;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  box-shadow: 0 4px 0px -4px var(--shadow-color);
+  box-shadow: 0px 11px 10px -9px var(--shadow-color);
+  transition: all 500ms ease;
+}
+
+.list-toggle.up {
+  top:60px;
+}
+
+.lister header.active {
+  box-shadow: 0px 2px 6px -3px var(--shadow-color);
 }
 
 .lister header h2, .lister header h3 {
@@ -156,6 +161,5 @@ word-break: keep-all;
 
 .lister header h3 {
   cursor: pointer;
-  box-shadow: 0px 4px 0 0 var(--shadow-color);
   border-radius: 12px;
 }

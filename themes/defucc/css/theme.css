@@ -20,6 +20,10 @@
 
 }
 
+body {
+  background-color: var(--bg-gray);
+}
+
 
 body iframe {
     min-width:100%;

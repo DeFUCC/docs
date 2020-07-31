@@ -1,60 +1,26 @@
 {% extends 'partials/item-page.html.twig' %}
 
 
-  {% do
-    assets.addCss('theme://css/design.css', 90) %}
-    {% do
-      assets.addCss('theme://css/icons.css', 90) %}
-
-
 {% set main_id = 'design' %}
 
 {% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
 {% set my_collection = page.collection(options) %}
 
-{% set bg_color = 'var(--darker-gray)'%}
-
-{% block side %}
-  <div class="top">
-
-    {% if page.header.icon %}
-      <div class="icon">
-        {{page.media[page.header.icon].cropZoom(600,600) }}
-      </div>
-    {% endif %}
-
-    <div class="start">
-
-      {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
-      {% endif %}
-
-      <h1>{{ page.title }}</h1>
-
-
-      {% if header.subtitle %}
-        {{ header.subtitle|markdown }}
-      {% endif %}
-
-      {% if header.website %}
-        <a href="https://{{ header.website}}" target="_blank">{{header.website}}</a>
-      {% endif %} <br>
-
-      {% if header.status %}
-        {% include 'partials/status.html.twig' with { item: page } %}
-      {% endif %}
-
-      {% if header.additional %}
-        <div class="additional">
-          {{ header.additional|markdown }}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-{% endblock side %}
 
 {% block info %}
+  {% if header.website %}
+    <a href="https://{{ header.website}}" target="_blank">{{header.website}}</a>
+  {% endif %} <br>
 
+  {% if header.status %}
+    {% include 'partials/status.html.twig' with { item: page } %}
+  {% endif %}
+
+  {% if header.additional %}
+    <div class="additional">
+      {{ header.additional|markdown }}
+    </div>
+  {% endif %}
 {% endblock %}
 
 {% block article %}
@@ -68,7 +34,6 @@
       <a class="avatar" href="{{des.alias}}">
       {{ designer.media[designer.header.icon].cropResize(300, 300).html(designer.title) }} </a>
     {% endfor %}
-    <br />
   {% endif %}
 
 {% endblock %}
