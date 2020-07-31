@@ -6,10 +6,10 @@ website: tsoop.ru
 content:
     items: '@self.children'
 status: process
-designers:
+people:
     -
         alias: /people/davay
-        author: true
+        role: author
 ---
 
 Проект живой совместной музыкальной импровизации. Дружелюбная среда для всех желающих творить вместе спонтанную музыку.

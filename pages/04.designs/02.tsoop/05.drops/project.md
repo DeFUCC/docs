@@ -1,6 +1,6 @@
 ---
 title: drops
-subtitle: Музыкальный альбом в концепции ярких цветных капель
+subtitle: 'Музыкальный альбом в концепции ярких цветных капель'
 icon: drops.png
 opportunities:
     -

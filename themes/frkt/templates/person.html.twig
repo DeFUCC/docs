@@ -3,16 +3,18 @@
 
 {% set main_id = 'person' %}
 
-{% set options = { items: {'@root.descendants':''}, filter:{ type: 'design'}, 'order': {'by': 'modified', 'dir': 'asc'}} %}
-{% set my_designs = page.collection('my') %}
-{% set designs = page.collection(options) %}
+{% set options = { items: {'@root.descendants':''}, filter:{ visible: true }, 'order': {'by': 'modified', 'dir': 'asc'}} %}
+{% set authorOf = page.collection('authorOf') %}
+{% set all_pages = page.collection(options) %}
 
-{% for design in designs %}
-  {% set designers = design.header.designers %}
-  {% if designers and designers|count > 0 %}
-    {% for person in designers %}
+{% for a_page in all_pages %}
+  {% set people = a_page.header.people %}
+  {% if people and people|count > 0 %}
+    {% for person in people %}
       {% if person.alias == page.url %}
-        {% do my_designs.addPage(design) %}
+        {% if person.role == 'author' %}
+          {% do authorOf.addPage(a_page) %}
+        {% endif %}
       {% endif %}
     {% endfor %}
   {% endif %}
@@ -25,7 +27,7 @@
 type: 'design',
 title: 'THEME_FRUKT.DESIGNS',
 template: 'design-card',
-collect: my_designs } %}
+collect: authorOf } %}
 
 </footer>
 {% endblock %}

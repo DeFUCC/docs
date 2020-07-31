@@ -27,12 +27,12 @@
 
   {{ page.content }}
 
-  {% if header.designers and header.designers|count > 0 %}
+  {% if header.people and header.people|count > 0 %}
   <h4>Ведущие:</h4>
-    {% for des in header.designers %}
-    {% set designer = pages.find(des.alias) %}
-      <a class="avatar" href="{{des.alias}}">
-      {{ designer.media[designer.header.icon].cropResize(300, 300).html(designer.title) }} </a>
+    {% for persona in header.people %}
+    {% set person = pages.find(persona.alias) %}
+      <a class="avatar" href="{{person.url}}">
+      {{ person.media[person.header.icon].cropResize(300, 300).html(person.title) }} </a>
     {% endfor %}
   {% endif %}
 

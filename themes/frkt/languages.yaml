@@ -10,6 +10,7 @@ en:
     AUTHOR: Author
     DESIGNER: Designer
     DOER: Doer
+    HOST: Host
     PERSON: Person
     PERSONA: Persona
     PUBLISHED: First published
@@ -62,6 +63,7 @@ ru:
     AUTHOR: Автор
     DESIGNER: Ведущий
     DOER: Деятель
+    HOST: Хост
     PERSON: Лицо
     PERSONA: Личность
     PUBLISHED: Впервые опубликовано

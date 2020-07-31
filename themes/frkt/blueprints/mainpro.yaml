@@ -79,4 +79,7 @@ form:
                               options:
                                   author: THEME_FRUKT.AUTHOR
                                   designer: THEME_FRUKT.DESIGNER
-                  
+                                  doer: THEME_FRUKT.DOER
+                                  host: THEME_FRUKT.HOST
+                                  person: THEME_FRUKT.PERSON
+                                  persona: THEME_FRUKT.PERSONA
