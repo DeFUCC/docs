@@ -1,0 +1,12 @@
+<a class="small card" href="{{item.url}}" style="background-color:var(--{{item.template}})">
+
+<div class="type">
+{% if true %}
+{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+{% endif %}
+</div>
+
+  <div class="text">
+    {{ item.title }}
+  </div>
+</a>

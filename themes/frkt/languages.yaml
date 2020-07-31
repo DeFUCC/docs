@@ -5,6 +5,7 @@ en:
     MINUTES: min.
     DETAILS: Details
     ICON: Icon
+    MENTIONS: Mentions
     ROLE: Role
     AUTHOR: Author
     DESIGNER: Designer
@@ -56,6 +57,7 @@ ru:
     MINUTES: мин.
     DETAILS: Детали
     ICON: Иконка
+    MENTIONS: Упоминания
     ROLE: Роль
     AUTHOR: Автор
     DESIGNER: Ведущий

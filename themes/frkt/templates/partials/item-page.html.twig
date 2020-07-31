@@ -4,6 +4,8 @@
 {% do
   assets.addCss('theme://css/icons.css', 99) %}
 
+
+
   {% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
 {% block info %}
@@ -41,5 +43,23 @@
     template: 'op-card',
     collect: page.header.opportunities } %}
 
+    {% if backlinks[page.url] %}
+    <aside>
+
+      {% set mentions = [] %}
+      {% for m in backlinks[page.url] %}
+          {% set mentions = mentions|merge([pages.find(m)]) %}
+      {% endfor %}
+
+      {% include 'partials/lister.html.twig' with {
+      type: 'mention',
+      title: 'THEME_FRUKT.MENTIONS',
+      template: 'small-card',
+      collect: mentions } %}
+
+      </aside>
+    {% endif %}
+
 </footer>
+
 {% endblock %}
