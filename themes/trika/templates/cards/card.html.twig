@@ -25,14 +25,16 @@
               </p>
               {% endif %}
 
-            <p class="summary">
+
           {% if item.header.subtitle %}
+          <p class="summary">
               {{ item.header.subtitle|markdown }}
             {% elseif item.template == 'article' or item.template == 'def' %}
                 {{item.summary(300)|striptags}}
+            </p>
           {% endif %}
 
-            </p>
+
 
             {% if item.template == 'article' %}
             <small class="">
