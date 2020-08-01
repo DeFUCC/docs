@@ -27,7 +27,7 @@
 
 
           {% if item.header.subtitle %}
-          <p class="summary">
+          <p class="summary">s
               {{ item.header.subtitle|markdown }}
             {% elseif item.template == 'article' or item.template == 'def' %}
                 {{item.summary(300)|striptags}}
