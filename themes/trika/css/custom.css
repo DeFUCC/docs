@@ -4,6 +4,10 @@
   display:none;
 }
 
+#body .card p, #body .card p {
+  margin:0;
+}
+
 .credits-menu a {
   color: #fff !important;
 }
