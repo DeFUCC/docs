@@ -8,7 +8,7 @@
 
   <div class="project card">
 
-    {% include 'cards/card-image.html.twig' with { size: 280, url:item.url }%}
+    {% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
 
     <div class="card-text">
 
@@ -45,6 +45,7 @@
         {% if item.header.opportunities and item.header.opportunities | count > 0 %}
           {% include 'partials/tag.html.twig' with {
             type : 'opportunity',
+            link: item.url ~ '#opportunity',
             icon_file: 'lines/opportunity.svg',
             text: item.header.opportunities | count
           }
@@ -55,6 +56,7 @@
           {% if item.children.ofType(type).visible | count > 0 %}
             {% include 'partials/tag.html.twig' with {
               type : type,
+              link: item.url ~ '#' ~ type,
               icon_file: 'lines/' ~ type ~ '.svg',
               text: item.children.ofType(type).visible | count
             } %}
@@ -66,6 +68,7 @@
           {% set person_icon = person.media[person.header.icon] %}
             {% include 'partials/tag.html.twig' with {
               type : persona.role,
+              class: 'people',
               icon_file: 'lines/' ~ persona.role ~ '.svg',
               text: person_icon.cropResize(24,24)
             } %}

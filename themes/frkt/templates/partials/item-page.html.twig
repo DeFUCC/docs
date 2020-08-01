@@ -4,28 +4,25 @@
 {% do
   assets.addCss('theme://css/icons.css', 99) %}
 
-
+  {% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
+  {% set my_collection = page.collection(options) %}
 
   {% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
-{% block info %}
+  {% block title %}
+    <h1 class="title">{{ page.title }} </h1>
+  {% endblock %}
 
+{% block additional %}
+{% if page.template in types %}
+<a class="type tag">
+  {{ read_file('theme://icons/lines/' ~ page.template ~ '.svg') }} <span class="text">{{ ('THEME_FRUKT.' ~ page.template|upper)|t }}</span>
+</a>
+{% endif %}
+{% include 'partials/people-list.html.twig' %}
 {% if page.header.status %}
   {% include 'partials/status.html.twig' with { item: page } %}
-{% endif %}
-
-{% endblock %}
-
-{% block people %}
-{% if header.people and header.people|count > 0 %}
-<div class="people">
-  {% for persona in header.people %}
-  {% set person = pages.find(persona.alias) %}
-    <a class="avatar" href="{{person.url}}">
-    {{ person.media[person.header.icon].cropResize(300, 300).html(person.title) }} </a>
-  {% endfor %}
-</div>
-{% endif %}
+  {% endif %}
 {% endblock %}
 
 

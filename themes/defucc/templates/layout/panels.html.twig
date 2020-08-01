@@ -22,26 +22,27 @@
       {% if config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}
       {% endif %}
+      {% block title %}
+        <h1 class="title">{{ page.title }}</h1>
+      {% endblock %}
 
-      <h1 class="">{{ page.title }}</h1>
       {% if page.header.subtitle %}
         {{page.header.subtitle|markdown }}
       {% endif %}
 
-    {% block people %}
-
-    {% endblock %}
 
     {% block info %}
       {% include 'partials/article-tags.html.twig' with {item: page} %}
     {% endblock info %}
 
+  {% block additional %}
+  {% if page.header.additional %}
+    <div class="additional">
+      {{ page.header.additional|markdown }}
+    </div>
+  {% endif %}
+  {% endblock %}
 
-    {% if page.header.additional %}
-      <div class="additional">
-        {{ page.header.additional|markdown }}
-      </div>
-    {% endif %}
 
 
     </div>

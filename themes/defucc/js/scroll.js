@@ -42,21 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
    window.removeEventListener('scrolldownstart', onScrollUpStart, true);
  })
 
-function toggleHeaders() {
+function padHeader(up) {
 	let tg = document.getElementsByClassName('list-toggle')
 	for (let el of tg) {
-		el.classList.toggle('up')
+		console.log(el)
+		if (up) {
+			el.classList.add('up')
+		} else {
+			el.classList.remove('up')
+		}
 	}
 }
 
  function onScrollUpStart() {
    		document.querySelector('#top-bar').classList.remove("hidden");
-			toggleHeaders()
+			padHeader(true)
  }
 
  function onScrollDownStart() {
        document.querySelector('#top-bar').classList.add("hidden");
-			 toggleHeaders()
+			 padHeader(false)
  }
 
 

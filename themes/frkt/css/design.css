@@ -1,7 +1,8 @@
 a.avatar {
   display: inline-block;
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 1.5em;
+  max-width: 1.5em;
+  vertical-align: text-bottom;
 }
 
 .avatar img {
@@ -10,6 +11,10 @@ a.avatar {
 
 #person .top .icon {
   border-radius: 50%;
+}
+
+.tag.people {
+    padding: 0 0 0 8px;
 }
 
 .small.card .type svg {
@@ -58,36 +63,26 @@ a.avatar {
 
  .card.op {
   padding: 4px;
-  margin: 0.5em;
-  flex: 1 1 300px;
-  border-radius: 12px;
   display: flex;
-  flex-flow: row wrap;
-}
-
-.card.op .verb {
-    flex: 1 1 90px;
-    max-width: max-content;
-    margin: 0 8px 0 0;
-}
-
-
-.card.op .text {
-  flex: 1 1 40%;
-  padding: 1em 1em 1em 0;
+  flex-flow: column;
+  flex: 1 1 150px;
+  margin: 0;
+  align-items: stretch;
+  border-radius: 12px;
 }
 
 .card.op a {
-
+  border-radius: 6px;
   font-weight: bold;
-  margin: 0 4px;
   background-color: var(--opportunity);
-
   display: flex;
-align-items: center;
-word-break: keep-all;
+  align-items: center;
+  word-break: keep-all;
+  padding: 1em
+}
 
-
+.idea.card {
+  padding: 1em;
 }
 
 .tag.op {
@@ -100,8 +95,8 @@ word-break: keep-all;
 
 .tag svg path, .op a svg path, .lister header h3 svg path {
   stroke: var(--text-color);
-  stroke-width: 10px;
-  transform: scale(1.1);
+  stroke-width: 8px;
+  transform: scale(1.2);
   transform-origin: center center;
 }
 
@@ -114,13 +109,14 @@ word-break: keep-all;
 }
 
 .alist {
-  padding: 0 1em;
+  padding: 1em;
   display: none;
   flex-flow: row wrap;
   transition: all 800ms ease-in-out;
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
+  gap:1em;
 }
 
 .alist.open {
@@ -135,7 +131,7 @@ word-break: keep-all;
 
 .lister header {
   background-color:  var(--darker-gray);
-  padding: 0 2em;
+  padding: 0 1em;
   position: sticky;
   top:0;
   display: flex;
@@ -143,10 +139,12 @@ word-break: keep-all;
   cursor: pointer;
   box-shadow: 0px 11px 10px -9px var(--shadow-color);
   transition: all 500ms ease;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .list-toggle.up {
-  top:60px;
+  top: var(--top-bar-h);
 }
 
 .lister > header.active {
@@ -157,22 +155,18 @@ word-break: keep-all;
   transform: rotate(180deg);
 }
 
-.lister > header h2, .lister > header h3 {
+.lister > header section, .lister > header aside {
   margin:1em 0;
   padding:4px 8px;
   font-size: 1.1rem;
 }
 
-.lister > header h2 svg {
+.lister > header section svg {
   width:30px;
   height:30px;
 }
 
-.lister > header h2 svg path {
+.lister > header section svg path {
   stroke: var(--text-color);
-}
-
-.lister > header h3 {
-  cursor: pointer;
-  border-radius: 12px;
+  stroke-width: 4px;
 }

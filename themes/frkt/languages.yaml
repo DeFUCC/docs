@@ -23,6 +23,7 @@ en:
     VERB: Verb
     TEXT: Text
     LINK: Link
+    PROJECT: Project
     PROJECTS: Projects
     OPPORTUNITIES: Opportunities
     DESIGN: Design
@@ -76,6 +77,7 @@ ru:
     VERB: Глагол
     TEXT: Текст
     LINK: Ссылка
+    PROJECT: Проект
     PROJECTS: Проекты
     OPPORTUNITIES: Возможности
     DESIGN: Программа

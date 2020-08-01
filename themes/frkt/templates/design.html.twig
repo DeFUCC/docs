@@ -3,8 +3,7 @@
 
 {% set main_id = 'design' %}
 
-{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
-{% set my_collection = page.collection(options) %}
+
 
 
 {% block info %}
@@ -12,15 +11,6 @@
     <a href="https://{{ header.website}}" target="_blank">{{header.website}}</a>
   {% endif %} <br>
 
-  {% if header.status %}
-    {% include 'partials/status.html.twig' with { item: page } %}
-  {% endif %}
-
-  {% if header.additional %}
-    <div class="additional">
-      {{ header.additional|markdown }}
-    </div>
-  {% endif %}
 {% endblock %}
 
 {% block article %}

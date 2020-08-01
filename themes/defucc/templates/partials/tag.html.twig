@@ -1,4 +1,7 @@
-<span class="tag {{type}}"
+<a class="tag {{type}} {{class}}"
+{% if link %}
+  href="{{link}}"
+{% endif %}
 {% if type %}
   style="background-color: var(--{{type}})"
 {% endif %}
@@ -12,4 +15,4 @@
   {% if text %}
     <span class="text">{{ text }}</span>
   {% endif %}
-</span>
+</a>

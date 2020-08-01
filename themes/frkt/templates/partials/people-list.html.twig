@@ -1,0 +1,9 @@
+{% if header.people and header.people|count > 0 %}
+<span class="people">
+  {% for persona in header.people %}
+  {% set person = pages.find(persona.alias) %}
+    <a class="avatar" href="{{person.url}}">
+    {{ person.media[person.header.icon].cropResize(150, 150).html(person.title) }} </a>
+  {% endfor %}
+</span>
+{% endif %}

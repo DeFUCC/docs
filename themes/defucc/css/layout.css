@@ -1,6 +1,5 @@
 #top-bar {
   background: var(--darker-gray);
-  padding: 1rem;
   display:flex;
   justify-content: flex-start;
   align-items:center;
@@ -8,6 +7,7 @@
   top:0;
   z-index:100;
   transition: all 600ms ease;
+  height: var(--top-bar-h);
  }
 
 #top-bar.hidden {
