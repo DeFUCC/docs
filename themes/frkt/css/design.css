@@ -78,7 +78,13 @@ a.avatar {
   display: flex;
   align-items: center;
   word-break: keep-all;
-  padding: 1em
+  padding: 1em;
+  transition: all .3s ease;
+  box-shadow: 0 2px 5px -3px hsla(0,0%,0%,0.4);
+}
+
+.card.op a:hover {
+  box-shadow: 0 8px 7px -5px hsla(0,0%,0%,0.2);
 }
 
 .idea.card {
