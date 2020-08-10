@@ -1,0 +1,77 @@
+{
+  "main": {
+    "id": "a64098dd79146032",
+    "type": "split",
+    "children": [
+      {
+        "id": "afa7110ca13807f2",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "02.frukt/01.foundation/def.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ea26c4a82ef5d337",
+    "type": "split",
+    "children": [
+      {
+        "id": "97e4a46a1e68f73f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6b15a58e3c279295",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f1984f888d3d03ba",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "944d16888509c121",
+    "type": "split",
+    "children": [
+      {
+        "id": "4efac111c9d83b86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5606eaf08f4e316",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "02.frukt/01.foundation/def.md"
+  ]
+}
