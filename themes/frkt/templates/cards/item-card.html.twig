@@ -7,9 +7,7 @@
         {% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
   <div class="project card">
-    <div class="item-type">
-      {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-    </div>
+
     {% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
 
     <div class="card-text">
@@ -29,6 +27,9 @@
       </a>
 
       <footer>
+      <span class="item-type">
+        {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+      </span>
 
         {% include 'partials/status.html.twig' %}
 

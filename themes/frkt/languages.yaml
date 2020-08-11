@@ -38,6 +38,7 @@ en:
     THING: Thing
     THINGS: Things
     TIME: Time
+    HISTORY: History
     PLACE: Place
     PURCHASE: Purchase
     PURCHASES: Purchases
@@ -94,6 +95,7 @@ ru:
     THING: Штука
     THINGS: Штуки
     TIME: Время
+    HISTORY: История
     PLACE: Место
     PURCHASE: Приобретение
     PURCHASES: Приобретения

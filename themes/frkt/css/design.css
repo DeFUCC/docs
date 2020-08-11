@@ -57,17 +57,18 @@ a.avatar {
 
 
 .card .item-type {
-  position: absolute;
-  top: 1em;
-  right: 1em;
+
   width: 2em;
   height: 2em;
   border-radius: 2em;
 }
 
 .item-type svg {
-    width: 100%;
-    height: 100%;
+    width: 2em;
+    height: 2em;
+}
+.item-type svg path {
+  stroke: var(--text-color);
 }
 
 .ops {
