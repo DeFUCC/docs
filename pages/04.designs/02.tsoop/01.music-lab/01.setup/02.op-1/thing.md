@@ -6,7 +6,7 @@ icon: op-1.jpg
 media_order: op-1.jpg
 opportunities:
     -
-        icon: null
+        icon: 'fa fa-shopping-basket'
         date: '12-12-2016 14:44'
         text: 'Приобретение юнита на вторичном рынке'
         link: null
