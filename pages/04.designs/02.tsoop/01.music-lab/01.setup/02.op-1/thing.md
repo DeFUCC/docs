@@ -1,7 +1,7 @@
 ---
 title: 'Teenage Engineering OP-1'
 subtitle: 'Портативный синтезатор, сэмплер и 4-х дорожечный лупер'
-status: development
+status: process
 icon: op-1.jpg
 media_order: op-1.jpg
 history:
