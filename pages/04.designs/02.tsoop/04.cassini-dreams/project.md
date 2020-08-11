@@ -12,7 +12,7 @@ opportunities:
     -
         icon: 'fa fa-apple'
         verb: Слушать
-        text: 'в Apple.Music'
+        text: 'на Apple.Music'
         link: 'https://music.apple.com/us/album/cassini-dreams/1500023423'
     -
         icon: 'fa fa-youtube'
@@ -22,7 +22,7 @@ opportunities:
     -
         icon: 'fa fa-google'
         verb: Слушать
-        text: 'в Google.Play'
+        text: 'на Google.Play'
         link: 'https://play.google.com/store/music/album/tsoop_Cassini_Dreams?id=Bvjdqwa6kxq3auyxcy5rkdoeaou'
     -
         icon: 'fa fa-yandex'
