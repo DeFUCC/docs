@@ -1,7 +1,8 @@
 ---
 title: 'Новая клавиатура для OP-1'
-price: 16000
-collected: 0
+finance:
+    total: 13000
+    available: 0
 icon: op1keyboard.jpeg
 people:
     -

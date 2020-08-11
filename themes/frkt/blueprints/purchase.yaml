@@ -21,7 +21,26 @@ form:
                   type: column
                   fields:
 
-                    header.price:
-                      style: vertical
-                      type: number
-                      label: Стоимость
+                    fincols:
+                      type: columns
+                      ordering@: 0
+                      label: Сбор средств
+                      fields:
+
+                        fincol1:
+                          type: column
+                          fields:
+
+                            header.finance.total:
+                              style: vertical
+                              type: number
+                              label: THEME_FRUKT.TOTAL
+
+                        fincol2:
+                          type: column
+                          fields:
+
+                            header.finance.available:
+                              style: vertical
+                              type: number
+                              label: THEME_FRUKT.AVAILABLE
