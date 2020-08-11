@@ -7,5 +7,7 @@ people:
     -
         alias: /people/davay
         role: author
+icon: pl.png
+media_order: pl.png
 ---
 
