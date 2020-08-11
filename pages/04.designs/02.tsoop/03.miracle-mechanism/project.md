@@ -8,12 +8,12 @@ content:
 media_order: miracle.png
 opportunities:
     -
-        icon: 'fas fa-bandcamp'
+        icon: 'fa fa-bandcamp'
         verb: Купить
         text: 'на Bandcamp'
         link: 'https://tsoop.bandcamp.com/album/miracle-mechanism-feat-daria-dubovik-live-wafest19'
     -
-        icon: 'fas fa-youtube'
+        icon: 'fa fa-youtube'
         verb: Слушать
         text: 'на Youtube.Music'
         link: 'https://music.youtube.com/playlist?list=OLAK5uy_kl_vb-pjGJRV3v5fBA1ZtbvERuit87vsk'
