@@ -16,8 +16,8 @@ form:
           ordering@: 1
           fields:
 
-            header.opportunities:
-              name: opportunities
+            header.history:
+              name: history
               type: list
               label: THEME_FRUKT.HISTORY
               style: vertical

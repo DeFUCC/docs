@@ -52,6 +52,12 @@
     template: 'op-card',
     collect: page.header.opportunities } %}
 
+    {% include 'partials/lister.html.twig' with {
+    type: 'time',
+    title: 'THEME_FRUKT.TIME',
+    template: 'moment',
+    collect: page.header.history|sort_by_key('date') } %}
+
     {% if backlinks[page.url] %}
     <aside>
 
