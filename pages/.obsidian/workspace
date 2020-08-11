@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "02.frukt/01.foundation/def.md",
+            "file": "02.frukt/03.universalization/def.md",
             "mode": "source"
           }
         }
@@ -72,6 +72,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "02.frukt/03.universalization/def.md",
+    "02.frukt/04.cooperation/def.md",
+    "02.frukt/05.creativity/def.md",
+    "02.frukt/02.development/def.md",
     "02.frukt/01.foundation/def.md"
   ]
 }

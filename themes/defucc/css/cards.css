@@ -1,18 +1,20 @@
 .card {
   flex: 1 1 400px;
-  border-radius: 6px;
+  border-radius: var(--card-radius);
   transition: all 300ms ease;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border: 1px solid hsla(0,0%,50%,0.1);
-  background-color: var(--bg-light);
+  border: 1px solid hsla(0,0%,50%,0);
   font-size: 0.9em;
-  box-shadow: 0 0.2rem 0.2rem rgba(0,0,0,0.05),0 0.05rem 0.71rem rgba(0,0,0,0.05);
+  box-shadow: 0 0rem 0rem rgba(0,0,0,0),0 0rem 0rem rgba(0,0,0,0);
+  position: relative;
 }
 
 .card:hover {
+  border: 1px solid hsla(0,0%,50%,0.1);
   box-shadow:  0 0.13rem 0.26rem rgba(0,0,0,0.1),0 0.43rem 1.30rem rgba(0,0,0,0.15);
+  background-color: var(--bg-light);
 }
 
 .card-content {
@@ -24,10 +26,13 @@
 }
 
 .card-image {
+  padding: 1em;
   flex: 0;
   display: flex;
   justify-content: center;
 }
+
+
 
 .card-image a {
       width: 180px;
@@ -69,6 +74,10 @@
   padding: 1em;
 }
 
+.child-cards .card-image {
+  padding: 0;
+}
+
 .child-cards .card {
   align-items: center;
   flex-wrap: nowrap;
@@ -81,8 +90,8 @@
 }
 
 .child-cards .card-image img {
-  width: 4em;
-  height: 4em;
+  width: 3em;
+  height: 3em;
   max-width: none;
   margin: 0.5em;
 }

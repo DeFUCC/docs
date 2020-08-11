@@ -2,3 +2,36 @@ title: Thing
 '@extends':
     type: mainpro
     context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        details:
+          type: tab
+          title: THEME_FRUKT.HISTORY
+          ordering@: 1
+          fields:
+
+            header.opportunities:
+              name: opportunities
+              type: list
+              label: THEME_FRUKT.HISTORY
+              style: vertical
+
+              fields:
+                .icon:
+                  type: iconPicker
+                  label: THEME_FRUKT.ICON
+                .date:
+                  type: datetime
+                  label: THEME_FRUKT.TIME
+                .text:
+                  type: text
+                  label: THEME_FRUKT.TEXT
+                .link:
+                  type: text
+                  label: THEME_FRUKT.LINK
