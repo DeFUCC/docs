@@ -18,27 +18,27 @@ opportunities:
         text: 'на Youtube.Music'
         link: 'https://music.youtube.com/playlist?list=OLAK5uy_kl_vb-pjGJRV3v5fBA1ZtbvERuit87vsk'
     -
-        icon: null
+        icon: 'fa fa-apple'
         verb: Слушать
         text: 'на Apple.Music'
         link: 'https://music.apple.com/us/album/miracle-mechanism-live/1483671339'
     -
-        icon: null
+        icon: 'fa fa-google'
         verb: Слушать
         text: 'в Google.Play'
         link: 'https://play.google.com/store/music/album/tsoop_Miracle_Mechanism?id=Bgdcsjlo2ey3xoi22qsjbkmrhlq&tid=song-T2vkgbvjbgrviwcybnhn4ft25zi'
     -
-        icon: null
+        icon: 'fa fa-yandex'
         verb: Слушать
         text: 'на Яндекс.Музыке'
         link: 'https://music.yandex.ru/album/8877544'
     -
-        icon: null
+        icon: 'fa fa-vk'
         verb: Слушать
         text: 'в ВК'
         link: 'https://vk.com/music/album/129086_50020659'
     -
-        icon: null
+        icon: 'fa fa-amazon'
         verb: Слушать
         text: 'на Amazon Music'
         link: 'https://www.amazon.com/Miracle-Mechanism-tsoop/dp/B07YNC3KBX/ref=sr_1_1?keywords=tsoop&qid=1577706006&s=dmusic&sr=1-1'
