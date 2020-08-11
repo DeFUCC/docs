@@ -5,26 +5,32 @@ icon: cassini.jpg
 media_order: cassini.jpg
 opportunities:
     -
+        icon: 'fa fa-ba'
         verb: Приобрести
         text: 'альбом на Bandcamp'
         link: 'https://tsoop.bandcamp.com/album/cassini-dreams'
     -
+        icon: null
         verb: Слушать
         text: 'в Apple.Music'
         link: 'https://music.apple.com/us/album/cassini-dreams/1500023423'
     -
+        icon: null
         verb: Слушать
         text: 'на Youtube.Music'
         link: 'https://music.youtube.com/playlist?list=OLAK5uy_np3dWefMN3gkTgpdhz5FyaInVb3z5-MZk'
     -
+        icon: null
         verb: Слушать
         text: 'в Google.Play'
         link: 'https://play.google.com/store/music/album/tsoop_Cassini_Dreams?id=Bvjdqwa6kxq3auyxcy5rkdoeaou'
     -
+        icon: null
         verb: Слушать
         text: 'на Яндекс.Музыке'
         link: 'https://music.yandex.ru/album/9847367'
     -
+        icon: null
         verb: Слушать
         text: 'в ВК'
         link: 'https://vk.com/music/album/129086_50020668'
