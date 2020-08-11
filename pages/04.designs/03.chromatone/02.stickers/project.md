@@ -8,7 +8,7 @@ people:
         role: doer
 opportunities:
     -
-        icon: 'fa fa-cart'
+        icon: 'fa fa-shopping-cart'
         verb: Купить
         text: 'наборы на сайте'
         link: 'https://chromatone.center/#practice'
