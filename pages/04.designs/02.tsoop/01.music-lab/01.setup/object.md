@@ -1,7 +1,7 @@
 ---
 title: 'Сетап в рюкзаке'
 subtitle: 'Набор производительного музыкального оборудования для полноценного живого электронного выступления и сочинительства'
-status: collect
+status: process
 icon: purple.jpg
 media_order: purple.jpg
 start_date: '20-08-2016 15:31'
