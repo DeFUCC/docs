@@ -9,15 +9,15 @@
 
 {% block article %}
 
-  {{ page.content }}
+	{{ page.content }}
 
 {% endblock %}
 
 {% block lists %}
-<footer>
-  {% include 'partials/lister.html.twig' with {
+	<footer>
+		{% include 'partials/lister.html.twig' with {
     type: page.slug,
     title:'THEME_FRUKT.' ~ page.slug|pluralize|upper,
     collect: my_collection.visible } %}
-</footer>
+	</footer>
 {% endblock %}

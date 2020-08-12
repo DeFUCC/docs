@@ -1,92 +1,94 @@
 {% if item.visible %}
 
-  {% do
+	{% do
     assets.addCss('theme://css/design.css', 90) %}
-    {% do
+	{% do
       assets.addCss('theme://css/icons.css', 99) %}
-        {% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
+	{% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
-  <div class="project card">
+	<div class="project card">
 
-    {% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
+		{% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
 
-    <div class="card-text">
+		<div class="card-text">
 
 
-      <a href="{{item.url}}">
-        <h3 class="title">{{item.title}}
-        </h3>
+			<a href="{{item.url}}">
+				<h3 class="title">{{item.title}}
+				</h3>
 
-        <p class="summary">
-          {% if item.header.subtitle %}
-            {{ item.header.subtitle }}
-          {% endif %}
+				<p class="summary">
+					{% if item.header.subtitle %}
+						{{ item.header.subtitle }}
+					{% endif %}
 
-        </p>
+				</p>
 
-      </a>
+			</a>
 
-      <footer>
-      <span class="item-type">
-        {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-      </span>
+			<footer>
+				<span class="item-type">
+					{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+				</span>
 
-    {% if item.header.finance %}
-    {% set fin = item.header.finance %}
-      <span class="progress">
-        <span class="bar"></span>{{fin.available}}/{{fin.total}} ₽
-      </span>
-    {% endif %}
+				{% if item.header.finance %}
+					{% set fin = item.header.finance %}
+					<span class="progress">
+						<span class="bar"></span>
+						{{fin.available}}/{{fin.total}}
+						₽
+					</span>
+				{% endif %}
 
-        {% include 'partials/status.html.twig' %}
+				{% include 'partials/status.html.twig' %}
 
-        {% if item.header.start_date %}
-          {% set thedate = item.header.start_date | nicetime %}
-          {% if item.header.end_date %}
-            {% set thedate = item.header.end_date | nicetime %}
-          {% endif %}
+				{% if item.header.start_date %}
+					{% set thedate = item.header.start_date | nicetime %}
+					{% if item.header.end_date %}
+						{% set thedate = item.header.end_date | nicetime %}
+					{% endif %}
 
-          {% include 'partials/tag.html.twig' with {
+					{% include 'partials/tag.html.twig' with {
             icon: 'fa-clock-o',
             text: item.header.start_date | nicetime
           }
           only %}
-        {% endif %}
+				{% endif %}
 
-        {% if item.header.opportunities and item.header.opportunities | count > 0 %}
-          {% include 'partials/tag.html.twig' with {
+				{% if item.header.opportunities and item.header.opportunities | count > 0 %}
+					{% include 'partials/tag.html.twig' with {
             type : 'opportunity',
             link: item.url ~ '#opportunity',
             icon_file: 'lines/opportunity.svg',
             text: item.header.opportunities | count
           }
           only %}
-        {% endif %}
+				{% endif %}
 
-        {% for type in types %}
-          {% if item.children.ofType(type).visible | count > 0 %}
-            {% include 'partials/tag.html.twig' with {
+				{% for type in types %}
+					{% if item.children.ofType(type).visible | count > 0 %}
+						{% include 'partials/tag.html.twig' with {
               type : type,
               link: item.url ~ '#' ~ type,
               icon_file: 'lines/' ~ type ~ '.svg',
               text: item.children.ofType(type).visible | count
             } %}
-          {% endif %}
-        {% endfor %}
+					{% endif %}
+				{% endfor %}
 
-        {% for persona in item.header.people %}
-          {% set person = pages.find(persona.alias) %}
-          {% set person_icon = person.media[person.header.icon] %}
-            {% include 'partials/tag.html.twig' with {
+				{% for persona in item.header.people %}
+					{% set person = pages.find(persona.alias) %}
+					{% set person_icon = person.media[person.header.icon] %}
+					{% include 'partials/tag.html.twig' with {
               type : persona.role,
               class: 'people',
               icon_file: 'lines/' ~ persona.role ~ '.svg',
               text: person_icon.cropResize(24,24)
             } %}
-        {% endfor %}
+				{% endfor %}
 
-      </footer>
-    </div>
-  </div>
+			</footer>
+		</div>
+	</div>
 
 {% endif %}

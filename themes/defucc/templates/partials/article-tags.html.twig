@@ -1,29 +1,29 @@
 <small class="tags">
 
-  {% for tag in item.taxonomy.tag %}
-    {% include 'partials/tag.html.twig' with {
+	{% for tag in item.taxonomy.tag %}
+		{% include 'partials/tag.html.twig' with {
       text: tag
     } only %}
-  {% endfor %}
+	{% endfor %}
 
-  {% if config.plugins['count-views'].enabled %}
-    {% include 'partials/tag.html.twig' with {
+	{% if config.plugins['count-views'].enabled %}
+		{% include 'partials/tag.html.twig' with {
       icon:'fa-eye',
       text: (viewcounts[item.route] ?? 0)|nicenumber
     } only %}
-  {% endif %}
+	{% endif %}
 
-  {% if config.plugins.readingtime.enabled and page.template == 'article' %}
-    {% include 'partials/tag.html.twig' with {
+	{% if config.plugins.readingtime.enabled and page.template == 'article' %}
+		{% include 'partials/tag.html.twig' with {
       icon:'fa-clock-o',
       text: item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'})
     } only %}
-  {% endif %}
+	{% endif %}
 
-  {% if false %}
-    <span class="tag">
-      <i class="fa fa-pencil"></i>
-      {{item.modified | nicetime}}</span>
-  {% endif %}
+	{% if false %}
+		<span class="tag">
+			<i class="fa fa-pencil"></i>
+			{{item.modified | nicetime}}</span>
+	{% endif %}
 
 </small>

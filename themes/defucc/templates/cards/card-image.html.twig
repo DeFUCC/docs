@@ -1,23 +1,16 @@
-{% if item.header.icon or item.header.bg %}
-{% set size = size ?: 400 %}
-{% set max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
+{% if item.header.icon or item.header.bg %} {% set size = size ?: 400 %} {% set
+max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
 
-    <div {{max}} class="card-image">
-
-            {% if item.header.icon %}
-              {% set image  = item.media[item.header.icon].cropResize(size,size) %}
-            {% elseif item.header.bg %}
-              {% set image  = item.media[item.header.bg].cropZoom(size,size) %}
-            {% endif %}
-
-          {% if url %}
-            <a href="{{item.url}}">
-              <img src="{{ image.url }}"  />
-            </a>
-            {% else %}
-                <img src="{{ image.url }}"  />
-          {% endif %}
-
-
-    </div>
+<div {{ max }} class="card-image">
+  {% if item.header.icon %} {% set image =
+  item.media[item.header.icon].cropResize(size,size) %} {% elseif item.header.bg
+  %} {% set image = item.media[item.header.bg].cropZoom(size,size) %} {% endif
+  %} {% if url %}
+  <a href="{{ item.url }}">
+    <img src="{{ image.url }}" />
+  </a>
+  {% else %}
+  <img src="{{ image.url }}" />
+  {% endif %}
+</div>
 {% endif %}

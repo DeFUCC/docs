@@ -22,35 +22,34 @@
 {% set doerOf = page.collection('doerOf') %}
 
 {% for a_page in all_pages %}
-  {% set people = a_page.header.people %}
-  {% if people and people|count > 0 %}
-    {% for person in people %}
-      {% if person.alias == page.url %}
-        {% for role in roles %}
-          {% if person.role == role %}
-            {% do cols[role].addPage(a_page) %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+	{% set people = a_page.header.people %}
+	{% if people and people|count > 0 %}
+		{% for person in people %}
+			{% if person.alias == page.url %}
+				{% for role in roles %}
+					{% if person.role == role %}
+						{% do cols[role].addPage(a_page) %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 {% endfor %}
 
 {% block lists %}
-<footer class="listers">
-{% for role in roles %}
-  {% include 'partials/lister.html.twig' with {
+	<footer class="listers">
+		{% for role in roles %}
+			{% include 'partials/lister.html.twig' with {
   type: role,
   title: 'THEME_FRUKT.' ~ role|upper,
   collect: cols[role] } %}
-{% endfor %}
+		{% endfor %}
 
 
-
-{% include 'partials/lister.html.twig' with {
+		{% include 'partials/lister.html.twig' with {
 type: 'project',
 title: 'THEME_FRUKT.DOER',
 collect: doerOf } %}
 
-</footer>
+	</footer>
 {% endblock %}

@@ -1,52 +1,51 @@
 <footer>
-   <nav id="footer-nav">
+  <nav id="footer-nav">
+    <section class="site-info">
+      {% if theme.custom_logo %}
+      <a href="{{ base_url_absolute }}">
+        <img
+          width="120px"
+          src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}"
+        />
+      </a>
+      {% endif %}
 
-   <section class="site-info">
+      <p>{{ site.title }} {{"now"|date("Y") }}</p>
 
+      {% if theme_config.github.tree %}
+      <p>
+        {{ "THEME_FRUKT.GITHUB_NOTE" | t }}
+        <a href="{{ theme_config.github.tree }}" target="_blank">GitHub</a
+        ><br />
+        {% include 'partials/github_link.html.twig' %}
+      </p>
+      {% endif %}
+    </section>
 
-     {% if theme.custom_logo %}
-       <a href="{{ base_url_absolute }}">
-         <img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
-       </a>
-     {% endif %}
-     
-     <p>
-      {{site.title}} {{"now"|date("Y") }}
-     </p>
-
-     {% if  theme_config.github.tree %}
-     <p>
-       {{ 'THEME_FRUKT.GITHUB_NOTE'|t }} <a href="{{theme_config.github.tree}}" target="_blank">GitHub</a><br />
-       {% include 'partials/github_link.html.twig' %}
-     </p>
-     {% endif %}
-
-   </section>
-
-     {% for p in pages.children.routable.visible %}
-     <section>
-       <h3 class="{{ p.active or p.activeChild ? 'active' : '' }}"> <a href="{{p.url}}">{{p.title}}</a> </h3>
-       <ul id="{{ slug }}">
-          {% for ch in p.children.visible %}
-            <li class="{{ ch.active or ch.activeChild ? 'active' : '' }}">
-                  <a href="{{ch.url}}">{{ch.title}}</a>
-                {% if ch.children.visible.count %}
-                  <span class="tag">{{ch.children.visible.count}}</span>
-                  {% if ch.active or ch.activeChild %}
-                    <ul>
-                      {% for sub in ch.children.visible %}
-                          <li class="{{ sub.active or sub.activeChild ? 'active' : '' }}">
-                              <a href="{{sub.url}}">{{sub.title}}</a>
-                          </li>
-                      {% endfor %}
-                    </ul>
-                  {% endif %}
-                {% endif %}
-              </li>
-          {% endfor %}
-       </ul>
-     </section>
-     {% endfor %}
-
-   </nav>
+    {% for p in pages.children.routable.visible %}
+    <section>
+      <h3 class="{{ p.active or p.activeChild ? 'active' : '' }}">
+        <a href="{{ p.url }}">{{ p.title }}</a>
+      </h3>
+      <ul id="{{ slug }}">
+        {% for ch in p.children.visible %}
+        <li class="{{ ch.active or ch.activeChild ? 'active' : '' }}">
+          <a href="{{ ch.url }}">{{ ch.title }}</a>
+          {% if ch.children.visible.count %}
+          <span class="tag">{{ ch.children.visible.count }}</span>
+          {% if ch.active or ch.activeChild %}
+          <ul>
+            {% for sub in ch.children.visible %}
+            <li class="{{ sub.active or sub.activeChild ? 'active' : '' }}">
+              <a href="{{ sub.url }}">{{ sub.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </nav>
 </footer>

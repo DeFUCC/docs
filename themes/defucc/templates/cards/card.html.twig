@@ -1,38 +1,29 @@
 {% if item.visible %}
 
-  <div class="card">
-    <div class="card-content">
+<div class="card">
+  <div class="card-content">
+    {% include 'cards/card-image.html.twig' with { url:item.url }%}
 
-      {% include 'cards/card-image.html.twig' with { url:item.url }%}
+    <div class="card-text">
+      <a href="{{ item.url }}">
+        <h3 class="title">{{ item.title }}</h3>
 
-      <div class="card-text">
-
-        <a href="{{item.url}}">
-          <h3 class="title">{{item.title}}
-          </h3>
-
-          <p class="summary">
-            {% if item.header.subtitle %}
-              {{ item.header.subtitle|markdown }}
-            {% elseif item.template == 'article' or item.template == 'def' %}
-              {{item.summary(300)|striptags}}
-            {% endif %}
-
-          </p>
-
-          {% if item.template == 'article' %}
-            {% include 'partials/article-tags.html.twig' %}
+        <p class="summary">
+          {% if item.header.subtitle %}
+          {{ item.header.subtitle | markdown }}
+          {% elseif item.template == 'article' or item.template == 'def' %}
+          {{ item.summary(300) | striptags }}
           {% endif %}
-        </a>
+        </p>
 
-      </div>
-
-      {% if item.template == 'feed' and item.children %}
-        {% include 'cards/child-cards.html.twig' %}
-      {% endif %}
-
+        {% if item.template == 'article' %} {% include
+        'partials/article-tags.html.twig' %} {% endif %}
+      </a>
     </div>
 
+    {% if item.template == 'feed' and item.children %} {% include
+    'cards/child-cards.html.twig' %} {% endif %}
   </div>
+</div>
 
 {% endif %}

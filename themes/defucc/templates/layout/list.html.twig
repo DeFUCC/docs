@@ -1,51 +1,51 @@
-
-
 <article id="{{ page.slug }}" class="list">
 
-  <header>
-    <div class="sticky">
+	<header>
+		<div class="sticky">
 
-      {% if config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
-      {% endif %}
+			{% if config.plugins.breadcrumbs.enabled %}
+				{% include 'partials/breadcrumbs.html.twig' %}
+			{% endif %}
 
-      {% include 'cards/card-image.html.twig' with {size:280} %}
+			{% include 'cards/card-image.html.twig' with {size:280} %}
 
-      {% if page.routable %}
-        <h1 >{{ page.title }}</h1>
-      {% endif %}
+			{% if page.routable %}
+				<h1>{{ page.title }}</h1>
+			{% endif %}
 
-      {% if page.header.subtitle %}
-        {{ page.header.subtitle|markdown }}
-      {% endif %}
+			{% if page.header.subtitle %}
+				{{ page.header.subtitle|markdown }}
+			{% endif %}
 
-      {% if page.header.additional %}
-        {{ page.header.additional|markdown }}
-      {% endif %}
+			{% if page.header.additional %}
+				{{ page.header.additional|markdown }}
+			{% endif %}
 
-      {% if uri.param('tag') %}
-          <h4><span class="tag is-large">{{uri.param('tag')}}</span></h4>
-      {% endif %}
+			{% if uri.param('tag') %}
+				<h4>
+					<span class="tag is-large">{{uri.param('tag')}}</span>
+				</h4>
+			{% endif %}
 
-    </div>
-  </header>
+		</div>
+	</header>
 
-  <section class="cards">
+	<section class="cards">
 
-      {{ page.content }}
+		{{ page.content }}
 
-      {% set collection = page.collection %}
-      {% for item in collection %}
+		{% set collection = page.collection %}
+		{% for item in collection %}
 
-            {% include 'cards/card-select.html.twig'  %}
+			{% include 'cards/card-select.html.twig'  %}
 
-      {% endfor %}
+		{% endfor %}
 
-      {# Render the pagination list #}
-        {% if config.plugins.pagination.enabled and collection.params.pagination %}
-            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-        {% endif %}
+		{# Render the pagination list #}
+		{% if config.plugins.pagination.enabled and collection.params.pagination %}
+			{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+		{% endif %}
 
-  </section>
+	</section>
 
 </article>

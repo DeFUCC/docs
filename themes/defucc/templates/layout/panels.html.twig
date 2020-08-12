@@ -1,66 +1,65 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-<main id="{{ main_id }}" class="{{ main_classes }} panels">
+	<main id="{{ main_id }}" class="{{ main_classes }} panels">
 
-  <header class="{{ header_classes }}">
+		<header class="{{ header_classes }}">
 
-    {% block side %}
-    <div class="top">
+			{% block side %}
+				<div class="top">
 
-    {% block icon %}
-      {% if page.header.icon  %}
-          <div class="icon">
-                {{page.media[page.header.icon].cropResize(300,300)}}
-          </div>
-      {% endif %}
-    {% endblock %}
-
-
-    <div class="start">
-
-      {% if config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
-      {% endif %}
-      {% block title %}
-        <h1 class="title">{{ page.title }}</h1>
-      {% endblock %}
-
-      {% if page.header.subtitle %}
-        {{page.header.subtitle|markdown }}
-      {% endif %}
+					{% block icon %}
+						{% if page.header.icon  %}
+							<div class="icon">
+								{{page.media[page.header.icon].cropResize(300,300)}}
+							</div>
+						{% endif %}
+					{% endblock %}
 
 
-    {% block info %}
-      {% include 'partials/article-tags.html.twig' with {item: page} %}
-    {% endblock info %}
+					<div class="start">
 
-  {% block additional %}
-  {% if page.header.additional %}
-    <div class="additional">
-      {{ page.header.additional|markdown }}
-    </div>
-  {% endif %}
-  {% endblock %}
+						{% if config.plugins.breadcrumbs.enabled %}
+							{% include 'partials/breadcrumbs.html.twig' %}
+						{% endif %}
+						{% block title %}
+							<h1 class="title">{{ page.title }}</h1>
+						{% endblock %}
+
+						{% if page.header.subtitle %}
+							{{page.header.subtitle|markdown }}
+						{% endif %}
 
 
+						{% block info %}
+							{% include 'partials/article-tags.html.twig' with {item: page} %}
+						{% endblock info %}
 
-    </div>
+						{% block additional %}
+							{% if page.header.additional %}
+								<div class="additional">
+									{{ page.header.additional|markdown }}
+								</div>
+							{% endif %}
+						{% endblock %}
 
-    </div>
 
-      {% block toc %}{% endblock %}
+					</div>
 
-    {% endblock side %}
-  </header>
+				</div>
 
-  <article class="content {{ article_classes }}">
-    {% block article %}
-      {{ page.content }}
-    {% endblock article %}
-  </article>
+				{% block toc %}{% endblock %}
 
-{% block lists %}{% endblock %}
+			{% endblock side %}
+		</header>
 
-</main>
+		<article class="content {{ article_classes }}">
+			{% block article %}
+				{{ page.content }}
+			{% endblock article %}
+		</article>
+
+		{% block lists %}{% endblock %}
+
+	</main>
 {% endblock content %}
