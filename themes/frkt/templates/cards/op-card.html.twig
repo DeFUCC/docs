@@ -1,6 +1,6 @@
 
 
-  <a class="button" href="{{item.link}}" target="_blank">
+  <a class="button {{ item.disabled ? 'disabled' : '' }}" href="{{item.link}}" target="_blank">
     {% if item.icon %}
       <i class="{{item.icon}}"></i>
     {% endif %}

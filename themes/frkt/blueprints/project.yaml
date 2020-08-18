@@ -35,6 +35,16 @@ form:
                 .link:
                   type: text
                   label: THEME_FRUKT.LINK
+                .disabled:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DISABLED
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
 
         fields:
           content:

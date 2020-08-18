@@ -16,7 +16,7 @@
 	{% if config.plugins.readingtime.enabled and page.template == 'article' %}
 		{% include 'partials/tag.html.twig' with {
       icon:'fa-clock-o',
-      text: item.content|readingtime({'minutes_label':'мин.', 'minute_label': 'мин.'})
+      text: item.content|readingtime( { 'minutes_label': 'мин.', 'minute_label': 'мин.' } )
     } only %}
 	{% endif %}
 
