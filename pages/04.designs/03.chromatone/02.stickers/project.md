@@ -12,5 +12,7 @@ opportunities:
         verb: Купить
         text: 'наборы на сайте'
         link: 'https://chromatone.center/#practice'
+media_order: op-12.jpg
+icon: op-12.jpg
 ---
 

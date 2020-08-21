@@ -22,6 +22,7 @@ people:
     -
         alias: /people/davay
         role: author
+start_date: '23-11-2012 16:02'
 ---
 
 #### OOLEY развивает творческие возможности человека и общества

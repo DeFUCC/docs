@@ -13,6 +13,15 @@
     <h1 class="title">{{ page.title }} </h1>
   {% endblock %}
 
+  {% block info %}
+    {% if header.website %}
+      <div class="row"><a href="https://{{ header.website }}" target="_blank">{{header.website}}</a></div>
+    {% endif %}
+    {% if header.start_date %}
+      <div class="row">{{ 'THEME_FRUKT.START'|t}}: {{ header.start_date|nicetime }}</div>
+    {% endif %}
+	{% endblock info %}
+
 {% block additional %}
 {% if page.template in types %}
 <a class="type tag">
@@ -23,7 +32,7 @@
 {% if page.header.status %}
   {% include 'partials/status.html.twig' with { item: page } %}
   {% endif %}
-{% endblock %}
+{% endblock additional %}
 
 
 {% block article %}
@@ -37,6 +46,16 @@
 
 {% block lists %}
 <footer class="listers">
+
+  {% if page.header.ideas and page.header.ideas|count > 0 %}
+  {% include 'partials/lister.html.twig' with {
+  type: 'idea',
+  title:'THEME_FRUKT.IDEAS',
+  icon_file: 'lines/idea.svg',
+  template: 'idea-card',
+  collect: page.header.ideas
+}  %}
+{% endif %}
 
     {% for type in types %}
       {% include 'partials/lister.html.twig' with {

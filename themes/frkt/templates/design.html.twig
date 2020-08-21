@@ -4,13 +4,6 @@
 {% set main_id = 'design' %}
 
 
-{% block info %}
-	{% if header.website %}
-		<a href="https://{{ header.website}}" target="_blank">{{header.website}}</a>
-	{% endif %}
-	<br>
-
-{% endblock %}
 
 {% block article %}
 
@@ -18,23 +11,4 @@
 
 {% endblock %}
 
-{% block lists %}
-	<footer>
-		{% if page.header.ideas and page.header.ideas|count > 0 %}
-			{% include 'partials/lister.html.twig' with {
-      type: 'idea',
-      title:'THEME_FRUKT.IDEAS',
-      icon_file: 'lines/idea.svg',
-      template: 'idea-card',
-      collect: page.header.ideas
-    }  %}
-		{% endif %}
 
-		{% include 'partials/lister.html.twig' with {
-    type: 'project',
-    title:'THEME_FRUKT.PROJECTS',
-    icon_file: 'lines/project.svg',
-    collect: page.children.visible
-  }  %}
-	</footer>
-{% endblock %}

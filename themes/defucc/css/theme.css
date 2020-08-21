@@ -11,6 +11,10 @@
 }
 
 
+.flex {
+  display: flex;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-light: #444;

@@ -1,8 +1,8 @@
 {% extends 'partials/item-page.html.twig' %}
 
 
-{% set options = { items: {'@root.descendants':''}, 'filter': { 'type': page.slug }, 'order': {'by': 'date', 'dir': 'asc'}} %}
-{% set my_collection = page.collection(options) %}
+{% set options = { items: {'@root.descendants':''} } %}
+{% set my_collection = ''  %}
 
 
 {% block info %}{% endblock %}
@@ -16,8 +16,13 @@
 {% block lists %}
 	<footer>
 		{% include 'partials/lister.html.twig' with {
-    type: page.slug,
-    title:'THEME_FRUKT.' ~ page.slug|pluralize|upper,
-    collect: my_collection.visible } %}
+			type: page.slug,
+			title:'THEME_FRUKT.' ~ page.slug|pluralize|upper,
+			template: 'small-card',
+			collect: page.collection.count() > 0 ? page.collection : page.collection({
+				'items': { '@root.descendants': ''},
+				'order': { 'by': 'modified', 'dir': 'desc' }
+			}).ofType(page.slug) } %}
 	</footer>
 {% endblock %}
+

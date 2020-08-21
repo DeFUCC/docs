@@ -17,6 +17,11 @@ a.avatar {
     padding: 0 0 0 8px;
 }
 
+.small.card:hover .label {
+  z-index: 30;
+  background-color: hsla(0, 0%, 100%, 0.98);;
+}
+
 .small.card .type svg {
   width:30px;
   height: 30px;
@@ -24,11 +29,31 @@ a.avatar {
 }
 
 .small.card {
-  padding:4px;
+  padding:1em 1em;
   margin: 8px;
   flex-wrap: nowrap;
   flex: 1 1 200px;
   color: var(--text-color);
+  background-color: var(--bg-gray);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+}
+
+.small.card .label {
+  display: flex;
+  align-items: center;
+  transition: all 300ms ease;
+  background-color: hsla(0, 0%, 100%, 0.85);
+  border-radius: var(--card-radius);
+}
+
+.small.card .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 
 .small.card svg path {

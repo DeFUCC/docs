@@ -4,6 +4,7 @@ en:
     GITHUB_EDIT_THIS_PAGE: Edit this page
     MINUTES: min.
     DETAILS: Details
+    START: Started
     ICON: Icon
     MENTIONS: Mentions
     ROLE: Role
@@ -61,6 +62,7 @@ ru:
     GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
     MINUTES: мин.
     DETAILS: Детали
+    START: Запуск
     ICON: Иконка
     MENTIONS: Упоминания
     ROLE: Роль
