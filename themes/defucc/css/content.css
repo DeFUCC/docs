@@ -90,6 +90,10 @@ blockquote {
   font-size: 1.1em;
 }
 
+blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
+  margin: 0.1em 0;
+}
+
 .content.narrow {
     flex-basis: 10px;
     max-width: 300px;

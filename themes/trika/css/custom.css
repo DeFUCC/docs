@@ -75,8 +75,12 @@ article.content  {
     font-family: 'Mukta';
 }
 
+.sanskrit h1, .sanskrit h2, .sanskrit h3, .sanskrit h4 {
+  font-family: 'Mukta';
+}
+
 .commentary .sanskrit {
-  font-size:1.4em;
+  font-size:1.2em;
 }
 
 .big {
