@@ -41,10 +41,6 @@ article.content  {
   border-bottom:2px solid #ccc;
 }
 
-.content section:nth-child(even) {
-
-}
-
 .count section:hover:before {
   opacity: 1;
 }
@@ -81,6 +77,10 @@ article.content  {
 
 .commentary .sanskrit {
   font-size:1.2em;
+}
+
+.commentary .transcript {
+  font-size: 1em;
 }
 
 .big {
@@ -141,7 +141,7 @@ article.content  {
     word-break: keep-all;
 }
 
-.only-ligatures td:nth-child(odd)) {
+.only-ligatures td:nth-child(odd) {
   background-color: hsla(0,0%,80%,0.3);
 }
 
