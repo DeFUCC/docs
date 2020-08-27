@@ -34,8 +34,14 @@
 
 		{{ page.content }}
 
-		{% set collection = page.collection %}
-		{% for item in collection %}
+		{% if page.collection|count >0 %}
+			{% set my_collection = page.collection %}
+		{% else %}
+			{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
+			{% set my_collection = page.collection(options) %}
+		{% endif %}
+		
+		{% for item in my_collection %}
 
 			{% include 'cards/card-select.html.twig'  %}
 
