@@ -86,7 +86,7 @@ blockquote {
   background-color:  var(--light-bg);
   border-left: 3px solid #eee;
   margin: 1em 0;
-  padding: 1em 1em 1em 2em;
+  padding: 1em;
   font-size: 1.1em;
 }
 

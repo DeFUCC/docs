@@ -1,4 +1,5 @@
-@import 'fonts.css'
+@import "fonts.css";
+
 
 .credits p {
   display:none;
@@ -68,10 +69,14 @@ article.content  {
 
 .sanskrt, .sanskrit, [lang=sa] {
 	font-weight:500;
-	font-size:24pt;
+	font-size:2em;
 	margin: 12px 0;
     line-height: 1.42;
     font-family: 'Mukta';
+}
+
+.commentary .sanskrit {
+  font-size:1.4em;
 }
 
 .big {
