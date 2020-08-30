@@ -1,7 +1,8 @@
 {% extends 'layout/panels.html.twig' %}
 
 {% do assets.addCss('theme://css/article.css',99) %}
-
+{% do
+  assets.addJs('theme://js/toggler.js', 99) %}
 {% set toc = page.header.toc ? 'with-toc':'no-toc' %}
 {% set main_classes = 'article ' ~ toc %}
 
