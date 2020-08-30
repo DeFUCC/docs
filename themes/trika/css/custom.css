@@ -1,5 +1,12 @@
 @import "fonts.css";
 
+.toggle {
+  padding: 0.5em;
+}
+
+.toggle.off {
+  opacity: 0.5;
+}
 
 .credits p {
   display:none;

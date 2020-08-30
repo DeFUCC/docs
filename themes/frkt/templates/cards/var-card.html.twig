@@ -1,0 +1,8 @@
+
+
+  <a class="button {{ item.disabled ? 'disabled' : '' }}" href="{{item.url}}" target="_blank">
+    {% if item.icon %}
+      <i class="{{item.icon}}"></i>
+    {% endif %}
+    <strong>{{item.title}}</strong> {{item.text}} - {{ item.price }} ₽
+   </a>

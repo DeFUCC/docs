@@ -35,17 +35,21 @@
 {% endblock additional %}
 
 
-{% block article %}
 
-        <p>
+{% block article %}
+{% block main %}{% endblock %}
+       
             {{ page.content }}
-        </p>
+        
 
 
 {% endblock %}
 
 {% block lists %}
 <footer class="listers">
+
+  {% block lister %}
+  {% endblock %}
 
   {% if page.header.ideas and page.header.ideas|count > 0 %}
   {% include 'partials/lister.html.twig' with {
@@ -54,8 +58,8 @@
   icon_file: 'lines/idea.svg',
   template: 'idea-card',
   collect: page.header.ideas
-}  %}
-{% endif %}
+  }  %}
+  {% endif %}
 
     {% for type in types %}
       {% include 'partials/lister.html.twig' with {
@@ -96,4 +100,4 @@
 
 </footer>
 
-{% endblock %}
+{% endblock lists %}
