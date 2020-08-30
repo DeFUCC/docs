@@ -70,7 +70,7 @@ article.content  {
   counter-increment: stanza;
 }
 
-.sanskrt, .sanskrit, [lang=sa] {
+.sanskrt, .sanskrit {
 	font-weight:500;
 	font-size:2em;
 	margin: 12px 0;
@@ -78,7 +78,7 @@ article.content  {
     font-family: 'Mukta';
 }
 
-.sanskrit h1, .sanskrit h2, .sanskrit h3, .sanskrit h4 {
+.sanskrit h1, .sanskrit h2, .sanskrit h3, .sanskrit h4,  [lang=sa] {
   font-family: 'Mukta';
 }
 
