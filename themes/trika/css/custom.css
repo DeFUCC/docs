@@ -189,3 +189,7 @@ table.names td:nth-child(2) {
 .no-words em {
   display: none;
 }
+
+.no-translate > section > p {
+  display: none;
+}
