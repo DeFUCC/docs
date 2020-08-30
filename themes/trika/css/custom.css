@@ -177,3 +177,15 @@ table.names {
 table.names td:nth-child(2) {
   font-family: 'Mukta';
 }
+
+.no-sans .sanskrit {
+  display: none;
+}
+
+.no-trans .transcript {
+  display: none;
+}
+
+.no-words em {
+  display: none;
+}
