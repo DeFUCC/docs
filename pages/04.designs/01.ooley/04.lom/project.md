@@ -1,6 +1,8 @@
 ---
 title: 'ЛОМ: Лесные Открытые Мастерские'
 subtitle: 'Лагерь совместного свободного творчества на природе'
+start_date: '01-05-2018 13:57'
+status: request
 icon: lom.jpg
 website: lom.camp
 ---

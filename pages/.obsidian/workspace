@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "02.frukt/03.universalization/def.md",
+            "file": "04.designs/02.tsoop/04.solo/project.md",
             "mode": "source"
           }
         }
@@ -39,14 +39,16 @@
             "type": "leaf",
             "state": {
               "type": "search",
-              "state": {}
+              "state": {
+                "query": ""
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 164
   },
   "right": {
     "id": "944d16888509c121",
@@ -61,7 +63,9 @@
             "type": "leaf",
             "state": {
               "type": "backlink",
-              "state": {}
+              "state": {
+                "file": "04.designs/02.tsoop/04.solo/project.md"
+              }
             }
           }
         ]
@@ -72,10 +76,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "02.frukt/03.universalization/def.md",
-    "02.frukt/04.cooperation/def.md",
-    "02.frukt/05.creativity/def.md",
-    "02.frukt/02.development/def.md",
-    "02.frukt/01.foundation/def.md"
+    "04.designs/02.tsoop/04.solo/project.md",
+    "04.designs/05.etovoteto/design.md",
+    "04.designs/05.etovoteto/eto.png",
+    "04.designs/01.ooley/04.lom/project.md",
+    "04.designs/01.ooley/04.lom/lom.jpg"
   ]
 }

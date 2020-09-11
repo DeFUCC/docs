@@ -26,7 +26,10 @@
       flex: 1 1 100%;
     }
   .panels header .start {
-    padding: 3em !important;
+    padding: 1em !important;
+  }
+  .panels header .icon {
+    margin: 1em;
   }
 .panels {
       padding: 0;

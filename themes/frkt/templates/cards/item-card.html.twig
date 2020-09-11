@@ -6,31 +6,43 @@
       assets.addCss('theme://css/icons.css', 99) %}
 	{% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
-	<div class="project card">
+	<div class="grid card">
 
-		{% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
+		  
 
-		<div class="card-text">
+		<aside>
+			<span class="item-type">
+				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+			</span>
+			{% for persona in item.header.people %}
+				{% include 'partials/persona.html.twig' %}
+			{% endfor %}
+		</aside>
 
-
-			<a href="{{item.url}}">
-				<h3 class="title">{{item.title}}
-				</h3>
-
-				<p class="summary">
-					{% if item.header.subtitle %}
-						{{ item.header.subtitle }}
-					{% endif %}
-
-				</p>
-
-			</a>
-
-			<footer>
-				<span class="item-type">
-					{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-				</span>
-
+		<article class="content">
+			<div class="b text">
+				<a href="{{item.url}}" class="title b">
+					{{item.title}}
+					
+				</a>
+		
+				<a href="{{item.url}}">
+					<p class="summary">
+						{% if item.header.subtitle %}
+							{{ item.header.subtitle }}
+						{% endif %}
+		
+					</p>
+				</a>
+			</div>
+			
+			{% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
+		</article>
+		
+	
+		<footer>
+				
+	
 				{% if item.header.finance %}
 					{% set fin = item.header.finance %}
 					<span class="progress">
@@ -39,56 +51,51 @@
 						₽
 					</span>
 				{% endif %}
-
+	
 				{% include 'partials/status.html.twig' %}
-
+	
 				{% if item.header.start_date %}
 					{% set thedate = item.header.start_date | nicetime %}
 					{% if item.header.end_date %}
 						{% set thedate = item.header.end_date | nicetime %}
 					{% endif %}
-
+	
 					{% include 'partials/tag.html.twig' with {
-            icon: 'fa-clock-o',
-            text: item.header.start_date | nicetime
-          }
-          only %}
+			icon: 'fa-clock-o',
+			text: item.header.start_date | nicetime
+			}
+			only %}
 				{% endif %}
-
+	
 				{% if item.header.opportunities and item.header.opportunities | count > 0 %}
 					{% include 'partials/tag.html.twig' with {
-            type : 'opportunity',
-            link: item.url ~ '#opportunity',
-            icon_file: 'lines/opportunity.svg',
-            text: item.header.opportunities | count
-          }
-          only %}
+			type : 'opportunity',
+			link: item.url ~ '#opportunity',
+			icon_file: 'lines/opportunity.svg',
+			text: item.header.opportunities | count
+			}
+			only %}
 				{% endif %}
-
+	
 				{% for type in types %}
 					{% if item.children.ofType(type).visible | count > 0 %}
 						{% include 'partials/tag.html.twig' with {
-              type : type,
-              link: item.url ~ '#' ~ type,
-              icon_file: 'lines/' ~ type ~ '.svg',
-              text: item.children.ofType(type).visible | count
-            } %}
+				type : type,
+				link: item.url ~ '#' ~ type,
+				icon_file: 'lines/' ~ type ~ '.svg',
+				text: item.children.ofType(type).visible | count
+			} %}
 					{% endif %}
 				{% endfor %}
+	
+				
+	
+		</footer>
 
-				{% for persona in item.header.people %}
-					{% set person = pages.find(persona.alias) %}
-					{% set person_icon = person.media[person.header.icon] %}
-					{% include 'partials/tag.html.twig' with {
-              type : persona.role,
-              class: 'people',
-              icon_file: 'lines/' ~ persona.role ~ '.svg',
-              text: person_icon.cropResize(24,24)
-            } %}
-				{% endfor %}
+		
 
-			</footer>
-		</div>
+		
+		
 	</div>
 
 {% endif %}

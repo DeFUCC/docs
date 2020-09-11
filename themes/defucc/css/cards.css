@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   align-items: center;
   border: 1px solid hsla(0,0%,50%,0);
-  font-size: 0.9em;
   box-shadow: 0 0rem 0rem rgba(0,0,0,0),0 0rem 0rem rgba(0,0,0,0);
   position: relative;
 }
@@ -33,7 +32,7 @@
 }
 
 .card-image a {
-      width: 180px;
+      width: 100px;
 }
 
 .card-image img {
@@ -98,8 +97,8 @@
 }
 
 .child-cards .card-image img {
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   max-width: none;
   margin: 0.5em;
 }
@@ -114,4 +113,5 @@
 
 .card footer {
   flex: 1 1 100%;
+  padding: 0 1em 0.5em 1em;
 }

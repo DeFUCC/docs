@@ -217,3 +217,59 @@ a.avatar {
   stroke: var(--text-color);
   stroke-width: 4px;
 }
+
+.card.grid {
+  background-color: rgba(255,255,255,0.5);
+  display: grid;
+  border-width: none;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: 3em 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "aside content"
+    "aside content"
+    "aside footer";
+}
+
+.grid .content { 
+  grid-area: content;
+  display: flex;
+  flex-flow: row;
+  padding: 0.5em;
+}
+
+.grid .content a {
+  display: block;
+}
+
+.grid .title {
+  margin: 0em 0 0.5em 0;
+}
+
+.grid .card-image { 
+  padding: 0.5em;
+ }
+
+ .grid .card-image img {
+   border-radius: 4px;
+ }
+
+.grid aside { 
+  grid-area: aside; 
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 0.8em 8px;
+  margin:0 8px 0 0;
+  background-color:rgba(0,0,0,0.03);
+  border-radius: var(--card-radius) 0 0 var(--card-radius);
+}
+
+.grid .content > .text { 
+  padding: 0;
+  flex: 1;
+ }
+
+.grid footer { grid-area: footer; }
