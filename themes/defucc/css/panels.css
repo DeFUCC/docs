@@ -28,7 +28,6 @@
 
 .panels .top .icon {
   justify-content: center;
-  display: flex;
   flex: 1 1 200px;
 }
 
