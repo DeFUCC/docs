@@ -1,0 +1,7 @@
+<ul id="menu">
+  {% for item in pages.children.routable.visible %}
+    <li class="dib dim pa1 {{ item.active or item.activeChild ? 'active' : '' }}">
+      <a class="link" href="/#{{ item.slug }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

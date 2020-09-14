@@ -1,0 +1,63 @@
+title: Design
+'@extends':
+    type: mainpro
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        details:
+          type: tab
+          title: THEME_FRUKT.IDEAS
+          ordering@: 1
+          fields:
+
+            header.ideas:
+              name: opportunities
+              type: list
+              label: THEME_FRUKT.IDEAS
+              style: vertical
+
+              fields:
+                .icon:
+                  type: iconPicker
+                  label: THEME_FRUKT.ICON
+                .title:
+                  type: text
+                  label: THEME_FRUKT.TITLE
+                .text:
+                  type: textarea
+                  rows: 3
+                  label: THEME_FRUKT.TEXT
+                .alias:
+                  type: pages
+                  size: medium
+                  classes: fancy
+                  label: Page
+                  show_all: false
+                  show_modular: false
+                  show_root: false
+                  help: does it have a page?
+                  toggleable: true
+
+
+        content:
+          fields:
+
+            columns:
+              fields:
+
+                column1:
+                  fields:
+
+                    header.website:
+                      toggleable: true
+                      style: vertical
+                      type: text
+                      label: Website
+
+            

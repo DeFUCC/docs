@@ -1,0 +1,16 @@
+{% if theme.custom_logo %}
+	<a href="{{ base_url_absolute }}">
+		<img width="120px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}"/>
+	</a>
+{% endif %}
+
+<p>{{ site.title }}
+	{{"now"|date("Y") }}</p>
+
+{% if theme_config.github.tree %}
+	<p>
+		{{ "THEME_FRUKT.GITHUB_NOTE" | t }}
+		<a href="{{ theme_config.github.tree }}" target="_blank">GitHub</a><br/>
+		{% include 'partials/github-link.html.twig' %}
+	</p>
+{% endif %}

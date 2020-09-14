@@ -1,3 +1,34 @@
-<footer class="bg-black-60 aspect-ratio--4x6">
-    bye
+<footer class="bg-black-70 f6 white-60 pa4 relative z-5 flex flex-wrap">
+	<section class="flex-grow-1 flex-shrink-1 basis-160">
+		{% include "partials/site-info.html.twig" %}
+	</section>
+
+	{% for p in pages.children.routable.visible %}
+		<nav class="flex-grow-1 flex-shrink-1 mw5 pa1">
+			<h3 class="{{ p.active or p.activeChild ? 'active' : '' }}">
+				<a class="link white-60" href="{{ p.url }}">{{ p.title }}</a>
+			</h3>
+			<ul class="list pa0" id="{{ slug }}">
+				{% for ch in p.children.visible %}
+					<li class="pv1 {{ ch.active or ch.activeChild ? 'active' : '' }}">
+						<a class="link white-50" href="{{ ch.url }}">{{ ch.title }}</a>
+
+						{% if ch.children.visible.count %}
+							<span class="white-40 f7 br4 ph1 bg-black-50">{{ ch.children.visible.count }}</span>
+							{% if ch.active or ch.activeChild %}
+								<ul>
+									{% for sub in ch.children.visible %}
+										<li class="{{ sub.active or sub.activeChild ? 'active' : '' }}">
+											<a href="{{ sub.url }}">{{ sub.title }}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	{% endfor %}
+
 </footer>

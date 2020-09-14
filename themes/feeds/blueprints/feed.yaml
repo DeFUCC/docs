@@ -1,0 +1,4 @@
+title: feed
+'@extends':
+    type: article
+    context: theme://blueprints

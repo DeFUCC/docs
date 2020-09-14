@@ -1,0 +1,32 @@
+{% set head = head ?? 'layout/panels/header.html.twig' %}
+
+<article id="{{ page.slug }}" class="mw9 pv1 center ph3-ns grid panels">
+	<header>
+		{% include head %}
+	</header>
+
+	<section class="cards">
+
+		{{ page.content }}
+
+		{% if page.collection|count >0 %}
+			{% set my_collection = page.collection %}
+		{% else %}
+			{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
+			{% set my_collection = page.collection(options) %}
+		{% endif %}
+
+		{% for item in my_collection %}
+			<div class="flex flex-row flex-wrap">
+				{% include "cards/card.html.twig" with { item: item } %}
+			</div>
+		{% endfor %}
+
+		{# Render the pagination list #}
+		{% if config.plugins.pagination.enabled and collection.params.pagination %}
+			{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+		{% endif %}
+
+	</section>
+
+</article>

@@ -1,0 +1,85 @@
+title: Mainpro
+'@extends':
+    type: main
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            columns:
+              type: columns
+              fields:
+
+                column1:
+                  type: column
+                  fields:
+
+                    columns:
+                      type: columns
+                      fields:
+
+                        datecol1:
+                          type: column
+                          fields:
+
+                            header.start_date:
+                              style: vertical
+                              type: datetime
+                              toggleable: true
+                              label: THEME_FRUKT.START_DATE
+
+                        datecol2:
+                          type: column
+                          fields:
+
+                            header.end_date:
+                              style: vertical
+                              type: datetime
+                              toggleable: true
+                              label: THEME_FRUKT.END_DATE
+
+                    header.status:
+                      type: select
+                      size: short
+                      style: vertical
+                      toggleable: true
+                      classes: fancy
+                      label: THEME_FRUKT.STATUS
+                      help: 'What is the status?'
+                      options:
+                          development: THEME_FRUKT.STATUSES.DEVELOPMENT
+                          process: THEME_FRUKT.STATUSES.PROCESS
+                          pause: THEME_FRUKT.STATUSES.PAUSE
+                          collect: THEME_FRUKT.STATUSES.COLLECT
+                          request: THEME_FRUKT.STATUSES.REQUEST
+                          finished: THEME_FRUKT.STATUSES.FINISHED
+                          product:  THEME_FRUKT.STATUSES.PRODUCT
+
+                    header.people:
+                      name: people
+                      type: list
+                      style: vertical
+                      label: THEME_FRUKT.PEOPLE
+                      fields:
+
+                        .alias:
+                          type: pages
+                          start_route: '/people'
+
+                        .role:
+                              type: select
+                              label: THEME_FRUKT.ROLE
+                              options:
+                                  author: THEME_FRUKT.AUTHOR
+                                  designer: THEME_FRUKT.DESIGNER
+                                  doer: THEME_FRUKT.DOER
+                                  host: THEME_FRUKT.HOST
+                                  person: THEME_FRUKT.PERSON
+                                  persona: THEME_FRUKT.PERSONA

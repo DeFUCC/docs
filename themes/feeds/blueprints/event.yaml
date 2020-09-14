@@ -1,0 +1,32 @@
+title: Design
+'@extends':
+    type: mainpro
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            columns:
+              type: columns
+              fields:
+
+                column1:
+                  type: column
+                  fields:
+
+                    header.start_date:
+                      style: vertical
+                      type: datetime
+                      label: FRUKT_THEME.START_DATE
+
+                    header.end_date:
+                      style: vertical
+                      type: datetime
+                      label: FRUKT_THEME.END_DATE

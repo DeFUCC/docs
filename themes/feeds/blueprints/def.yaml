@@ -1,0 +1,24 @@
+title: def
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.icon:
+              ordering@: header.title
+              toggleable: true
+              type: filepicker
+              preview_images: true
+              label: Page icon
+              accept:
+                - .png
+                - .jpg
+                - .svg

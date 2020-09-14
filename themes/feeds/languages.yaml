@@ -1,0 +1,24 @@
+en:
+  THEME_FRUKT:
+    GITHUB_NOTE: Found errors? Think you can improve this page? It's available on
+    GITHUB_EDIT_THIS_PAGE: Edit this page
+    MINUTES: min.
+    AUTHOR: Author
+    PUBLISHED: First published
+    EDITED: Last edited
+    LINKS: Mentions
+    PREVIOUS: Previous
+    NEXT: Next
+    SUBTITLE: Subtitle
+ru:
+  THEME_FRUKT:
+    GITHUB_NOTE: Все материалы этого сайта доступны для совместного редактирования на
+    GITHUB_EDIT_THIS_PAGE: Редактировать эту страницу
+    MINUTES: мин.
+    AUTHOR: Автор
+    PUBLISHED: Впервые опубликовано
+    EDITED: Последняя редакция
+    LINKS: На этот материал ссылаются
+    PREVIOUS: Ранее
+    NEXT: Далее
+    SUBTITLE: Подзаголовок

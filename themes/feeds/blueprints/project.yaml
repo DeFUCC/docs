@@ -1,0 +1,69 @@
+title: Project
+'@extends':
+    type: mainpro
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        details:
+          type: tab
+          title: THEME_FRUKT.OPPORTUNITIES
+          ordering@: 1
+          fields:
+
+            header.opportunities:
+              name: opportunities
+              type: list
+              label: THEME_FRUKT.OPPORTUNITIES
+              style: vertical
+
+              fields:
+                .icon:
+                  type: iconPicker
+                  label: THEME_FRUKT.ICON
+                .verb:
+                  type: text
+                  label: THEME_FRUKT.VERB
+                .text:
+                  type: text
+                  label: THEME_FRUKT.TEXT
+                .link:
+                  type: text
+                  label: THEME_FRUKT.LINK
+                .disabled:
+                  type: toggle
+                  toggleable: true
+                  label: PLUGIN_ADMIN.DISABLED
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
+
+        fields:
+          content:
+            fields:
+
+              columns:
+                type: columns
+                fields:
+
+                  column1:
+                    type: column
+                    fields:
+
+                      header.start_date:
+                        style: vertical
+                        type: datetime
+                        label: FRUKT_THEME.START_DATE
+
+                      header.end_date:
+                        style: vertical
+                        type: datetime
+                        label: FRUKT_THEME.END_DATE

@@ -1,0 +1,4 @@
+title: UKT
+'@extends':
+    type: main
+    context: theme://blueprints

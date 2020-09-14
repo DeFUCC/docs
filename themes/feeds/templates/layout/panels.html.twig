@@ -1,0 +1,65 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block body %}
+	<main id="{{ main_id }}" class="{{ main_classes }} mw8 pv1 center ph3-ns grid panels">
+
+		<header class="{{ header_classes }} pa2">
+
+			{% block side %}
+				<div class="sticky top-0 pa2 bg-white-70 z-3">
+
+					{% block icon %}
+						{% if page.header.icon  %}
+							<div class="img">
+								{{page.media[page.header.icon].cropResize(300,300)}}
+							</div>
+						{% endif %}
+					{% endblock %}
+
+
+					<div class="start">
+
+						{% if config.plugins.breadcrumbs.enabled %}
+							{% include 'partials/breadcrumbs.html.twig' %}
+						{% endif %}
+						{% block title %}
+							<h1 class="f3">{{ page.title }}</h1>
+						{% endblock %}
+
+						{% if page.header.subtitle %}
+							{{page.header.subtitle|markdown }}
+						{% endif %}
+
+
+						{% block info %}
+							
+						{% endblock info %}
+
+						{% block additional %}
+							{% if page.header.additional %}
+								<div class="">
+									{{ page.header.additional|markdown }}
+								</div>
+							{% endif %}
+						{% endblock %}
+
+
+					</div>
+
+				</div>
+
+				{% block toc %}{% endblock %}
+
+			{% endblock side %}
+		</header>
+
+		<article id="content" class="content break-word measure-wider pa4 {{ article_classes }}">
+			{% block article %}
+				{{ page.content }}
+			{% endblock article %}
+		</article>
+
+		{% block lists %}{% endblock %}
+
+	</main>
+{% endblock body %}

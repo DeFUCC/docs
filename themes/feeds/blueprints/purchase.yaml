@@ -1,0 +1,105 @@
+title: Purchase
+'@extends':
+    type: mainpro
+    context: theme://blueprints
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        requirements:
+            type: tab
+            title: THEME_FRUKT.REQUIREMENTS
+            ordering@: 1
+            fields:
+              header.requirements:
+                name: requirements
+                type: list
+                label: THEME_FRUKT.REQUIREMENTS
+                fields:
+                  .text:
+                    type: textarea
+                    label: THEME_FRUKT.REQUIREMENT
+                  .required:
+                    type: toggle
+                    label: THEME_FRUKT.REQUIRED
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: 'Yes'
+                        0: 'No'
+                    validate:
+                        type: bool
+
+        variants:
+            type: tab
+            title: THEME_FRUKT.VARIANTS
+            ordering@: 1
+            fields:
+              header.variants:
+                name: variants
+                type: list
+                label: THEME_FRUKT.VARIANTS
+                fields:
+                  .title:
+                    type: text
+                    label: THEME_FRUKT.TITLE
+                  .description:
+                    type: textarea
+                    label: THEME_FRUKT.DESCRIPTION
+                  .url:
+                    type: url
+                    label: THEME_FRUKT.LINK
+                  .price:
+                    type: number
+                    label: THEME_FRUKT.PRICE
+                  .main:
+                    type: toggle
+                    label: THEME_FRUKT.MAIN
+                    highlight: 1
+                    default: 1
+                    options:
+                        1: 'Yes'
+                        0: 'No'
+                    validate:
+                        type: bool
+
+        content:
+          fields:
+
+            columns:
+              type: columns
+              fields:
+
+                column1:
+                  type: column
+                  fields:
+
+                    fincols:
+                      type: columns
+                      ordering@: 0
+                      label: THEME_FRUKT.FINANCE
+                      fields:
+
+                        fincol1:
+                          type: column
+                          fields:
+
+                            header.finance.min:
+                              style: vertical
+                              type: number
+                              label: THEME_FRUKT.MIN
+
+                        fincol2:
+                          type: column
+                          fields:
+
+                            header.finance.max:
+                              style: vertical
+                              type: number
+                              label: THEME_FRUKT.MAX
+
+            

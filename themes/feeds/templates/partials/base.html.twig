@@ -1,67 +1,57 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
-<head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+<html lang="{{ grav.language.getActive ? : grav.config.site.default_lang }}">
+  <head>
+    {% block head %}
+      <meta charset="utf-8" />
+      <title>
+        {% if header.title %}
+          {{ header.title }} |
+        {% endif %}{{ site.title }}
+      </title>
+      
+      {% include 'partials/metadata.html.twig' %}
+      
+    {% endblock %}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include 'partials/metadata.html.twig' %}
+    {% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    {% do assets.addCss('theme://css/utils.css', 94) %}
+      {% do assets.addCss('theme://css/theme.css', 98) %}
+      {% do assets.addCss('theme://css/assets/tachyons.min.css', 100) %}
+      {% do assets.addCss('theme://css/assets/fork-awesome.min.css', 102) %}
+    {% endblock %}
 
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
-{% endblock head %}
+    {% block javascripts %}
+      {% do assets.addJs('theme://js/scroll.js', 100) %}
+    {% endblock %}
 
-{% block stylesheets %}
-    {% do assets.addCss('theme://css/custom.css', 98) %}
-    {% do assets.addCss('theme://css/assets/tachyons.min.css', 100) %}
-    {% do assets.addCss('theme://css/assets/fork-awesome.min.css', 102) %}
-{% endblock %}
-
-{% block javascripts %}
-    {% do assets.addJs('jquery', 100) %}
-{% endblock %}
-
-{% block assets deferred %}
+    {% block assets deferred %}
     {{ assets.css()|raw }}
     {{ assets.js()|raw }}
-{% endblock %}
-</head>
-<body id="top" class="{{ page.header.body_classes }}">
+    {% endblock %}
+  </head>
+  <body id="top" class="{{ page.header.body_classes }}">
 
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ home_url }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %}
-        </div>
-    </div>
-{% endblock %}
+    {% block header %}
+      {% include 'layout/header.html.twig' %}
+    {% endblock %}
 
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
-        </div>
-    </section>
-{% endblock %}
+    {% block body %}
+      <main id="body" class="mw8">
 
-{% block footer %}
-    {% include 'layout/footer.html.twig' %}
-{% endblock %}
+          {% block content %}
+          {% endblock %}
+        
+      </main>
+    {% endblock %}
 
-{% block bottom %}
-    {{ assets.js('bottom')|raw }}
-{% endblock %}
+    {% block footer %}
+      {% include 'layout/footer.html.twig' %}
+    {% endblock %}
 
-</body>
+    {% block bottom %}
+      {{ assets.js('bottom')|raw }}
+    {% endblock %}
+  </body>
 </html>

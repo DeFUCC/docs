@@ -1,0 +1,35 @@
+.sticky {
+    position: sticky;
+}
+
+.top-head {
+    top: var(--top-head, 80px);
+}
+
+.grid {
+    display: grid;
+}
+
+.transition {
+    transition: all 300ms ease-in-out;
+}
+
+#top-bar.hidden {
+    transform: translateY(-100%);
+}
+
+.panels {
+    grid-template-columns: minmax(280px,25%) 1fr;
+}
+
+.basis-160 {
+    flex-basis: 160px;
+}
+
+.break-word {
+    word-break: break-word;
+}
+
+.measure-wider {
+    max-width: 38em;
+}
