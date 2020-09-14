@@ -6,10 +6,9 @@
 
 {% if page.nextSibling %}
 	{% set prev = page.nextSibling %}
-	{% else %}
+{% else %}
 	{% set prev = page.parent.nextSibling %}
 {% endif %}
-
 
 
 {% macro get_bg(item) %}
@@ -23,25 +22,25 @@
 
 	<footer id="bottom-page-nav">
 
-	{% if prev.title %}
-	    <a class="nav prev" href="{{ prev.url }}" {{ _self.get_bg(prev) }}>
-	        <i class="fa fa-2x fa-chevron-left"></i>
-	        <div>
-	            <h6>{{ 'THEME_FRUKT.PREVIOUS'|t }}</h6>
-	            <h5>{{ prev.title }}</h5>
-	        </div>
-	    </a>
-	{% endif %}
+		{% if prev.title %}
+			<a class="nav prev" href="{{ prev.url }}" {{ _self.get_bg(prev) }}>
+				<i class="fa fa-2x fa-chevron-left"></i>
+				<div>
+					<h6>{{ 'THEME_FRUKT.PREVIOUS'|t }}</h6>
+					<h5>{{ prev.title }}</h5>
+				</div>
+			</a>
+		{% endif %}
 
-	{% if next.title %}
-	    <a class="nav next" href="{{ next.url }}" {{ _self.get_bg(next) }}>
-	        <i class="fa fa-2x fa-chevron-right"></i>
-	        <div>
-	            <h6>{{ 'THEME_FRUKT.NEXT'|t }}</h6>
-	            <h5>{{ next.title }}</h5>
-	        </div>
-        </a>
-	{% endif %}
+		{% if next.title %}
+			<a class="nav next" href="{{ next.url }}" {{ _self.get_bg(next) }}>
+				<i class="fa fa-2x fa-chevron-right"></i>
+				<div>
+					<h6>{{ 'THEME_FRUKT.NEXT'|t }}</h6>
+					<h5>{{ next.title }}</h5>
+				</div>
+			</a>
+		{% endif %}
 
 	</footer>
 {% endif %}

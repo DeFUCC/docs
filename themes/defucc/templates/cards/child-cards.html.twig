@@ -1,8 +1,8 @@
 <div class="child-cards">
-  {% for child in item.children.visible %}
-  <a href="{{ child.url }}" class="card">
-    {% include 'cards/card-image.html.twig' with {'size': 50, 'item': child } %}
-    <h5 class="title">{{ child.title }}</h5>
-  </a>
-  {% endfor %}
+	{% for child in item.children.visible %}
+		<a href="{{ child.url }}" class="card">
+			{% include 'cards/card-image.html.twig' with {'size': 50, 'item': child } %}
+			<h5 class="title">{{ child.title }}</h5>
+		</a>
+	{% endfor %}
 </div>

@@ -1,0 +1,18 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <main class="index">
+
+  {% for item in page.parent.children.visible %}
+
+    <section>
+
+       {{ item.content }}
+
+
+    </section>
+
+  {% endfor %}
+
+</main>
+{% endblock %}
