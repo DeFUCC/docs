@@ -4,100 +4,90 @@
 {% do
   assets.addCss('theme://css/icons.css', 99) %}
 
-  {% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
-  {% set my_collection = page.collection(options) %}
+{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
+{% set my_collection = page.collection(options) %}
 
-  {% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
+{% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
-  {% block title %}
-    <h1 class="title">{{ page.title }} </h1>
-  {% endblock %}
+{% block title %}
+	<h1 class="title">{{ page.title }}
+	</h1>
+{% endblock %}
 
-  {% block info %}
-    {% if header.website %}
-      <div class="row"><a href="https://{{ header.website }}" target="_blank">{{header.website}}</a></div>
-    {% endif %}
-    {% if header.start_date %}
-      <div class="row">{{ 'THEME_FRUKT.START'|t}}: {{ header.start_date|nicetime }}</div>
-    {% endif %}
-	{% endblock info %}
+{% block info %}
+	{% if header.website %}
+		<div class="row">
+			<a href="https://{{ header.website }}" target="_blank">{{header.website}}</a>
+		</div>
+	{% endif %}
+{% endblock info %}
 
 {% block additional %}
-{% if page.template in types %}
-<a class="type tag">
-  {{ read_file('theme://icons/lines/' ~ page.template ~ '.svg') }} <span class="text">{{ ('THEME_FRUKT.' ~ page.template|upper)|t }}</span>
-</a>
-{% endif %}
-{% include 'partials/people-list.html.twig' %}
-{% if page.header.status %}
-  {% include 'partials/status.html.twig' with { item: page } %}
-  {% endif %}
+
+	{% include "partials/item-info.html.twig" with {item:page} %}
+  
 {% endblock additional %}
 
 
-
 {% block article %}
-{% block main %}{% endblock %}
-       
-            {{ page.content }}
-        
+	{% block main %}{% endblock %}
 
+	{{ page.content }}
 
 {% endblock %}
 
 {% block lists %}
-<footer class="listers">
+	<footer class="listers">
 
-  {% block lister %}
-  {% endblock %}
+		{% block lister %}{% endblock %}
 
-  {% if page.header.ideas and page.header.ideas|count > 0 %}
-  {% include 'partials/lister.html.twig' with {
-  type: 'idea',
-  title:'THEME_FRUKT.IDEAS',
-  icon_file: 'lines/idea.svg',
-  template: 'idea-card',
-  collect: page.header.ideas
-  }  %}
-  {% endif %}
+		{% if page.header.ideas and page.header.ideas|count > 0 %}
+			{% include 'partials/lister.html.twig' with {
+        type: 'idea',
+        title:'THEME_FRUKT.IDEAS',
+        icon_file: 'lines/idea.svg',
+        template: 'idea-card',
+        collect: page.header.ideas
+        }  %}
+		{% endif %}
 
-    {% for type in types %}
-      {% include 'partials/lister.html.twig' with {
+		{% for type in types %}
+			{% include 'partials/lister.html.twig' with {
       type: type,
       title: 'THEME_FRUKT.' ~ type|pluralize|upper,
       collect: page.children.ofType(type) } %}
-    {% endfor %}
+		{% endfor %}
 
 
-    {% include 'partials/lister.html.twig' with {
+		{% include 'partials/lister.html.twig' with {
     type: 'opportunity',
     title: 'THEME_FRUKT.OPPORTUNITIES',
     template: 'op-card',
     collect: page.header.opportunities } %}
 
-    {% include 'partials/lister.html.twig' with {
-    type: 'time',
-    title: 'THEME_FRUKT.HISTORY',
-    template: 'moment',
-    collect: page.header.history } %}
+		{% include 'partials/lister.html.twig' with {
+      type: 'time',
+      title: 'THEME_FRUKT.HISTORY',
+      template: 'moment',
+      collect: page.header.history } %}
 
-    {% if backlinks[page.url] %}
-    <aside>
+		{% if backlinks[page.url] %}
+			<aside>
 
-      {% set mentions = [] %}
-      {% for m in backlinks[page.url] %}
-          {% set mentions = mentions|merge([pages.find(m)]) %}
-      {% endfor %}
+				{% set mentions = [] %}
+				{% for m in backlinks[page.url] %}
+					{% set mentions = mentions|merge([pages.find(m)]) %}
+				{% endfor %}
 
-      {% include 'partials/lister.html.twig' with {
-      type: 'mention',
-      title: 'THEME_FRUKT.MENTIONS',
-      template: 'small-card',
-      collect: mentions } %}
+				{% include 'partials/lister.html.twig' with {
+          type: 'mention',
+          title: 'THEME_FRUKT.MENTIONS',
+          template: 'small-card',
+          collect: mentions } %}
 
-      </aside>
-    {% endif %}
+			</aside>
+		{% endif %}
 
-</footer>
+	</footer>
 
 {% endblock lists %}

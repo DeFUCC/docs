@@ -1,4 +1,7 @@
-{% if item.template == 'design' or item.template == 'project' %}
+{% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
+
+
+{% if item.template in types %}
 
   {% include 'cards/item-card.html.twig'  %}
 

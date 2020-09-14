@@ -1,101 +1,25 @@
-{% if item.visible %}
-
-	{% do
+{% do
     assets.addCss('theme://css/design.css', 90) %}
-	{% do
+{% do
       assets.addCss('theme://css/icons.css', 99) %}
-	{% set types = ['purchase', 'design', 'project', 'object', 'event', 'thing'] %}
 
-	<div class="grid card">
+{% embed "cards/card.html.twig" %}
 
-		  
-
-		<aside>
-			<span class="item-type">
+	{% block image %}
+		{% if item.header.icon %}
+			{% include 'cards/card-image.html.twig' with { url:item.url }%}
+		{% else %}
+			<div class="card-image icon">
 				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-			</span>
-			{% for persona in item.header.people %}
-				{% include 'partials/persona.html.twig' %}
-			{% endfor %}
-		</aside>
-
-		<article class="content">
-			<div class="b text">
-				<a href="{{item.url}}" class="title b">
-					{{item.title}}
-					
-				</a>
-		
-				<a href="{{item.url}}">
-					<p class="summary">
-						{% if item.header.subtitle %}
-							{{ item.header.subtitle }}
-						{% endif %}
-		
-					</p>
-				</a>
 			</div>
-			
-			{% include 'cards/card-image.html.twig' with { size: 480, url:item.url }%}
-		</article>
-		
-	
-		<footer>
-				
-	
-				{% if item.header.finance %}
-					{% set fin = item.header.finance %}
-					<span class="progress">
-						<span class="bar"></span>
-						Бюджет: {{fin.min}}-{{fin.max}}
-						₽
-					</span>
-				{% endif %}
-	
-				{% include 'partials/status.html.twig' %}
-	
-				{% if item.header.start_date %}
-					{% set thedate = item.header.start_date | nicetime %}
-					{% if item.header.end_date %}
-						{% set thedate = item.header.end_date | nicetime %}
-					{% endif %}
-	
-					{% include 'partials/tag.html.twig' with {
-			icon: 'fa-clock-o',
-			text: item.header.start_date | nicetime
-			}
-			only %}
-				{% endif %}
-	
-				{% if item.header.opportunities and item.header.opportunities | count > 0 %}
-					{% include 'partials/tag.html.twig' with {
-			type : 'opportunity',
-			link: item.url ~ '#opportunity',
-			icon_file: 'lines/opportunity.svg',
-			text: item.header.opportunities | count
-			}
-			only %}
-				{% endif %}
-	
-				{% for type in types %}
-					{% if item.children.ofType(type).visible | count > 0 %}
-						{% include 'partials/tag.html.twig' with {
-				type : type,
-				link: item.url ~ '#' ~ type,
-				icon_file: 'lines/' ~ type ~ '.svg',
-				text: item.children.ofType(type).visible | count
-			} %}
-					{% endif %}
-				{% endfor %}
-	
-				
-	
-		</footer>
+		{% endif %}
 
-		
+	{% endblock %}
 
-		
-		
-	</div>
 
-{% endif %}
+	{% block infobar %}
+		{% include "partials/item-info.html.twig" %}
+	{% endblock infobar %}
+
+
+{% endembed %}

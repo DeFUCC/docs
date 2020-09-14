@@ -8,6 +8,7 @@
   --shadow-color: hsla(0, 0%, 30%, 0.6);
   --top-bar-h: 60px;
   --card-radius: 4px;
+  --card-border: hsla(0,0%,50%,0.2);
 }
 
 
@@ -23,7 +24,6 @@
     --text-color:#eee;
     --text-light-color: #ccc;
   }
-
 }
 
 body {
@@ -125,42 +125,7 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     background-color: #aaa;
 }
 
-#body {
-  position: relative;
-}
 
-  body img, #body .video-container {
-    max-width: 100%;
-    display: block;
-    text-align: center;
-    object-fit: contain;
-   }
-
-    #body img.border, #body .video-container.border {
-      border: 2px solid #e6e6e6 !important;
-      padding: 2px; }
-
-    #body img.shadow, #body .video-container.shadow {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
-
-  #body .bordered {
-    border: 1px solid #ccc; }
-
-  #body .padding {
-    padding: 3rem 6rem; }
-
-
-
-  #body h1 + hr {
-    margin-top: -1.7rem;
-    margin-bottom: 3rem; }
-
-
-#body a.anchor-link {
-  color: #ccc; }
-
-#body a.anchor-link:hover {
-  color: #1694CA; }
 
 #breadcrumbs a {
   font-weight: normal;
@@ -182,23 +147,24 @@ svg {
 }
 
 .tag {
-  margin:4px;
+  cursor: pointer;
+  margin: 4px;
   padding: 4px 8px;
-  border-radius: 20px;
   background-color: var(--darker-gray);
-  color: var(--text-color);
+  color: var(--text-light-color);
   font-size: 0.9em;
   display: inline-flex;
   align-items: center;
   word-break: keep-all;
-  max-width: min-content;
   transition: all .3s ease;
-  box-shadow: 0 0px 2px rgba(0,0,0,0.05),0 0px 1px rgba(0,0,0,0.5);
+  border: 1px solid transparent;
+  border-radius: var(--card-radius);
+  box-shadow: 0 0px 2px rgba(0,0,0,0),0 0px 1px rgba(0,0,0,0);
 }
 
 .tag:hover {
   color: var(--text-color);
-  box-shadow:  0 0px 2px rgba(0,0,0,0.4),0 0px 8px rgba(0,0,0,0.15);
+  box-shadow:  0 0px 2px rgba(0,0,0,0.3),0 2px 8px rgba(0,0,0,0.2);
 }
 
 .tag i, .tag svg {
@@ -209,9 +175,14 @@ svg {
     width:max-content;
 }
 
-.tag img {
-  border-radius: 20px;
-  margin:2px;
+.avatar {
+  padding:0;
+}
+
+.avatar img {
+  border-radius: 3em;
+  max-width: 2em;
+  max-height: 2em;
 }
 
 .button {

@@ -1,29 +1,50 @@
 {% if item.visible %}
 
-<div class="card">
-  <div class="card-content">
-    {% include 'cards/card-image.html.twig' with { url:item.url }%}
+	<div class="card">
+		{% block image %}
+			{% include 'cards/card-image.html.twig' with { url:item.url }%}
+		{% endblock %}
 
-    <div class="card-text">
-      <a href="{{ item.url }}">
-        <h3 class="title">{{ item.title }}</h3>
+		{% block content %}
+			<div class="card-content">
+				<a class="card-text pa3" href="{{ item.url }}">
+					<h3 class="title">{{ item.title }}</h3>
 
-        <p class="summary">
-          {% if item.header.subtitle %}
-          {{ item.header.subtitle | markdown }}
-          {% elseif item.template == 'article' or item.template == 'def' %}
-          {{ item.summary(300) | striptags }}
-          {% endif %}
-        </p>
+         
+					{% if item.header.subtitle %}
+             <p class="subtitle">
+						{{ item.header.subtitle }}
+            </p>
+					{% elseif item.template == 'article' or item.template == 'def' %}
+           <p class="subtitle">
+						{{ item.summary(100) | striptags }}
+            </p>
+					{% endif %}
+          
+				</a>
 
-        {% if item.template == 'article' %} {% include
-        'partials/article-tags.html.twig' %} {% endif %}
-      </a>
-    </div>
 
-    {% if item.template == 'feed' and item.children %} {% include
-    'cards/child-cards.html.twig' %} {% endif %}
-  </div>
-</div>
+			</div>
+			{% block infobar %}
+
+				{% if item.template == 'article' %}
+					<footer class="item-info">
+						{% include 'partials/article-tags.html.twig' %}
+					</footer>
+				{% endif %}
+
+			{% endblock infobar %}
+
+			{% block children %}
+				{% if item.template == 'feed' and item.children %}
+					{% include 'cards/child-cards.html.twig' %}
+				{% endif %}
+			{% endblock children %}
+
+
+		{% endblock %}
+
+
+	</div>
 
 {% endif %}

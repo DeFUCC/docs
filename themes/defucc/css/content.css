@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(//fonts.googleapis.com/css?family='Noto sans'|Inconsolata);
+@import url(//fonts.googleapis.com/css?family=Noto+Sans);
 
 body {
   background: var(--bg-gray);

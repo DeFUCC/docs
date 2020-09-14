@@ -1,6 +1,6 @@
 {% set person = pages.find(persona.alias) %}
 {% set person_icon = person.media[person.header.icon] %}
 
-<a class="avatar" >
-    {{ person_icon.cropResize(24,24) }}
+<a href="{{person.url}}" class="tag avatar" >
+    {{ person_icon.cropResize(64,64) }}
 </a>

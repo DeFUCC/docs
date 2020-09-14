@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border: 1px solid hsla(0,0%,50%,0);
+  border: 1px solid var(--card-border);
   box-shadow: 0 0rem 0rem rgba(0,0,0,0),0 0rem 0rem rgba(0,0,0,0);
   position: relative;
 }
@@ -32,16 +32,17 @@
 }
 
 .card-image a {
-      width: 100px;
+      width: 140px;
 }
 
 .card-image img {
-  border-radius: 10em;
+  border-radius: var(--card-radius);
   transition: all 600ms ease;
+  opacity:0.7
 }
 
 .card:hover .card-image img {
-  border-radius: var(--card-radius);
+  opacity:1;
 }
 
 
@@ -49,16 +50,29 @@
   transition: all 300ms ease;
   color: var(--text-color);
   font-weight: normal;
+  line-height: 1;
 }
 
-.card-text {
+.card-content {
   flex: 1;
-  padding:1em;
+  min-width: 180px;
+}
+
+.card-text p {
+  margin: 0;
 }
 
 .card .title {
-  margin:0.5em 0;
+  margin:0;
   font-size: 1.25em;
+}
+
+.card .subtitle {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+
 }
 
 .card .summary {
@@ -73,12 +87,26 @@
 
 }
 
-.child-cards {
+.item-info, .child-cards {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  gap: 1em;
-  padding: 1em;
+  flex: 1 1 100%;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--darker-gray);
+  border-top: 1px solid var(--card-border);
+  transition: all 600ms ease;
+  color: var(--text-light-color);
+  box-shadow: 0px 0px 0px 0px hsla(0, 0%, 30%, 0) inset;
+}
+
+.card:hover .item-info {
+  box-shadow: 0px 15px 17px -17px var(--shadow-color) inset;
+}
+
+.child-cards {
+  align-items: stretch;
 }
 
 .child-cards .card-image {
@@ -111,7 +139,7 @@
   gap: 1em;
 }
 
-.card footer {
-  flex: 1 1 100%;
-  padding: 0 1em 0.5em 1em;
-}
+
+
+
+

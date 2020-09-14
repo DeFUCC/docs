@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function padHeader(up) {
 	let tg = document.getElementsByClassName('list-toggle')
 	for (let el of tg) {
-		console.log(el)
 		if (up) {
 			el.classList.add('up')
 		} else {

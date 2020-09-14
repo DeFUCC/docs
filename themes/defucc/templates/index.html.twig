@@ -1,18 +1,17 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  <main class="index">
+	<main class="index">
 
-  {% for item in page.parent.children.visible %}
+		{% for item in page.parent.children.visible %}
 
-    <section>
+			<section>
 
-          {% include 'layout/list.html.twig' with {'page':item} %}
+				{% include 'layout/list.html.twig' with {'page':item} %}
 
+			</section>
 
-    </section>
+		{% endfor %}
 
-  {% endfor %}
-
-</main>
+	</main>
 {% endblock %}
