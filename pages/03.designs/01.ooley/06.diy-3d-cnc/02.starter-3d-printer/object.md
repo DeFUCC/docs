@@ -2,7 +2,7 @@
 title: 'Начальный 3D-принтер'
 subtitle: 'Комплект для знакомства с аддитивным способом производства'
 start_date: '31-07-2020 21:56'
-status: collect
+status: process
 people:
     -
         alias: /people/davay
