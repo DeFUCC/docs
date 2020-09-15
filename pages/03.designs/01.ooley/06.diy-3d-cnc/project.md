@@ -3,7 +3,7 @@ title: 'DIY 3D CNC'
 subtitle: 'Осваиваем новые технологии цифрового производства: от моделирования до готовых изделий'
 start_date: '01-02-2020 13:57'
 end_date: '27-07-2020 13:57'
-status: collect
+status: process
 icon: 3d_printer.jpg
 media_order: 3d_printer.jpg
 ---
