@@ -11,9 +11,8 @@
   --card-border: hsla(0,0%,50%,0.2);
 }
 
-
-.flex {
-  display: flex;
+.grid {
+  display: grid;
 }
 
 @media (prefers-color-scheme: dark) {

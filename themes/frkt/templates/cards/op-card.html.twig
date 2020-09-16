@@ -1,8 +1,19 @@
+<div class="card  {{ item.disabled ? 'disabled' : '' }}" >
+	<div class="pa2" style="flex:0 1 10px">
+		<a href="{{item.link}}" target="_blank" class="pa3  bg-gray br3 align-center flex flex-row flex-nowrap shadow-hover">
+			{% if item.icon %}
+				<div class="ph1 white">
+					<i class=" {{item.icon}}"></i>
+				</div>
+			{% endif %}
+			<div class="nowrap white b">{{item.verb}}</div>
+		</a>
+	</div>
+	<div class="pa2" style="flex: 1 1">{{item.text}}</div>
 
-
-  <a class="button {{ item.disabled ? 'disabled' : '' }}" href="{{item.link}}" target="_blank">
-    {% if item.icon %}
-      <i class="{{item.icon}}"></i>
-    {% endif %}
-    <strong>{{item.verb}}</strong> {{item.text}}
-   </a>
+	<footer class="item-info light-gray">
+		<a class="pa1" href="{{item.link}}" target="_blank">
+			<small>{{item.link}}</small>
+		</a>
+	</footer>
+</div>

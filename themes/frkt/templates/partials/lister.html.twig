@@ -6,7 +6,7 @@
 
   {% if collect and collect | count > 0 %}
 
-    <div id="{{ type }}" class="lister">
+    <div id="{{ type }}" class="lister ba b--light-gray br2">
       <header class="list-toggle up" data-type="{{type}}">
             <section>{% if icon_file %}
               {{ read_file('theme://icons/' ~ icon_file) }}
