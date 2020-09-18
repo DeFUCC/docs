@@ -75,7 +75,6 @@
   z-index: 40;
   max-width: 600px;
   word-wrap: break-word;
-  padding: 1em 2em;
   background: var(--bg-grey);
   min-width:280px;
 }

@@ -2,16 +2,12 @@
 
 
 {% set main_id = 'purchase' %}
-{% block main %}
-    
-    {% if header.requirements and header.requirements|count > 0 %}
-        <h1>{{'THEME_FRUKT.REQUIREMENTS'|t}}</h1>
-        <ul>
-        {% for req in header.requirements %}
-        <li> {{ req.text|markdown }}</li>
-        {% endfor %}
-        </ul>  
-    {% endif %}
+{% block lists %}
+
+    {% include 'partials/lister.html.twig' with {
+        title: 'THEME_FRUKT.REQUIREMENTS',
+        template: 'idea-card',
+        collect: page.header.requirements } %}
     
 
     {% include 'partials/lister.html.twig' with {

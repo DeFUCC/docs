@@ -1,9 +1,9 @@
 {% if item.header.icon or item.header.bg %}
-	{% set size = size ?: 400 %}
+	{% set size = size ?: 200 %}
 	{% set
 max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
 
-	<div {{ max }} class="card-image">
+	<div {{ max }} class="card-image mw4">
 		{% if item.header.icon %}
 			{% set image =
   item.media[item.header.icon].cropResize(size,size) %}

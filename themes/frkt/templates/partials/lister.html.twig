@@ -4,26 +4,32 @@
   assets.addJs('theme://js/lister.js', 99) %}
 
 
-  {% if collect and collect | count > 0 %}
+{% if collect and collect | count > 0 %}
 
-    <div id="{{ type }}" class="lister ba b--light-gray br2">
-      <header class="list-toggle up" data-type="{{type}}">
-            <section>{% if icon_file %}
-              {{ read_file('theme://icons/' ~ icon_file) }}
-            {% endif %} {{ title|t }}</section>
-            <aside>
-              {{collect|count}} <i class="fa fa-angle-down"></i>
-            </aside>
-      </header>
-      <section class="alist open" id="{{type}}-list">
-      {% for item in collect %}
+	<div id="{{ type }}" class="mh4 mv2 flex flex-column  b--light-gray br2">
+		<header class="flex sticky top-0 pa2 flex-row justify-between up bg-light-gray z-4" style="border-radius: 4px 4px 0 0" data-type="{{type}}">
+			<section>
+				{% if icon_file %}
+					<span class="item-type">
+						{{ read_file('theme://icons/' ~ icon_file) }}
+					</span>
+				{% endif %}
+				{{ title|t }}
+			</section>
+			<aside>
+				{{collect|count}}
+				<i class="fa fa-angle-down"></i>
+			</aside>
+		</header>
+		<section class="f6 open z-3" id="{{type}}-list">
+			{% for item in collect %}
 
-        {% include 'cards/' ~ template ~ '.html.twig' %}
+				{% include 'cards/' ~ template ~ '.html.twig' %}
 
-      {% endfor %}
-      </section>
+			{% endfor %}
+		</section>
 
 
-    </div>
+	</div>
 
-  {% endif %}
+{% endif %}

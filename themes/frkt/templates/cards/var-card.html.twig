@@ -1,8 +1,19 @@
+<article class=" pa2 flex flex-wrap {{ item.disabled ? 'disabled' : '' }}" target="_blank">
+	{% if item.icon %}
+		<i class="{{item.icon}}"></i>
+	{% endif %}
+	<a href="{{item.url}}" class="near-black flex flex-row f4 items-center" style="flex: 1 1 100%;">
+		<strong>{{item.title}}</strong>
+		{% if item.price %}
+			<span>-
+				{{ item.price }}
+				Р</span>
+		{% endif %}
+		{% if item.main %}
+			<i class="fa fa-check"></i>
+		{% endif %}
+	</a>
+	{{item.description}}
 
 
-  <a class="button {{ item.disabled ? 'disabled' : '' }}" href="{{item.url}}" target="_blank">
-    {% if item.icon %}
-      <i class="{{item.icon}}"></i>
-    {% endif %}
-    <strong>{{item.title}}</strong> {{item.text}} - {{ item.price }} ₽
-   </a>
+</article>
