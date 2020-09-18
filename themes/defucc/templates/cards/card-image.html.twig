@@ -2,8 +2,10 @@
 	{% set size = size ?: 200 %}
 	{% set
 max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
+{% set
+min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
 
-	<div {{ max }} class="card-image mw4">
+	<div {{ max }} class="pa3 flex-grow-0 flex content-center">
 		{% if item.header.icon %}
 			{% set image =
   item.media[item.header.icon].cropResize(size,size) %}
@@ -14,10 +16,10 @@ max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
   %}
 		{% if url %}
 			<a href="{{ item.url }}">
-				<img src="{{ image.url }}"/>
+				<img src="{{ image.url }}" style="min-width:2em"/>
 			</a>
 		{% else %}
-			<img src="{{ image.url }}"/>
+			<img src="{{ image.url }}" style="min-width:2em"/>
 		{% endif %}
 	</div>
 {% endif %}

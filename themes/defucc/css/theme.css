@@ -19,6 +19,7 @@
   position: sticky;
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-light: #444;

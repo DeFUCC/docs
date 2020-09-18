@@ -1,8 +1,8 @@
-<div class="child-cards">
+<div class="items-stretch flex flex-wrap content-stretch">
 	{% for child in item.children.visible %}
-		<a href="{{ child.url }}" class="card">
-			{% include 'cards/card-image.html.twig' with {'size': 50, 'item': child } %}
-			<h5 class="title">{{ child.title }}</h5>
+		<a href="{{ child.url }}" class="flex flex-grow-1 ba br3 b--black-10 shadow-hover">
+			{% include 'cards/card-image.html.twig' with { 'size': 50, 'item': child} %}
+			<h5 class="f5" style="margin: auto 0;">{{ child.title }}</h5>
 		</a>
 	{% endfor %}
 </div>
