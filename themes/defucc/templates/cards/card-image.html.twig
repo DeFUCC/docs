@@ -1,5 +1,5 @@
 {% if item.header.icon or item.header.bg %}
-	{% set size = size ?: 200 %}
+	{% set size = size ?: 120 %}
 	{% set
 max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
 {% set
@@ -16,10 +16,10 @@ min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
   %}
 		{% if url %}
 			<a href="{{ item.url }}">
-				<img src="{{ image.url }}" style="min-width:2em"/>
+				<img src="{{ image.url }}" style="min-width:{{size}}px"/>
 			</a>
 		{% else %}
-			<img src="{{ image.url }}" style="min-width:2em"/>
+			<img src="{{ image.url }}" style="min-width:{{size}}px"/>
 		{% endif %}
 	</div>
 {% endif %}

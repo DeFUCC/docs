@@ -12,11 +12,11 @@
 
          
 					{% if item.header.subtitle %}
-             <p class="f6 mb0">
+             <p class="f6 mb0 clamp">
 						{{ item.header.subtitle }}
             </p>
 					{% elseif item.template == 'article' or item.template == 'def' %}
-           <p class="f6 mb0">
+           <p class="f6 mb0 clamp">
 						{{ item.summary(100) | striptags }}
             </p>
 					{% endif %}
@@ -37,7 +37,10 @@
 
 			{% block children %}
 				{% if item.template == 'feed' and item.children %}
-					{% include 'cards/child-cards.html.twig' %}
+					{% include 'cards/child-cards.html.twig' with {
+						'size': '120',
+						'max': 120
+					} %}
 				{% endif %}
 			{% endblock children %}
 
