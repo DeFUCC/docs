@@ -6,8 +6,12 @@
 		{% for item in page.parent.children.visible %}
 
 			<section>
+				{% if item.template == 'front' %}
+					{% include 'layout/front.html.twig' with {'page':item} %}
+				{% else %}
+					{% include 'layout/list.html.twig' with {'page':item} %}
+				{% endif %}
 
-				{% include 'layout/list.html.twig' with {'page':item} %}
 
 			</section>
 

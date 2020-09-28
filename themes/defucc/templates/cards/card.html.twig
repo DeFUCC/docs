@@ -2,7 +2,7 @@
 
 	<div class="br-2 flex flex-wrap items-center ba b--black-10 relative f6 br3 mv2 shadow-hover">
 		{% block image %}
-			{% include 'cards/card-image.html.twig' with { url:item.url }%}
+			{% include 'cards/card-image.html.twig' with { url:item.url, min: 180 } %}
 		{% endblock %}
 
 		{% block content %}
@@ -10,17 +10,17 @@
 				<a class="db near-black pa2 hover-near-black" href="{{ item.url }}">
 					<h3 class="mb2 f5 mt0">{{ item.title }}</h3>
 
-         
+
 					{% if item.header.subtitle %}
-             <p class="f6 mb0 clamp">
-						{{ item.header.subtitle }}
-            </p>
+						<p class="f6 mb0 clamp">
+							{{ item.header.subtitle }}
+						</p>
 					{% elseif item.template == 'article' or item.template == 'def' %}
-           <p class="f6 mb0 clamp">
-						{{ item.summary(100) | striptags }}
-            </p>
+						<p class="f6 mb0 clamp">
+							{{ item.summary(100) | striptags }}
+						</p>
 					{% endif %}
-          
+
 				</a>
 
 

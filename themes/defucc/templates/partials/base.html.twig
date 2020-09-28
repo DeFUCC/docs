@@ -18,7 +18,7 @@
 			<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}">
 
 			{% block stylesheets %}
-			<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+				<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 				{% do assets.addCss('theme://css/assets/tachyons.min.css',103) %}
 				{% do assets.addCss('theme://css/theme.css',102) %}
 
@@ -42,6 +42,7 @@
 				{% do assets.addJs('jquery',101) %}
 				{% do assets.addJs('theme://js/featherlight.min.js') %}
 				{% do assets.addJs('theme://js/scroll.js') %}
+
 			{% endblock %}
 
 			{% block assets deferred %}
@@ -70,7 +71,7 @@
 
 
 		{% block body %}
-			<section id="body">
+			<section id="swup">
 
 				{% if page.header.bg %}
 					<section class="article-back" style="background-image: linear-gradient(hsla(0,0%,50%,0.1),hsla(0,0%,50%,0.1)), url('{{page.media[page.header.bg].cropResize(1920,1024).quality(70).url}}')"></section>

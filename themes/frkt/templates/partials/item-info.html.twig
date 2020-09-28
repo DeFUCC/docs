@@ -1,61 +1,60 @@
 <footer class="flex flex-wrap pa0 justify-end items-center bg-black-05" style="flex: 1 1 100%;">
-			<span class="item-type ml2">
-				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-			</span>
-			
+	{% if item.template in types %}
+		<span class="item-type ml2">
+			{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+		</span>
+	{% endif %}
 
-            
 
-			{% if item.header.finance %}
-				{% set fin = item.header.finance %}
-				<span class="progress">
-					<span class="bar"></span>
-					Бюджет:
-					{{fin.min}}-{{fin.max}}
-					₽
-				</span>
-			{% endif %}
+	{% if item.header.finance %}
+		{% set fin = item.header.finance %}
+		<span class="progress">
+			<span class="bar"></span>
+			Бюджет:
+			{{fin.min}}-{{fin.max}}
+			₽
+		</span>
+	{% endif %}
 
-			
 
-			{% if item.header.start_date %}
-				{% set thedate = item.header.start_date | date('d.m.y') %}
-				{% if item.header.end_date %}
-					{% set thedate = thedate ~ ' – ' ~ item.header.end_date | date('d.m.y') %}
-                    {% else %}
-                    {% set thedate = thedate ~ ' – ... ' %} 
-				{% endif %}
+	{% if item.header.start_date %}
+		{% set thedate = item.header.start_date | date('d.m.y') %}
+		{% if item.header.end_date %}
+			{% set thedate = thedate ~ ' – ' ~ item.header.end_date | date('d.m.y') %}
+		{% else %}
+			{% set thedate = thedate ~ ' – ... ' %}
+		{% endif %}
 
-				{% include 'partials/tag.html.twig' with {
+		{% include 'partials/tag.html.twig' with {
 						icon: 'fa-calendar',
 						text: thedate
 						} only %}
-			{% endif %}
+	{% endif %}
 
-            {% for persona in item.header.people %}
-				{% include 'partials/persona.html.twig' %}
-			{% endfor %}
+	{% for persona in item.header.people %}
+		{% include 'partials/persona.html.twig' %}
+	{% endfor %}
 
-            {% include 'partials/status.html.twig' %}
+	{% include 'partials/status.html.twig' %}
 
-			{% if item.header.opportunities and item.header.opportunities | count > 0 %}
-				{% include 'partials/tag.html.twig' with {
+	{% if item.header.opportunities and item.header.opportunities | count > 0 %}
+		{% include 'partials/tag.html.twig' with {
 			type : 'opportunity',
 			link: item.url ~ '#opportunity',
 			icon_file: 'lines/opportunity.svg',
 			text: item.header.opportunities | count
 			}
 			only %}
-			{% endif %}
+	{% endif %}
 
-			{% for type in types %}
-				{% if item.children.ofType(type).visible | count > 0 %}
-					{% include 'partials/tag.html.twig' with {
+	{% for type in types %}
+		{% if item.children.ofType(type).visible | count > 0 %}
+			{% include 'partials/tag.html.twig' with {
 				type : type,
 				link: item.url ~ '#' ~ type,
 				icon_file: 'lines/' ~ type ~ '.svg',
 				text: item.children.ofType(type).visible | count
 			} %}
-				{% endif %}
-			{% endfor %}
-		</footer>
+		{% endif %}
+	{% endfor %}
+</footer>
