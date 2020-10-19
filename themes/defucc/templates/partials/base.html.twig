@@ -72,7 +72,7 @@
 
 
 		{% block body %}
-			<section data-barba="container" data-barba-namespace="page-a">
+			<section>
 
 				{% if page.header.bg %}
 					<section class="article-back" style="background-image: linear-gradient(hsla(0,0%,50%,0.1),hsla(0,0%,50%,0.1)), url('{{page.media[page.header.bg].cropResize(1920,1024).quality(70).url}}')"></section>
@@ -100,30 +100,7 @@
 
 		{% block bottom %}
 			{{ assets.js('bottom')|raw }}
-			<!-- load barba (UMD version) -->
-			<script src="https://unpkg.com/@barba/core"></script>
 
-			<!-- load gsap animation library (minified version) -->
-			<script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
-
-			<!-- init barba with a simple opacity transition -->
-			<script type="text/javascript">
-				barba.init({
-transitions: [
-{
-name: 'opacity-transition',
-leave(data) {
-window.scrollTo(0, 0)
-gsap.to(data.current.container, {opacity: 0});
-},
-enter(data) {
-window.scrollTo(0, 0)
-gsap.from(data.next.container, {opacity: 0});
-}
-}
-]
-});
-			</script>
 		{% endblock %}
 	</body>
 </html>

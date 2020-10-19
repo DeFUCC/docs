@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "04.designs/02.tsoop/04.solo/project.md",
+            "file": "04.research/culture-design/article.md",
             "mode": "source"
           }
         }
@@ -48,7 +48,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 164
+    "width": 246
   },
   "right": {
     "id": "944d16888509c121",
@@ -64,7 +64,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04.designs/02.tsoop/04.solo/project.md"
+                "file": "04.research/culture-design/article.md"
               }
             }
           }
@@ -76,10 +76,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "04.designs/02.tsoop/04.solo/project.md",
-    "04.designs/05.etovoteto/design.md",
-    "04.designs/05.etovoteto/eto.png",
-    "04.designs/01.ooley/04.lom/project.md",
-    "04.designs/01.ooley/04.lom/lom.jpg"
+    "04.research/culture-design/article.md",
+    "04.research/culture-design/Untitled.md",
+    "03.designs/03.chromatone/05.workshops/02.namm-2019/event.md",
+    "03.designs/02.tsoop/03.collab/02.miracle-mechanism/01.wafest/event.md",
+    "03.designs/03.chromatone/05.workshops/01.khromaton-yazyk-vizualnoi-muzykalnoi-kommunikacii/event.md",
+    "03.designs/03.chromatone/05.workshops/02.namm-2019/Untitled.md",
+    "03.designs/03.chromatone/05.workshops/project.md",
+    "03.designs/03.chromatone/04.center/project.md",
+    "03.designs/03.chromatone/05.workshops/project.md.md",
+    "03.designs/03.chromatone/04.center/01.khromaton-yazyk-vizualnoi-muzykalnoi-kommunikacii/event.md"
   ]
 }
