@@ -1,18 +1,60 @@
+.cards h1 {
+  margin-top: 14px;
+}
+
+.cards {
+  gap: 1em;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overscroll-behavior-x: none;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1em;
+  padding: 1em;
+  width: 100%;
+  background-color: var(--darker-gray);
+  align-items: flex-start;
+}
+
+.cards .intro {
+  flex: 1 1 340px;
+  min-width: 240px;
+  display: flex;
+  flex-flow: column wrap;
+  scroll-snap-align: start;
+  padding: 1em;
+}
+
+.swiper {
+  padding: 1em;
+  background-color: hsla(0, 0%, 0%, 0);
+  font-size: 0.7em;
+  opacity: 0.4;
+  transition: opacity ease 300ms;
+}
+
+.swiper:hover {
+  opacity: 1;
+}
+
 .card {
-  flex: 1 1 400px;
+  flex: 1 0 340px;
+  min-width: 30%;
   border-radius: var(--card-radius);
   transition: all 300ms ease;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 0rem 0rem rgba(0,0,0,0),0 0rem 0rem rgba(0,0,0,0);
+  box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0), 0 0rem 0rem rgba(0, 0, 0, 0);
   position: relative;
+  scroll-snap-align: start;
+  padding: 1em;
 }
 
 .card:hover {
-  border: 1px solid hsla(0,0%,50%,0.1);
-  box-shadow:  0 0.13rem 0.26rem rgba(0,0,0,0.1),0 0.43rem 1.30rem rgba(0,0,0,0.15);
+  box-shadow: 0 0.13rem 0.26rem rgba(0, 0, 0, 0.1),
+    0 0.43rem 1.3rem rgba(0, 0, 0, 0.15);
   background-color: var(--bg-light);
 }
 
@@ -25,26 +67,16 @@
 }
 
 .card-image {
-  padding: 1em;
-  flex: 0;
-  display: flex;
-  justify-content: center;
 }
 
-.card-image a {
-      width: 140px;
+.card-image {
+  max-height: 300px;
+  overflow: hidden;
 }
 
-.card-image img {
-  border-radius: var(--card-radius);
-  transition: all 600ms ease;
-  opacity:0.7
+.card:hover {
+  opacity: 1;
 }
-
-.card:hover .card-image img {
-  opacity:1;
-}
-
 
 .card a {
   transition: all 300ms ease;
@@ -63,7 +95,7 @@
 }
 
 .card .title {
-  margin:0;
+  margin: 0;
   font-size: 1.25em;
 }
 
@@ -72,11 +104,10 @@
   text-overflow: ellipsis;
   line-clamp: 3;
   -webkit-line-clamp: 3;
-
 }
 
 .card .summary {
-  margin:0 0 0.5em 0;
+  margin: 0 0 0.5em 0;
   max-height: 5em;
   overflow: hidden;
   line-clamp: 3;
@@ -84,10 +115,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-
 }
 
-.item-info, .child-cards {
+.item-info,
+.child-cards {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100%;
@@ -101,7 +132,6 @@
   box-shadow: 0px 0px 0px 0px hsla(0, 0%, 30%, 0) inset;
 }
 
-
 .child-cards {
   align-items: stretch;
 }
@@ -113,7 +143,7 @@
 .child-cards .card {
   align-items: center;
   flex-wrap: nowrap;
-  flex:1 1 9em;
+  flex: 1 1 9em;
 }
 
 .child-cards .title {
@@ -127,16 +157,3 @@
   max-width: none;
   margin: 0.5em;
 }
-
-.cards h1 {
-  margin-top:14px;
-}
-
-.cards {
-  gap: 1em;
-}
-
-
-
-
-

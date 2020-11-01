@@ -5,33 +5,29 @@ main.index {
 
 main.index > section {
   background: var(--bg-gray);
+  background: linear-gradient(0deg, var(--bg-gray) 0%, var(--darker-gray) 100%);
 }
 
 main.index > section:nth-child(even) {
-  background: var(--darker-gray);
 }
 
 .list {
   max-width: 860px;
   padding: 2em 0;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(280px,25%) 1fr;
   position: relative;
 }
 
 .list .sticky {
   position: sticky;
-  top:80px;
+  top: 80px;
   padding: 1em;
 }
 
 .list header {
-  padding: 1em;
+  padding: 2em;
 }
 
-.list .cards {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
+.list section {
+  max-width: 100%;
 }

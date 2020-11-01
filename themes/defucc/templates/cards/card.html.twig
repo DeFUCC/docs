@@ -1,12 +1,12 @@
 {% if item.visible %}
 
-	<div class="br-2 flex flex-wrap items-center ba b--black-10 relative f6 br3 mv2 shadow-hover">
+	<div class="card">
 		{% block image %}
-			{% include 'cards/card-image.html.twig' with { url:item.url, min: 180 } %}
+			{% include 'cards/card-image.html.twig' with { url:item.url, size:300, min: 180, min_size:false } %}
 		{% endblock %}
 
 		{% block content %}
-			<div class="pv2" style="flex:1 1 300px;">
+			<div class="pv2" >
 				<a class="db near-black pa2 hover-near-black" href="{{ item.url }}">
 					<h3 class="mb2 f5 mt0">{{ item.title }}</h3>
 
@@ -28,7 +28,7 @@
 			{% block infobar %}
 
 				{% if item.template == 'article' %}
-					<footer class="flex flex-wrap pa0 justify-end items-center bg-black-05" style="flex: 1 1 100%;">
+					<footer class="flex flex-wrap pa0 " >
 						{% include 'partials/article-tags.html.twig' %}
 					</footer>
 				{% endif %}

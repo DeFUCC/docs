@@ -57,6 +57,7 @@ en:
     START_DATE: Start date
     END_DATE: End date
     WEBSITE: Website
+    SWIPE: Swipe
     STATUS: Status
     STATUSES:
       DEVELOPMENT: Development
@@ -121,6 +122,7 @@ ru:
     PRICE: Цена
     MAIN: Основной
     WEBSITE: Сайт
+    SWIPE: Листайте
     FINANCE: Бюджет
     MIN: Минимум
     MAX: Максимум

@@ -7,7 +7,7 @@
 
 	{% block image %}
 		{% if item.header.icon %}
-			{% include 'cards/card-image.html.twig' with { url:item.url, size:120 }%}
+			{% include 'cards/card-image.html.twig' with { url:item.url, size:300 }%}
 		{% else %}
 			<div class="card-image icon">
 				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}

@@ -1,24 +1,10 @@
 <article id="{{ page.slug }}" class="list">
 
-	<header>
-		<div class="sticky">
-
-			{% if config.plugins.breadcrumbs.enabled %}
-				{% include 'partials/breadcrumbs.html.twig' %}
-			{% endif %}
-
-			{% include 'cards/card-image.html.twig' with {size:280} %}
+	<header class="pa4">
+		
 
 			{% if page.routable %}
-				<h1>{{ page.title }}</h1>
-			{% endif %}
-
-			{% if page.header.subtitle %}
-				{{ page.header.subtitle|markdown }}
-			{% endif %}
-
-			{% if page.header.additional %}
-				{{ page.header.additional|markdown }}
+				<h1 class="ma0">{{ page.title }}</h1>
 			{% endif %}
 
 			{% if uri.param('tag') %}
@@ -27,12 +13,12 @@
 				</h4>
 			{% endif %}
 
-		</div>
+			{{ page.content }}
+			
+
 	</header>
-
-	<section class="cards">
-
-		{{ page.content }}
+	
+	<section class="flex flex-column mw100">
 
 		{% if page.collection|count >0 %}
 			{% set my_collection = page.collection %}
@@ -40,6 +26,27 @@
 			{% set options = { items: {'@self.children':''}, 'order': {'by': 'default', 'dir': 'asc'}} %}
 			{% set my_collection = page.collection(options) %}
 		{% endif %}
+
+	{% if my_collection|count>0 %}	
+
+	<section class="cards">
+		<section class="intro">
+		{% include 'cards/card-image.html.twig' with {size:280} %}
+		
+			{% if page.header.subtitle %}
+				{{ page.header.subtitle|markdown }}
+			{% endif %}
+
+			{% if page.header.additional %}
+				{{ page.header.additional|markdown }}
+			{% endif %}
+<div class="swiper">← Листайте →
+</div>
+			
+			
+			
+		</section>
+	
 		
 		{% for item in my_collection %}
 
@@ -52,6 +59,9 @@
 			{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
 		{% endif %}
 
+		</section>
 	</section>
+
+	{% endif %}
 
 </article>

@@ -72,7 +72,7 @@
 
 
 		{% block body %}
-			<section>
+			<section id="base">
 
 				{% if page.header.bg %}
 					<section class="article-back" style="background-image: linear-gradient(hsla(0,0%,50%,0.1),hsla(0,0%,50%,0.1)), url('{{page.media[page.header.bg].cropResize(1920,1024).quality(70).url}}')"></section>

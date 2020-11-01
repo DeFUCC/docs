@@ -1,5 +1,9 @@
 // https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
 
+window.addEventListener('onBeforeUnload', () => {
+  document.body.style.opacity = 0
+})
+
 window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

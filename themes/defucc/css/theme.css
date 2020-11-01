@@ -1,7 +1,7 @@
 :root {
   --bg-light: #fefefe;
   --bg-gray: #f8f8f8;
-  --darker-gray: #f4f4f4;
+  --darker-gray: #eee;
   --text-color: #333;
   --text-light-color: #696969;
   --accent: #f7bf76;
@@ -33,6 +33,34 @@ html.is-animating .transition-fade {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.index {
+  overscroll-behavior: auto;
+}
+
+.index > section {
+}
+
+body {
+  transition: opacity 300ms ease;
+  animation: fadeInAnimation ease-out 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body.leaving {
+  animation: fadeInAnimation ease-out 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
 }
 
 @media (prefers-color-scheme: dark) {

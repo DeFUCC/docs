@@ -4,11 +4,11 @@
   position: relative;
   padding: 0;
   display: grid;
-  grid-template-columns: 300px minmax(auto,620px) auto;
+  grid-template-columns: 300px minmax(100px, 620px) auto;
   grid-template-rows: 1fr auto;
   grid-template-areas:
-  "header content"
-  "header footer";
+    'header content'
+    'header footer';
 }
 
 .panels > header {
@@ -23,45 +23,42 @@
 }
 
 #breadcrumbs {
-    padding: 1em 0 0.5em 0;
+  padding: 1em 0 0.5em 0;
 }
 
 .panels .top .icon {
   justify-content: center;
-  flex: 1 1 200px;
+  flex: 0 1 200px;
 }
-
 
 .panels > footer {
   grid-area: footer;
-  width: 100%;
-
+  max-width: 100%;
 }
 
 .panels > header > .icon {
   flex: 0 1 240px;
-  padding:3em 1em 0 1em;
-  z-index:30;
+  padding: 3em 1em 0 1em;
+  z-index: 30;
   position: relative;
 }
 
-.panels > header  .start {
-  flex:1 1 200px;
+.panels > header .start {
+  flex: 1 1 200px;
   height: min-content;
-  padding:1em 0;
-  z-index:30;
+  padding: 1em 0;
+  z-index: 30;
   position: relative;
-
 }
 
-.panels > header  .start h1 {
-  font-size:1.4em;
+.panels > header .start h1 {
+  font-size: 1.4em;
   margin-bottom: 8px;
 }
 
 .panels > header > .info {
   padding: 1em 0;
-  font-size:14px;
+  font-size: 14px;
 }
 .panels > header .additional a {
   padding: 0.5em;
@@ -70,25 +67,22 @@
   color: #333;
 }
 
-
 .panels > article {
   z-index: 40;
   max-width: 600px;
   word-wrap: break-word;
   background: var(--bg-grey);
-  min-width:280px;
+  min-width: 280px;
 }
 
 .panels .top {
-  position:sticky;
+  position: sticky;
   top: 80px;
   padding: 1em;
   z-index: 50;
   display: flex;
   flex-flow: row wrap;
 }
-
-
 
 .panels .back {
   height: 70vh;

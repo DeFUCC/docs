@@ -2,10 +2,12 @@
 	{% set size = size ?: 120 %}
 	{% set
 max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
-	{% set
+	{% if min_size %}
+		{% set
 min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
+	{% endif %}
 
-	<div {{ max }} class="pa3 flex-grow-0 flex content-center">
+	<div {{ max }} class="  card-image">
 		{% if item.header.icon %}
 			{% set image =
   item.media[item.header.icon].cropResize(size,size) %}
