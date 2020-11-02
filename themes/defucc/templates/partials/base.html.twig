@@ -54,6 +54,9 @@
 		{% endblock head %}
 	</head>
 	<body data-barba="wrapper" class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
+		{% block topper %}
+			
+		{% endblock %}
 
 		{% block topbar %}
 			<header id="top-bar">

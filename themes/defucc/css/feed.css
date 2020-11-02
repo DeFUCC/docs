@@ -5,10 +5,10 @@ main.index {
 
 main.index > section {
   background: var(--bg-gray);
-  background: linear-gradient(0deg, var(--bg-gray) 0%, var(--darker-gray) 100%);
 }
 
 main.index > section:nth-child(even) {
+  background: var(--darker-gray);
 }
 
 .list {

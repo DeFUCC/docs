@@ -1,25 +1,24 @@
-
 #person .top .icon {
   border-radius: 50%;
 }
 
 .tag.people {
-    padding: 0 0 0 8px;
+  padding: 0 0 0 8px;
 }
 
 .small.card:hover .label {
   z-index: 30;
-  background-color: hsla(0, 0%, 100%, 0.98);;
+  background-color: hsla(0, 0%, 100%, 0.98);
 }
 
 .small.card .type svg {
-  width:30px;
+  width: 30px;
   height: 30px;
   margin: 8px;
 }
 
 .small.card {
-  padding:1em 1em;
+  padding: 1em 1em;
   margin: 8px;
   flex-wrap: nowrap;
   flex: 1 1 200px;
@@ -28,7 +27,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  
 }
 
 .small.card .label {
@@ -50,9 +48,8 @@
   stroke: var(--text-color);
 }
 
-
 .event footer {
-  flex:1 1 75px;
+  flex: 1 1 75px;
 }
 
 .event .card-text {
@@ -60,16 +57,15 @@
 }
 
 .event .date {
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  padding:0.5em;
+  padding: 0.5em;
   font-weight: bold;
   border-radius: 12px;
   background-color: var(--darker-gray);
 }
-
 
 .item-type {
   width: 2em;
@@ -77,19 +73,19 @@
 }
 
 .item-type svg {
-    width: 2em;
-    height: 2em;
+  width: 2em;
+  height: 2em;
 }
 .item-type svg path {
   stroke: var(--text-color);
 }
 
 .ops {
- display: flex;
- flex-flow: wrap;
+  display: flex;
+  flex-flow: wrap;
 }
 
- .card.op {
+.card.op {
   padding: 4px;
   display: flex;
   flex-flow: column;
@@ -107,12 +103,12 @@
   align-items: center;
   word-break: keep-all;
   padding: 1em;
-  transition: all .3s ease;
-  box-shadow: 0 2px 5px -3px hsla(0,0%,0%,0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px -3px hsla(0, 0%, 0%, 0.4);
 }
 
 .card.op a:hover {
-  box-shadow: 0 8px 7px -5px hsla(0,0%,0%,0.2);
+  box-shadow: 0 8px 7px -5px hsla(0, 0%, 0%, 0.2);
 }
 
 .idea.card {
@@ -120,14 +116,17 @@
 }
 
 .tag.op {
-  background-color:  var(--opportunity);
+  background-color: var(--opportunity);
 }
 
-.tag svg, .op a svg  {
+.tag svg,
+.op a svg {
   margin: 0 4px 0 -2px;
 }
 
-.tag svg path, .op a svg path, .lister header h3 svg path {
+.tag svg path,
+.op a svg path,
+.lister header h3 svg path {
   stroke: var(--text-color);
   stroke-width: 8px;
   transform: scale(1.2);
@@ -135,7 +134,7 @@
 }
 
 .lister header h3 svg {
-  margin:0 0 0.13em 0;
+  margin: 0 0 0.13em 0;
 }
 
 .listers {
@@ -150,7 +149,7 @@
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  gap:1em;
+  gap: 1em;
 }
 
 .alist.open {
@@ -164,10 +163,10 @@
 }
 
 .lister header {
-  background-color:  var(--darker-gray);
+  background-color: var(--darker-gray);
   padding: 0 1em;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -190,15 +189,16 @@
   transform: rotate(180deg);
 }
 
-.lister > header section, .lister > header aside {
-  margin:0.5em 0;
-  padding:4px 8px;
+.lister > header section,
+.lister > header aside {
+  margin: 0.5em 0;
+  padding: 4px 8px;
   font-size: 1.1rem;
 }
 
 .lister > header section svg {
-  width:30px;
-  height:30px;
+  width: 30px;
+  height: 30px;
 }
 
 .lister > header section svg path {
@@ -208,4 +208,51 @@
 
 .card-image.icon svg {
   height: 6em;
+}
+
+.item-card {
+  display: flex;
+  flex: 1 1 420px;
+  margin: 1em 0;
+  flex-flow: row wrap;
+  border: 0x solid hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0), 0 rem rem rgba(0, 0, 0, 0);
+  transition: all 300ms ease-in-out;
+  background-color: #fcfcfc;
+}
+
+.item-card img {
+  min-height: 100%;
+  object-fit: cover;
+  min-width: 100%;
+}
+
+.item-card > a {
+  flex: 0 0 180px;
+}
+
+.item-card:hover {
+  box-shadow: 0 0.13rem 0.26rem rgba(0, 0, 0, 0.1),
+    0 0.43rem 1.3rem rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-light);
+}
+
+.item-card > img {
+  max-width: 180px;
+  flex: 0 0 180px;
+  max-height: 180px;
+}
+
+.item-card_content {
+  flex: 1 1 100px;
+  padding: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.card-icon svg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

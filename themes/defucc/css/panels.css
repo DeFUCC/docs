@@ -1,5 +1,6 @@
 .panels {
   max-width: 980px;
+  min-height: 80vh;
   margin: 0 auto;
   position: relative;
   padding: 0;

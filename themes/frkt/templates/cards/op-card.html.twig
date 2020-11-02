@@ -1,5 +1,5 @@
-<div class="card flex-wrap {{ item.disabled ? 'disabled' : '' }}" >
-	<div class="pa2" style="flex:1 1 100%">
+<div class="flex flex-row flex-wrap flex-grow-1 items-center mv2 {{ item.disabled ? 'disabled' : '' }}" >
+	<div class="pa2" style="flex:1 1 80px">
 		<a href="{{item.link}}" target="_blank" class="pa3  bg-gray br3 align-center flex flex-row flex-nowrap shadow-hover">
 			{% if item.icon %}
 				<div class="ph1 white">
@@ -9,7 +9,7 @@
 			<div class="nowrap white b">{{item.verb}}</div>
 		</a>
 	</div>
-	<div class="pa2" style="flex: 1 1">{{item.text}}</div>
+	<div class="pa2" style="flex: 10 1 200px">{{item.text}}</div>
 
 	
 </div>

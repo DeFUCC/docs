@@ -39,9 +39,6 @@ html.is-animating .transition-fade {
   overscroll-behavior: auto;
 }
 
-.index > section {
-}
-
 body {
   transition: opacity 300ms ease;
   animation: fadeInAnimation ease-out 300ms;

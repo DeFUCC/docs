@@ -3,23 +3,64 @@
 {% do
       assets.addCss('theme://css/icons.css', 99) %}
 
-{% embed "cards/card.html.twig" %}
 
-	{% block image %}
-		{% if item.header.icon %}
-			{% include 'cards/card-image.html.twig' with { url:item.url, size:300 }%}
-		{% else %}
-			<div class="card-image icon">
-				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+	<div class="item-card">
+		{% block image %}
+		<a href="{{ item.url }}">
+			{% if item.header.icon %}
+			{% set image =
+	item.media[item.header.icon].cropResize(180,180) %}
+			
+	
+				<img src="{{ image.url }}" />
+			{% else %}
+				<div class="card-icon">
+					{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+				</div>
+			{% endif %}
+		</a>
+		{% endblock %}
+
+		{% block content %}
+			<div class="item-card_content" >
+				<a class="db near-black pa2 hover-near-black" href="{{ item.url }}">
+					<h3 class="mb2 f5 mt0">{{ item.title }}</h3>
+
+
+					{% if item.header.subtitle %}
+						<p class="f6 mb0 clamp">
+							{{ item.header.subtitle }}
+						</p>
+					{% elseif item.template == 'article' or item.template == 'def' %}
+						<p class="f6 mb0 clamp">
+							{{ item.summary(100) | striptags }}
+						</p>
+					{% endif %}
+
+				</a>
+
+
+			{% block infobar %}
+
+				{% include "partials/item-info.html.twig" %}
+
+			{% endblock infobar %}
+
+			{% block children %}
+				{% if item.template == 'feed' and item.children %}
+					{% include 'cards/child-cards.html.twig' with {
+						'size': '120',
+						'max': 120
+					} %}
+				{% endif %}
+			{% endblock children %}
+
+
 			</div>
-		{% endif %}
-
-	{% endblock %}
 
 
-	{% block infobar %}
-		{% include "partials/item-info.html.twig" %}
-	{% endblock infobar %}
+
+		{% endblock %}
 
 
-{% endembed %}
+	</div>

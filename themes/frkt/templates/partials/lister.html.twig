@@ -21,7 +21,7 @@
 				<i class="fa fa-angle-down"></i>
 			</aside>
 		</header>
-		<section class="cards open " id="{{type}}-list">
+		<section class="flex flex-wrap open " id="{{type}}-list">
 			{% for item in collect %}
 
 				{% include 'cards/' ~ template ~ '.html.twig' %}

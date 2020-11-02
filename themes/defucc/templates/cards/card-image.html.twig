@@ -7,7 +7,7 @@ max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
 min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
 	{% endif %}
 
-	<div {{ max }} class="  card-image">
+	<div {{ max }} class="card-image" style="flex: 0 0 {{size}}px">
 		{% if item.header.icon %}
 			{% set image =
   item.media[item.header.icon].cropResize(size,size) %}
