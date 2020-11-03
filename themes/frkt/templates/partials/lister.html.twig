@@ -6,8 +6,8 @@
 
 {% if collect and collect | count > 0 %}
 
-	<div id="{{ type }}" class="mh4 mv2 flex flex-column  b--light-gray br2">
-		<header class="flex sticky top-0 pa2 flex-row justify-between up bg-light-gray z-4" style="border-radius: 4px 4px 0 0" data-type="{{type}}">
+	<div id="{{ type }}" class="lister">
+		<header data-type="{{type}}">
 			<section class="pa2">
 				{% if icon_file %}
 					<span class="item-type">
