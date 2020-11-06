@@ -210,7 +210,7 @@
   min-height: 100%;
   object-fit: cover;
   min-width: 100%;
-  filter: grayscale(60%) opacity(70%);
+  filter: grayscale(60%) opacity(90%);
 }
 
 .item-card > a {
@@ -228,7 +228,7 @@
 }
 
 .item-card > a > img {
-  transition: all 700ms ease;
+  transition: all 400ms ease;
   max-width: 180px;
   flex: 0 0 180px;
   max-height: 180px;
