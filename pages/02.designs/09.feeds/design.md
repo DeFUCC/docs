@@ -3,7 +3,7 @@ title: Ленты
 subtitle: 'Интерфейс совместной разработки и реализации проектов'
 icon: feeds.svg
 website: feeds.frkt.ru
-start_date: '03-04-2014 13:23'
+start_date: '20-12-2013 13:23'
 status: development
 people:
     -

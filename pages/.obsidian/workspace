@@ -8,10 +8,9 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "02.designs/09.feeds/02.angular/project.md",
-            "mode": "source"
+            "file": "02.designs/09.feeds/feeds.svg"
           }
         }
       }
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02.designs/09.feeds/02.angular/project.md",
+                "file": "02.designs/09.feeds/feeds.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,15 +85,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "02.designs/09.feeds/02.angular/project.md",
-    "02.designs/09.feeds/02.angular/01.json/object.md",
-    "02.designs/02.tsoop/01.net/03.bandcamp/object.md",
-    "02.designs/02.tsoop/01.net/03.bandcamp/Bandcamp.png",
-    "02.designs/02.tsoop/01.net/02.instagram/object.md",
-    "02.designs/02.tsoop/01.net/02.instagram/unnamed.jpg",
-    "02.designs/02.tsoop/01.net/02.instagram/instagram.jpg",
-    "02.designs/02.tsoop/01.net/project.md",
-    "02.designs/02.tsoop/01.net/02.instagram/instagram-instagram.jpg",
-    "02.designs/02.tsoop/01.net/03.bandcamp/Sold-and-supplied-by-Bandcamp-.com_ 1.png"
+    "02.designs/09.feeds/feeds.svg",
+    "02.designs/09.feeds/01.fruit-tree/Screenshot 2020-11-27 at 14.26.34.png",
+    "02.designs/09.feeds/01.firebase/project.md",
+    "02.designs/09.feeds/03.vuetify/project.md",
+    "02.designs/09.feeds/03.vuetify/Screenshot 2020-11-27 at 20.40.09.png",
+    "02.designs/09.feeds/03.gun/Untitled.md",
+    "02.designs/09.feeds/02.fruit-tree/project.md",
+    "02.designs/09.feeds/design.md",
+    "02.designs/09.feeds/01.feeds/project.md",
+    "02.designs/09.feeds/01.feeds/Screenshot 2020-11-27 at 19.30.43.png"
   ]
 }

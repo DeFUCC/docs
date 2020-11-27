@@ -86,7 +86,6 @@
 
 		{% if backlinks[page.url] %}
 			<aside>
-
 				{% set mentions = [] %}
 				{% for m in backlinks[page.url] %}
 					{% set mentions = mentions|merge([pages.find(m)]) %}

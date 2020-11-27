@@ -13,8 +13,8 @@ end_date: '18-03-2014 14:47'
 opportunities:
     -
         icon: 'fa fa-github'
-        verb: Посмотреть
-        text: 'код приложения на GitHub'
+        verb: 'Открыть код'
+        text: 'приложения на GitHub'
         link: 'https://github.com/DeFUCC/fruit-tree'
 ---
 
