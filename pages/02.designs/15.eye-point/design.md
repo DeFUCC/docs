@@ -10,6 +10,7 @@ people:
     -
         alias: /people/anna-starova
         role: author
+media_order: 'small-square.svg,exp.svg'
 ---
 
 То, что привлекает взгляд

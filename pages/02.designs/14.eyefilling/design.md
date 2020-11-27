@@ -1,7 +1,7 @@
 ---
 title: Eyefilling
 subtitle: 'Мы внимательно наблюдаем за миром вокруг и внутри, собираем самые яркие мгновения и мысли в альбомы и сочинения и делимся всем этим богатством с вами.'
-icon: eyefill.png
+icon: color.svg
 website: eyefilling.ru
 start_date: '01-11-2016 23:27'
 status: process
@@ -9,6 +9,7 @@ people:
     -
         alias: /people/davay
         role: author
+media_order: 'eyefill.png,color.svg,gray.svg'
 ---
 
 >«Я верю, что листик травы не меньше поденщины звезд,

@@ -1,13 +1,1 @@
-{
-  "theme": "moonstone",
-  "pluginEnabledStatus": {
-    "file-explorer": true,
-    "global-search": true,
-    "switcher": true,
-    "graph": true,
-    "backlink": true,
-    "command-palette": true,
-    "markdown-importer": true,
-    "word-count": true
-  }
-}
+{"theme":"moonstone","pluginEnabledStatus":{"file-explorer":true,"global-search":true,"switcher":true,"graph":true,"backlink":true,"command-palette":true,"markdown-importer":true,"word-count":true,"open-with-default-app":true},"enabledPlugins":[],"attachmentFolderPath":"02.designs/02.tsoop/01.net/02.instagram","alwaysUpdateLinks":true,"promptDelete":false}

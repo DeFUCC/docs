@@ -20,12 +20,25 @@
 			<a href="https://{{ header.website }}" target="_blank">{{header.website}}</a>
 		</div>
 	{% endif %}
+
 {% endblock info %}
 
 {% block additional %}
 
 	{% include "partials/item-info.html.twig" with {item:page} %}
-  
+	{% if header.start_date %}
+		<div class="row">
+			{{'THEME_FRUKT.START_DATE'|t}}:
+			{{header.start_date|nicetime}}
+		</div>
+	{% endif %}
+	{% if header.end_date %}
+		<div class="row">
+			{{'THEME_FRUKT.END_DATE'|t}}:
+			{{header.end_date|nicetime}}
+		</div>
+	{% endif %}
+
 {% endblock additional %}
 
 
@@ -88,10 +101,9 @@
 			</aside>
 		{% endif %}
 
-    
 
 	</footer>
 
-  {% include "forms/form.html.twig" %}
+	{% include "forms/form.html.twig" %}
 
 {% endblock lists %}

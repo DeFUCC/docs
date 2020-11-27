@@ -1,0 +1,16 @@
+
+{
+    "title": "{{ page.title }}",
+    "subtitle": "{{page.header.subtitle}}",
+    "feed": {
+        {% for child in page.children %}
+            "{{loop.index0}}": {
+              "title": "{{child.title}}",
+              "subtitle": "{{child.header.subtitle}}",
+              "icon": "{{child.media[child.header.icon].url()}}"
+            }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    }
+}
+
+

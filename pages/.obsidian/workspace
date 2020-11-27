@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "03.designs/02.tsoop/03.collab/01.project-app/object.md",
+            "file": "02.designs/09.feeds/02.angular/project.md",
             "mode": "source"
           }
         }
@@ -40,7 +40,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ""
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               }
             }
           }
@@ -64,7 +69,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03.designs/02.tsoop/03.collab/01.project-app/object.md"
+                "file": "02.designs/09.feeds/02.angular/project.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -76,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "03.designs/02.tsoop/03.collab/01.project-app/object.md",
-    "03.designs/02.tsoop/02.music-lab/01.setup/01.op-z/thing.md",
-    "03.designs/02.tsoop/02.music-lab/01.setup/01.op-z/op-z.jpg",
-    "03.designs/02.tsoop/03.collab/01.project-app/Untitled.md",
-    "03.designs/02.tsoop/03.collab/03.studiinyi-albom-s-dashei-dubovik/object.md",
-    "03.designs/02.tsoop/03.collab/02.miracle-mechanism/object.md",
-    "04.research/culture-design/article.md",
-    "04.research/culture-design/Untitled.md",
-    "03.designs/03.chromatone/05.workshops/02.namm-2019/event.md",
-    "03.designs/02.tsoop/03.collab/02.miracle-mechanism/01.wafest/event.md"
+    "02.designs/09.feeds/02.angular/project.md",
+    "02.designs/09.feeds/02.angular/01.json/object.md",
+    "02.designs/02.tsoop/01.net/03.bandcamp/object.md",
+    "02.designs/02.tsoop/01.net/03.bandcamp/Bandcamp.png",
+    "02.designs/02.tsoop/01.net/02.instagram/object.md",
+    "02.designs/02.tsoop/01.net/02.instagram/unnamed.jpg",
+    "02.designs/02.tsoop/01.net/02.instagram/instagram.jpg",
+    "02.designs/02.tsoop/01.net/project.md",
+    "02.designs/02.tsoop/01.net/02.instagram/instagram-instagram.jpg",
+    "02.designs/02.tsoop/01.net/03.bandcamp/Sold-and-supplied-by-Bandcamp-.com_ 1.png"
   ]
 }
