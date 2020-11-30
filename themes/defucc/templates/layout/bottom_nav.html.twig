@@ -1,46 +1,54 @@
 {% if page.prevSibling %}
-	{% set next = page.prevSibling %}
+  {% set next = page.prevSibling %}
 {% else %}
-	{% set next = page.parent.prevSibling %}
+  {% set next = page.parent.prevSibling %}
 {% endif %}
 
 {% if page.nextSibling %}
-	{% set prev = page.nextSibling %}
+  {% set prev = page.nextSibling %}
 {% else %}
-	{% set prev = page.parent.nextSibling %}
+  {% set prev = page.parent.nextSibling %}
 {% endif %}
 
-
 {% macro get_bg(item) %}
-	{% if item.header.bg %}
-		{% set media_url = item.media[item.header.bg].cropResize(700,200).url %}
-		style="background-image: linear-gradient(hsla(0,0%,100%,0.9),hsla(0,0%,100%,0.9)), url({{ media_url }})"
-	{% endif %}
+  {% if item.header.bg %}
+    {% set media_url =
+      item.media[item.header.bg].cropResize(700, 200).url
+    %}style="background-image:
+    linear-gradient(hsla(0,0%,100%,0.9),hsla(0,0%,100%,0.9)), url({{
+      media_url
+    }})"
+  {% endif %}
 {% endmacro %}
 
 {% if prev or next %}
+  <footer id="bottom-page-nav">
+    {% if prev.title %}
+      <a class="nav prev" href="{{ prev.url }}" {{ _self.get_bg(prev) }}>
+        <i class="fa fa-2x fa-chevron-left"></i>
+        <div>
+          <h6>
+            {{ 'THEME_FRUKT.PREVIOUS'|t }}
+          </h6>
+          <h5>
+            {{ prev.title }}
+          </h5>
+        </div>
+      </a>
+    {% endif %}
 
-	<footer id="bottom-page-nav">
-
-		{% if prev.title %}
-			<a class="nav prev" href="{{ prev.url }}" {{ _self.get_bg(prev) }}>
-				<i class="fa fa-2x fa-chevron-left"></i>
-				<div>
-					<h6>{{ 'THEME_FRUKT.PREVIOUS'|t }}</h6>
-					<h5>{{ prev.title }}</h5>
-				</div>
-			</a>
-		{% endif %}
-
-		{% if next.title %}
-			<a class="nav next" href="{{ next.url }}" {{ _self.get_bg(next) }}>
-				<i class="fa fa-2x fa-chevron-right"></i>
-				<div>
-					<h6>{{ 'THEME_FRUKT.NEXT'|t }}</h6>
-					<h5>{{ next.title }}</h5>
-				</div>
-			</a>
-		{% endif %}
-
-	</footer>
+    {% if next.title %}
+      <a class="nav next" href="{{ next.url }}" {{ _self.get_bg(next) }}>
+        <i class="fa fa-2x fa-chevron-right"></i>
+        <div>
+          <h6>
+            {{ 'THEME_FRUKT.NEXT'|t }}
+          </h6>
+          <h5>
+            {{ next.title }}
+          </h5>
+        </div>
+      </a>
+    {% endif %}
+  </footer>
 {% endif %}

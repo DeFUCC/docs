@@ -1,7 +1,7 @@
 {% if item.header.status %}
-{% set status =  item.header.status %}
+  {% set status = item.header.status %}
   {% include 'partials/tag.html.twig' with {
     type: status,
-    text: ('THEME_FRUKT.STATUSES.' ~ status|upper)|t
+    text: ('THEME_FRUKT.STATUSES.' ~ (status|upper))|t
   } only %}
 {% endif %}

@@ -1,48 +1,43 @@
-<footer class="flex flex-wrap pa0 justify-start items-center" >
-	{% if item.template in types %}
-		<span class="item-type ml2">
-			{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-		</span>
-	{% endif %}
+<footer class="flex flex-wrap pa0 justify-start items-center">
+  {% if item.template in types %}
+    <span class="item-type ml2">
+      {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+    </span>
+  {% endif %}
 
+  {% if item.header.finance %}
+    {% set fin = item.header.finance %}
+    <span class="progress">
+      <span class="bar"></span>
+      Бюджет:
+      {{ fin.min }}-{{ fin.max }}
+      ₽
+    </span>
+  {% endif %}
 
-	{% if item.header.finance %}
-		{% set fin = item.header.finance %}
-		<span class="progress">
-			<span class="bar"></span>
-			Бюджет:
-			{{fin.min}}-{{fin.max}}
-			₽
-		</span>
-	{% endif %}
+  {% for persona in item.header.people %}
+    {% include 'partials/persona.html.twig' %}
+  {% endfor %}
 
+  {% include 'partials/status.html.twig' %}
 
-	
+  {% if item.header.opportunities and (item.header.opportunities|count) > 0 %}
+    {% include 'partials/tag.html.twig' with {
+      type: 'opportunity',
+      link: item.url ~ '#opportunity',
+      icon_file: 'lines/opportunity.svg',
+      text: item.header.opportunities|count
+    } only %}
+  {% endif %}
 
-	{% for persona in item.header.people %}
-		{% include 'partials/persona.html.twig' %}
-	{% endfor %}
-
-	{% include 'partials/status.html.twig' %}
-
-	{% if item.header.opportunities and item.header.opportunities | count > 0 %}
-		{% include 'partials/tag.html.twig' with {
-			type : 'opportunity',
-			link: item.url ~ '#opportunity',
-			icon_file: 'lines/opportunity.svg',
-			text: item.header.opportunities | count
-			}
-			only %}
-	{% endif %}
-
-	{% for type in types %}
-		{% if item.children.ofType(type).visible | count > 0 %}
-			{% include 'partials/tag.html.twig' with {
-				type : type,
-				link: item.url ~ '#' ~ type,
-				icon_file: 'lines/' ~ type ~ '.svg',
-				text: item.children.ofType(type).visible | count
-			} %}
-		{% endif %}
-	{% endfor %}
+  {% for type in types %}
+    {% if (item.children.ofType(type).visible|count) > 0 %}
+      {% include 'partials/tag.html.twig' with {
+        type: type,
+        link: item.url ~ '#' ~ type,
+        icon_file: 'lines/' ~ type ~ '.svg',
+        text: item.children.ofType(type).visible|count
+      } %}
+    {% endif %}
+  {% endfor %}
 </footer>

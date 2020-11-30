@@ -1,12 +1,4 @@
-
-{
-    "title": "{{ page.title }}",
-    "subtitle": "{{page.header.subtitle}}",
-    "projects": {
-        {% for child in page.children %}
-            "{{loop.index0}}": "{{child.title}}"{% if not loop.last %},{% endif %}
-        {% endfor %}
-    }
-}
-
-
+{ "title": "{{ page.title }}", "subtitle": "{{ page.header.subtitle }}",
+"projects": {{% for child in page.children %}
+  "{{ loop.index0 }}": "{{ child.title }}"{% if not loop.last %},{% endif %}
+{% endfor %}} }

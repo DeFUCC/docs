@@ -1,25 +1,23 @@
 <div id="page-details">
-
   <div class="info">
+    <h4>
+      {{ page.title }}
+    </h4>
 
-    <h4>{{ page.title }}</h4>
-
-  {% if page.header.author %}
-        {{'THEME_FRUKT.AUTHOR'|t}}: {{page.header.author }} <br />
-  {% endif %}
-
-    {% if page.header.date %}
-        {{'THEME_FRUKT.PUBLISHED'|t}} {{page.header.date | nicetime }} <br />
+    {% if page.header.author %}
+      {{ 'THEME_FRUKT.AUTHOR'|t }}: {{ page.header.author }} <br />
     {% endif %}
 
-        {{'THEME_FRUKT.EDITED'|t}} {{page.modified | nicetime}}
+    {% if page.header.date %}
+      {{ 'THEME_FRUKT.PUBLISHED'|t }} {{ page.header.date|nicetime }} <br />
+    {% endif %}
 
+    {{ 'THEME_FRUKT.EDITED'|t }} {{ page.modified|nicetime }}
   </div>
 
   {% if config.plugins.qrcode.enabled %}
     <div class="qr">
-      {{ qrcode_image_element( page.url(true), ["#888", '#7e7'] ) }}
+      {{ qrcode_image_element(page.url(true), ['#888', '#7e7']) }}
     </div>
   {% endif %}
-
 </div>

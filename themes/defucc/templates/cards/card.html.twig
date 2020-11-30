@@ -1,53 +1,48 @@
 {% if item.visible %}
+  <div class="card">
+    {% block image %}
+      {% include 'cards/card-image.html.twig' with {
+        url: item.url,
+        size: 300,
+        min: 180,
+        min_size: false
+      } %}
+    {% endblock %}
 
-	<div class="card">
-		{% block image %}
-			{% include 'cards/card-image.html.twig' with { url:item.url, size:300, min: 180, min_size:false } %}
-		{% endblock %}
+    {% block content %}
+      <div class="pv2">
+        <a class="db near-black pa2 hover-near-black" href="{{ item.url }}">
+          <h3 class="mb2 f5 mt0">
+            {{ item.title }}
+          </h3>
 
-		{% block content %}
-			<div class="pv2" >
-				<a class="db near-black pa2 hover-near-black" href="{{ item.url }}">
-					<h3 class="mb2 f5 mt0">{{ item.title }}</h3>
+          {% if item.header.subtitle %}
+            <p class="f6 mb0 clamp">
+              {{ item.header.subtitle }}
+            </p>
+          {% elseif item.template == 'article' or item.template == 'def' %}
+            <p class="f6 mb0 clamp">
+              {{ item.summary(100)|striptags }}
+            </p>
+          {% endif %}
+        </a>
+      </div>
+      {% block infobar %}
+        {% if item.template == 'article' %}
+          <footer class="flex flex-wrap pa0">
+            {% include 'partials/article-tags.html.twig' %}
+          </footer>
+        {% endif %}
+      {% endblock %}
 
-
-					{% if item.header.subtitle %}
-						<p class="f6 mb0 clamp">
-							{{ item.header.subtitle }}
-						</p>
-					{% elseif item.template == 'article' or item.template == 'def' %}
-						<p class="f6 mb0 clamp">
-							{{ item.summary(100) | striptags }}
-						</p>
-					{% endif %}
-
-				</a>
-
-
-			</div>
-			{% block infobar %}
-
-				{% if item.template == 'article' %}
-					<footer class="flex flex-wrap pa0 " >
-						{% include 'partials/article-tags.html.twig' %}
-					</footer>
-				{% endif %}
-
-			{% endblock infobar %}
-
-			{% block children %}
-				{% if item.template == 'feed' and item.children %}
-					{% include 'cards/child-cards.html.twig' with {
-						'size': '120',
-						'max': 120
-					} %}
-				{% endif %}
-			{% endblock children %}
-
-
-		{% endblock %}
-
-
-	</div>
-
+      {% block children %}
+        {% if item.template == 'feed' and item.children %}
+          {% include 'cards/child-cards.html.twig' with {
+            size: '120',
+            max: 120
+          } %}
+        {% endif %}
+      {% endblock %}
+    {% endblock %}
+  </div>
 {% endif %}

@@ -1,27 +1,22 @@
 {% if item.header.icon or item.header.bg %}
-	{% set size = size ?: 120 %}
-	{% set
-max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
-	{% if min_size %}
-		{% set
-min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
-	{% endif %}
+  {% set size = size ? : 120 %}
+  {% set max = max ? 'style="max-width:' ~ max ~ 'px;"' : '' %}
+  {% if min_size %}
+    {% set min = min ? 'style="min-width:' ~ min ~ ';"' : '' %}
+  {% endif %}
 
-	<div {{ max }} class="card-image" style="flex: 0 0 {{size}}px">
-		{% if item.header.icon %}
-			{% set image =
-  item.media[item.header.icon].cropResize(size,size) %}
-		{% elseif item.header.bg
-  %}
-			{% set image = item.media[item.header.bg].cropZoom(size,size) %}
-		{% endif
-  %}
-		{% if url %}
-			<a href="{{ item.url }}">
-				<img src="{{ image.url }}" style="min-width:{{size}}px"/>
-			</a>
-		{% else %}
-			<img src="{{ image.url }}" style="min-width:{{size}}px"/>
-		{% endif %}
-	</div>
+  <div {{ max }} class="card-image" style="flex: 0 0 {{ size }}px">
+    {% if item.header.icon %}
+      {% set image = item.media[item.header.icon].cropResize(size, size) %}
+    {% elseif item.header.bg %}
+      {% set image = item.media[item.header.bg].cropZoom(size, size) %}
+    {% endif %}
+    {% if url %}
+      <a href="{{ item.url }}">
+        <img src="{{ image.url }}" style="min-width:{{ size }}px" />
+      </a>
+    {% else %}
+      <img src="{{ image.url }}" style="min-width:{{ size }}px" />
+    {% endif %}
+  </div>
 {% endif %}

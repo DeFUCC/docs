@@ -1,35 +1,27 @@
-{% set icon_file = icon_file ?: 'lines/' ~ type ~ '.svg' %}
-{% set template = template ?: 'item-card' %}
-{% do
-  assets.addJs('theme://js/lister.js', 99) %}
+{% set icon_file = icon_file ? : 'lines/' ~ type ~ '.svg' %}
+{% set template = template ? : 'item-card' %}
+{% do assets.addJs('theme://js/lister.js', 99) %}
 
-
-{% if collect and collect | count > 0 %}
-
-	<div id="{{ type }}" class="lister">
-		<header data-type="{{type}}">
-			<section class="pa2">
-				{% if icon_file %}
-					<span class="item-type">
-						{{ read_file('theme://icons/' ~ icon_file) }}
-					</span>
-				{% endif %}
-				{{ title|t }}
-			</section>
-			<aside class="pa2">
-				{{collect|count}}
-				<i class="fa fa-angle-down"></i>
-			</aside>
-		</header>
-		<section class="flex flex-wrap open " id="{{type}}-list">
-			{% for item in collect %}
-
-				{% include 'cards/' ~ template ~ '.html.twig' %}
-
-			{% endfor %}
-		</section>
-
-
-	</div>
-
+{% if collect and (collect|count) > 0 %}
+  <div id="{{ type }}" class="lister">
+    <header data-type="{{ type }}">
+      <section class="pa2">
+        {% if icon_file %}
+          <span class="item-type">
+            {{ read_file('theme://icons/' ~ icon_file) }}
+          </span>
+        {% endif %}
+        {{ title|t }}
+      </section>
+      <aside class="pa2">
+        {{ collect|count }}
+        <i class="fa fa-angle-down"></i>
+      </aside>
+    </header>
+    <section class="flex flex-wrap open" id="{{ type }}-list">
+      {% for item in collect %}
+        {% include 'cards/' ~ template ~ '.html.twig' %}
+      {% endfor %}
+    </section>
+  </div>
 {% endif %}

@@ -5,64 +5,74 @@
 
 {% set main_id = 'ukt' %}
 
-{% block info %}{% endblock %}
+{% block info %}
+{% endblock %}
 
 {% set file = read_file(page.path() ~ '/ukt.svg') %}
 
-{% macro col(u,k,t,file) %}
+{% macro col(u, k, t, file) %}
   {% set classes = 'u' ~ u ~ ' k' ~ k ~ ' t' ~ t %}
   {% set text = 'Y' ~ u ~ ' K' ~ k ~ ' T' ~ t %}
-    <div class="col {{classes}}">
-      <div class="svg">{{file}}</div>
-      <div class="text">{{text}}</div>
+  <div class="col {{ classes }}">
+    <div class="svg">
+      {{ file }}
     </div>
+    <div class="text">
+      {{ text }}
+    </div>
+  </div>
 {% endmacro %}
 
 {% block article %}
-
   {{ page.content }}
 
-
   <div class="ukts">
-  <h4>Универсализация:</h4>
-  <ul>
-    <li>0 — «Делать то, что уже хорошо умеешь»</li>
-    <li>5 — «Делать что-то для себя совершенно новое»</li>
-  </ul>
+    <h4>
+      Универсализация:
+    </h4>
+    <ul>
+      <li>0 — «Делать то, что уже хорошо умеешь»</li>
+      <li>5 — «Делать что-то для себя совершенно новое»</li>
+    </ul>
     <div class="row">
-    {% for u in 0..5 %}
-      {{ _self.col(u,0,0,file) }}
-    {% endfor %}
+      {% for u in 0..5 %}
+        {{ _self.col(u, 0, 0, file) }}
+      {% endfor %}
     </div>
-    <h4>Кооперация:</h4>
+    <h4>
+      Кооперация:
+    </h4>
     <ul>
       <li>0 — «Делать в одиночку»</li>
       <li>5 — «Делать то, что реализуемо только слаженной командой»</li>
     </ul>
     <div class="row">
-    {% for k in 0..5 %}
-      {{ _self.col(0,k,0,file) }}
-    {% endfor %}
+      {% for k in 0..5 %}
+        {{ _self.col(0, k, 0, file) }}
+      {% endfor %}
     </div>
-    <h4>Творчество:</h4>
+    <h4>
+      Творчество:
+    </h4>
     <ul>
       <li>0 — «В результате все остается как было»</li>
       <li>5 — «В результате получится что-то красивое и полезное»</li>
     </ul>
     <div class="row">
-    {% for t in 0..5 %}
-      {{ _self.col(0,0,t,file) }}
-    {% endfor %}
+      {% for t in 0..5 %}
+        {{ _self.col(0, 0, t, file) }}
+      {% endfor %}
     </div>
 
-<h4>Случайные примеры:</h4>
-  {% for ran in 1..4 %}
-    <div class="row">
-      {% for r in 0..5 %}
-        {{ _self.col(random(5),random(5),random(5),file) }}
-      {% endfor %}
+    <h4>
+      Случайные примеры:
+    </h4>
+    {% for ran in 1..4 %}
+      <div class="row">
+        {% for r in 0..5 %}
+          {{ _self.col(random(5), random(5), random(5), file) }}
+        {% endfor %}
       </div>
-  {% endfor %}
-</div>
-
+    {% endfor %}
+  </div>
 {% endblock %}

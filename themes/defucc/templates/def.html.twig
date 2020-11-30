@@ -1,21 +1,20 @@
 {% extends 'layout/panels.html.twig' %}
 
-
 {% block side %}
-
-	{% if page.header.icon  %}
-		<div class="icon">
-			{{page.media[page.header.icon].cropResize(300,300)}}
-		</div>
-	{% endif %}
-{% endblock side %}
+  {% if page.header.icon %}
+    <div class="icon">
+      {{ page.media[page.header.icon].cropResize(300, 300) }}
+    </div>
+  {% endif %}
+{% endblock %}
 
 {% block article %}
-	<h1 class="">{{ page.title }}</h1>
-	{{ page.content }}
+  <h1 class="">
+    {{ page.title }}
+  </h1>
+  {{ page.content }}
 
-	{% for item in page.collection %}
-		{{item.title}}
-	{% endfor %}
-
-{% endblock article %}
+  {% for item in page.collection %}
+    {{ item.title }}
+  {% endfor %}
+{% endblock %}

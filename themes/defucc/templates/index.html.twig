@@ -1,36 +1,32 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block topper %}
-
-<header class="flex justify-center pv4"  id="topper">
-				<a href="{{ base_url_absolute }}">
-					{% if theme.custom_logo %}
-						<img width="420px" src="{{base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}"/>
-					{% else %}
-						{{ site.title }}
-					{% endif %}
-				</a>
-
-			</header>
-
+  <header class="flex justify-center pv4" id="topper">
+    <a href="{{ base_url_absolute }}">
+      {% if theme.custom_logo %}
+        <img width="420px"
+          src="{{ base_url_absolute ~ '/' ~ theme.custom_logo|first.path }}" />
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </a>
+  </header>
 {% endblock %}
 
 {% block content %}
-	<main class="index">
-
-		{% for item in page.parent.children.visible %}
-
-			<section>
-				{% if item.template == 'front' %}
-					{% include 'layout/front.html.twig' with {'page':item} %}
-				{% else %}
-					{% include 'layout/list.html.twig' with {'page':item} %}
-				{% endif %}
-
-
-			</section>
-
-		{% endfor %}
-
-	</main>
+  <main class="index">
+    {% for item in page.parent.children.visible %}
+      <section>
+        {% if item.template == 'front' %}
+          {% include 'layout/front.html.twig' with {
+            page: item
+          } %}
+        {% else %}
+          {% include 'layout/list.html.twig' with {
+            page: item
+          } %}
+        {% endif %}
+      </section>
+    {% endfor %}
+  </main>
 {% endblock %}

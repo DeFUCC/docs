@@ -1,66 +1,51 @@
-{% do
-    assets.addCss('theme://css/design.css', 90) %}
-{% do
-      assets.addCss('theme://css/icons.css', 99) %}
+{% do assets.addCss('theme://css/design.css', 90) %}
+{% do assets.addCss('theme://css/icons.css', 99) %}
 
+<div class="item-card">
+  {% block image %}
+    <a href="{{ item.url }}">
+      {% if item.header.icon %}
+        {% set image = item.media[item.header.icon].cropResize(180, 180) %}
 
-	<div class="item-card">
-		{% block image %}
-		<a href="{{ item.url }}">
-			{% if item.header.icon %}
-			{% set image =
-	item.media[item.header.icon].cropResize(180,180) %}
-			
-	
-				<img src="{{ image.url }}" />
-			{% else %}
-				<div class="card-icon">
-					{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-				</div>
-			{% endif %}
-		</a>
-		{% endblock %}
+        <img src="{{ image.url }}" />
+      {% else %}
+        <div class="card-icon">
+          {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+        </div>
+      {% endif %}
+    </a>
+  {% endblock %}
 
-		{% block content %}
-			<div class="item-card_content" >
-				<a class=" pa2 " href="{{ item.url }}">
-					<h3 class="mb2 f5 mt0">{{ item.title }}</h3>
+  {% block content %}
+    <div class="item-card_content">
+      <a class="pa2" href="{{ item.url }}">
+        <h3 class="mb2 f5 mt0">
+          {{ item.title }}
+        </h3>
 
+        {% if item.header.subtitle %}
+          <p class="f6 mb0 clamp">
+            {{ item.header.subtitle }}
+          </p>
+        {% elseif item.template == 'article' or item.template == 'def' %}
+          <p class="f6 mb0 clamp">
+            {{ item.summary(100)|striptags }}
+          </p>
+        {% endif %}
+      </a>
 
-					{% if item.header.subtitle %}
-						<p class="f6 mb0 clamp">
-							{{ item.header.subtitle }}
-						</p>
-					{% elseif item.template == 'article' or item.template == 'def' %}
-						<p class="f6 mb0 clamp">
-							{{ item.summary(100) | striptags }}
-						</p>
-					{% endif %}
+      {% block infobar %}
+        {% include 'partials/item-info.html.twig' %}
+      {% endblock %}
 
-				</a>
-
-
-			{% block infobar %}
-
-				{% include "partials/item-info.html.twig" %}
-
-			{% endblock infobar %}
-
-			{% block children %}
-				{% if item.template == 'feed' and item.children %}
-					{% include 'cards/child-cards.html.twig' with {
-						'size': '120',
-						'max': 120
-					} %}
-				{% endif %}
-			{% endblock children %}
-
-
-			</div>
-
-
-
-		{% endblock %}
-
-
-	</div>
+      {% block children %}
+        {% if item.template == 'feed' and item.children %}
+          {% include 'cards/child-cards.html.twig' with {
+            size: '120',
+            max: 120
+          } %}
+        {% endif %}
+      {% endblock %}
+    </div>
+  {% endblock %}
+</div>

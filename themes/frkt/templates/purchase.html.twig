@@ -1,35 +1,33 @@
 {% extends 'partials/item-page.html.twig' %}
 
-
 {% set main_id = 'purchase' %}
 {% block lists %}
+  {% include 'partials/lister.html.twig' with {
+    title: 'THEME_FRUKT.REQUIREMENTS',
+    template: 'idea-card',
+    collect: page.header.requirements
+  } %}
 
-    {% include 'partials/lister.html.twig' with {
-        title: 'THEME_FRUKT.REQUIREMENTS',
-        template: 'idea-card',
-        collect: page.header.requirements } %}
-    
-
-    {% include 'partials/lister.html.twig' with {
-        title: 'THEME_FRUKT.VARIANTS',
-        template: 'var-card',
-        collect: page.header.variants } %}
-
+  {% include 'partials/lister.html.twig' with {
+    title: 'THEME_FRUKT.VARIANTS',
+    template: 'var-card',
+    collect: page.header.variants
+  } %}
 {% endblock %}
 
 {% block info %}
+  {% set min_price = 0 %}
+  {% set max_price = 0 %}
+  {% for var in header.variants %}
+    {% if var.price < min_price or min_price == 0 %}
+      {% set min_price = var.price %}
+    {% endif %}
+    {% if var.price > max_price or max_price == 0 %}
+      {% set max_price = var.price %}
+    {% endif %}
+  {% endfor %}
 
-    {% set min_price = 0 %}
-    {% set max_price = 0 %}
-    {% for var in header.variants %}
-        {% if var.price < min_price or min_price == 0 %}
-            {% set min_price = var.price %}
-        {% endif %}
-        {% if var.price > max_price or max_price == 0 %}
-            {% set max_price = var.price %}
-        {% endif %}
-    {% endfor %}
-
-    <h3>{{min_price }} &mdash; {{max_price}} ₽</h3>
-
+  <h3>
+    {{ min_price }} &mdash; {{ max_price }} ₽
+  </h3>
 {% endblock %}

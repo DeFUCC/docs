@@ -1,13 +1,17 @@
-<a class="small card" href="{{item.url}}" style="border-color:var(--{{item.template}}); background-image: url({{ item.media[item.header.icon].url }})">
-	<div class="label">
-		<div class="type">
-			{% if true %}
-				{{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-			{% endif %}
-		</div>
+<a class="small card"
+  href="{{ item.url }}"
+  style="border-color:var(--{{ item.template }}); background-image: url({{
+  item.media[item.header.icon].url
+  }})">
+  <div class="label">
+    <div class="type">
+      {% if true %}
+        {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+      {% endif %}
+    </div>
 
-		<div class="text">
-			{{ item.title }}
-		</div>
-	</div>
+    <div class="text">
+      {{ item.title }}
+    </div>
+  </div>
 </a>

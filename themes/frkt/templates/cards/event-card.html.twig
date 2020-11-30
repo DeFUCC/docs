@@ -1,60 +1,47 @@
 {% if item.visible %}
-
-{% do assets.addCss('theme://css/design.css',99) %}
-{% do
-  assets.addCss('theme://css/icons.css', 99) %}
+  {% do assets.addCss('theme://css/design.css', 99) %}
+  {% do assets.addCss('theme://css/icons.css', 99) %}
 
   <div class="event card">
-
-    {% include 'cards/card-image.html.twig' with { size: 280, url:item.url }%}
+    {% include 'cards/card-image.html.twig' with {
+      size: 280,
+      url: item.url
+    } %}
 
     <div class="card-text">
-
-      <a href="{{item.url}}">
-        <h3 class="title">{{item.title}}
+      <a href="{{ item.url }}">
+        <h3 class="title">
+          {{ item.title }}
         </h3>
 
         <p class="summary">
           {% if item.header.subtitle %}
             {{ item.header.subtitle }}
           {% endif %}
-
         </p>
-
-    </a>
-
+      </a>
     </div>
     <footer>
-
-    {% if item.header.start_date %}
-    {% set start_date = date(item.header.start_date) %}
-      <div class="date">
+      {% if item.header.start_date %}
+        {% set start_date = date(item.header.start_date) %}
+        <div class="date">
           {{ start_date|date('d M Y') }}
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
 
-    {% include 'partials/status.html.twig' %}
+      {% include 'partials/status.html.twig' %}
 
+      {% if item.header.start_date %}
+        {% include 'partials/tag.html.twig' with {
+          type: 'time',
+          icon_file: 'lines/time.svg',
+          text: item.header.start_date|nicetime
+        } only %}
+      {% endif %}
 
-
-    {% if item.header.start_date %}
-
-      {% include 'partials/tag.html.twig' with {
-        type: 'time',
-        icon_file: 'lines/time.svg',
-        text: item.header.start_date|nicetime
-      } only %}
-    {% endif %}
-
-
-
-
-
-
-    {% if item.children.visible %}
-      {% include 'cards/child-cards.html.twig' %}
-    {% endif %}
-</footer>
+      {% if item.children.visible %}
+        {% include 'cards/child-cards.html.twig' %}
+      {% endif %}
+    </footer>
   </div>
-
 {% endif %}

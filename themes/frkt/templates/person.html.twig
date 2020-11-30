@@ -1,6 +1,5 @@
 {% extends 'partials/item-page.html.twig' %}
 
-
 {% set main_id = 'person' %}
 
 {% set roles = ['author', 'designer', 'doer', 'host', 'person', 'persona'] %}
@@ -13,43 +12,53 @@
   persona: page.collection('persona')
 } %}
 
-{% set options = { items: {'@root.descendants':''}, filter:{ visible: true }, 'order': {'by': 'modified', 'dir': 'asc'}} %}
+{% set options = {
+  items: {
+    '@root.descendants': ''
+  },
+  filter: {
+    visible: true
+  },
+  order: {
+    by: 'modified',
+    dir: 'asc'
+  }
+} %}
 
 {% set all_pages = page.collection(options) %}
-
 
 {% set authorOf = page.collection('authorOf') %}
 {% set doerOf = page.collection('doerOf') %}
 
 {% for a_page in all_pages %}
-	{% set people = a_page.header.people %}
-	{% if people and people|count > 0 %}
-		{% for person in people %}
-			{% if person.alias == page.url %}
-				{% for role in roles %}
-					{% if person.role == role %}
-						{% do cols[role].addPage(a_page) %}
-					{% endif %}
-				{% endfor %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
+  {% set people = a_page.header.people %}
+  {% if people and (people|count) > 0 %}
+    {% for person in people %}
+      {% if person.alias == page.url %}
+        {% for role in roles %}
+          {% if person.role == role %}
+            {% do cols[role].addPage(a_page) %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 
 {% block lists %}
-	<footer class="listers">
-		{% for role in roles %}
-			{% include 'partials/lister.html.twig' with {
-  type: role,
-  title: 'THEME_FRUKT.' ~ role|upper,
-  collect: cols[role] } %}
-		{% endfor %}
+  <footer class="listers">
+    {% for role in roles %}
+      {% include 'partials/lister.html.twig' with {
+        type: role,
+        title: 'THEME_FRUKT.' ~ (role|upper),
+        collect: cols[role]
+      } %}
+    {% endfor %}
 
-
-		{% include 'partials/lister.html.twig' with {
-type: 'project',
-title: 'THEME_FRUKT.DOER',
-collect: doerOf } %}
-
-	</footer>
+    {% include 'partials/lister.html.twig' with {
+      type: 'project',
+      title: 'THEME_FRUKT.DOER',
+      collect: doerOf
+    } %}
+  </footer>
 {% endblock %}

@@ -1,65 +1,60 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<main id="{{ main_id }}" class="{{ main_classes }} panels">
+  <main id="{{ main_id }}" class="{{ main_classes }} panels">
+    <header class="{{ header_classes }}">
+      {% block side %}
+        <div class="top">
+          {% block icon %}
+            {% if page.header.icon %}
+              <div class="icon">
+                {{ page.media[page.header.icon].cropResize(300, 300) }}
+              </div>
+            {% endif %}
+          {% endblock %}
 
-		<header class="{{ header_classes }}">
+          <div class="start">
+            {% if config.plugins.breadcrumbs.enabled %}
+              {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+            {% block title %}
+              <h1 class="title">
+                {{ page.title }}
+              </h1>
+            {% endblock %}
 
-			{% block side %}
-				<div class="top">
+            {% if page.header.subtitle %}
+              {{ page.header.subtitle|markdown }}
+            {% endif %}
 
-					{% block icon %}
-						{% if page.header.icon  %}
-							<div class="icon">
-								{{page.media[page.header.icon].cropResize(300,300)}}
-							</div>
-						{% endif %}
-					{% endblock %}
+            {% block info %}
+              {% include 'partials/article-tags.html.twig' with {
+                item: page
+              } %}
+            {% endblock %}
 
+            {% block additional %}
+              {% if page.header.additional %}
+                <div class="additional">
+                  {{ page.header.additional|markdown }}
+                </div>
+              {% endif %}
+            {% endblock %}
+          </div>
+        </div>
 
-					<div class="start">
+        {% block toc %}
+        {% endblock %}
+      {% endblock %}
+    </header>
 
-						{% if config.plugins.breadcrumbs.enabled %}
-							{% include 'partials/breadcrumbs.html.twig' %}
-						{% endif %}
-						{% block title %}
-							<h1 class="title">{{ page.title }}</h1>
-						{% endblock %}
+    <article id="content" class="pv0 ph4 {{ article_classes }}">
+      {% block article %}
+        {{ page.content }}
+      {% endblock %}
+    </article>
 
-						{% if page.header.subtitle %}
-							{{page.header.subtitle|markdown }}
-						{% endif %}
-
-
-						{% block info %}
-							{% include 'partials/article-tags.html.twig' with {item: page} %}
-						{% endblock info %}
-
-						{% block additional %}
-							{% if page.header.additional %}
-								<div class="additional">
-									{{ page.header.additional|markdown }}
-								</div>
-							{% endif %}
-						{% endblock %}
-
-
-					</div>
-
-				</div>
-
-				{% block toc %}{% endblock %}
-
-			{% endblock side %}
-		</header>
-
-		<article id="content" class="pv0 ph4 {{ article_classes }}">
-			{% block article %}
-				{{ page.content }}
-			{% endblock article %}
-		</article>
-
-		{% block lists %}{% endblock %}
-
-	</main>
-{% endblock content %}
+    {% block lists %}
+    {% endblock %}
+  </main>
+{% endblock %}

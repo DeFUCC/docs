@@ -1,28 +1,38 @@
 {% extends 'partials/item-page.html.twig' %}
 
+{% set options = {
+  items: {
+    '@root.descendants': ''
+  }
+} %}
+{% set my_collection = '' %}
 
-{% set options = { items: {'@root.descendants':''} } %}
-{% set my_collection = ''  %}
-
-
-{% block info %}{% endblock %}
+{% block info %}
+{% endblock %}
 
 {% block article %}
-
-	{{ page.content }}
-
+  {{ page.content }}
 {% endblock %}
 
 {% block lists %}
-	<footer>
-		{% include 'partials/lister.html.twig' with {
-			type: page.slug,
-			title:'THEME_FRUKT.' ~ page.slug|pluralize|upper,
-			template: 'small-card',
-			collect: page.collection.count() > 0 ? page.collection : page.collection({
-				'items': { '@root.descendants': ''},
-				'order': { 'by': 'modified', 'dir': 'desc' }
-			}).ofType(page.slug) } %}
-	</footer>
+  <footer>
+    {% include 'partials/lister.html.twig' with {
+      type: page.slug,
+      title: 'THEME_FRUKT.' ~ (page.slug|pluralize|upper),
+      template: 'small-card',
+      collect: page.collection.count() > 0
+        ? page.collection
+        : page.collection({
+          items: {
+            '@root.descendants': ''
+          },
+          order: {
+            by: 'modified',
+            dir: 'desc'
+          }
+        }).ofType(
+          page.slug
+        )
+    } %}
+  </footer>
 {% endblock %}
-

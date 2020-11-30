@@ -2,35 +2,25 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 {% set divider = breadcrumbs_config.icon_divider_classes %}
 
-{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-
-	<div id="breadcrumbs">
-
-		{% for crumb in crumbs %}
-			<span>
-				{% if not loop.last %}
-					{% if crumb.routable %}
-						<a href="{{ crumb.url }}">
-							{{ crumb.menu }}
-						</a>
-					{% else  %}
-						<span>
-							{{ crumb.menu }}
-						</span>
-					{% endif %}
-					<i class="{{ divider }}"></i>
-				{% else %}
-					{% if breadcrumbs_config.link_trailing %}
-						<a href="{{ crumb.url }}">
-							{{ crumb.menu }}
-						</a>
-					{% else %}
-						<span>
-							{{ crumb.menu }}
-						</span>
-					{% endif %}
-				{% endif %}
-			</span>
-		{% endfor %}
-	</div>
+{% if (crumbs|length) > 1 or breadcrumbs_config.show_all %}
+  <div id="breadcrumbs">
+    {% for crumb in crumbs %}
+      <span>
+        {% if not loop.last %}
+          {% if crumb.routable %}
+            <a href="{{ crumb.url }}">{{ crumb.menu }}</a>
+          {% else %}
+            <span>{{ crumb.menu }}</span>
+          {% endif %}
+          <i class="{{ divider }}"></i>
+        {% else %}
+          {% if breadcrumbs_config.link_trailing %}
+            <a href="{{ crumb.url }}">{{ crumb.menu }}</a>
+          {% else %}
+            <span>{{ crumb.menu }}</span>
+          {% endif %}
+        {% endif %}
+      </span>
+    {% endfor %}
+  </div>
 {% endif %}
