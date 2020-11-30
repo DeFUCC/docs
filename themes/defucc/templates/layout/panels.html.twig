@@ -44,17 +44,19 @@
         </div>
 
         {% block toc %}
+
         {% endblock %}
       {% endblock %}
     </header>
 
-    <article id="content" class="pv0 ph4 {{ article_classes }}">
+    <article id="content" class="pv4 ph4 {{ article_classes }}">
       {% block article %}
         {{ page.content }}
       {% endblock %}
     </article>
 
     {% block lists %}
+
     {% endblock %}
   </main>
 {% endblock %}
