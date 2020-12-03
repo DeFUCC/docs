@@ -3,6 +3,7 @@ title: 'Дар для будущего'
 subtitle: 'Фундаментальное исследование экономики дарения с древних времен до современности'
 media_order: 'gift.jpg, stone-age.jpg, '
 date: '15:12 25-06-2020'
+icon: gift.jpg
 taxonomy:
     category:
         - Исследование

@@ -1,3 +1,15 @@
 {% extends 'partials/item-page.html.twig' %}
 
-{% set main_id = 'project' %}
+{% set main_id = 'thing' %}
+
+{% block lists %}
+  {% include 'partials/lister.html.twig' with {
+    title: 'THEME_FRUKT.QUALITY',
+    collect: page.header.quality
+  } %}
+
+  {% include 'partials/lister.html.twig' with {
+    title: 'THEME_FRUKT.QUANTITY',
+    collect: page.header.quantity
+  } %}
+{% endblock %}

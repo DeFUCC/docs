@@ -9,8 +9,8 @@ body {
   line-height: 1.65;
   letter-spacing: 0;
   hyphens: auto;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   font-family: 'Noto sans', sans-serif;
 }
 
@@ -19,7 +19,11 @@ p {
   line-height: calc(1ex / 0.33);
 }
 
- h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 2.75rem 0 1.05rem;
   font-family: 'Noto sans', sans-serif;
   font-weight: 600;
@@ -56,61 +60,73 @@ h5 {
   margin: calc(1ex / 0.34) 0;
 }
 
-small, .text_small {font-size: 0.889em;}
+small,
+.text_small {
+  font-size: 0.889em;
+}
 
 code,
 kbd,
 pre,
 samp {
-  font-family: "Inconsolata", monospace;
+  font-family: 'Inconsolata', monospace;
   overflow: scroll;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
   color: var(--text-light-color);
- }
-
-a:hover {
-  color: #0e6185; }
-
-a.underlined {
-    border-bottom: solid 1px #1694CA;
 }
 
-b, strong, label, th {
-  font-weight: 600; }
+a:hover {
+  color: #0e6185;
+}
+
+a.underlined {
+  border-bottom: solid 1px #1694ca;
+}
+
+b,
+strong,
+label,
+th {
+  font-weight: 600;
+}
 
 blockquote {
-  background-color:  var(--light-bg);
+  background-color: var(--light-bg);
   border-left: 3px solid #eee;
   margin: 1em 0;
   padding: 0.1em 1em;
   font-size: 1.1em;
 }
 
-blockquote h1, blockquote h2, blockquote h3, blockquote h4 {
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4 {
   margin: 0.1em 0;
 }
 
 .content.narrow {
-    flex-basis: 10px;
-    max-width: 300px;
+  flex-basis: 10px;
+  max-width: 300px;
 }
 
 .content a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .pagination {
-    justify-content:center !important;
+  justify-content: center !important;
 }
 
 code {
   background: var(--light-bg);
   color: #9c1d3d;
-  padding: .2rem .4rem;
-  border-radius: 3px; }
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
 
 pre {
   padding: 1rem;
@@ -119,12 +135,14 @@ pre {
   border: 1px solid #ddd;
   border-radius: 2px;
   line-height: 1.15;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
-  pre code {
-    color: #237794;
-    background: inherit;
-    font-size: 1rem; }
+pre code {
+  color: #237794;
+  background: inherit;
+  font-size: 1rem;
+}
 
 hr {
   color: #eee;
@@ -138,7 +156,8 @@ hr {
 
 .content th {
   background: var(--bg-gray);
-  padding: 0.5rem; }
+  padding: 0.5rem;
+}
 
 .content td {
   padding: 0.5rem;
@@ -153,13 +172,17 @@ hr {
 }
 
 .content ul {
-  margin-top:-0.5em;
+  margin-top: -0.5em;
 }
 
 .content .sticky {
   position: sticky;
-  top:0;
-  padding:1em 1.5em;
+  top: 0;
+  padding: 1em 1.5em;
   margin: 0 -1em;
   background-color: var(--darker-gray);
+}
+
+.content li {
+  margin: 0.5em 0;
 }

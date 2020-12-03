@@ -2,24 +2,10 @@
 {% do assets.addCss('theme://css/icons.css', 99) %}
 
 <div class="item-card">
-  {% block image %}
-    <a href="{{ item.url }}">
-      {% if item.header.icon %}
-        {% set image = item.media[item.header.icon].cropResize(180, 180) %}
-
-        <img src="{{ image.url }}" />
-      {% else %}
-        <div class="card-icon">
-          {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
-        </div>
-      {% endif %}
-    </a>
-  {% endblock %}
-
   {% block content %}
     <div class="item-card_content">
-      <a class="pa2" href="{{ item.url }}">
-        <h3 class="mb2 f5 mt0">
+      <a class="pa1" href="{{ item.url }}">
+        <h3 class="mb2 f5 mt0 black-90">
           {{ item.title }}
         </h3>
 
@@ -47,5 +33,18 @@
         {% endif %}
       {% endblock %}
     </div>
+  {% endblock %}
+  {% block image %}
+    <a href="{{ item.url }}">
+      {% if item.header.icon %}
+        {% set image = item.media[item.header.icon].cropResize(180, 180) %}
+
+        <img src="{{ image.url }}" />
+      {% else %}
+        <div class="card-icon">
+          {{ read_file('theme://icons/lines/' ~ item.template ~ '.svg') }}
+        </div>
+      {% endif %}
+    </a>
   {% endblock %}
 </div>

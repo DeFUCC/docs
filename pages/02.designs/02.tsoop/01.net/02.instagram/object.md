@@ -1,5 +1,5 @@
 ---
-title: @tsoop.ru на Instagram
+title: '@tsoop.ru на Instagram'
 subtitle: '<a href="https://www.instagram.com/tsoop.ru" target="_blank">@tsoop.ru</a>'
 status: process
 icon: instagram.jpg

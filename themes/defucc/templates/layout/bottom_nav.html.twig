@@ -1,11 +1,17 @@
 {% if page.prevSibling %}
   {% set next = page.prevSibling %}
+  {% if not next.routable %}
+    {% set next = next.prevSibling %}
+  {% endif %}
 {% else %}
   {% set next = page.parent.prevSibling %}
 {% endif %}
 
 {% if page.nextSibling %}
   {% set prev = page.nextSibling %}
+  {% if not prev.routable %}
+    {% set prev = prev.nextSibling %}
+  {% endif %}
 {% else %}
   {% set prev = page.parent.nextSibling %}
 {% endif %}
@@ -33,6 +39,9 @@
           <h5>
             {{ prev.title }}
           </h5>
+          <p>
+            {{ prev.header.subtitle }}
+          </p>
         </div>
       </a>
     {% endif %}
@@ -47,6 +56,9 @@
           <h5>
             {{ next.title }}
           </h5>
+          <p>
+            {{ next.header.subtitle }}
+          </p>
         </div>
       </a>
     {% endif %}

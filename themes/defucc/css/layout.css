@@ -72,6 +72,9 @@
   background: var(--darker-gray);
   z-index: 20;
   color: #777;
+  transition: all 300ms ease;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #bottom-page-nav h6 {
@@ -108,7 +111,7 @@
 }
 
 #bottom-page-nav .nav:hover {
-  background: var(--bg-gray);
+  background-color: var(--bg-gray);
   color: #333;
 }
 

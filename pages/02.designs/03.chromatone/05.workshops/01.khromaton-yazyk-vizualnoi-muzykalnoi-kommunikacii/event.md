@@ -1,12 +1,13 @@
 ---
-title: 'Воркшоп: Chromatone — визуально-музыкальный язык для обучения, коммуникации и самовыражения.'
+title: 'Chromatone — визуально-музыкальный язык для обучения, коммуникации и самовыражения.'
 start_date: '07-10-2020 19:00'
 status: development
+icon: poster.png
 people:
     -
         alias: /people/davay
         role: doer
-end_date: '07-10-2020 21:00'
+end_date: '07-10-2020 22:00'
 subtitle: 'Лекция и перформанс в рамках образовательной среды коворкинга Colab'
 ---
 
@@ -19,3 +20,5 @@ subtitle: 'Лекция и перформанс в рамках образова
 - какого цвета ваша любимая тональность.
 
 Чтобы вместе по-новому взглянуть на теорию музыки мы будем рассматривать схемы, графики и диаграммы, запускать интерактивные инсталляции и устроим аудиовизуальный перформанс. На воркшопе будет интересно как музыкантам, так и дизайнерам, художникам, программистам, визуализаторам. 
+
+<iframe width="1280" height="420" src="https://www.youtube.com/embed/wChhiBwOkY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
