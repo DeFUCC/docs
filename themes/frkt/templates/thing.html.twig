@@ -12,4 +12,10 @@
     title: 'THEME_FRUKT.QUANTITY',
     collect: page.header.quantity
   } %}
+
+  {% include 'partials/lister.html.twig' with {
+    title: 'THEME_FRUKT.HISTORY',
+    template: 'moment-card',
+    collect: page.header.history
+  } %}
 {% endblock %}
