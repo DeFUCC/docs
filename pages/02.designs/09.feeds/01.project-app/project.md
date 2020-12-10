@@ -32,7 +32,9 @@ This app is intended to be fast, reliable and free. So it's developed only by th
   - [purgeIcons](https://github.com/antfu/purge-icons) **TBD**
   - [vite-plugin-md](https://github.com/antfu/vite-plugin-md) may be used for static pages...
 - [GUN](https://gun.eco/) for the reactive p2p graph database
-- and some other libraries, check the package.json and index.html
+- timeago-js to render short dates
+- color-hash to get colors for item UUIDs
+- image-compressor to create small user avatars
 
 ## Basic structure
 
