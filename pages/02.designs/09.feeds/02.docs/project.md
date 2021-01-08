@@ -1,9 +1,8 @@
 ---
-title: 'Доки'
+title: Доки
 subtitle: 'Переработанный сайт ФРУКТ со встроенным проектным дискурсом'
-icon: 'grav.png'
+icon: grav.png
 status: process
-
 website: docs.frkt.ru
 people:
     -
@@ -13,7 +12,7 @@ start_date: '10-05-2020 14:47'
 opportunities:
     -
         icon: 'fa fa-github'
-        verb: 'Редактировать'
+        verb: Редактировать
         text: 'содержание и оформление на GitHub'
         link: 'https://github.com/DeFUCC/docs'
 ---
