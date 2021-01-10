@@ -16,3 +16,5 @@ people:
 
 Наиболее близкие по структуре конструкции:
 - [Башня Суваблен (Tour de Sauvabelin)](https://en.wikipedia.org/wiki/Tour_de_Sauvabelin) в Лозанне, Швейцария
+- [Forrest tower at Adventure camp](https://www.visitdenmark.com/denmark/explore/forest-tower-camp-adventure-gdk1108133) в Дании
+  - https://youtu.be/Yl-ujv_okg0
