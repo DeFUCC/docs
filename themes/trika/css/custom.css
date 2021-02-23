@@ -193,3 +193,14 @@ table.names td:nth-child(2) {
 .no-translate > section > p {
   display: none;
 }
+.child-cards .card {
+    padding: 0;
+}
+
+#top-bar ul#menu {
+    flex-grow: 4;
+    justify-content: center;
+}
+body[data-url="/"] #top-bar #logo {
+    display: none;
+}
